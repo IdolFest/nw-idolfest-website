@@ -5,6 +5,24 @@ module.exports = {
     author: `The NW IdolFest Team`,
   },
   plugins: [
+    `nw-idolfest-theme`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@layouts": "src/layouts",
+          "@theme": "plugins/nw-idolfest-theme",
+          "@pages": "src/pages"
+        },
+        extensions: [
+          "js",
+        ],
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -12,6 +30,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        useResolveUrlLoader: true,
+        precision: 6,
       },
     },
     `gatsby-transformer-sharp`,

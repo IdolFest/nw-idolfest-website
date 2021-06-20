@@ -1,50 +1,75 @@
 /**
  * Layout component that queries for data
- * with Gatsby's useStaticQuery component
+ * with Gatsby's StaticQuery component
  *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 
-import Header from "./header"
-import "./layout.css"
+import { styled, makeStyles } from '@material-ui/styles'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+
+import Header from '@components/Header'
+// import Footer from '@components/Footer'
+import LightDarkFab from '@components/LightDarkFab'
+
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { far } from "@fortawesome/free-regular-svg-icons"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+
+library.add(fab, fas, far)
+
+const Fab = styled(LightDarkFab)({
+    position: "fixed",
+    bottom: '20px',
+    right: '20px'
+})
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        backgroundColor: theme.palette.primary.main,
+        height: '100%'
     }
-  `)
+}));
 
+const Layout = ({ children, print, printButton }) => {
+
+  const classes = useStyles()
+    
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <StaticQuery
+      query={graphql`
+        query SiteTitleSQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `}
+      render={data => (
+        <Box>
+          <Grid className={classes.root} alignItems='stretch' container wrap={'nowrap'} justify='space-between' direction='column'>
+              <Grid item xs={12}>
+                  <Header siteTitle={data.site.siteMetadata.title} />
+              </Grid>
+              <Grid item color="primary">    
+                  <main>{children}</main>
+              </Grid>
+              <Grid item xs={12}>
+                {/* <Footer printButton={printButton} printablePage={true} /> */}
+              </Grid>
+              <Fab key="darkMode" />
+          </Grid>
+        </Box>
+      )}
+    />
   )
 }
 
