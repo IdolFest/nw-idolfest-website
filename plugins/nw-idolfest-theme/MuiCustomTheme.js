@@ -7,6 +7,7 @@ import { createMuiTheme,
 	responsiveFontSizes,
 	createStyles,
 	withStyles } from '@material-ui/core/styles';
+import './assets/fonts/fonts.css'
 
 const Head = () =>
 	<Helmet>
@@ -14,13 +15,13 @@ const Head = () =>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	</Helmet>;
 
-const mySerif = `"Montserrat", "Noto Serif SC", "Noto Serif", serif`;
 
-const mySans = `"Montserrat", "Source Sans Pro", sans-serif`;
+const headerFont = `"Junegull", serif`;
+const mySans = `"Open Sans", "Source Sans Pro", sans-serif`;
 const BLACK = '#000000'
 const WHITE = '#ffffff'
 
-const myTheme = isDark => responsiveFontSizes(createMuiTheme({
+const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
 	palette: {
 		type: isDark ? 'dark' : 'light',
 		primary: {
@@ -33,16 +34,16 @@ const myTheme = isDark => responsiveFontSizes(createMuiTheme({
 	typography: {
 		fontFamily: mySans,
 		h1: {
-			fontFamily: mySerif
+			fontFamily: headerFont
 		},
 		h2: {
-			fontFamily: mySerif
+			fontFamily: headerFont
 		},
 		h3: {
-			fontFamily: mySerif
+			fontFamily: headerFont
 		},
 		h4: {
-			fontFamily: mySerif
+			fontFamily: headerFont
 		},
 		body1: {
 			fontFamily: mySans
@@ -51,6 +52,7 @@ const myTheme = isDark => responsiveFontSizes(createMuiTheme({
     overrides: {
         MuiCssBaseline: {
             '@global': {
+				'@font-face': [mySans],
                 html: {
                     height: '100%',
                     backgroundColor: isDark ? BLACK : WHITE,
@@ -66,43 +68,6 @@ const myTheme = isDark => responsiveFontSizes(createMuiTheme({
                 '#gatsby-focus-wrapper': {
                     height: '100%',
                     backgroundColor: isDark ? BLACK : WHITE,
-				},
-				'.dangerous-html p': {
-						margin: 0
-				},
-				'.print-only': {
-					display: 'none'
-				},
-				'@media print': {
-					'.dangerous-html > ul > li': {
-						listStyleType: 'square',
-						listStylePosition: 'outside !important'
-					},
-					'.dangerous-html > ul': {
-						marginBlockStart: '0',
-						marginBlockEnd: '0',
-					},
-					'.no-print': {
-						display: 'none'
-					},
-					'.print-only': {
-						display: 'initial'
-					},
-					'.dangerous-html a': {
-						boxShadow: 'none'
-					},
-					// html: {
-					// 	backgroundColor: WHITE,
-					// },
-					// body: {
-					// 	backgroundColor: WHITE,
-					// },
-					// '#___gatsby': {
-					// 	backgroundColor: WHITE,
-					// },
-					// '#gatsby-focus-wrapper': {
-					// 	backgroundColor: WHITE,
-					// },
 				}
             },
 		},
@@ -117,7 +82,6 @@ const myTheme = isDark => responsiveFontSizes(createMuiTheme({
 
 // TODO: The style is changing, but something above it is more important and static
 const GlobalStyles = withStyles(theme => {
-	const isLight = theme.palette.type === 'light';
     const modeColor = theme.palette.secondary.main
 	return createStyles({
 		'@global': {
@@ -157,7 +121,8 @@ const GlobalStyles = withStyles(theme => {
 			p: {
 				...theme.typography.body1,
 				margin: theme.spacing(1, 0),
-				lineHeight: 1.75
+				lineHeight: 1.25,
+				fontSize: '1.5em'
 			},
 			li: {
 				...theme.typography.body1
@@ -184,7 +149,7 @@ export default function MuiCustomTheme({ darkMode, children, ...props }) {
 		document.body.className = '';
 	}, []);
 	return (
-		<ThemeProvider theme={myTheme(darkMode)} {...props}>
+		<ThemeProvider theme={nwIdolfestTheme(darkMode)} {...props}>
             <Head />
 			<CssBaseline />
 			<ChildrenWithGlobalStyle>
