@@ -11,7 +11,8 @@ const HeroText = styled(Container)({
   '& span': {
     backgroundColor: 'white',
     borderRadius: '5px',
-    padding: '.25em'
+    padding: '.25em',
+    opacity: '85%'
   }
 })
 
