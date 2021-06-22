@@ -20,6 +20,7 @@ const headerFont = `"Junegull", serif`;
 const mySans = `"Open Sans", "Source Sans Pro", sans-serif`;
 const BLACK = '#000000'
 const WHITE = '#ffffff'
+const PINK = 'pink'
 
 const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
 	palette: {
@@ -29,7 +30,8 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
         },
         secondary: {
             main: isDark ? WHITE : BLACK
-        }
+        },
+		pink: PINK
 	},
 	typography: {
 		fontFamily: mySans,

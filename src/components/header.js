@@ -1,41 +1,178 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  IconButton,
+  Drawer,
+} from "@material-ui/core"
+import MenuIcon from "@material-ui/icons/Menu"
+import { makeStyles } from '@material-ui/styles' // useTheme
+import React, { useState, useEffect } from "react"
+import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
+const headersData = [
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Events",
+    href: "/events",
+  },
+  {
+    label: "Hotel",
+    href: "/hotel",
+  },
+  {
+    label: "Register",
+    href: "/register",
+  },
+];
+
+const useStyles = makeStyles(theme => ({
+  header: {
+    backgroundColor: theme.palette.primary.main,
+    paddingRight: "79px",
+    paddingLeft: "118px",
+    borderBottomColor: theme.palette.pink,
+    borderBottom: '10px solid',
+    "@media (max-width: 900px)": {
+      paddingLeft: 0,
+    },
+  },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  drawerContainer: {
+    padding: "20px 30px",
+  }
+}))
+
+export default function Header() {  
+  const classes = useStyles()
+  //const theme = useTheme()
+
+  const [state, setState] = useState({
+    mobileView: false,
+    drawerOpen: false,
+  });
+
+  const { mobileView, drawerOpen } = state;
+
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 900
+        ? setState((prevState) => ({ ...prevState, mobileView: true }))
+        : setState((prevState) => ({ ...prevState, mobileView: false }));
+    };
+
+    setResponsiveness();
+
+    window.addEventListener("resize", () => setResponsiveness());
+
+    return () => {
+      window.removeEventListener("resize", () => setResponsiveness());
+    };
+  }, []);
+
+  const displayDesktop = () => {
+    return (
+      <Toolbar className={classes.toolbar}>
+        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>{idolfestLogo}</Link>
+        <div>{getMenuButtons()}</div>
+      </Toolbar>
+    );
+  };
+
+  const displayMobile = () => {
+    const handleDrawerOpen = () =>
+      setState((prevState) => ({ ...prevState, drawerOpen: true }));
+    const handleDrawerClose = () =>
+      setState((prevState) => ({ ...prevState, drawerOpen: false }));
+
+    return (
+      <Toolbar>
+        <IconButton
+          {...{
+            edge: "start",
+            color: "inherit",
+            "aria-label": "menu",
+            "aria-haspopup": "true",
+            onClick: handleDrawerOpen,
           }}
         >
-          {siteTitle}
+          <MenuIcon />
+        </IconButton>
+
+        <Drawer
+          {...{
+            anchor: "left",
+            open: drawerOpen,
+            onClose: handleDrawerClose,
+          }}
+        >
+          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
+        </Drawer>
+
+        <div>{idolfestLogo}</div>
+      </Toolbar>
+    );
+  };
+
+  const getDrawerChoices = () => {
+    return headersData.map(({ label, href }) => {
+      return (
+        <Link
+          to={href}
+          key={href}
+          style= {{ 
+            textDecoration: 'none',
+            boxShadow: 'none',
+            fontSize: '1.5em'
+          }}
+        >
+          <Link>{label}</Link>
         </Link>
-      </h1>
-    </div>
-  </header>
-)
+      );
+    });
+  };
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  const idolfestLogo = (
+    <StaticImage
+          layout='fixed'
+          // This is a presentational image, so the alt should be an empty string
+          height={150}
+          alt=''
+          src='../images/logo/Logo Pink.svg'
+          />
+  );
+
+  const getMenuButtons = () => {
+    return headersData.map(({ label, href }) => {
+      return (
+        <Button key={href}>
+            <Link
+              to={href} 
+              style={{ 
+                textDecoration: 'none',
+                boxShadow: 'none',
+                fontSize: '1.5em'
+              }}
+            >
+            {label}
+          </Link>
+          </Button>
+      );
+    });
+  };
+
+  return (
+    <header>
+      <AppBar className={classes.header}>
+        {mobileView ? displayMobile() : displayDesktop()}
+      </AppBar>
+    </header>
+  );
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
