@@ -116,7 +116,7 @@ export default function Header() {
           <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
-        <div>{idolfestLogo}</div>
+        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>{idolfestLogo}</Link>
       </Toolbar>
     );
   };
@@ -128,12 +128,12 @@ export default function Header() {
           to={href}
           key={href}
           style= {{ 
-            textDecoration: 'none',
-            boxShadow: 'none',
-            fontSize: '1.5em'
+            fontSize: '1.5em',
+            display: 'block',
+            padding: '.75em'
           }}
         >
-          <Link>{label}</Link>
+          {label}
         </Link>
       );
     });
@@ -163,7 +163,7 @@ export default function Header() {
             >
             {label}
           </Link>
-          </Button>
+        </Button>
       );
     });
   };

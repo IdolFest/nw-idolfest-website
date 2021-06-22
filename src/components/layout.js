@@ -33,8 +33,10 @@ const Fab = styled(LightDarkFab)({
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.primary.main,
-        height: '100%'
+      backgroundColor: theme.palette.primary.main,
+    },
+    content: {
+      marginTop: '10em'
     }
 }));
 
@@ -58,7 +60,7 @@ const Layout = ({ children, print, printButton }) => {
               <Grid item xs={12}>
                 <Header siteTitle={data.site.siteMetadata.title} />
               </Grid>
-              <Grid item color="primary">    
+              <Grid item color="primary" className={classes.content}>    
                 <main>{children}</main>
               </Grid>
               <Grid item xs={12}>
