@@ -1,16 +1,7 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 
 import { styled, makeStyles } from '@material-ui/styles'
-
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 
@@ -44,17 +35,6 @@ const Layout = ({ children, print, printButton }) => {
   const classes = useStyles()
     
   return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleSQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={data => (
         <Box>
           <Grid className={classes.root} alignItems='stretch' container wrap={'nowrap'} justify='space-between' direction='column'>
               <Grid item xs={12}>
@@ -69,8 +49,6 @@ const Layout = ({ children, print, printButton }) => {
               <Fab key="darkMode" />
           </Grid>
         </Box>
-      )}
-    />
   )
 }
 
