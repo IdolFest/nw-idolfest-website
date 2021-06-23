@@ -7,7 +7,6 @@ import { styled } from '@material-ui/styles'
 const WelcomeWrapper = styled(Box)({
     width: '100%',
     display: 'flex',
-    flexWrap: 'nowrap',
     color: 'black',
     background: 'rgb(250,210,233)',
     // eslint-disable-next-line no-dupe-keys
@@ -15,7 +14,7 @@ const WelcomeWrapper = styled(Box)({
     justifyContent: 'center',
     alignItems: 'center',
     '& h1': {
-      flexShrink: '0'
+      textAlign: 'center',
     },
     '& .flexStar': {
       flexShrink: '0',
@@ -40,8 +39,9 @@ const WelcomeWrapper = styled(Box)({
     }
   })
   
-const PageHeader = () => (
-    <WelcomeWrapper>
+  const PageHeader = ({ title }) => {
+    return (
+      <WelcomeWrapper>
         <StaticImage 
             src='../images/White Star.svg' 
             alt=''
@@ -63,7 +63,7 @@ const PageHeader = () => (
             height={70}
             layout='fixed'
         />
-        <h1 style={{display: 'inline'}}>Welcome to Northwest IdolFest!</h1>
+        <h1 style={{display: 'inline'}}>{title}</h1>
         <StaticImage 
             src='../images/White Star.svg' 
             alt=''
@@ -86,7 +86,7 @@ const PageHeader = () => (
             layout='fixed'
         />
     </WelcomeWrapper>
-)
+)}
 
 PageHeader.propTypes = {
     title: PropTypes.string,
