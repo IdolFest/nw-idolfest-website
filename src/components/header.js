@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     borderBottomColor: theme.palette.pink,
     background: 'radial-gradient(circle, rgba(250,210,233,1) 0%, rgba(244,165,210,1) 100%) bottom no-repeat',
     backgroundSize: '100% 10px',
-    height: '10vh',
+    height: '20vh',
     "@media (max-width: 900px)": {
       paddingLeft: 0,
     },
