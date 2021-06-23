@@ -58,7 +58,7 @@ const Layout = ({ children, print, printButton }) => {
         <Box>
           <Grid className={classes.root} alignItems='stretch' container wrap={'nowrap'} justify='space-between' direction='column'>
               <Grid item xs={12}>
-                <Header siteTitle={data.site.siteMetadata.title} />
+                <Header />
               </Grid>
               <Grid item color="primary" className={classes.content}>    
                 <main>{children}</main>

@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function Seo({ description, lang, meta, title, imageUrl, imageAlt }) {
+  const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,54 +19,79 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            social {
+              twitter
+            }
+            siteUrl
+          }
+        }
+        ogImageDefault: file(relativePath: {eq: "icon/Icon-Pink.png"}) { 
+          childImageSharp {
+            fixed(height: 260, width: 260) {
+              src
+            }
           }
         }
       }
     `
   )
 
+  const constructUrl = (baseUrl, path) =>
+  (!baseUrl || !path) ? null : `${baseUrl}${path}`
+  
+  const defaultImageUrl = constructUrl(site.siteMetadata.siteUrl, ogImageDefault?.childImageSharp?.fixed?.src)
+
+  const ogImageUrl = imageUrl || defaultImageUrl; 
+
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+
+  const titleTemplate = title ? `${title} | ${defaultTitle}` : defaultTitle
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={titleTemplate}
+      titleTemplate={titleTemplate}
       meta={[
         {
           name: `description`,
           content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
+        },        
         {
           property: `og:description`,
           content: metaDescription,
         },
         {
+          property: `og:title`,
+          content: titleTemplate,
+        },
+        { 
+          property: `og:image`, 
+          content: ogImageUrl, 
+        }, 
+        {
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
+        // If a post has an image, use the larger card. 
+        // Otherwise the default image is just 
+        // a small logo, so use the smaller card.
+        { 
+          name: `twitter:card`, 
+          content: imageUrl ? `summary_large_image` : `summary`, 
+        }, 
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.social?.twitter || ``,
         },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
+        // Add image alt text
+        // Falls back to default which describes the site logo
+        { 
+          name: `twitter:image:alt`, 
+          content: imageAlt || "nwidolfest.com logo", 
         },
       ].concat(meta)}
     />

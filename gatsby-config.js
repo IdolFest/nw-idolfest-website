@@ -1,13 +1,33 @@
 module.exports = {
   siteMetadata: {
     title: `NW IdolFest`,
-    description: `Get ready to experience idol like you never have before! Coming to Seattle in 2021.`,
+    siteUrl: 'https://nwidolfest.com',
+    description: `Get ready to experience idol like you never have before! Coming to the DoubleTree at Seattle Airport on Nov 13-14, 2021.`,
     author: `The NW IdolFest Team`,
+    social: {
+      twitter: '@NWIdolFest'
+    }
   },
   plugins: [
     `nw-idolfest-theme`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-XPTSB6WENM",
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
