@@ -18,7 +18,7 @@ const HeroText = styled(Container)({
 
 export default function Hero({ header, body }) {
   return (
-    <div style={{ display: 'grid' }}>
+    <div style={{ display: 'grid', marginBottom: '1.5em' }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <StaticImage
         style={{
