@@ -9,9 +9,9 @@ const WelcomeWrapper = styled(Box)({
     display: 'flex',
     flexWrap: 'nowrap',
     color: 'black',
-    background: `rgb(240,164,255)`,
+    background: 'rgb(250,210,233)',
     // eslint-disable-next-line no-dupe-keys
-    background: `radial-gradient(circle, rgba(240,164,255,1) 0%, rgba(246,190,244,1) 0%, rgba(201,89,194,1) 100%)`,
+    background: 'radial-gradient(circle, rgba(244, 165, 210, 1), rgba(250, 210, 233, 1) 0%, rgba(244, 165, 210, 1))',
     justifyContent: 'center',
     alignItems: 'center',
     '& h1': {
@@ -43,21 +43,21 @@ const WelcomeWrapper = styled(Box)({
 const PageHeader = () => (
     <WelcomeWrapper>
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={50}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={60}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={70}
@@ -65,21 +65,21 @@ const PageHeader = () => (
         />
         <h1 style={{display: 'inline'}}>Welcome to Northwest IdolFest!</h1>
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={70}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={60}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/Star.svg' 
+            src='../images/White Star.svg' 
             alt=''
             className='flexStar'
             height={50}

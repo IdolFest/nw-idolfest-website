@@ -1,20 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { styled, makeStyles } from '@material-ui/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
-
 import Header from '@components/Header'
 // import Footer from '@components/Footer'
 import LightDarkFab from '@components/LightDarkFab'
-
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { far } from "@fortawesome/free-regular-svg-icons"
-import { fas } from "@fortawesome/free-solid-svg-icons"
-
-library.add(fab, fas, far)
 
 const Fab = styled(LightDarkFab)({
     position: "fixed",
@@ -27,11 +18,17 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.primary.main,
     },
     content: {
-      marginTop: '10em'
+      marginTop: '10em',
+      background: `url('images/Wallpaper.svg'), center center no-repeat, linear-gradient(rgba(255, 255, 255, 1) 82.35%, rgba(250, 210, 233, 1))`      
+    },
+    bgImage: {
+      backgroundColor: theme.palette.primary.main,
+      backgroundRepeat: 'repeat',
+      background: `center center no-repeat, linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))`
     }
 }));
 
-const Layout = ({ children, print, printButton }) => {
+const Layout = ({ children }) => {
   const classes = useStyles()
     
   return (
