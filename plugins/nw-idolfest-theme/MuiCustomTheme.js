@@ -124,7 +124,8 @@ const GlobalStyles = withStyles(theme => {
 				...theme.typography.body1,
 				margin: theme.spacing(1, 0),
 				lineHeight: 1.25,
-				fontSize: '1.5em'
+				fontSize: '1.5em',
+				padding: '.5em 0',
 			},
 			li: {
 				...theme.typography.body1
