@@ -11,8 +11,11 @@ import './assets/fonts/fonts.css'
 
 const Head = () =>
 	<Helmet>
-		<meta name="viewpoint" content="minimum-scale=1, initial-scale=1, width=device-width" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+	/>		
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	</Helmet>;
 
 
@@ -57,6 +60,7 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
 				'@font-face': [mySans],
                 html: {
                     height: '100%',
+					overflowX: 'hidden',
                     backgroundColor: isDark ? BLACK : WHITE,
                 },
                 body: {
