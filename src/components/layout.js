@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Header from '@components/Header'
 // import Footer from '@components/Footer'
+/*
 import LightDarkFab from '@components/LightDarkFab'
 
 const Fab = styled(LightDarkFab)({
@@ -12,7 +13,7 @@ const Fab = styled(LightDarkFab)({
     bottom: '20px',
     right: '20px'
 })
-
+*/
 const useStyles = makeStyles(theme => ({
     root: {
       backgroundColor: theme.palette.primary.main,
