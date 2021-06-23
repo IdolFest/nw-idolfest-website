@@ -16,10 +16,12 @@ const Fab = styled(LightDarkFab)({
 const useStyles = makeStyles(theme => ({
     root: {
       backgroundColor: theme.palette.primary.main,
+      height: '100%'
     },
     content: {
-      marginTop: '10em',
-      background: `url('images/Wallpaper.svg'), center center no-repeat, linear-gradient(rgba(255, 255, 255, 1) 82.35%, rgba(250, 210, 233, 1))`      
+      background: `url('images/Wallpaper.svg'), center center no-repeat, linear-gradient(rgba(255, 255, 255, 1) 82.35%, rgba(250, 210, 233, 1))`,
+      marginTop: '20vh',
+      height: '100%'  
     },
     bgImage: {
       backgroundColor: theme.palette.primary.main,
@@ -32,18 +34,18 @@ const Layout = ({ children }) => {
   const classes = useStyles()
     
   return (
-        <Box>
+        <Box style={{ height: '100%' }}>
           <Grid className={classes.root} alignItems='stretch' container wrap={'nowrap'} justify='space-between' direction='column'>
-              <Grid item xs={12}>
+              <Grid>
                 <Header />
               </Grid>
               <Grid item color="primary" className={classes.content}>    
                 <main>{children}</main>
               </Grid>
-              <Grid item xs={12}>
-                {/* <Footer /> */}
-              </Grid>
-              <Fab key="darkMode" />
+              {/* <Grid item xs={12}>
+                <Footer />
+              </Grid> */}
+              {/* <Fab key="darkMode" /> */}
           </Grid>
         </Box>
   )
