@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `NW IdolFest`,
     siteUrl: 'https://nwidolfest.com',
-    description: `Get ready to experience idol like you never have before! Coming to the DoubleTree at Seattle Airport on Nov 13-14, 2021.`,
+    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Nov 13-14, 2021.`,
     author: `The NW IdolFest Team`,
     social: {
       twitter: '@NWIdolFest'
