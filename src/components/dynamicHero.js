@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 import { styled } from '@material-ui/styles'
 import Container from '@material-ui/core/Container'
+import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const HeroText = styled(Container)({
   color: 'black',
@@ -16,22 +17,38 @@ const HeroText = styled(Container)({
   }
 })
 
-export default function Hero({ header, body }) {
+export default function Hero({ imgName, header, body }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allImageSharp {
+          edges {
+            node {
+              gatsbyImageData(aspectRatio: 4.3)
+              fluid {
+                originalName
+              }
+            }
+          }
+        }
+      }
+    `)
+
+  // Single Image Data
+  const imageData = data.allImageSharp.edges.find(
+      edge => edge.node.fluid.originalName === imgName
+  ).node.gatsbyImageData
+
   return (
     <div style={{ display: 'grid', marginBottom: '1.5em' }}>
-      {/* You can use a GatsbyImage component if the image is dynamic */}
-      <StaticImage
+      <GatsbyImage
         style={{
           gridArea: '1/1',
           // You can set a maximum height for the image, if you wish.
-          // maxHeight: 600,
         }}
-        layout='fullWidth'
-        // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
         // This is a presentational image, so the alt should be an empty string
         alt=''
-        src='../images/Hero_Rainbow_Initial.jpeg'
+        image={imageData}
         loading='eager'
         placeholder='blurred'
       />
@@ -50,6 +67,7 @@ export default function Hero({ header, body }) {
 }
 
 Hero.propTypes = {
+    imgName: PropTypes.string.isRequired,
     header: PropTypes.string,
     body: PropTypes.string, 
 }
