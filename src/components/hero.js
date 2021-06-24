@@ -28,10 +28,12 @@ export default function Hero({ header, body }) {
         }}
         layout='fullWidth'
         // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
+        aspectRatio={4 / 3}
         // This is a presentational image, so the alt should be an empty string
         alt=''
         src='../images/Hero_Rainbow_Initial.jpeg'
+        loading='eager'
+        placeholder='blurred'
       />
       <HeroText
         style={{
