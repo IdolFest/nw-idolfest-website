@@ -76,6 +76,11 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
                 '#gatsby-focus-wrapper': {
                     height: '100%',
                     backgroundColor: isDark ? BLACK : WHITE,
+				},
+				'button.cta': {
+					backgroundColor: DARK_PINK,
+					padding: '1em',
+					marginTop: '1em',
 				}
             },
 		},
@@ -131,7 +136,7 @@ const GlobalStyles = withStyles(theme => {
 				margin: theme.spacing(1, 0),
 				lineHeight: 1.25,
 				fontSize: '1.5em',
-				padding: '.5em 0',
+				paddingBottom: '.5em'
 			},
 			li: {
 				...theme.typography.body1
