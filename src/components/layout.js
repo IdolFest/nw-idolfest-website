@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { styled, makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Header from '@components/Header'
