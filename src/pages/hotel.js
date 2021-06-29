@@ -12,6 +12,12 @@ const CenteredBox = styled(Box)({
   paddingBottom: '1em'
 })
 
+const RoomRateTable = styled(TableContainer)({
+  margin: '0 auto',
+  width: '70%',
+  paddingBottom: '1em'
+})
+
 function createData(roomType, price) {
   return { roomType, price };
 }
@@ -40,12 +46,12 @@ const HotelPage = () => {
         Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. The hotel is easily accessible by complimentary shuttle from SeaTac Airport, or by light rail from downtown Seattle.
       </p>
       <CenteredBox>
-        <TableContainer>
+        <RoomRateTable>
           <Table aria-label="simple table">
             <TableHead style={{}}>
               <TableRow>
                 <TableCell>Room Type</TableCell>
-                <TableCell>Price</TableCell>
+                <TableCell>Price Per Night<sup>†</sup></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -59,7 +65,11 @@ const HotelPage = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </RoomRateTable>
+        
+        <div>
+          <sup>†</sup>Taxes and fees not included in price.
+        </div>
         <Button variant="contained" className="cta">
           Booking link coming soon!
         </Button>
