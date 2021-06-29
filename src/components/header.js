@@ -38,9 +38,11 @@ const useStyles = makeStyles(theme => ({
     borderBottomColor: theme.palette.pink,
     background: 'radial-gradient(circle, rgba(250,210,233,1) 0%, rgba(244,165,210,1) 100%) bottom no-repeat',
     backgroundSize: '100% 10px',
-    height: '20vh',
-    "@media (max-width: 900px)": {
+    position: 'sticky',
+    //height: '15vh',
+    "@media (max-width: 1200px)": {
       paddingLeft: 0,
+      paddingRight: 0
     },
   },
   toolbar: {
@@ -49,6 +51,15 @@ const useStyles = makeStyles(theme => ({
   },
   drawerContainer: {
     padding: "20px 30px",
+  },
+  dates: {
+    flex: '1',
+    textTransform: 'uppercase',
+    "@media (max-width: 878px)": {
+      flex: 'unset',
+      fontSize: 'small',
+      textAalign: 'center',
+    }
   }
 }))
 
@@ -82,7 +93,10 @@ export default function Header() {
   const displayDesktop = () => {
     return (
       <Toolbar className={classes.toolbar}>
-        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>{idolfestLogo}</Link>
+        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>
+          {idolfestLogo}
+        </Link>
+        <div className={classes.dates}>Nov 13-14, 2021 | Seattle, WA</div>
         <div>{getMenuButtons()}</div>
       </Toolbar>
     );
@@ -118,7 +132,13 @@ export default function Header() {
           <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
-        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>{idolfestLogo}</Link>
+        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>
+          {idolfestLogo}
+        </Link>
+        <div className={classes.dates}>
+          <div>Nov 13-14, 2021</div>
+          <div>Seattle, WA</div>
+        </div>
       </Toolbar>
     );
   };
@@ -143,10 +163,11 @@ export default function Header() {
 
   const idolfestLogo = (
     <StaticImage
-          layout='fixed'
+          layout='constrained'
           // This is a presentational image, so the alt should be an empty string
-          height={150}
           alt=''
+          width={300}
+          transformOptions={{fit: "contain"}}
           src='../images/logo/Logo Pink.svg'
           />
   );

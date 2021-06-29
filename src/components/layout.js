@@ -17,12 +17,13 @@ const Fab = styled(LightDarkFab)({
 const useStyles = makeStyles(theme => ({
     root: {
       backgroundColor: theme.palette.primary.main,
-      height: '100%'
+      height: '100%',
     },
     content: {
       background: `url('images/Wallpaper.svg'), center center no-repeat, linear-gradient(rgba(255, 255, 255, 1) 65.97%, rgba(250, 210, 233, 1))`,
-      marginTop: '20vh',
-      height: '100%'  
+      //padding: '1em 0',
+      paddingBottom: '1em',
+      height: '3000px'
     },
     bgImage: {
       backgroundColor: theme.palette.primary.main,
