@@ -7,7 +7,8 @@ const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: theme.palette.primary.main,
     borderRadius: '10px',
-    marginTop: '1em'
+    marginTop: '1em',
+    padding: '2em'
   }
 }))
 
