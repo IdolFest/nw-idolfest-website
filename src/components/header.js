@@ -16,18 +16,18 @@ const headersData = [
     label: "About",
     href: "/about",
   },
-  {
-    label: "Events",
-    href: "/events",
-  },
+  // {
+  //   label: "Events & Guests",
+  //   href: "/events",
+  // },
   {
     label: "Hotel",
     href: "/hotel",
   },
-  {
-    label: "Register",
-    href: "/register",
-  },
+  // {
+  //   label: "Register",
+  //   href: "/register",
+  // },
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -57,8 +57,8 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     "@media (max-width: 878px)": {
       flex: 'unset',
-      fontSize: 'small',
-      textAalign: 'center',
+      fontSize: 'smaller',
+      textAlign: 'center',
     }
   }
 }))

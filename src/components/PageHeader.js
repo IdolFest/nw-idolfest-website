@@ -18,15 +18,16 @@ const WelcomeWrapper = styled(Box)({
     },
     '& .flexStar': {
       flexShrink: '0',
+      margin: '0 .5em'
     },
     '& .flexStar:nth-of-type(1)': {
       transform: `rotate(25deg)`
     },
     '& .flexStar:nth-of-type(2)': {
-      transform: `rotate(45deg)`
+      transform: `rotate(50deg)`
     },
     '& .flexStar:nth-of-type(3)': {
-      transform: `rotate(65deg)`
+      transform: `rotate(55deg)`
     },
     '& .flexStar:nth-of-type(4)': {
       transform: `rotate(85deg)`
@@ -36,6 +37,11 @@ const WelcomeWrapper = styled(Box)({
     },
     '& .flexStar:nth-of-type(6)': {
       transform: `rotate(35deg)`
+    },
+    "@media (max-width: 678px)": {
+      '& .flexStar': {
+        display: 'none'
+      }
     }
   })
   
@@ -43,46 +49,46 @@ const WelcomeWrapper = styled(Box)({
     return (
       <WelcomeWrapper>
         <StaticImage 
-            src='../images/White Star.svg' 
+            src='../images/slimStarWhite.svg' 
+            alt=''
+            className='flexStar'
+            height={40}
+            layout='fixed'
+        />      
+        <StaticImage 
+            src='../images/slimStarWhite.svg' 
             alt=''
             className='flexStar'
             height={50}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/White Star.svg' 
+            src='../images/slimStarWhite.svg' 
             alt=''
             className='flexStar'
             height={60}
-            layout='fixed'
-        />      
-        <StaticImage 
-            src='../images/White Star.svg' 
-            alt=''
-            className='flexStar'
-            height={70}
             layout='fixed'
         />
-        <h1 style={{display: 'inline'}}>{title}</h1>
+        <h1 style={{display: 'inline', padding: '0 .5em' }}>{title}</h1>
         <StaticImage 
-            src='../images/White Star.svg' 
-            alt=''
-            className='flexStar'
-            height={70}
-            layout='fixed'
-        />      
-        <StaticImage 
-            src='../images/White Star.svg' 
+            src='../images/slimStarWhite.svg' 
             alt=''
             className='flexStar'
             height={60}
             layout='fixed'
         />      
         <StaticImage 
-            src='../images/White Star.svg' 
+            src='../images/slimStarWhite.svg' 
             alt=''
             className='flexStar'
             height={50}
+            layout='fixed'
+        />      
+        <StaticImage 
+            src='../images/slimStarWhite.svg' 
+            alt=''
+            className='flexStar'
+            height={40}
             layout='fixed'
         />
     </WelcomeWrapper>
