@@ -31,7 +31,7 @@ const AboutPage = () => (
       </p>
 
       <h2>The Staff</h2>
-      <p>NW IdolFest is comprised of experienced convention staff from all backgrounds and professions. We are a small team with big dream and big love for idols. As the premiere US convention for idol content, we want to work for and with other idol fans to bring the best possible experience to the Pacific Northwest. Though we are starting small, we have the talent and experience to grow our event into something special!</p>
+      <p>Our staff is made up of experienced convention runners from all backgrounds and professions. As the premiere US convention for idol content, we want to work for and with other idol fans to bring the best possible experience to the Pacific Northwest. Though we are starting small, we have the talent and experience to grow into something special!</p>
     </PageContent>
   </Layout>
 )
