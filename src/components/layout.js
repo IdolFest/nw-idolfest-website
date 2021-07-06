@@ -20,15 +20,9 @@ const useStyles = makeStyles(theme => ({
       height: '100%',
     },
     content: {
-      background: `url('images/Wallpaper.svg'), center center no-repeat, linear-gradient(rgba(255, 255, 255, 1) 65.97%, rgba(250, 210, 233, 1))`,
-      //padding: '1em 0',
+      background: `linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/images/diamondsSolidPink.svg'), center center`,
       paddingBottom: '1em',
-      height: '3000px'
-    },
-    bgImage: {
-      backgroundColor: theme.palette.primary.main,
-      backgroundRepeat: 'repeat',
-      background: `center center no-repeat, linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))`
+      flexGrow: '1'
     }
 }));
 

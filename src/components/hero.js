@@ -23,15 +23,14 @@ export default function Hero({ header, body }) {
       <StaticImage
         style={{
           gridArea: '1/1',
-          // You can set a maximum height for the image, if you wish.
-          // maxHeight: 600,
+          height: '50vh',
         }}
         layout='fullWidth'
         // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
+        //aspectRatio={3 / 1}
         // This is a presentational image, so the alt should be an empty string
         alt=''
-        src='../images/Hero_Rainbow_Initial.jpeg'
+        src='../images/idolfestSplash.png'
         loading='eager'
         placeholder='blurred'
       />
