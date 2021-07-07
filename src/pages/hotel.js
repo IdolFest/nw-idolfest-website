@@ -5,7 +5,7 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from '@material-ui/styles'
-import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
+import { Container, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 
 const CenteredBox = styled(Box)({
   textAlign: 'center',
@@ -16,6 +16,20 @@ const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',
   width: '70%',
   paddingBottom: '1em'
+})
+
+const ResponsiveMap = styled(Container)({
+    overflow: 'hidden',
+    paddingBottom: '56.25%',
+    position: 'relative',
+    height: '0',
+    '& iframe': {
+      left: '0',
+      top: '0',
+      height: '100%',
+      width: '100%',
+      position: 'absolute'
+    }
 })
 
 function createData(roomType, price) {
@@ -76,7 +90,9 @@ const HotelPage = () => {
       
       </CenteredBox>
       <CenteredBox>
-        <iframe title="Hotel map" width="600" height="450" style={{ border: 0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK3JMX6dckFQR7lXNagC5B9Q&key=AIzaSyDk8pOuoUbrYKocNBn6QzLe9j-bUAx7GvA"></iframe>
+        <ResponsiveMap>
+          <iframe title="Hotel map" maxWidth="600" height="450" style={{ border: 0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK3JMX6dckFQR7lXNagC5B9Q&key=AIzaSyDk8pOuoUbrYKocNBn6QzLe9j-bUAx7GvA"></iframe>
+        </ResponsiveMap>
 
         <h2>How to Get Here</h2> 
       </CenteredBox>
