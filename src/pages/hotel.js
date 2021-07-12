@@ -14,7 +14,7 @@ const CenteredBox = styled(Box)({
 
 const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',
-  width: '70%',
+  //width: '70%',
   paddingBottom: '1em'
 })
 
@@ -62,7 +62,7 @@ const HotelPage = () => {
       <CenteredBox>
         <RoomRateTable>
           <Table aria-label="simple table">
-            <TableHead style={{}}>
+            <TableHead style={{ textTransform: 'uppercase' }}>
               <TableRow>
                 <TableCell>Room Type</TableCell>
                 <TableCell>Price Per Night<sup>†</sup></TableCell>

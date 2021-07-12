@@ -19,24 +19,25 @@ const HeroText = styled(Container)({
 export default function Hero({ header, body }) {
   return (
     <div style={{ display: 'grid', marginBottom: '1.5em' }}>
-      {/* You can use a GatsbyImage component if the image is dynamic */}
       <StaticImage
         style={{
           gridArea: '1/1',
-          height: '50vh',
+          maxHeight: '50vh'
         }}
         layout='fullWidth'
-        // You can optionally force an aspect ratio for the generated image
-        //aspectRatio={3 / 1}
+        aspectRatio={16 / 9}
         // This is a presentational image, so the alt should be an empty string
         alt=''
-        src='../images/idolfestSplash.png'
+        src='../images/heroimage.png'
         loading='eager'
         placeholder='blurred'
+        objectPosition='top left'
+        objectFit='none'
+        quality='100'
       />
       <HeroText
         style={{
-            // By using the same grid area for both, they are stacked on top of each other
+            // By using the same grid area for both, the image and text are stacked on top of each other
             gridArea: '1/1',
             position: 'relative',
         }}
