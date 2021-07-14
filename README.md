@@ -10,4 +10,4 @@ This is the repo for https://nwidolfest.com/. It runs off of Gatsby with a Mater
 
 ## Site Builds
 
-The site uses gh-pages to deploy. Simply do `npm run develop` to push a new build.
+The site uses gh-pages to deploy. Simply do `npm run deploy` to push a new build.
