@@ -5,12 +5,8 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from '@material-ui/styles'
-import { Container, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
-
-const CenteredBox = styled(Box)({
-  textAlign: 'center',
-  paddingBottom: '1em'
-})
+import { Container, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
+import CenteredBox from '@components/CenteredBox'
 
 const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',
