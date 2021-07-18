@@ -4,13 +4,22 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { Button, Box } from '@material-ui/core'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { TextField } from 'formik-material-ui'
+import { Formik, Form, Field } from 'formik'
+import { TextField, Select } from 'formik-material-ui'
 import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
-import CenteredBox from '@components/CenteredBox'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
+import MenuItem from '@material-ui/core/MenuItem'
+import InputLabel from '@material-ui/core/InputLabel'
+import FormControl from '@material-ui/core/FormControl'
+import FormHelperText from '@material-ui/core/FormHelperText'
+import { styled } from '@material-ui/styles'
+
+const FormBox = styled(Box)({
+  width: '80%',
+  paddingBottom: '1em'
+})
 
 const RegisterPage = () => {
   return (
@@ -27,6 +36,7 @@ const RegisterPage = () => {
       </p>
 
       <MuiPickersUtilsProvider utils={MomentUtils}>
+      <FormBox>
       <Formik
        initialValues={{ 
          fullName: '', 
@@ -56,30 +66,61 @@ const RegisterPage = () => {
         //props.myCallbackFunction(res);
       }}
      >
-       <CenteredBox>
+       
         <Form>
           <Box margin={1}>
-            <Field name="fullName" type="text" label="Full Name" component={TextField} />
+            <FormControl>
+              <InputLabel htmlFor="badgeType">Badge Type</InputLabel>
+              <Field
+                component={Select}
+                name="badgeType"
+                inputProps={{
+                  id: 'badgeType',
+                }}
+              >
+                <MenuItem value="attendee">Attendee</MenuItem>
+                <MenuItem value="sponsor">Sponsor</MenuItem>
+                <MenuItem value="superSponsor">Super Sponsor</MenuItem>
+              </Field>
+              <FormHelperText>Select your badge type. See above for what each comes with.</FormHelperText>
+            </FormControl>
+          </Box>
+
+          <Box margin={1}>
+            <Field name="fullName" type="text" label="Full Name" component={TextField} fullWidth={true} />
           </Box>
   
           <Box margin={1}>
-            <Field name="badgeName" type="text" label="Badge Name" component={TextField} /> 
+            <Field name="badgeName" type="text" label="Badge Name" component={TextField} fullWidth={true} /> 
           </Box>
     
           <Box margin={1}>
-            <Field name="email" type="email" label="Email" component={TextField} /> 
+            <Field name="email" type="email" label="Email" component={TextField} fullWidth={true} /> 
           </Box>
       
           <Box margin={1}>
-            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" />
+            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" fullWidth={true} />
+          </Box>
+
+          <Box margin={1}>
+            <Field name="zipCode" type="text" label="Zip Code" component={TextField} fullWidth={true} />
+          </Box>
+
+          <Box margin={1}>
+            <Field name="emergencyContactName" type="text" label="Emergency Contact Name" component={TextField} fullWidth={true} />
+          </Box>
+
+          <Box margin={1}>
+            <Field name="emergencyContactPhone" type="text" label="Emergency Contact Phone" component={TextField} fullWidth={true} />
           </Box>
   
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
           </Button>
         </Form>
-      </CenteredBox>
+      
     </Formik>
+    </FormBox>
     </MuiPickersUtilsProvider>
       
     </PageContent>
