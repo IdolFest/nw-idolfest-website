@@ -39,13 +39,14 @@ const RegisterPage = () => {
       <FormBox>
       <Formik
        initialValues={{ 
-          
+          // badgeType: '',
           fullName: '', 
-          badgeName: '', 
+          badgeName: '',
           email: '',
           dateOfBirth: new Date('2010', '07', '25')
         }}
        validationSchema={Yup.object({
+        //  badgeType: Yup.object().required(),
          fullName: Yup.string()
            .max(80, 'Must be 80 characters or less')
            .required('Required'),
@@ -53,8 +54,8 @@ const RegisterPage = () => {
          dateOfBirth: Yup.date().required('Required'),
        })}
        onSubmit={ async (values, { setSubmitting }) => {
-         console.log(values)
-        const res = await fetch(`https://uk4u1v0jp3.execute-api.us-east-2.amazonaws.com/default/nwif-reg1`, {
+          console.log(values)
+          const response = await fetch(`https://uk4u1v0jp3.execute-api.us-east-2.amazonaws.com/dev/foo`, {
             method: 'POST',
             // TODO: fix this
             mode: 'no-cors',
@@ -62,15 +63,41 @@ const RegisterPage = () => {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
-            }}).then(response => response.json());
-        console.log(res);
-        setSubmitting(false);
+            }});
+          if (!response.ok) {
+            console.log(response)
+            throw new Error(`HTTP error! status: ${response.status}`);
+          } else {
+            console.log(response)
+            setSubmitting(false)
+            window.location.replace('/payment?foobar')
+          }
         //props.myCallbackFunction(res);
       }}
      >
        
         <Form>
-          
+          {/* <Box margin={1}>
+            <FormControl>
+              <InputLabel htmlFor="badgeType">Badge Type</InputLabel>
+              <Field
+                component={Select}
+                name="badgeType"
+                inputProps={{
+                  id: 'badgeType',
+                }}
+                
+              >
+                <MenuItem value="" disabled>
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value="attendee">Attendee</MenuItem>
+                <MenuItem value="sponsor">Sponsor</MenuItem>
+                <MenuItem value="superSponsor">Super Sponsor</MenuItem>
+              </Field>
+              <FormHelperText>Select your badge type. See above for what each comes with.</FormHelperText>
+            </FormControl>
+          </Box> */}
 
           <Box margin={1}>
             <Field name="fullName" type="text" label="Full Name" component={TextField} fullWidth={true} />
@@ -85,7 +112,9 @@ const RegisterPage = () => {
           </Box>
       
           <Box margin={1}>
-            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" fullWidth={true} />
+            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" fullWidth={true}
+
+            />
           </Box>
 
           <Box margin={1}>
