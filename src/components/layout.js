@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
-import Header from '@components/Header'
+import Header from '@components/header'
 // import Footer from '@components/Footer'
 /*
 import LightDarkFab from '@components/LightDarkFab'
