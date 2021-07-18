@@ -39,10 +39,11 @@ const RegisterPage = () => {
       <FormBox>
       <Formik
        initialValues={{ 
-         fullName: '', 
-         badgeName: '', 
-         email: '',
-         dateOfBirth: new Date('2010', '07', '25')
+          
+          fullName: '', 
+          badgeName: '', 
+          email: '',
+          dateOfBirth: new Date('2010', '07', '25')
         }}
        validationSchema={Yup.object({
          fullName: Yup.string()
@@ -52,6 +53,7 @@ const RegisterPage = () => {
          dateOfBirth: Yup.date().required('Required'),
        })}
        onSubmit={ async (values, { setSubmitting }) => {
+         console.log(values)
         const res = await fetch(`https://uk4u1v0jp3.execute-api.us-east-2.amazonaws.com/default/nwif-reg1`, {
             method: 'POST',
             // TODO: fix this
@@ -68,30 +70,14 @@ const RegisterPage = () => {
      >
        
         <Form>
-          <Box margin={1}>
-            <FormControl>
-              <InputLabel htmlFor="badgeType">Badge Type</InputLabel>
-              <Field
-                component={Select}
-                name="badgeType"
-                inputProps={{
-                  id: 'badgeType',
-                }}
-              >
-                <MenuItem value="attendee">Attendee</MenuItem>
-                <MenuItem value="sponsor">Sponsor</MenuItem>
-                <MenuItem value="superSponsor">Super Sponsor</MenuItem>
-              </Field>
-              <FormHelperText>Select your badge type. See above for what each comes with.</FormHelperText>
-            </FormControl>
-          </Box>
+          
 
           <Box margin={1}>
             <Field name="fullName" type="text" label="Full Name" component={TextField} fullWidth={true} />
           </Box>
   
           <Box margin={1}>
-            <Field name="badgeName" type="text" label="Badge Name" component={TextField} fullWidth={true} /> 
+            <Field name="badgeName" type="text" label="Badge Name (optional)" component={TextField} fullWidth={true} /> 
           </Box>
     
           <Box margin={1}>
