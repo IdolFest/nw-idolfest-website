@@ -23,22 +23,25 @@ const FormBox = styled(Box)({
 })
 
 const RegisterPage = () => {
-  const initialValues2 = { 
-    // badgeType: '',
-    fullName: '', 
-    badgeName: '',
-    email: '',
-    dateOfBirth: null // new Date('2010', '07', '25')
-  }  
-  const initialValues = { 
-    // badgeType: '',
-    fullName: 'Foo', 
-    badgeName: 'Bar',
-    email: 'test@test.com',
-    dateOfBirth: new Date('2010', '07', '25'),
-    zipCode: '01851',
-    emergencyContactName: 'Hewwo',
-    emergencyContactPhone: '234567890'
+  if (process.env.DEVELOPMENT) {
+    let initialValues = { 
+      // badgeType: '',
+      fullName: 'Foo', 
+      badgeName: 'Bar',
+      email: 'test@test.com',
+      dateOfBirth: new Date('2010', '07', '25'),
+      zipCode: '01851',
+      emergencyContactName: 'Hewwo',
+      emergencyContactPhone: '234567890'
+    }
+  } else {
+    let initialValues = { 
+      // badgeType: '',
+      fullName: '', 
+      badgeName: '',
+      email: '',
+      dateOfBirth: null // new Date('2010', '07', '25')
+    } 
   }
 
   return (
