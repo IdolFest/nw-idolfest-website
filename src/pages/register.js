@@ -23,8 +23,9 @@ const FormBox = styled(Box)({
 })
 
 const RegisterPage = () => {
-  if (process.env.DEVELOPMENT) {
-    let initialValues = { 
+  let initialValues = {}
+  if (process.env.NODE_ENV == 'development') {
+    initialValues = { 
       // badgeType: '',
       fullName: 'Foo', 
       badgeName: 'Bar',
@@ -35,7 +36,7 @@ const RegisterPage = () => {
       emergencyContactPhone: '234567890'
     }
   } else {
-    let initialValues = { 
+    initialValues = { 
       // badgeType: '',
       fullName: '', 
       badgeName: '',
