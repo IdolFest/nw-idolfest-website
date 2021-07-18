@@ -4,8 +4,9 @@ This is the repo for https://nwidolfest.com/. It runs off of Gatsby with a Mater
 
 ## Set Up
 
-1. Have a working node/npm dev environment.
+1. Have a working node/npm dev environment with node >= 12
 1. `npm install`
+1. `npm install -g gatsby-cli`
 1. `gatsby develop`
 
 ## Site Builds
