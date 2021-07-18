@@ -32,7 +32,7 @@ const RegisterPage = () => {
          fullName: '', 
          badgeName: '', 
          email: '',
-         dateOfBirth: ''
+         dateOfBirth: new Date('2010', '07', '25')
         }}
        validationSchema={Yup.object({
          fullName: Yup.string()
@@ -46,6 +46,7 @@ const RegisterPage = () => {
             method: 'POST',
             // TODO: fix this
             mode: 'no-cors',
+            body: JSON.stringify(values),
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
@@ -70,7 +71,7 @@ const RegisterPage = () => {
           </Box>
       
           <Box margin={1}>
-            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} /> 
+            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" />
           </Box>
   
           <Button variant="contained" className="cta" type="submit">
