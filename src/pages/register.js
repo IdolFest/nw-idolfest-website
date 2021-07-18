@@ -43,7 +43,7 @@ const RegisterPage = () => {
           fullName: '', 
           badgeName: '',
           email: '',
-          dateOfBirth: new Date('2010', '07', '25')
+          dateOfBirth: null // new Date('2010', '07', '25')
         }}
        validationSchema={Yup.object({
         //  badgeType: Yup.object().required(),
@@ -58,15 +58,15 @@ const RegisterPage = () => {
           const response = await fetch(`https://uk4u1v0jp3.execute-api.us-east-2.amazonaws.com/dev/foo`, {
             method: 'POST',
             // TODO: fix this
-            mode: 'no-cors',
+            mode: 'cors',
             body: JSON.stringify(values),
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
-            }});
+            }})
           if (!response.ok) {
             console.log(response)
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`)
           } else {
             console.log(response)
             setSubmitting(false)
@@ -111,8 +111,17 @@ const RegisterPage = () => {
             <Field name="email" type="email" label="Email" component={TextField} fullWidth={true} /> 
           </Box>
       
+          {/* format="MMM D, YYYY" */}
+          {/* placeholder="2010/07/25" */}
           <Box margin={1}>
-            <Field name="dateOfBirth" label="Date of Birth" component={KeyboardDatePicker} format="MMM D, YYYY" openTo="year" fullWidth={true}
+            <Field 
+              name="dateOfBirth" 
+              label="Date of Birth" 
+              component={KeyboardDatePicker} 
+              format="yyyy/mm/D"
+              openTo="year"
+              fullWidth={true}
+              placeholder="yyyy/mm/dd"
 
             />
           </Box>
