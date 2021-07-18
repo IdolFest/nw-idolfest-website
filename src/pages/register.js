@@ -15,6 +15,7 @@ import InputLabel from '@material-ui/core/InputLabel'
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import { styled } from '@material-ui/styles'
+import { navigate } from 'gatsby'
 
 const FormBox = styled(Box)({
   width: '80%',
@@ -67,24 +68,24 @@ const RegisterPage = () => {
        })}
        onSubmit={ async (values, { setSubmitting }) => {
           console.log(values)
-          const response = await fetch(`https://uk4u1v0jp3.execute-api.us-east-2.amazonaws.com/dev/foo`, {
+          const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
             method: 'POST',
-            // TODO: fix this
             mode: 'cors',
             body: JSON.stringify(values),
             headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            }})
+                'Content-Type': 'application/json'
+          }})
           if (!response.ok) {
-            console.log(response)
+            //console.log(response)
+            alert('Sorry, something went wrong. Please try resubmitting your registration.')
             throw new Error(`HTTP error! status: ${response.status}`)
           } else {
-            console.log(response)
+            //console.log(response)
             setSubmitting(false)
-            window.location.replace('/payment?foobar')
+            response.text().then(data => 
+              navigate(`/payment?${data}`)
+            )
           }
-        //props.myCallbackFunction(res);
       }}
      >
        
