@@ -4,7 +4,13 @@ import { makeStyles } from '@material-ui/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Header from '@components/header'
-// import Footer from '@components/Footer'
+import Footer from '@components/footer'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { far } from "@fortawesome/free-regular-svg-icons"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+
+library.add(fab, fas, far)
 /*
 import LightDarkFab from '@components/LightDarkFab'
 
@@ -38,9 +44,9 @@ const Layout = ({ children }) => {
               <Grid item color="primary" className={classes.content}>    
                 <main>{children}</main>
               </Grid>
-              {/* <Grid item xs={12}>
+              <Grid item xs={12}>
                 <Footer />
-              </Grid> */}
+              </Grid>
               {/* <Fab key="darkMode" /> */}
           </Grid>
         </Box>
