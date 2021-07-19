@@ -22,6 +22,16 @@ const FormBox = styled(Box)({
   paddingBottom: '1em'
 })
 
+/*
+To add:
+
+* spirit badge tier that asks for full shipping address
+* Discord username (with help text saying "We'll use this to give you special role")
+* Name to credit on website (conditional for sponsor/super sponsor)
+* Newsletter opt-in
+* Text saying "You'll be able to add a t-shirt to your registration on the next page"
+*/
+
 const RegisterPage = () => {
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
