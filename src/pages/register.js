@@ -24,7 +24,7 @@ const FormBox = styled(Box)({
 
 const RegisterPage = () => {
   let initialValues = {}
-  if (process.env.NODE_ENV == 'development') {
+  if (process.env.NODE_ENV === 'development') {
     initialValues = { 
       // badgeType: '',
       fullName: 'Foo', 
@@ -41,7 +41,7 @@ const RegisterPage = () => {
       fullName: '', 
       badgeName: '',
       email: '',
-      dateOfBirth: null // new Date('2010', '07', '25')
+      dateOfBirth: null
     } 
   }
 
