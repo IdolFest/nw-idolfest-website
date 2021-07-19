@@ -9,9 +9,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import LogoUrl from '@components/LogoUrl'
 
 function Seo({ description, lang, meta, title, imageUrl, imageAlt }) {
-  const { site, ogImageDefault } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -25,23 +26,11 @@ function Seo({ description, lang, meta, title, imageUrl, imageAlt }) {
             siteUrl
           }
         }
-        ogImageDefault: file(relativePath: {eq: "icon/Icon-Pink.png"}) { 
-          childImageSharp {
-            fixed(height: 260, width: 260) {
-              src
-            }
-          }
-        }
       }
     `
   )
 
-  const constructUrl = (baseUrl, path) =>
-  (!baseUrl || !path) ? null : `${baseUrl}${path}`
-  
-  const defaultImageUrl = constructUrl(site.siteMetadata.siteUrl, ogImageDefault?.childImageSharp?.fixed?.src)
-
-  const ogImageUrl = imageUrl || defaultImageUrl; 
+  const ogImageUrl = imageUrl || LogoUrl(); 
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
