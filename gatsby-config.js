@@ -9,8 +9,24 @@ module.exports = {
     description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Nov 13-14, 2021.`,
     author: `The NW IdolFest Team`,
     social: {
-      twitter: '@NWIdolFest'
-    }
+      twitter: '@NWIdolFest',
+      facebook: 'NWIdolFest',
+      instagram: 'NWIdolFest'
+    },
+    badgeTiers: [
+      { 
+        tierName: 'Attendee',
+        tierPrice: '$30'
+      },
+      {
+        tierName: 'Sponsor',
+        tierPrice: '$70'
+      },
+      {
+        tierName: 'Super Sponsor',
+        tierPrice: '$350'
+      }
+    ],
   },
   plugins: [
     `nw-idolfest-theme`,
