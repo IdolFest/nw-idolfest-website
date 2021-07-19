@@ -67,10 +67,18 @@ export default class PaymentForm extends Component {
   }
 
   componentDidMount() {
+    let applicationId = ''
+    let locationId = ''
+
+    if (process.env.NODE_ENV === 'development') {
+      applicationId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA'
+      locationId = 'LKWP27DQ486HS'
+    }
+
     const config = {
     //TODO: set based on env
-      applicationId: "sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA",
-      locationId: "GMT96A77XABR1",
+      applicationId: applicationId,
+      locationId: locationId,
       inputClass: "sq-input",
       autoBuild: false,
       inputStyles: [
