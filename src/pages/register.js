@@ -22,11 +22,21 @@ const FormBox = styled(Box)({
   paddingBottom: '1em'
 })
 
+/*
+To add:
+
+* spirit badge tier that asks for full shipping address
+* Discord username (with help text saying "We'll use this to give you special role")
+* Name to credit on website (conditional for sponsor/super sponsor)
+* Newsletter opt-in
+* Text saying "You'll be able to add a t-shirt to your registration on the next page"
+*/
+
 const RegisterPage = () => {
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
     initialValues = { 
-      // badgeType: '',
+      badgeType: '',
       fullName: 'Foo', 
       badgeName: 'Bar',
       email: 'test@test.com',
@@ -37,7 +47,7 @@ const RegisterPage = () => {
     }
   } else {
     initialValues = { 
-      // badgeType: '',
+      badgeType: '',
       fullName: '', 
       badgeName: '',
       email: '',
@@ -63,10 +73,12 @@ const RegisterPage = () => {
       <Formik
        initialValues={initialValues}
        validationSchema={Yup.object({
-        //  badgeType: Yup.object().required(),
+         badgeType: Yup.string().required('This field is required.'),
          fullName: Yup.string()
            .max(80, 'Must be 80 characters or less')
            .required('Required'),
+          badgeName: Yup.string()
+           .max(30, 'Must be 30 characters or less'),
          email: Yup.string().email('Invalid email address').required('Required'),
          dateOfBirth: Yup.date().required('Required'),
        })}
@@ -94,34 +106,35 @@ const RegisterPage = () => {
      >
        
         <Form>
-          {/* <Box margin={1}>
+          <Box margin={1}>
             <FormControl>
               <InputLabel htmlFor="badgeType">Badge Type</InputLabel>
               <Field
                 component={Select}
-                name="badgeType"
+                name='badgeType'
                 inputProps={{
+                  //name: 'badgeType',
                   id: 'badgeType',
                 }}
-                
+                aria-describedby='badgeTypeHelperText'
               >
-                <MenuItem value="" disabled>
+                {/* <MenuItem value="" key="" disabled>
                   <em>None</em>
-                </MenuItem>
-                <MenuItem value="attendee">Attendee</MenuItem>
-                <MenuItem value="sponsor">Sponsor</MenuItem>
-                <MenuItem value="superSponsor">Super Sponsor</MenuItem>
+                </MenuItem> */}
+                <MenuItem value="attendee" key="attendee">Attendee</MenuItem>
+                <MenuItem value="sponsor" key="sponsor">Sponsor</MenuItem>
+                <MenuItem value="superSponsor" key="superSponsor">Super Sponsor</MenuItem>
               </Field>
-              <FormHelperText>Select your badge type. See above for what each comes with.</FormHelperText>
+              <FormHelperText id='badgeTypeHelperText'>Select your badge type. See above for what each comes with.</FormHelperText>
             </FormControl>
-          </Box> */}
+          </Box>
 
           <Box margin={1}>
             <Field name="fullName" type="text" label="Full Name" component={TextField} fullWidth={true} />
           </Box>
   
           <Box margin={1}>
-            <Field name="badgeName" type="text" label="Badge Name (optional)" component={TextField} fullWidth={true} /> 
+            <Field name="badgeName" type="text" label="Fandom Name (optional)" component={TextField} fullWidth={true} />
           </Box>
     
           <Box margin={1}>

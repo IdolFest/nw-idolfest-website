@@ -81,6 +81,9 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
 					backgroundColor: DARK_PINK,
 					padding: '1em',
 					marginTop: '1em',
+				},
+				footer: {
+					color: isDark ? BLACK : WHITE,
 				}
             },
 		},
