@@ -49,6 +49,13 @@ async function initializeGooglePay(payments) {
     return googlePay;
 }
 
+async function initializeApplePay(payments) {
+    const paymentRequest = buildPaymentRequest(payments);
+    const applePay = await payments.applePay(paymentRequest);
+    // Note: You do not need to `attach` applePay.
+    return applePay;
+}
+
 async function createPayment(token) {
     const body = JSON.stringify({
         locationId,
@@ -132,12 +139,20 @@ export default class PaymentForm extends Component {
             return;
         }
 
-        let googlePay;
         try {
-            googlePay = await initializeGooglePay(payments);
+            this.googlePay = await initializeGooglePay(payments);
         } catch (e) {
             console.error('Initializing Google Pay failed', e);
             // There are a number of reason why Google Pay may not be supported
+            // (e.g. Browser Support, Device Support, Account). Therefore you should handle
+            // initialization failures, while still loading other applicable payment methods.
+        }
+
+        try {
+            this.applePay = await initializeApplePay(payments);
+        } catch (e) {
+            console.error('Initializing Apple Pay failed', e);
+            // There are a number of reason why Apple Pay may not be supported
             // (e.g. Browser Support, Device Support, Account). Therefore you should handle
             // initialization failures, while still loading other applicable payment methods.
         }
@@ -167,10 +182,17 @@ export default class PaymentForm extends Component {
         });
 
         // Checkpoint 2.
-        if (googlePay) {
+        if (this.googlePay) {
             const googlePayButton = document.getElementById('google-pay-button');
             googlePayButton.addEventListener('click', async function (event) {
-                await handlePaymentMethodSubmission(event, googlePay);
+                await handlePaymentMethodSubmission(event, this.googlePay);
+            });
+        }
+
+        if (this.applePay) {
+            const applePayButton = document.getElementById('apple-pay-button');
+            applePayButton.addEventListener('click', async function (event) {
+                await handlePaymentMethodSubmission(event, this.applePay);
             });
         }
     }
@@ -181,6 +203,7 @@ export default class PaymentForm extends Component {
             <div>
                 <form id="payment-form">
                 <div id="google-pay-button"></div>
+                <div id="apple-pay-button"></div>
                 <div id="card-container"></div>
                 <button id="card-button" type="button">Pay $1.00</button>
                 </form>
