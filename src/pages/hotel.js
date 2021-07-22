@@ -81,9 +81,9 @@ const HotelPage = () => {
           <sup>†</sup>Taxes and fees not included in price.
         </div>
         <Button variant="contained" className="cta">
-          Booking link coming soon!
+            <a href='https://book.passkey.com/go/IDF21'>Book online</a>
         </Button>
-      
+        <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group name "NW IdolFest".</div>
       </CenteredBox>
       <CenteredBox>
         <ResponsiveMap>
