@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/styles' // useTheme
 import React, { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
+import Grid from '@material-ui/core/Grid'
 
 const headersData = [
   {
@@ -93,11 +94,19 @@ export default function Header() {
   const displayDesktop = () => {
     return (
       <Toolbar className={classes.toolbar}>
-        <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>
-          {idolfestLogo}
-        </Link>
-        <div className={classes.dates}>Nov 13-14, 2021 | Seattle, WA</div>
-        <div>{getMenuButtons()}</div>
+        <Grid container direction='row' justify='flex-start' alignItems='center'>
+        <Grid item>
+          <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>
+            {idolfestLogo}
+          </Link>
+        </Grid>
+        <Grid item className={classes.dates}>
+          Nov 13-14, 2021 | Seattle, WA
+        </Grid>
+        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }}>
+          {getMenuButtons()}
+        </div>
+        </Grid>
       </Toolbar>
     );
   };
@@ -118,9 +127,10 @@ export default function Header() {
             "aria-haspopup": "true",
             onClick: handleDrawerOpen,
           }}
+          style={{ flex: '0' }}
         >
-          <MenuIcon />
-        </IconButton>
+        <MenuIcon />
+      </IconButton>
 
         <Drawer
           {...{
@@ -135,7 +145,7 @@ export default function Header() {
         <Link to="/" style={{ textDecoration: 'none', boxShadow: 'none', fontSize: '1.5em' }}>
           {idolfestLogo}
         </Link>
-        <div className={classes.dates}>
+        <div className={classes.dates} style={{ display: 'flex', flexDirection: 'column', marginLeft: 'auto', alignItems: 'flex-end' }}>
           <div>Nov 13-14, 2021</div>
           <div>Seattle, WA</div>
         </div>
@@ -175,7 +185,8 @@ export default function Header() {
   const getMenuButtons = () => {
     return headersData.map(({ label, href }) => {
       return (
-        <Button key={href}>
+        <Grid item key={href}>
+            <Button>
             <Link
               to={href} 
               style={{ 
@@ -186,7 +197,8 @@ export default function Header() {
             >
             {label}
           </Link>
-        </Button>
+          </Button>
+        </Grid>
       );
     });
   };
