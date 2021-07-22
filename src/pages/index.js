@@ -9,6 +9,7 @@ import { Formik, Form, Field } from 'formik'
 import { TextField } from 'formik-material-ui'
 import { Button, Box } from '@material-ui/core'
 import * as Yup from 'yup'
+import { Link } from 'gatsby'
 
 const IndexPage = () => {
   const [msg, setState] = useState(null)
@@ -27,7 +28,7 @@ const IndexPage = () => {
 
       <PageContent>
         <p>Northwest Idol Festival is a celebration of all things idol! Join us in Seattle on November 13-14, 2021 for two days of guests, concerts, panels, cosplay, and more. We are run by idol fans, for idol fans.</p>
-        <p>Ready to find out more? Join our email list below to get notified when badges and hotel rooms go on sale!</p>
+        <p>Ready to find out more? <Link to="/hotel">Book your hotel room today</Link>, and sign up for our email list below to find out when badges go on sale!</p>
         <Box>
           <Formik
             initialValues={{ email: '' }}
