@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  drawerPaper: {
+    background: theme.palette.pink
+  },
   drawerContainer: {
     padding: "20px 30px",
   },
@@ -60,6 +63,7 @@ const useStyles = makeStyles(theme => ({
       flex: 'unset',
       fontSize: 'smaller',
       textAlign: 'center',
+      alignItems: 'center'
     }
   }
 }))
@@ -133,6 +137,9 @@ export default function Header() {
       </IconButton>
 
         <Drawer
+          classes={{
+            paper: classes.drawerPaper
+          }}
           {...{
             anchor: "left",
             open: drawerOpen,
@@ -190,8 +197,6 @@ export default function Header() {
             <Link
               to={href} 
               style={{ 
-                textDecoration: 'none',
-                boxShadow: 'none',
                 fontSize: '1.5em'
               }}
             >

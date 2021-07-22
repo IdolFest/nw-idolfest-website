@@ -77,10 +77,17 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
                     height: '100%',
                     backgroundColor: isDark ? BLACK : WHITE,
 				},
+				'button a': {
+					textDecoration: 'none !important',
+					boxShadow: 'none !important'
+				},
 				'button.cta': {
 					backgroundColor: DARK_PINK,
 					padding: '1em',
 					marginTop: '1em',
+				},
+				'button.cta:hover': {
+					backgroundColor: LIGHT_PINK,
 				},
 				footer: {
 					color: isDark ? BLACK : WHITE,
