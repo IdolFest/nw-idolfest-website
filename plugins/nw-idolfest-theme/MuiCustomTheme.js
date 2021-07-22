@@ -23,7 +23,7 @@ const headerFont = `"Junegull", serif`;
 const mySans = `"Open Sans", "Source Sans Pro", sans-serif`;
 const BLACK = '#000000'
 const WHITE = '#ffffff'
-const LIGHT_PINK = 'f4a5d2'
+const LIGHT_PINK = '#f4a5d2'
 const DARK_PINK = '#e83e9f'
 
 const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({

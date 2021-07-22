@@ -84,7 +84,7 @@ export default function Footer() {
                     {footerSocial(`https://instagram.com/${socialSites.instagram}`, 'instagram')}
                     <Grid item className='copyright'>
                         <Typography>
-                            &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank'>Nijiiro Events LLC</a>
+                            &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank' rel='noreferrer'>Nijiiro Events LLC</a>
                         </Typography>
                     </Grid>
                 </Grid>
