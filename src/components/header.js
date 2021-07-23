@@ -4,31 +4,41 @@ import {
   Button,
   IconButton,
   Drawer,
+  Menu,
+  MenuItem,
+  Grid
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import { makeStyles } from '@material-ui/styles' // useTheme
 import React, { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
-import Grid from '@material-ui/core/Grid'
 
 const headersData = [
-  {
-    label: "About",
-    href: "/about",
-  },
   // {
-  //   label: "Events & Guests",
-  //   href: "/events",
+  //   label: "Register",
+  //   href: "/register",
   // },
   {
     label: "Hotel",
     href: "/hotel",
   },
   // {
-  //   label: "Register",
-  //   href: "/register",
+  //   label: "Events",
+  //   href: "/events",
   // },
+  // {
+  //   label: "Guests",
+  //   href: "/guests",
+  // },
+  // {
+  //   label: "Artist Alley",
+  //   href: "/artistAlley",
+  // },
+  {
+    label: "About",
+    href: "/about",
+  },
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -75,9 +85,20 @@ export default function Header() {
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
+    anchorEl: null
   });
 
-  const { mobileView, drawerOpen } = state;
+  const handleClick = (event) => {
+    setState({ anchorEl: event.currentTarget })
+  };
+
+  const handleClose = () => {
+    setState({ anchorEl: null })
+  };
+
+  const { mobileView, drawerOpen } = state
+
+  const useDropdown = false
 
   useEffect(() => {
     const setResponsiveness = () => {
@@ -108,7 +129,7 @@ export default function Header() {
           Nov 13-14, 2021 | Seattle, WA
         </Grid>
         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }}>
-          {getMenuButtons()}
+          { useDropdown ? getMenuButtonsDropdown(handleClick, handleClose, state) : getMenuButtons() }
         </div>
         </Grid>
       </Toolbar>
@@ -190,9 +211,39 @@ export default function Header() {
   );
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href }) => {
+      return headersData.map(({ label, href }) => {
+        return (
+          <Grid item key={href}>
+            <Button>
+              <Link
+                to={href} 
+                style={{ 
+                  fontSize: '1.5em'
+                }}
+                >
+                {label}
+              </Link>
+            </Button>
+          </Grid>
+        );
+    })
+  };
+
+  const getMenuButtonsDropdown = (handleClick, handleClose, state) => {
       return (
-        <Grid item key={href}>
+      <Grid item>
+        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+          Open Menu
+        </Button>
+        <Menu
+          anchorEl={state.anchorEl}
+          keepMounted
+          open={Boolean(state.anchorEl)}
+          onClose={handleClose}
+        >
+          {headersData.map(({ label, href }) => {
+            return (
+              <MenuItem onClick={handleClose}>
             <Button>
             <Link
               to={href} 
@@ -203,9 +254,12 @@ export default function Header() {
             {label}
           </Link>
           </Button>
+              </MenuItem>
+            );
+          })}
+        </Menu>
         </Grid>
-      );
-    });
+    )
   };
 
   return (
