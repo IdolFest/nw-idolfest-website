@@ -4,7 +4,7 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { Button, Box } from '@material-ui/core'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { TextField, Select } from 'formik-material-ui'
 import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
@@ -71,40 +71,48 @@ const RegisterPage = () => {
       <MuiPickersUtilsProvider utils={MomentUtils}>
       <FormBox>
       <Formik
-       initialValues={initialValues}
-       validationSchema={Yup.object({
-         badgeType: Yup.string().required('This field is required.'),
-         fullName: Yup.string()
-           .max(80, 'Must be 80 characters or less')
-           .required('Required'),
+        initialValues={initialValues}
+        validationSchema={Yup.object({
+          badgeType: Yup.string()
+            .matches(/(attendee|sponsor|superSponsor)/)
+            .required('Required'),
+          fullName: Yup.string()
+            .max(80, 'Must be 80 characters or less')
+            .required('Required'),
           badgeName: Yup.string()
-           .max(30, 'Must be 30 characters or less'),
-         email: Yup.string().email('Invalid email address').required('Required'),
-         dateOfBirth: Yup.date().required('Required'),
-       })}
-       onSubmit={ async (values, { setSubmitting }) => {
-          console.log(values)
-          const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
-            method: 'POST',
-            mode: 'cors',
-            body: JSON.stringify(values),
-            headers: {
-                'Content-Type': 'application/json'
-          }})
-          if (!response.ok) {
-            //console.log(response)
-            alert('Sorry, something went wrong. Please try resubmitting your registration.')
-            throw new Error(`HTTP error! status: ${response.status}`)
-          } else {
-            //console.log(response)
-            setSubmitting(false)
-            response.text().then(data => 
-              navigate(`/payment?${data}`)
-            )
+            .max(30, 'Must be 30 characters or less'),
+          email: Yup.string().email('Invalid email address').required('Required'),
+          dateOfBirth: Yup.date().required('Required'),
+        })}
+        validate={values => {
+          const errors = {}
+          if (!values.badgeType) {
+            errors.badgeType = 'Required'
           }
-      }}
-     >
-       
+          return errors
+        }}
+        onSubmit={ async (values, { setSubmitting }) => {
+            console.log(values)
+            const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
+              method: 'POST',
+              mode: 'cors',
+              body: JSON.stringify(values),
+              headers: {
+                  'Content-Type': 'application/json'
+            }})
+            if (!response.ok) {
+              //console.log(response)
+              alert('Sorry, something went wrong. Please try resubmitting your registration.')
+              throw new Error(`HTTP error! status: ${response.status}`)
+            } else {
+              //console.log(response)
+              setSubmitting(false)
+              response.text().then(data => 
+                navigate(`/payment?${data}`)
+              )
+            }
+        }}
+      >
         <Form>
           <Box margin={1}>
             <FormControl>
@@ -117,6 +125,7 @@ const RegisterPage = () => {
                   id: 'badgeType',
                 }}
                 aria-describedby='badgeTypeHelperText'
+                fullWidth={true}
               >
                 {/* <MenuItem value="" key="" disabled>
                   <em>None</em>
@@ -126,6 +135,7 @@ const RegisterPage = () => {
                 <MenuItem value="superSponsor" key="superSponsor">Super Sponsor</MenuItem>
               </Field>
               <FormHelperText id='badgeTypeHelperText'>Select your badge type. See above for what each comes with.</FormHelperText>
+              <div style={{ width: '100%', color: 'red' }}><ErrorMessage name='badgeType' /></div>
             </FormControl>
           </Box>
 
@@ -167,12 +177,11 @@ const RegisterPage = () => {
           <Box margin={1}>
             <Field name="emergencyContactPhone" type="text" label="Emergency Contact Phone" component={TextField} fullWidth={true} />
           </Box>
-  
+
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
           </Button>
         </Form>
-      
     </Formik>
     </FormBox>
     </MuiPickersUtilsProvider>
