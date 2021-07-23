@@ -53,7 +53,7 @@ const HotelPage = () => {
         alt=''
       />
       <p>
-        Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. The hotel is easily accessible by complimentary shuttle from SeaTac Airport, or by light rail from downtown Seattle.
+          Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
       </p>
       <CenteredBox>
         <RoomRateTable>
@@ -98,12 +98,12 @@ const HotelPage = () => {
       <p>From the light rail station, go down the stairs or elevator and cross 176th Street. Follow 176th for 0.6 of a mile, and the DoubleTree will be on your left. You can also cross the skybridge from the light rail station and take the complimentary shuttle.</p>
 
       <h3>Sea-Tac Airport</h3>
-      <p>Head to the shuttle pick up area. The shuttle to the DoubleTree Hotel Seattle Airport comes every 15 minutes during the day. Flag down the driver of the shuttle that you need. To see when the next shuttle will be arriving, call (206) 246-8600.</p> 
+        <p>Complimentary shuttles to the DoubleTree Hotel Seattle Airport leave every 15 minutes during the day. Call (207) 246-8600 to check when the next shuttle will be available.</p>
 
-      <p>Be sure to get on the shuttle for the DoubleTree Hotel Seattle Airport, and not the one for the DoubleTree Suites by Hilton Hotel Seattle Airport – Southcenter. Yes, there are two DoubleTree shuttles. Both will say DoubleTree on the side (the O is a giant cookie!), and will both have the location they are going. If you’re not sure if it’s the right shuttle, feel free to flag down the driver and ask.</p>
+        <p>There are two DoubleTree shuttles available at the hotel. Make sure to get on the one bound for DoubleTree Hotel Seattle Airport. Do NOT get on the shuttle for DoubleTree Suites by Hilton Hotel Seattle Airport - Southcenter. That is a different hotel. If you are unsure about the destination of the shuttle you are boarding, please confirm with the driver.</p>
       
       <h3>Driving</h3>
-      <p>Take I-5 to exit 152. Follow 188th St and it will take you right by the hotel.</p>
+      <p>Take I-5 to exit 152 and follow 188th St. The DoubleTree is located on the corner of 188th St. and Pacific Hwy.</p>
     </PageContent>
   </Layout>
 )}

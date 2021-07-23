@@ -14,10 +14,10 @@ const AboutPage = () => (
 
     <PageContent>
       <p>
-        Northwest IdolFest is a passion project founded by long-time idol fans and event organizers. Our goal is to create an event space where friends can gather to celebrate the unique fulfillment we all share as we watch our favorite girls perform on stage.
+        Northwest IdolFest is a passion project founded by experienced event organizers. Our goal is to create an event space where idol fans of all types can gather and share in the unique joy that idols bring to our lives. Whether you’re a long-time wota or just getting into the scene, NWIF has a place for you!
       </p>
       <p>
-        We want to offer a place for fans to meet other fans, see major community figures and VIP guests, listen to live music, and of course, buy and trade merch! We hope to grow into an event that can bring you live guests from overseas. With your help, we can do it together! We love idols!
+        Though our beginnings may be humble, our love for idols knows no bounds. With your help and under the guidance of our dedicated team, we hope to grow into an event that can bring you live guests from overseas. We aim to become the premiere US convention for the idol community!
       </p>
 
       <h2>The Chair</h2>
@@ -31,7 +31,7 @@ const AboutPage = () => (
       </p>
 
       <h2>The Staff</h2>
-      <p>Our staff is made up of experienced convention runners from all backgrounds and professions. As the premiere US convention for idol content, we want to work for and with other idol fans to bring the best possible experience to the Pacific Northwest. Though we are starting small, we have the talent and experience to grow into something special!</p>
+      <p>Our staff is made up of veteran convention runners from all backgrounds and professions. We operate under a policy of transparency and long-term planning to bring the best possible experience to the Pacific Northwest.</p>
     </PageContent>
   </Layout>
 )
