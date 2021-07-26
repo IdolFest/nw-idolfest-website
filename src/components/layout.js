@@ -44,9 +44,7 @@ const Layout = ({ children }) => {
               <Grid item color="primary" className={classes.content}>    
                 <main>{children}</main>
               </Grid>
-              <Grid item xs={12}>
-                <Footer />
-              </Grid>
+              <Footer />
               {/* <Fab key="darkMode" /> */}
           </Grid>
         </Box>
