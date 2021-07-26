@@ -57,6 +57,12 @@ const nwIdolfestTheme = isDark => responsiveFontSizes(createMuiTheme({
 		}
     },
     overrides: {
+		MuiPickersCalendarHeader: {
+			// fix display on reg page
+			iconButton: {
+				flex: 1
+			}
+		},
         MuiCssBaseline: {
             '@global': {
 				'@font-face': [mySans],
