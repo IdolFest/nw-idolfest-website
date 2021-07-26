@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 
 export default function LogoUrl() {
     const { site, ogImageDefault } = useStaticQuery(

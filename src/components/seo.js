@@ -8,7 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 import LogoUrl from '@components/LogoUrl'
 
 function Seo({ description, lang, meta, title, imageUrl, imageAlt }) {
