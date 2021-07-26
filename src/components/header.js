@@ -31,13 +31,23 @@ const headersData = [
   //   label: "Guests",
   //   href: "/guests",
   // },
-  // {
-  //   label: "Artist Alley",
-  //   href: "/artistAlley",
-  // },
+  {
+    label: "Artist Alley",
+    href: "/artistalley",
+  },
   {
     label: "About",
     href: "/about",
+    children: [
+    {
+      label: "The Team",
+      href: "/about"
+    },
+    {
+      label: "Contact",
+      href: "/contact"
+    }
+    ]
   },
 ];
 
@@ -85,20 +95,21 @@ export default function Header() {
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
-    anchorEl: null
+    anchorEl: null,
+    open: false,
   });
 
   const handleClick = (event) => {
-    setState({ anchorEl: event.currentTarget })
+    setState({ open: true, anchorEl: event.currentTarget })
   };
 
   const handleClose = () => {
-    setState({ anchorEl: null })
+    setState({ open: false, anchorEl: null })
   };
 
   const { mobileView, drawerOpen } = state
 
-  const useDropdown = false
+  const useDropdown = true
 
   useEffect(() => {
     const setResponsiveness = () => {
@@ -182,22 +193,78 @@ export default function Header() {
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
-      return (
-        <Link
-          to={href}
-          key={href}
-          style= {{ 
-            fontSize: '1.5em',
-            display: 'block',
-            padding: '.75em'
-          }}
-        >
-          {label}
-        </Link>
-      );
-    });
-  };
+    return headersData.map(({ label, href, children }) => {
+        return (
+          <>
+          { children ? 
+            <> 
+            { children.map(({ label, href }) => {
+              return (
+                <Link
+                  to={href}
+                  key={href}
+                  style={{
+                    fontSize: '1.5em',
+                    display: 'block',
+                    padding: '.75em'
+                  }}
+                >
+                  {label}
+                </Link>
+              )
+            })}
+            </>
+          : 
+            <Link
+              to={href}
+              key={href}
+              style={{
+                fontSize: '1.5em',
+                display: 'block',
+                padding: '.75em'
+              }}
+            >
+              {label}
+            </Link>
+          }
+          </>
+        )
+      })
+  }
+/*
+  const getDrawerChoices = () => {
+    return headersData.map(({ label, href, children }) => {
+      { children ?
+          { children.map(({ label, href }) => {
+            return (<Link
+              to={href}
+              key={href}
+              style={{
+                fontSize: '1.5em',
+                display: 'block',
+                padding: '.75em'
+              }}
+            >
+              {label}
+            </Link>)
+          })}
+          :
+          <Link
+            to={href}
+            key={href}
+            style= {{ 
+              fontSize: '1.5em',
+              display: 'block',
+              padding: '.75em'
+            }}
+          >
+            {label}
+          </Link>
+        }
+      )
+    })
+  }
+  */
 
   const idolfestLogo = (
     <StaticImage
@@ -230,37 +297,59 @@ export default function Header() {
   };
 
   const getMenuButtonsDropdown = (handleClick, handleClose, state) => {
-      return (
-      <Grid item>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-          Open Menu
-        </Button>
-        <Menu
-          anchorEl={state.anchorEl}
-          keepMounted
-          open={Boolean(state.anchorEl)}
-          onClose={handleClose}
-        >
-          {headersData.map(({ label, href }) => {
-            return (
-              <MenuItem onClick={handleClose}>
+      return headersData.map(({ label, href, children }) => {
+        return (
+        <Grid item key={label}>
+          { children ? 
+                <>
+                <Button aria-controls="simple-menu" aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state.open ? `idolfest-menu-${label}` : null}>
+                  <div style={{
+                    fontSize: '1.5em'
+                  }}>{label}</div>
+                </Button>
+                <Menu
+                  anchorEl={state.anchorEl}
+                  keepMounted
+                  open={state.open}
+                  onClose={handleClose}
+                  onRequestClose={handleClose}
+                  id={`idolfest-menu-${label}`}
+                  MenuListProps={{ onMouseLeave: handleClose }}
+                >
+                  {children.map(({ label, href }) => {
+                    return (
+                      <MenuItem onClick={handleClose}>
+                        <Button>
+                          <Link
+                            to={href} 
+                            style={{ 
+                              fontSize: '1.5em'
+                            }}
+                          >
+                            {label}
+                          </Link>
+                        </Button>
+                      </MenuItem>
+                    );
+                  })}
+                </Menu>
+                </>
+            :
             <Button>
-            <Link
-              to={href} 
-              style={{ 
-                fontSize: '1.5em'
-              }}
-            >
-            {label}
-          </Link>
-          </Button>
-              </MenuItem>
-            );
-          })}
-        </Menu>
-        </Grid>
-    )
-  };
+              <Link
+                to={href}
+                style={{
+                  fontSize: '1.5em'
+                }}
+              >
+                {label}
+              </Link>
+            </Button>
+          }
+          </Grid>
+      )
+    })
+}
 
   return (
     <header>
