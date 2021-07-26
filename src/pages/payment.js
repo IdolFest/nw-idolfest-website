@@ -3,8 +3,7 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
-//import PaymentForm, { loadSquareSdk } from '@components/paymentForm'
-import PaymentForm, { loadSquareSdk } from '@components/newPaymentForm'
+import PaymentForm, { loadSquareSdk } from '@components/paymentForm'
 
 const PaymentPage = ({ location }) => {
   const [squareStatus, setSquareStatus] = useState(null)

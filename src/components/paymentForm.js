@@ -1,287 +1,214 @@
-/* eslint-disable */
 import React, { Component } from "react"
-import "../../static/payments.css"
+import "./paymentForm.css"
 
-const styles = {
-  name: {
-    verticalAlign: "top",
-    display: "none",
-    margin: 0,
-    border: "none",
-    fontSize: "16px",
-    fontFamily: "Helvetica Neue",
-    padding: "16px",
-    color: "#373F4A",
-    backgroundColor: "transparent",
-    lineHeight: "1.15em",
-    placeholderColor: "#000",
-    _webkitFontSmoothing: "antialiased",
-    _mozOsxFontSmoothing: "grayscale",
-  },
-  leftCenter: {
-    float: "left",
-    textAlign: "center",
-  },
-  blockRight: {
-    display: "block",
-    float: "right",
-  },
-  center: {
-    textAlign: "center",
-  },
-}
+const appId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA';
+const locationId = 'LKWP27DQ486HS';
 
 export const loadSquareSdk = () => {
-  return new Promise((resolve, reject) => {
-    const sqPaymentScript = document.createElement("script")
-    if (process.env.DEVELOPMENT) {
-        sqPaymentScript.src = "https://js.squareupsandbox.com/v2/paymentform"
+    return new Promise((resolve, reject) => {
+        const sqPaymentScript = document.createElement("script")
+        if (process.env.NODE_ENV === 'development') {
+            sqPaymentScript.src = "https://sandbox.web.squarecdn.com/v1/square.js"
+        } else {
+            sqPaymentScript.src = "https://web.squarecdn.com/v1/square.js"
+        }
+        sqPaymentScript.crossorigin = "anonymous"
+        sqPaymentScript.onload = () => {
+            resolve()
+        }
+        sqPaymentScript.onerror = () => {
+            reject(`Failed to load ${sqPaymentScript.src}`)
+        }
+        document.getElementsByTagName("head")[0].appendChild(sqPaymentScript)
+    })
+}
+
+async function initializeCard(payments) {
+    const card = await payments.card();
+    await card.attach('#card-container');
+
+    return card;
+}
+
+function buildPaymentRequest(payments) {
+    return payments.paymentRequest({
+        countryCode: 'US',
+        currencyCode: 'USD',
+        total: {
+            amount: '1.00',
+            label: 'Total',
+        },
+    });
+}
+
+async function initializeGooglePay(payments) {
+    const paymentRequest = buildPaymentRequest(payments);
+    const googlePay = await payments.googlePay(paymentRequest);
+    await googlePay.attach('#google-pay-button');
+
+    return googlePay;
+}
+
+async function initializeApplePay(payments) {
+    const paymentRequest = buildPaymentRequest(payments);
+    const applePay = await payments.applePay(paymentRequest);
+    // Note: You do not need to `attach` applePay.
+    return applePay;
+}
+
+async function createPayment(token) {
+    const body = JSON.stringify({
+        locationId,
+        sourceId: token,
+    });
+
+    const paymentResponse = await fetch('/payment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body,
+    });
+
+    if (paymentResponse.ok) {
+        return paymentResponse.json();
+    }
+
+    const errorBody = await paymentResponse.text();
+    throw new Error(errorBody);
+}
+
+async function tokenize(paymentMethod) {
+    const tokenResult = await paymentMethod.tokenize();
+    if (tokenResult.status === 'OK') {
+        return tokenResult.token;
     } else {
-        sqPaymentScript.src = "https://js.squareup.com/v2/paymentform"
+        let errorMessage = `Tokenization failed with status: ${tokenResult.status}`;
+        if (tokenResult.errors) {
+            errorMessage += ` and errors: ${JSON.stringify(
+                tokenResult.errors
+            )}`;
+        }
+
+        throw new Error(errorMessage);
     }
-    sqPaymentScript.crossorigin = "anonymous"
-    sqPaymentScript.onload = () => {
-      resolve()
+}
+
+// status is either SUCCESS or FAILURE;
+function displayPaymentResults(status) {
+    const statusContainer = document.getElementById(
+        'payment-status-container'
+    );
+    if (status === 'SUCCESS') {
+        statusContainer.classList.remove('is-failure');
+        statusContainer.classList.add('is-success');
+    } else {
+        statusContainer.classList.remove('is-success');
+        statusContainer.classList.add('is-failure');
     }
-    sqPaymentScript.onerror = () => {
-      reject(`Failed to load ${sqPaymentScript.src}`)
-    }
-    document.getElementsByTagName("head")[0].appendChild(sqPaymentScript)
-  })
+
+    statusContainer.style.visibility = 'visible';
 }
 
 export default class PaymentForm extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      cardBrand: "",
-      nonce: undefined,
-      googlePay: false,
-      applePay: false,
-      masterpass: false,
+    async componentDidMount() {
+        console.log(appId, locationId)
+        if (!window.Square) {
+            throw new Error('Square.js failed to load properly');
+        }
+
+        let payments;
+        try {
+            console.log(window.Square.payments(appId, locationId))
+            payments = window.Square.payments(appId, locationId);
+            console.log(payments)
+        } catch {
+            const statusContainer = document.getElementById(
+                'payment-status-container'
+            );
+            statusContainer.className = 'missing-credentials';
+            statusContainer.style.visibility = 'visible';
+            return;
+        }
+
+        let card;
+        try {
+            card = await initializeCard(payments);
+        } catch (e) {
+            console.error('Initializing Card failed', e);
+            return;
+        }
+
+        try {
+            this.googlePay = await initializeGooglePay(payments);
+        } catch (e) {
+            console.error('Initializing Google Pay failed', e);
+            // There are a number of reason why Google Pay may not be supported
+            // (e.g. Browser Support, Device Support, Account). Therefore you should handle
+            // initialization failures, while still loading other applicable payment methods.
+        }
+
+        try {
+            this.applePay = await initializeApplePay(payments);
+        } catch (e) {
+            console.error('Initializing Apple Pay failed', e);
+            // There are a number of reason why Apple Pay may not be supported
+            // (e.g. Browser Support, Device Support, Account). Therefore you should handle
+            // initialization failures, while still loading other applicable payment methods.
+        }
+
+        async function handlePaymentMethodSubmission(event, paymentMethod) {
+            event.preventDefault();
+
+            try {
+                // disable the submit button as we await tokenization and make a payment request.
+                cardButton.disabled = true;
+                const token = await tokenize(paymentMethod);
+                const paymentResults = await createPayment(token);
+                displayPaymentResults('SUCCESS');
+
+                console.debug('Payment Success', paymentResults);
+            } catch (e) {
+                cardButton.disabled = false;
+                displayPaymentResults('FAILURE');
+                console.error(e.message);
+            }
+        }
+
+        const cardButton = document.getElementById('card-button');
+        cardButton.addEventListener('click', async function (event) {
+            event.preventDefault()
+            await handlePaymentMethodSubmission(event, card);
+        });
+
+        // Checkpoint 2.
+        if (this.googlePay) {
+            const googlePayButton = document.getElementById('google-pay-button');
+            googlePayButton.addEventListener('click', async function (event) {
+                await handlePaymentMethodSubmission(event, this.googlePay);
+            });
+        }
+
+        if (this.applePay) {
+            const applePayButton = document.getElementById('apple-pay-button');
+            applePayButton.addEventListener('click', async function (event) {
+                await handlePaymentMethodSubmission(event, this.applePay);
+            });
+        }
     }
-    this.requestCardNonce = this.requestCardNonce.bind(this)
-  }
 
-  requestCardNonce() {
-    this.paymentForm.requestCardNonce()
-  }
-
-  componentDidMount() {
-    let applicationId = ''
-    let locationId = ''
-
-    if (process.env.NODE_ENV === 'development') {
-      applicationId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA'
-      locationId = 'LKWP27DQ486HS'
-    }
-
-    const config = {
-    //TODO: set based on env
-      applicationId: applicationId,
-      locationId: locationId,
-      inputClass: "sq-input",
-      autoBuild: false,
-      inputStyles: [
-        {
-          fontSize: "16px",
-          fontFamily: "Helvetica Neue",
-          padding: "16px",
-          color: "#373F4A",
-          backgroundColor: "transparent",
-          lineHeight: "1.15em",
-          placeholderColor: "#000",
-          _webkitFontSmoothing: "antialiased",
-          _mozOsxFontSmoothing: "grayscale",
-        },
-      ],
-      applePay: {
-        elementId: "sq-apple-pay",
-      },
-      masterpass: {
-        elementId: "sq-masterpass",
-      },
-      googlePay: {
-        elementId: "sq-google-pay",
-      },
-      cardNumber: {
-        elementId: "sq-card-number",
-        placeholder: "• • • •  • • • •  • • • •  • • • •",
-      },
-      cvv: {
-        elementId: "sq-cvv",
-        placeholder: "CVV",
-      },
-      expirationDate: {
-        elementId: "sq-expiration-date",
-        placeholder: "MM/YY",
-      },
-      postalCode: {
-        elementId: "sq-postal-code",
-        placeholder: "Zip",
-      },
-      callbacks: {
-        methodsSupported: methods => {
-          console.log(methods)
-          if (methods.googlePay) {
-            this.setState({
-              googlePay: methods.googlePay,
-            })
-          }
-          if (methods.applePay) {
-            this.setState({
-              applePay: methods.applePay,
-            })
-          }
-          if (methods.masterpass) {
-            this.setState({
-              masterpass: methods.masterpass,
-            })
-          }
-          return
-        },
-        createPaymentRequest: () => {
-          return {
-            requestShippingAddress: false,
-            requestBillingInfo: true,
-            currencyCode: "USD",
-            countryCode: "US",
-            total: {
-              label: "MERCHANT NAME",
-              amount: "100",
-              pending: false,
-            },
-            lineItems: [
-              {
-                label: "Subtotal",
-                amount: "100",
-                pending: false,
-              },
-            ],
-          }
-        },
-        cardNonceResponseReceived: (errors, nonce, cardData) => {
-          if (errors) {
-            // Log errors from nonce generation to the JavaScript console
-            console.log("Encountered errors:")
-            errors.forEach(function (error) {
-              console.log("  " + error.message)
-            })
-            return
-          }
-          this.setState({
-            nonce: nonce,
-          })
-          console.log(nonce)
-        },
-        unsupportedBrowserDetected: () => {},
-        inputEventReceived: inputEvent => {
-          switch (inputEvent.eventType) {
-            case "focusClassAdded":
-              break
-            case "focusClassRemoved":
-              break
-            case "errorClassAdded":
-              document.getElementById("error").innerHTML =
-                "Please fix card information errors before continuing."
-              break
-            case "errorClassRemoved":
-              document.getElementById("error").style.display = "none"
-              break
-            case "cardBrandChanged":
-              if (inputEvent.cardBrand !== "unknown") {
-                this.setState({
-                  cardBrand: inputEvent.cardBrand,
-                })
-              } else {
-                this.setState({
-                  cardBrand: "",
-                })
-              }
-              break
-            case "postalCodeChanged":
-              break
-            default:
-              break
-          }
-        },
-        paymentFormLoaded: function () {
-          document.getElementById("name").style.display = "inline-flex"
-        },
-      },
-    }
-    this.paymentForm = new this.props.paymentForm(config)
-    this.paymentForm.build()
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <div id="form-container">
-          <div id="sq-walletbox">
-            <button
-              style={{ display: this.state.applePay ? "inherit" : "none" }}
-              className="wallet-button"
-              id="sq-apple-pay"
-            />
-            <button
-              style={{ display: this.state.masterpass ? "block" : "none" }}
-              className="wallet-button"
-              id="sq-masterpass"
-            />
-            <button
-              style={{ display: this.state.googlePay ? "inherit" : "none" }}
-              className="wallet-button"
-              id="sq-google-pay"
-            />
-            <hr />
-          </div>
-
-          <div id="sq-ccbox">
-            <p>
-              <span style={styles.leftCenter}>Enter Card Info Below </span>
-              <span style={styles.blockRight}>
-                {this.state.cardBrand.toUpperCase()}
-              </span>
-            </p>
-            <div id="cc-field-wrapper">
-              <label>
-                Card Number
-                <div id="sq-card-number" />
-              </label>
-              <input type="hidden" id="card-nonce" name="nonce" />
-              <label>
-                Expiration Date
-                <div id="sq-expiration-date" />
-              </label>
-              <label>
-                CVV
-                <div id="sq-cvv" />
-              </label>
+    
+    render() {
+        return (
+            <div>
+                <form id="payment-form">
+                <div id="google-pay-button"></div>
+                <div id="apple-pay-button"></div>
+                <div id="card-container"></div>
+                <button id="card-button" type="button">Pay $1.00</button>
+                </form>
+                <div id="payment-status-container"></div>
             </div>
-            <label>
-              Name
-              <input
-                id="name"
-                style={styles.name}
-                type="text"
-                placeholder="Name"
-              />
-            </label>
-            <label>
-              Postal Code
-              <div id="sq-postal-code" />
-            </label>
-          </div>
-          <button
-            className="button-credit-card"
-            onClick={this.requestCardNonce}
-          >
-            Pay
-          </button>
-        </div>
-        <p style={styles.center} id="error" />
-      </div>
-    )
-  }
-}
+        )
+    }
+} 
