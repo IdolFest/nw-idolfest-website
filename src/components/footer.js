@@ -3,7 +3,7 @@ import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { createSocialIcon } from '@components/socialIcon'
 import { useStaticQuery, graphql } from 'gatsby'
 // import LogoUrl from '@components/LogoUrl'
 // import { StaticImage } from 'gatsby-plugin-image'
@@ -35,12 +35,10 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-function footerSocial(url, siteName) {
+function wrapFooterSocial(children) {
     return (
         <Grid item className='social'>
-            <a href={url} target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={['fab', siteName]} size="5x" />
-            </a>
+            {children}
         </Grid>
     )
 }
@@ -80,10 +78,10 @@ export default function Footer() {
                             src='../images/icon/Icon-Pink.png'
                         />
                     </Grid> */}
-                    {footerSocial(`https://facebook.com/${socialSites.facebook}`, 'facebook')}
-                    {footerSocial(`https://twitter.com/${socialSites.twitter}`, 'twitter')}
-                    {footerSocial(`https://instagram.com/${socialSites.instagram}`, 'instagram')}
-                    {footerSocial(`https://discord.gg/${socialSites.discord}`, 'discord')}
+                    {wrapFooterSocial(createSocialIcon(`https://facebook.com/${socialSites.facebook}`, 'facebook'))}
+                    {wrapFooterSocial(createSocialIcon(`https://twitter.com/${socialSites.twitter}`, 'twitter'))}
+                    {wrapFooterSocial(createSocialIcon(`https://instagram.com/${socialSites.instagram}`, 'instagram'))}
+                    {wrapFooterSocial(createSocialIcon(`https://discord.gg/${socialSites.discord}`, 'discord'))}
                     <Grid item className='copyright'>
                         <Typography>
                             &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank' rel='noreferrer'>Nijiiro Events LLC</a>
