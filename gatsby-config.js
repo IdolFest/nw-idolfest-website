@@ -11,7 +11,8 @@ module.exports = {
     social: {
       twitter: '@NWIdolFest',
       facebook: 'NWIdolFest',
-      instagram: 'NWIdolFest'
+      instagram: 'NWIdolFest',
+      discord: 'h5yJbXgTgE',
     },
     badgeTiers: [
       { 

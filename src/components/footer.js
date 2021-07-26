@@ -57,6 +57,7 @@ export default function Footer() {
                             facebook
                             twitter
                             instagram
+                            discord
                         }
                     }
                 }            
@@ -82,6 +83,7 @@ export default function Footer() {
                     {footerSocial(`https://facebook.com/${socialSites.facebook}`, 'facebook')}
                     {footerSocial(`https://twitter.com/${socialSites.twitter}`, 'twitter')}
                     {footerSocial(`https://instagram.com/${socialSites.instagram}`, 'instagram')}
+                    {footerSocial(`https://discord.gg/${socialSites.discord}`, 'discord')}
                     <Grid item className='copyright'>
                         <Typography>
                             &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank' rel='noreferrer'>Nijiiro Events LLC</a>
