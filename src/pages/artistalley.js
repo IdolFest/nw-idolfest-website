@@ -13,7 +13,8 @@ const ArtistAlleyPage = () => (
         />
 
         <PageContent>
-            <p>Our Artist Alley this year is by invitation only. Are you an interested artist? <a href="mailto:contact@nwidolfest.com">Get in touch</a>.</p>
+            <p>Due to space limitations, our Artist Alley this year will be by invitation only.</p> 
+            <p>Although there is no formal application process, we encourage interested artists to <a href='mailto:contact@nwidolfest.com' target='_blank' rel='noreferrer'>email us</a>.</p>
         </PageContent>
     </Layout>
 )

@@ -12,7 +12,8 @@ import MenuIcon from "@material-ui/icons/Menu"
 import { makeStyles } from '@material-ui/styles' // useTheme
 import React, { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const headersData = [
   // {
@@ -23,10 +24,10 @@ const headersData = [
     label: "Hotel",
     href: "/hotel",
   },
-  // {
-  //   label: "Events",
-  //   href: "/events",
-  // },
+  {
+    label: "Events",
+    href: "/events",
+  },
   // {
   //   label: "Guests",
   //   href: "/guests",
@@ -65,6 +66,9 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 0,
       paddingRight: 0
     },
+    '& .item': {
+      fontSize: '1.25em'
+    },
   },
   toolbar: {
     display: "flex",
@@ -75,6 +79,12 @@ const useStyles = makeStyles(theme => ({
   },
   drawerContainer: {
     padding: "20px 30px",
+    '& a': {
+      boxShadow: 'none',
+      fontSize: '1.5em',
+      display: 'block',
+      padding: '.75em'
+    }
   },
   dates: {
     flex: '1',
@@ -109,8 +119,6 @@ export default function Header() {
 
   const { mobileView, drawerOpen } = state
 
-  const useDropdown = true
-
   useEffect(() => {
     const setResponsiveness = () => {
       return window.innerWidth < 900
@@ -139,9 +147,9 @@ export default function Header() {
         <Grid item className={classes.dates}>
           Nov 13-14, 2021 | Seattle, WA
         </Grid>
-        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }}>
-          { useDropdown ? getMenuButtonsDropdown(handleClick, handleClose, state) : getMenuButtons() }
-        </div>
+        <header style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }} className={classes.item}>
+          { getMenuButtonsDropdown(handleClick, handleClose, state) }
+        </header>
         </Grid>
       </Toolbar>
     );
@@ -203,11 +211,6 @@ export default function Header() {
                 <Link
                   to={href}
                   key={href}
-                  style={{
-                    fontSize: '1.5em',
-                    display: 'block',
-                    padding: '.75em'
-                  }}
                 >
                   {label}
                 </Link>
@@ -218,11 +221,6 @@ export default function Header() {
             <Link
               to={href}
               key={href}
-              style={{
-                fontSize: '1.5em',
-                display: 'block',
-                padding: '.75em'
-              }}
             >
               {label}
             </Link>
@@ -231,40 +229,6 @@ export default function Header() {
         )
       })
   }
-/*
-  const getDrawerChoices = () => {
-    return headersData.map(({ label, href, children }) => {
-      { children ?
-          { children.map(({ label, href }) => {
-            return (<Link
-              to={href}
-              key={href}
-              style={{
-                fontSize: '1.5em',
-                display: 'block',
-                padding: '.75em'
-              }}
-            >
-              {label}
-            </Link>)
-          })}
-          :
-          <Link
-            to={href}
-            key={href}
-            style= {{ 
-              fontSize: '1.5em',
-              display: 'block',
-              padding: '.75em'
-            }}
-          >
-            {label}
-          </Link>
-        }
-      )
-    })
-  }
-  */
 
   const idolfestLogo = (
     <StaticImage
@@ -277,25 +241,6 @@ export default function Header() {
           />
   );
 
-  const getMenuButtons = () => {
-      return headersData.map(({ label, href }) => {
-        return (
-          <Grid item key={href}>
-            <Button>
-              <Link
-                to={href} 
-                style={{ 
-                  fontSize: '1.5em'
-                }}
-                >
-                {label}
-              </Link>
-            </Button>
-          </Grid>
-        );
-    })
-  };
-
   const getMenuButtonsDropdown = (handleClick, handleClose, state) => {
       return headersData.map(({ label, href, children }) => {
         return (
@@ -303,30 +248,32 @@ export default function Header() {
           { children ? 
                 <>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state.open ? `idolfest-menu-${label}` : null}>
-                  <div style={{
-                    fontSize: '1.5em'
-                  }}>{label}</div>
+                  <Link
+                    to={href}
+                  >
+                    {label}
+                  </Link>
+                  <FontAwesomeIcon icon={['fas', 'caret-down']} style={{ marginLeft: '10px' }} />
                 </Button>
                 <Menu
                   anchorEl={state.anchorEl}
+                  getContentAnchorEl={null}
                   keepMounted
                   open={state.open}
                   onClose={handleClose}
-                  onRequestClose={handleClose}
                   id={`idolfest-menu-${label}`}
                   MenuListProps={{ onMouseLeave: handleClose }}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+                  transformOrigin={{ vertical: "top", horizontal: "center" }}
                 >
-                  {children.map(({ label, href }) => {
+                  {children.map(({ label: childLabel, href: childHref }) => {
                     return (
-                      <MenuItem onClick={handleClose}>
+                      <MenuItem onClick={handleClose} key={childLabel}>
                         <Button>
                           <Link
-                            to={href} 
-                            style={{ 
-                              fontSize: '1.5em'
-                            }}
+                            to={childHref}
                           >
-                            {label}
+                            {childLabel}
                           </Link>
                         </Button>
                       </MenuItem>
@@ -338,9 +285,6 @@ export default function Header() {
             <Button>
               <Link
                 to={href}
-                style={{
-                  fontSize: '1.5em'
-                }}
               >
                 {label}
               </Link>

@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
             marginLeft: 'auto',
             textTransform: 'uppercase'
         },
-        '@media (max-width: 400px)': {
+        '@media (max-width: 450px)': {
             '& .copyright': {
                 marginLeft: '0',
             },
