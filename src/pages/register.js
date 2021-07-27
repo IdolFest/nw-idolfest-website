@@ -72,13 +72,13 @@ const RegisterPage = () => {
     <Seo title="Register" />
      
     <PageHeader 
-      title="Register" 
+      title="Attend" 
     />
 
     <PageContent>
         <Grid container alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
           <Grid item>
-            <RegistrationTier tierName='Silver' tierText='Attendee <strike>($45)</strike> ($30)'>
+            <RegistrationTier tierName='Silver' tierText='Attendee <strike>($40)</strike> ($30)'>
               <span>Early bird pricing available until Sept 12!</span>
               <ul>
                 <li>Access to all events at NWIF</li>
@@ -107,7 +107,7 @@ const RegisterPage = () => {
               <span>Everything in Gold, plus:</span>
               <ul>
                 <li>Prism-only badge and lanyard</li>
-                <li>Hotel room for 2 nights</li>
+                <li>King bed hotel room for 2 nights</li>
                 <li>Badge delivery to hotel room</li>
                 <li>Can badge set</li>
                 <li>Closing Ceremonies special thanks</li>
@@ -116,13 +116,15 @@ const RegisterPage = () => {
           </Grid>
       </Grid>
 
-      <Grid container style={{ paddingTop: '2em' }} alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
+      <Grid container style={{ paddingTop: '2em' }} alignItems='stretch' justify='space-evenly'>
         <Grid item>
           <RegistrationTier tierName='Whale' tierText='Whale ($???)'>
             <span>The most special tier of all! Email us for more info.</span>
           </RegistrationTier>
         </Grid>
       </Grid>
+
+      <h2>Register</h2>
 
       <MuiPickersUtilsProvider utils={MomentUtils}>
       <FormBox>
@@ -200,10 +202,10 @@ const RegisterPage = () => {
                 aria-describedby='badgeTypeHelperText'
                 fullWidth={true}
               >
-                <MenuItem value="spiritBadge" key="spiritBadge">Spirit Badge</MenuItem>
-                <MenuItem value="attendee" key="attendee">Attendee</MenuItem>
-                <MenuItem value="sponsor" key="sponsor">Sponsor</MenuItem>
-                <MenuItem value="superSponsor" key="superSponsor">Super Sponsor</MenuItem>
+                {/* <MenuItem value="spiritBadge" key="spiritBadge">Fallen Angel - </MenuItem> */}
+                <MenuItem value="attendee" key="attendee">Silver - Attendee ($30)</MenuItem>
+                <MenuItem value="sponsor" key="sponsor">Gold - Sponsor ($70)</MenuItem>
+                <MenuItem value="superSponsor" key="superSponsor">Prism - Super Sponsor ($450)</MenuItem>
               </Field>
               <FormHelperText id='badgeTypeHelperText'>Select your badge type. See above for what each comes with.</FormHelperText>
               <div style={{ width: '100%', color: 'red' }}><ErrorMessage name='badgeType' /></div>

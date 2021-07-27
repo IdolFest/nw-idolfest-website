@@ -109,7 +109,7 @@ export default function RegistrationTier({ tierName, tierText, children }) {
 }
 
 RegistrationTier.propTypes = {
-    imgName: PropTypes.string.isRequired,
-    header: PropTypes.string,
-    body: PropTypes.string, 
+    tierName: PropTypes.string.isRequired,
+    tierText: PropTypes.string,
+    children: PropTypes.node,
 }
