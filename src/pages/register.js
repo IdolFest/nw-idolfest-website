@@ -82,7 +82,6 @@ const RegisterPage = () => {
               <span>Early bird pricing available until Sept 12!</span>
               <ul>
                 <li>Access to all events at NWIF</li>
-                <li>Custom lanyard</li>
                 <li>Special surprise at registration</li>
               </ul>
             </RegistrationTier>
@@ -92,8 +91,8 @@ const RegisterPage = () => {
             <RegistrationTier tierName='Gold' tierText='Sponsor ($70)'>
               <span>Everything in Silver, plus:</span>
               <ul>
-                <li>Special badge</li>
-                <li>Gold Tier-only lanyard</li>
+                <li>Gold-only badge</li>
+                <li>Gold-only lanyard</li>
                 <li>Sticker pack</li>
                 <li>T-shirt</li>
               </ul>
@@ -104,15 +103,15 @@ const RegisterPage = () => {
             <RegistrationTier tierName='Prism' tierText='Super Sponsor ($450)'>
               <span>Everything in Gold, plus:</span>
               <ul>
-                <li>Special badge</li>
-                <li>Prism Tier-only lanyard</li>
+                <li>Prism-only badge</li>
+                <li>Prism-only lanyard</li>
                 <li>Hotel room for 2 nights</li>
               </ul>
             </RegistrationTier>
           </Grid>
       </Grid>
 
-      <Grid container style={{ paddingTop: '3em' }} alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
+      <Grid container style={{ paddingTop: '2em' }} alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
         <Grid item>
           <RegistrationTier tierName='Whale' tierText='Whale ($???)'>
             <span>The most special tier of all! Email us for more info.</span>

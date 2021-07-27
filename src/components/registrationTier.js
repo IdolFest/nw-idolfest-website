@@ -20,13 +20,21 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: '1.5em',
     },
   },
-  tierImage: {
+  tierTextImage: {
     maxHeight: '50px',
     height: '50px',
     '& img': {
       objectFit: 'contain !important'
     }
-  }
+  },
+  tierGemImage: {
+    maxHeight: '100px',
+    height: '100px',
+    paddingTop: '1em',
+    '& img': {
+      objectFit: 'contain !important'
+    }
+  },
 }))
 
 const HeroText = styled(Box)({
@@ -70,11 +78,9 @@ export default function RegistrationTier({ tierName, tierText, children }) {
   ).node.gatsbyImageData
 
   return (
-    <Grid container direction='column' style={{ maxWidth: '200px' }}>
+    <Grid container direction='column' style={{ maxWidth: '200px', paddingTop: '1em' }}>
       <GatsbyImage
-        styles={{
-          maxWidth: '100px'
-        }}
+        className={classes.tierGemImage}
         // This is a presentational image, so the alt should be an empty string
         alt=''
         image={gemImageData}
@@ -82,7 +88,7 @@ export default function RegistrationTier({ tierName, tierText, children }) {
         placeholder='blurred'
       />
       <GatsbyImage
-        className={classes.tierImage}
+        className={classes.tierTextImage}
         alt={tierName}
         image={tierTextImageData}
         loading='eager'
