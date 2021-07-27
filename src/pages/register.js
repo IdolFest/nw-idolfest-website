@@ -114,7 +114,7 @@ const RegisterPage = () => {
 
       <Grid container style={{ paddingTop: '3em' }} alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
         <Grid item>
-          <RegistrationTier tierName='Whale' tierText='Whale'>
+          <RegistrationTier tierName='Whale' tierText='Whale ($???)'>
             <span>The most special tier of all! Email us for more info.</span>
           </RegistrationTier>
         </Grid>
