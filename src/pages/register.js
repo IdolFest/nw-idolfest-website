@@ -107,8 +107,9 @@ const RegisterPage = () => {
               <span>Everything in Gold, plus:</span>
               <ul>
                 <li>Prism-only badge and lanyard</li>
-                <li>Skip badge pickup</li>
                 <li>Hotel room for 2 nights</li>
+                <li>Badge delivery to hotel room</li>
+                <li>Can badge set</li>
                 <li>Closing Ceremonies special thanks</li>
               </ul>
             </RegistrationTier>

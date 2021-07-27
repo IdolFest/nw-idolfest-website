@@ -15,10 +15,12 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     borderRadius: '10px',
     padding: '1em',
-    minHeight: '250px',
     '& ul': {
       paddingLeft: '1.5em',
     },
+  },
+  regularTierText: {
+    height: '290px'
   },
   tierTextImage: {
     maxHeight: '50px',
@@ -97,7 +99,11 @@ export default function RegistrationTier({ tierName, tierText, children }) {
       <HeroText>
         <span dangerouslySetInnerHTML={{ __html: tierText }}></span>
       </HeroText>
-      <Box className={classes.tierText}>{children}</Box>
+      { tierName === 'Whale' ? 
+        <Box className={classes.tierText}>{children}</Box>
+      : 
+        <Box className={`${classes.tierText} ${classes.regularTierText}`}>{children}</Box>
+      }
     </Grid>
   )
 }
