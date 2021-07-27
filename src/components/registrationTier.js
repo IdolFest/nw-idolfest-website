@@ -15,7 +15,10 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     borderRadius: '10px',
     padding: '1em',
-    height: '200px'
+    height: '200px',
+    '& ul': {
+      paddingLeft: '1.5em',
+    },
   },
   tierImage: {
     maxHeight: '50px',

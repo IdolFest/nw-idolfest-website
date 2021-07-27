@@ -76,42 +76,46 @@ const RegisterPage = () => {
     />
 
     <PageContent>
-      <p>
-        We're excited to welcome you to NW IdolFest this November! You can buy badges below.
-      </p>
-
         <Grid container alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
-        <Grid item>
-          <RegistrationTier tierName='Silver' tierText='Attendee Badge <strike>($45)</strike> ($30)'>
-            <span>Early bird pricing available until Sept 12!</span>
-            <ul>
-              <li>Access to all events at NWIF</li>
-              <li>Custom lanyard</li>
-              <li>Special surprise at registration</li>
-            </ul>
-          </RegistrationTier>
-        </Grid>
+          <Grid item>
+            <RegistrationTier tierName='Silver' tierText='Attendee <strike>($45)</strike> ($30)'>
+              <span>Early bird pricing available until Sept 12!</span>
+              <ul>
+                <li>Access to all events at NWIF</li>
+                <li>Custom lanyard</li>
+                <li>Special surprise at registration</li>
+              </ul>
+            </RegistrationTier>
+          </Grid>
 
-        <Grid item>
-          <RegistrationTier tierName='Gold' tierText='Sponsor Badge'>
-            <span>Everything in Silver, plus:</span>
-            <ul>
-              <li>Special badge</li>
-              <li>Gold Tier-only lanyard</li>
-              <li>Sticker pack</li>
-              <li>T-shirt</li>
-            </ul>
-          </RegistrationTier>
-        </Grid>
+          <Grid item>
+            <RegistrationTier tierName='Gold' tierText='Sponsor ($70)'>
+              <span>Everything in Silver, plus:</span>
+              <ul>
+                <li>Special badge</li>
+                <li>Gold Tier-only lanyard</li>
+                <li>Sticker pack</li>
+                <li>T-shirt</li>
+              </ul>
+            </RegistrationTier>
+          </Grid>
 
+          <Grid item>
+            <RegistrationTier tierName='Prism' tierText='Super Sponsor ($450)'>
+              <span>Everything in Gold, plus:</span>
+              <ul>
+                <li>Special badge</li>
+                <li>Prism Tier-only lanyard</li>
+                <li>Hotel room for 2 nights</li>
+              </ul>
+            </RegistrationTier>
+          </Grid>
+      </Grid>
+
+      <Grid container style={{ paddingTop: '3em' }} alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
         <Grid item>
-          <RegistrationTier tierName='Prism' tierText='Super Sponsor Badge'>
-            <span>Everything in Gold, plus:</span>
-            <ul>
-              <li>Special badge</li>
-              <li>Prism Tier-only lanyard</li>
-              <li>Hotel room for 2 nights</li>
-            </ul>
+          <RegistrationTier tierName='Whale' tierText='Whale'>
+            <span>The most special tier of all! Email us for more info.</span>
           </RegistrationTier>
         </Grid>
       </Grid>
