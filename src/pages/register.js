@@ -82,6 +82,7 @@ const RegisterPage = () => {
               <span>Early bird pricing available until Sept 12!</span>
               <ul>
                 <li>Access to all events at NWIF</li>
+                <li>NWIF Discord role</li>
                 <li>Special surprise at registration</li>
               </ul>
             </RegistrationTier>
@@ -91,10 +92,12 @@ const RegisterPage = () => {
             <RegistrationTier tierName='Gold' tierText='Sponsor ($70)'>
               <span>Everything in Silver, plus:</span>
               <ul>
-                <li>Gold-only badge</li>
-                <li>Gold-only lanyard</li>
+                <li>Gold-only badge and lanyard</li>
+                <li>Drawstring bag</li>
                 <li>Sticker pack</li>
                 <li>T-shirt</li>
+                <li>Priority seating</li>
+                <li>NWIF website special thanks</li>
               </ul>
             </RegistrationTier>
           </Grid>
@@ -103,9 +106,10 @@ const RegisterPage = () => {
             <RegistrationTier tierName='Prism' tierText='Super Sponsor ($450)'>
               <span>Everything in Gold, plus:</span>
               <ul>
-                <li>Prism-only badge</li>
-                <li>Prism-only lanyard</li>
+                <li>Prism-only badge and lanyard</li>
+                <li>Skip badge pickup</li>
                 <li>Hotel room for 2 nights</li>
+                <li>Closing Ceremonies special thanks</li>
               </ul>
             </RegistrationTier>
           </Grid>

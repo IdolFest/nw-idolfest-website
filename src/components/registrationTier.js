@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     borderRadius: '10px',
     padding: '1em',
-    height: '200px',
+    minHeight: '250px',
     '& ul': {
       paddingLeft: '1.5em',
     },
