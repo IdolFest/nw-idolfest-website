@@ -22,10 +22,19 @@ const useStyles = makeStyles(theme => ({
                     color: theme.palette.light_pink
                 }
             },
+            '& svg': {
+                color: 'white'
+            },
         },
         '& .copyright': {
             marginLeft: 'auto',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            '& a': {
+                color: 'white',
+                '& :hover': {
+                    color: theme.palette.light_pink
+                }
+            }
         },
         '@media (max-width: 450px)': {
             '& .copyright': {

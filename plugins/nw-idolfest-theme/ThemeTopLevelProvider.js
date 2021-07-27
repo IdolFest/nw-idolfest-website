@@ -61,7 +61,8 @@ function ThemeTopLevelProvider({ children, initTheme }) {
 	}, [])
 
 	return (
-		<MuiCustomTheme darkMode={mode === 'dark'}>
+		// <MuiCustomTheme darkMode={mode === 'dark'}>
+		<MuiCustomTheme darkMode={false}>
 			<LightDarkProvider theme={mode}
 				changeTheme={setTheme}
 				print={print}
