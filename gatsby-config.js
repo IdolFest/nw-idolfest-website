@@ -13,6 +13,7 @@ module.exports = {
       facebook: 'NWIdolFest',
       instagram: 'NWIdolFest',
       discord: 'h5yJbXgTgE',
+      email: 'contact@nwidolfest.com',
     },
     badgeTiers: [
       { 
