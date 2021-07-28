@@ -35,9 +35,12 @@ export default function Hero({ imgName, header, body }) {
     `)
 
   // Single Image Data
-  const imageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName === imgName
-  ).node.gatsbyImageData
+  const imageData = React.useMemo(() => {
+    if (!data) return
+    return data.allImageSharp.edges.find(
+        edge => edge.node.fluid.originalName === imgName
+    ).node.gatsbyImageData
+  }, [data])
 
   return (
     <div style={{ display: 'grid', marginBottom: '1.5em' }}>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ThemeTopLevelProvider from './ThemeTopLevelProvider';
 
 export const wrapRootElement = ({ element }) =>
-	<ThemeTopLevelProvider initTheme='dark'>
+	<ThemeTopLevelProvider initTheme='light'>
 		{element}
 	</ThemeTopLevelProvider>;
 
