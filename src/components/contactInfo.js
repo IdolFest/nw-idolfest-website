@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         '& ul': {
             listStyle: 'none'
         },
-        '& .social': {
+        '& li.social': {
             padding: '1em',
             fontSize: '.5em',
             '& svg': {
@@ -30,12 +30,13 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-function wrapContactSocial(socialIcon, socialName) {
+function wrapContactSocial(socialIcon, url) {
     return (
-        <li className='social'>
-            {socialIcon}
-            <span>{socialName}</span>
-        </li>
+        <a className='social' href={url} target='_blank' rel='noreferrer'>
+            <li className='social'>
+                {socialIcon}
+            </li>
+        </a>
     )
 }
 
@@ -64,11 +65,11 @@ export default function ContactInfo() {
     return (
         <div className={classes.contact}>
         <ul>
-            {wrapContactSocial(createSocialIcon(`mailto:${socialSites.email}`, 'envelope', 'Email', 'fas'))}
-            {wrapContactSocial(createSocialIcon(`https://discord.gg/${socialSites.discord}`, 'discord', 'Discord'))}
-            {wrapContactSocial(createSocialIcon(`https://facebook.com/${socialSites.facebook}`, 'facebook', 'Facebook'))}
-            {wrapContactSocial(createSocialIcon(`https://twitter.com/${socialSites.twitter}`, 'twitter', 'Twitter'))}
-            {wrapContactSocial(createSocialIcon(`https://instagram.com/${socialSites.instagram}`, 'instagram', 'Instagram'))}
+            {wrapContactSocial(createSocialIcon('envelope', 'Email', 'fas'), `mailto:${socialSites.email}`)}
+            {wrapContactSocial(createSocialIcon('discord', 'Discord'), `https://discord.gg/${socialSites.discord}`)}
+            {wrapContactSocial(createSocialIcon('facebook', 'Facebook'), `https://facebook.com/${socialSites.facebook}`)}
+            {wrapContactSocial(createSocialIcon('twitter', 'Twitter'), `https://twitter.com/${socialSites.twitter}`)}
+            {wrapContactSocial(createSocialIcon('instagram', 'Instagram'), `https://instagram.com/${socialSites.instagram}`)}
         </ul>
         </div>
     )

@@ -164,6 +164,13 @@ const GlobalStyles = withStyles(theme => {
 				position: 'relative',
 				paddingLeft: theme.spacing(2),
 				borderLeft: `0.2em solid ${modeColor}`
+			},
+			'a.social' : {
+				textDecoration: 'none',
+                boxShadow: 'none',
+                '& :hover': {
+                    color: theme.palette.light_pink
+                }
 			}
 		}
 	});

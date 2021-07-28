@@ -44,9 +44,9 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-function wrapFooterSocial(children) {
+function wrapFooterSocial(children, url) {
     return (
-        <Grid item className='social'>
+        <Grid component={'a'} className='social' href={url} target='_blank' rel='noreferrer' item className='social'>
             {children}
         </Grid>
     )
@@ -87,10 +87,10 @@ export default function Footer() {
                                 src='../images/icon/Icon-Pink.png'
                             />
                         </Grid> */}
-                        {wrapFooterSocial(createSocialIcon(`https://facebook.com/${socialSites.facebook}`, 'facebook'))}
-                        {wrapFooterSocial(createSocialIcon(`https://twitter.com/${socialSites.twitter}`, 'twitter'))}
-                        {wrapFooterSocial(createSocialIcon(`https://instagram.com/${socialSites.instagram}`, 'instagram'))}
-                        {wrapFooterSocial(createSocialIcon(`https://discord.gg/${socialSites.discord}`, 'discord'))}
+                        {wrapFooterSocial(createSocialIcon('facebook'), `https://facebook.com/${socialSites.facebook}`)}
+                        {wrapFooterSocial(createSocialIcon('twitter'), `https://twitter.com/${socialSites.twitter}`)}
+                        {wrapFooterSocial(createSocialIcon('instagram'), `https://instagram.com/${socialSites.instagram}`)}
+                        {wrapFooterSocial(createSocialIcon('discord'), `https://discord.gg/${socialSites.discord}`)}
                         <Grid item className='copyright'>
                             <Typography>
                                 &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank' rel='noreferrer'>Nijiiro Events LLC</a>
