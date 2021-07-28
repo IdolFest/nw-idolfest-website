@@ -37,13 +37,67 @@ To add:
 * Text saying "You'll be able to add a t-shirt to your registration on the next page"
 */
 
+const badgeTiers = [
+  // {
+  //   name: 'Spirit Badge',
+  //   price: '$15',
+  //   tierName: ''
+  // },
+  {
+    badgeName: 'Attendee',
+    price: '<strike>$40</strike> $30',
+    tierName: 'Silver',
+    description: 'Early bird pricing available until Sept 12!',
+    perks: [
+      'Access to all events at NWIF',
+      'NWIF Discord role',
+      'Special surprise at registration',
+    ]
+  },
+  {
+    badgeName: 'Sponsor',
+    price: '$75',
+    tierName: 'Gold',
+    description: 'Everything in Silver, plus:',
+    perks: [
+      'Gold-only badge and lanyard',
+      'Drawstring bag',
+      'Sticker pack',
+      'T-shirt',
+      'Priority seating',
+      'NWIF website special thanks',
+    ]
+  },
+  {
+    badgeName: 'Super Sponsor',
+    price: '$450',
+    tierName: 'Prism',
+    description: 'Everything in Gold, plus:',
+    perks: [
+      'Prism-only badge and lanyard',
+      'King bed hotel room for 2 nights',
+      'Badge delivery to hotel room',
+      'Can badge set',
+      'Closing Ceremonies special thanks',
+    ]
+  }
+]
+
+const whaleBadge = {
+  badgeName: 'Whale',
+  price: '???',
+  tierName: 'Whale',
+  description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
+  perks: []
+}
+
 const RegisterPage = () => {
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
     initialValues = { 
       badgeType: '',
       fullName: 'Foo', 
-      badgeName: 'Bar',
+      discordHandle: 'abcd#1234',
       email: 'test@test.com',
       dateOfBirth: new Date('2010', '07', '25'),
       zipCode: '01851',
@@ -52,14 +106,12 @@ const RegisterPage = () => {
       city: '',
       state: '',
       country: '',
-      // emergencyContactName: 'Hewwo',
-      // emergencyContactPhone: '234567890'
     }
   } else {
     initialValues = { 
       badgeType: '',
       fullName: '', 
-      badgeName: '',
+      discordHandle: '',
       email: '',
       dateOfBirth: null,
       emailSignup: true,
@@ -77,50 +129,16 @@ const RegisterPage = () => {
 
     <PageContent>
         <Grid container alignItems='stretch' justify='space-evenly' alignContent='space-evenly'>
-          <Grid item>
-            <RegistrationTier tierName='Silver' tierText='Attendee <strike>($40)</strike> ($30)'>
-              <span>Early bird pricing available until Sept 12!</span>
-              <ul>
-                <li>Access to all events at NWIF</li>
-                <li>NWIF Discord role</li>
-                <li>Special surprise at registration</li>
-              </ul>
-            </RegistrationTier>
-          </Grid>
-
-          <Grid item>
-            <RegistrationTier tierName='Gold' tierText='Sponsor ($70)'>
-              <span>Everything in Silver, plus:</span>
-              <ul>
-                <li>Gold-only badge and lanyard</li>
-                <li>Drawstring bag</li>
-                <li>Sticker pack</li>
-                <li>T-shirt</li>
-                <li>Priority seating</li>
-                <li>NWIF website special thanks</li>
-              </ul>
-            </RegistrationTier>
-          </Grid>
-
-          <Grid item>
-            <RegistrationTier tierName='Prism' tierText='Super Sponsor ($450)'>
-              <span>Everything in Gold, plus:</span>
-              <ul>
-                <li>Prism-only badge and lanyard</li>
-                <li>King bed hotel room for 2 nights</li>
-                <li>Badge delivery to hotel room</li>
-                <li>Can badge set</li>
-                <li>Closing Ceremonies special thanks</li>
-              </ul>
-            </RegistrationTier>
-          </Grid>
+            {badgeTiers.map((badge) => (
+              <Grid item>
+                <RegistrationTier badge={badge} />
+              </Grid>
+            ))}
       </Grid>
 
       <Grid container style={{ paddingTop: '2em' }} alignItems='stretch' justify='space-evenly'>
         <Grid item>
-          <RegistrationTier tierName='Whale' tierText='Whale ($???)'>
-            <span>The most special tier of all! Email us for more info.</span>
-          </RegistrationTier>
+          <RegistrationTier badge={whaleBadge} />
         </Grid>
       </Grid>
 
@@ -139,6 +157,7 @@ const RegisterPage = () => {
             .required('Required'),
           badgeName: Yup.string()
             .max(30, 'Must be 30 characters or less'),
+          discordHandle: Yup.string().matches(/^.+#\d{4}$/, 'Please provide your full handle, including tag.'),
           email: Yup.string().email('Invalid email address').required('Required'),
           dateOfBirth: Yup.date().nullable().required('Required'),
           address1: Yup.string()
@@ -158,14 +177,6 @@ const RegisterPage = () => {
             }),
           country: Yup.string().required('Required'),
         })}
-        // validate={values => {
-        //   const errors = {}
-        //   if (!values.badgeType) {
-        //     errors.badgeType = 'Required'
-        //   }
-        //   console.log(values, errors)
-        //   return errors
-        // }}
         onSubmit={ async (values, { setSubmitting }) => {
             console.log(values)
             const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
@@ -202,10 +213,14 @@ const RegisterPage = () => {
                 aria-describedby='badgeTypeHelperText'
                 fullWidth={true}
               >
-                {/* <MenuItem value="spiritBadge" key="spiritBadge">Fallen Angel - </MenuItem> */}
-                <MenuItem value="attendee" key="attendee">Silver - Attendee ($30)</MenuItem>
-                <MenuItem value="sponsor" key="sponsor">Gold - Sponsor ($70)</MenuItem>
-                <MenuItem value="superSponsor" key="superSponsor">Prism - Super Sponsor ($450)</MenuItem>
+                {badgeTiers.map((badge) => (
+                  <MenuItem 
+                    value={badge.badgeName.toLowerCase().split(" ").join("_")} 
+                    key={badge.badgeName.toLowerCase().split(" ").join("_")}>
+                    <span dangerouslySetInnerHTML={{ __html: 
+                      badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price})` : badge.name }} />
+                  </MenuItem>
+                ))}
               </Field>
               <FormHelperText id='badgeTypeHelperText'>Select your badge type. See above for what each comes with.</FormHelperText>
               <div style={{ width: '100%', color: 'red' }}><ErrorMessage name='badgeType' /></div>
@@ -215,9 +230,10 @@ const RegisterPage = () => {
           <Box margin={1}>
             <Field name="fullName" type="text" label="* Full Name" component={TextField} fullWidth={true} />
           </Box>
-  
+
           <Box margin={1}>
-            <Field name="badgeName" type="text" label="Fandom Name" component={TextField} fullWidth={true} />
+            <Field name="discordHandle" type="text" label="Discord Handle (optional)" component={TextField} fullWidth={true} aria-describedby='discordHandleHelperText' />
+            <FormHelperText id='discordHandleHelperText'>If you provide your Discord handle and join our server, we'll give you a special role!</FormHelperText>
           </Box>
     
           <Box margin={1}>
@@ -289,8 +305,6 @@ const RegisterPage = () => {
             />
           </Box>
 
-          {/* {values, errors, touched, status, isSubmitting, isValidating, submitCount, initialValues, initialErrors, initialTouched, initialStatus, handleBlur, handleChange, handleReset, handleSubmit, resetForm, setErrors, setFormikState, setFieldTouched, setFieldValue, setFieldError, setStatus, setSubmitting, setTouched, setValues, submitForm, validateForm, validateField, isValid, dirty, unregisterField, registerField, getFieldProps, getFieldMeta, getFieldHelpers, validateOnBlur, validateOnChange, validateOnMount} */}
-          {/* {Object.keys(props.errors).map(item => (<p key={item}>{item}</p>))} */}
           {props.submitCount > 0 && !props.isValid ? <div style={{ color: 'red' }}>Please fix errors.</div> : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
           <Button variant="contained" className="cta" type="submit">

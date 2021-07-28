@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const useStyles = makeStyles(theme => ({
-  tierText: {
+  tierHeading: {
     color: 'black',
     backgroundColor: theme.palette.light_pink,
     alignSelf: 'center',
@@ -49,8 +49,14 @@ const HeroText = styled(Box)({
   }
 })
 
-export default function RegistrationTier({ tierName, tierText, children }) {
+export default function RegistrationTier({ badge }) {
   const classes = useStyles()
+
+  console.log(badge)
+  const { badgeName, price, tierName, description, perks } = badge
+
+  console.log(badgeName, price, tierName, description, perks)
+  const tierHeading = `${badgeName} - ${price}`
   
   const data = useStaticQuery(
     graphql`
@@ -97,12 +103,23 @@ export default function RegistrationTier({ tierName, tierText, children }) {
         placeholder='blurred'
       />
       <HeroText>
-        <span dangerouslySetInnerHTML={{ __html: tierText }}></span>
+        <span dangerouslySetInnerHTML={{ __html: tierHeading }}></span>
       </HeroText>
       { tierName === 'Whale' ? 
-        <Box className={classes.tierText}>{children}</Box>
+        <Box className={classes.tierHeading}>
+          <span dangerouslySetInnerHTML={{ __html: description}} />
+        </Box>
       : 
-        <Box className={`${classes.tierText} ${classes.regularTierText}`}>{children}</Box>
+        <Box className={`${classes.tierHeading} ${classes.regularTierText}`}>
+          <span>{description}</span>
+          <ul>
+            {perks.map((perk) => (
+              <li>{perk}</li>
+            ))}
+
+          </ul>
+
+        </Box>
       }
     </Grid>
   )
