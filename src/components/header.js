@@ -276,13 +276,13 @@ export default function Header() {
   const getDrawerChoices = useMemo(() => {
     return headersData.map(({ label, href, children }) => {
       return (
-        <>
+        <React.Fragment key={`${href}`}>
           {children ? (
             <>
-              {children.map(({ label, href }) => {
+              {children.map(({ label: childLabel, href: childHref }) => {
                 return (
-                  <Link to={href} key={href}>
-                    {label}
+                  <Link to={childHref} key={childHref}>
+                    {childLabel}
                   </Link>
                 )
               })}
@@ -292,7 +292,7 @@ export default function Header() {
               {label}
             </Link>
           )}
-        </>
+        </React.Fragment>
       )
     })
   }, [])
