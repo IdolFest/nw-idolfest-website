@@ -14,7 +14,7 @@ const EventsPage = () => (
         />
 
         <PageContent>
-            <p>IdolFest has two dedicated panel rooms, as well as space for meetups and more.</p>
+            <p>NW IdolFest has two dedicated panel rooms, as well as space for meetups and more.</p>
             <p>If you're interested in running an panel, please fill out the form below by 8/31/21.</p>
             <p>Looking to run something other than a panel? <Link to='/contact'>Let's talk!</Link></p>
 
