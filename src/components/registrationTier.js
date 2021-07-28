@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { styled } from '@material-ui/styles'
 import { Box, Grid } from '@material-ui/core'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -52,10 +51,8 @@ const HeroText = styled(Box)({
 export default function RegistrationTier({ badge }) {
   const classes = useStyles()
 
-  console.log(badge)
   const { badgeName, price, tierName, description, perks } = badge
 
-  console.log(badgeName, price, tierName, description, perks)
   const tierHeading = `${badgeName} - ${price}`
   
   const data = useStaticQuery(
@@ -123,10 +120,4 @@ export default function RegistrationTier({ badge }) {
       }
     </Grid>
   )
-}
-
-RegistrationTier.propTypes = {
-    tierName: PropTypes.string.isRequired,
-    tierText: PropTypes.string,
-    children: PropTypes.node,
 }
