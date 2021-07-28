@@ -15,13 +15,6 @@ const useStyles = makeStyles(theme => ({
         '& .social': {
             padding: '1em',
             fontSize: '.5em',
-            '& a': {
-                textDecoration: 'none',
-                boxShadow: 'none',
-                '& :hover': {
-                    color: theme.palette.light_pink
-                }
-            },
             '& svg': {
                 color: 'white'
             },
@@ -46,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 function wrapFooterSocial(children, url) {
     return (
-        <Grid component={'a'} className='social' href={url} target='_blank' rel='noreferrer' item className='social'>
+        <Grid component={'a'} className='social' href={url} target='_blank' rel='noreferrer' item>
             {children}
         </Grid>
     )

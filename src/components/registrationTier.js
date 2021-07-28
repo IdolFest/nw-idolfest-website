@@ -61,8 +61,8 @@ export default function RegistrationTier({ badge }) {
         allImageSharp {
           edges {
             node {
-              gatsbyImageData
-              fluid {
+              gatsbyImageData(layout: FULL_WIDTH)
+              resize {
                 originalName
               }
             }
@@ -75,11 +75,11 @@ export default function RegistrationTier({ badge }) {
   const tierTextFilename = `${tierName.toLowerCase()}Text.png`
   
   const gemImageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName === tierGemFilename
+      edge => edge.node.resize.originalName === tierGemFilename
   ).node.gatsbyImageData
 
   const tierTextImageData = data.allImageSharp.edges.find(
-    edge => edge.node.fluid.originalName === tierTextFilename
+    edge => edge.node.resize.originalName === tierTextFilename
   ).node.gatsbyImageData
 
   return (
