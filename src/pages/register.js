@@ -195,8 +195,8 @@ const RegisterPage = () => {
             } else {
               //console.log(response)
               setSubmitting(false)
-              response.text().then(data => 
-                navigate(`/payment?${data}`)
+              response.json().then(data =>
+                navigate(`/payment?guid=${data.guid}&amount=${data.amount}`)
               )
             }
         }}
@@ -210,7 +210,7 @@ const RegisterPage = () => {
                 component={Select}
                 name='badgeType'
                 inputProps={{
-                  id: 'badgeType',
+                  id: 'badgeType'
                 }}
                 aria-describedby='badgeTypeHelperText'
                 fullWidth={true}
