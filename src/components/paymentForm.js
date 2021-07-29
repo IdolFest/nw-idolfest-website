@@ -35,7 +35,7 @@ function buildPaymentRequest(payments, amount) {
         countryCode: 'US',
         currencyCode: 'USD',
         total: {
-            amount: parseFloat(amount),
+            amount: parseFloat(amount).toString(),
             label: 'Total',
         },
     });
