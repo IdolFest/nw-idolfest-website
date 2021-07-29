@@ -1,8 +1,16 @@
 import React, { Component } from "react"
 import "./paymentForm.css"
 
-const appId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA';
-const locationId = 'LKWP27DQ486HS';
+let appId
+let locationId
+
+if (process.env.NODE_ENV === 'development') {
+    appId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA'
+    locationId = 'LKWP27DQ486HS'
+} else {
+    appId = 'sq0idp-OyXssltwNQblNk9NOxKJ4w'
+    locationId = 'L4RPAVMCK1MD7'
+}
 
 export const loadSquareSdk = () => {
     return new Promise((resolve, reject) => {
