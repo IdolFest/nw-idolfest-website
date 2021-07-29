@@ -16,9 +16,9 @@ const PaymentPage = ({ location }) => {
   }, []) // on mount, add the js script dynamically
 
   /*
-  const params = new URLSearchParams(location.search);
-  const parameter1 = params.get("parameter1");
-  const parameter2 = params.get("parameter2");
+  const params = new URLSearchParams(location.search)
+  const parameter1 = params.get('guid')
+  const parameter2 = params.get('amount')
 
   // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
   */
