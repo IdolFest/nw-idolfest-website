@@ -30,27 +30,27 @@ async function initializeCard(payments) {
     return card;
 }
 
-function buildPaymentRequest(payments) {
+function buildPaymentRequest(payments, amount) {
     return payments.paymentRequest({
         countryCode: 'US',
         currencyCode: 'USD',
         total: {
-            amount: '1.00',
+            amount: parseFloat(amount),
             label: 'Total',
         },
     });
 }
 
-async function initializeGooglePay(payments) {
-    const paymentRequest = buildPaymentRequest(payments);
+async function initializeGooglePay(payments, amount) {
+    const paymentRequest = buildPaymentRequest(payments, amount);
     const googlePay = await payments.googlePay(paymentRequest);
     await googlePay.attach('#google-pay-button');
 
     return googlePay;
 }
 
-async function initializeApplePay(payments) {
-    const paymentRequest = buildPaymentRequest(payments);
+async function initializeApplePay(payments, amount) {
+    const paymentRequest = buildPaymentRequest(payments, amount);
     const applePay = await payments.applePay(paymentRequest);
     // Note: You do not need to `attach` applePay.
     return applePay;
@@ -142,7 +142,7 @@ export default class PaymentForm extends Component {
         }
 
         try {
-            this.googlePay = await initializeGooglePay(payments);
+            this.googlePay = await initializeGooglePay(payments, amount);
         } catch (e) {
             console.error('Initializing Google Pay failed', e);
             // There are a number of reason why Google Pay may not be supported
@@ -151,7 +151,7 @@ export default class PaymentForm extends Component {
         }
 
         try {
-            this.applePay = await initializeApplePay(payments);
+            this.applePay = await initializeApplePay(payments, amount);
         } catch (e) {
             console.error('Initializing Apple Pay failed', e);
             // There are a number of reason why Apple Pay may not be supported
@@ -207,7 +207,7 @@ export default class PaymentForm extends Component {
                 <div id="google-pay-button"></div>
                 <div id="apple-pay-button"></div>
                 <div id="card-container"></div>
-                <button id="card-button" type="button">Pay $1.00</button>
+                <button id="card-button" type="button">Pay ${this.props.amount}</button>
                 </form>
                 <div id="payment-status-container"></div>
             </div>
