@@ -9,7 +9,7 @@ body {
 #payment-form {
   max-width: 550px;
   min-width: 300px;
-  margin: 150px auto;
+  margin: 0 auto;
 }
 
 .buyer-inputs {
@@ -22,7 +22,6 @@ body {
 }
 
 #card-container {
-  margin-top: 45px;
   /* this height depends on the size of the container element */
   /* We transition from a single row to double row at 485px */
   /* Settting this min-height minimizes the impact of the card form loading */
