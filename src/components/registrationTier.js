@@ -110,8 +110,8 @@ export default function RegistrationTier({ badge }) {
         <Box className={`${classes.tierHeading} ${classes.regularTierText}`}>
           <span>{description}</span>
           <ul>
-            {perks.map((perk) => (
-              <li>{perk}</li>
+            {perks.map((perk, index) => (
+              <li key={index}>{perk}</li>
             ))}
 
           </ul>
