@@ -15,13 +15,12 @@ const PaymentPage = ({ location }) => {
       .catch(() => setSquareStatus("ERROR"))
   }, []) // on mount, add the js script dynamically
 
-  /*
   const params = new URLSearchParams(location.search)
-  const parameter1 = params.get('guid')
-  const parameter2 = params.get('amount')
+  const guid = params.get('guid')
+  const amount = params.get('amount')
 
   // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
-  */
+
   return (
     <Layout>
       <Seo title="Payment" />
@@ -31,12 +30,15 @@ const PaymentPage = ({ location }) => {
       />
 
       <PageContent suppressHydrationWarning>
-        {location.search}
+        <p>GUID: {guid}</p>
+
+        <p>Amount: {amount}</p>
+
 
         {squareStatus === "ERROR" &&
         "Failed to load SquareSDK. Please refresh the page."}
         {squareStatus === "SUCCESS" && (
-          <PaymentForm paymentForm={window.SqPaymentForm} />
+          <PaymentForm guid={guid} amount={amount} />
         )}
       </PageContent>
     </Layout>

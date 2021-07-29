@@ -56,13 +56,15 @@ async function initializeApplePay(payments) {
     return applePay;
 }
 
-async function createPayment(token) {
+async function createPayment(token, guid, amount) {
     const body = JSON.stringify({
         locationId,
         sourceId: token,
+        guid,
+        amount
     });
 
-    const paymentResponse = await fetch('/payment', {
+    const paymentResponse = await fetch('https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg2', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -112,16 +114,16 @@ function displayPaymentResults(status) {
 
 export default class PaymentForm extends Component {
     async componentDidMount() {
-        console.log(appId, locationId)
         if (!window.Square) {
             throw new Error('Square.js failed to load properly');
         }
 
+        let guid = this.props.guid
+        let amount = this.props.amount
+
         let payments;
         try {
-            console.log(window.Square.payments(appId, locationId))
-            payments = window.Square.payments(appId, locationId);
-            console.log(payments)
+            payments = window.Square.payments(appId, locationId)
         } catch {
             const statusContainer = document.getElementById(
                 'payment-status-container'
@@ -164,7 +166,7 @@ export default class PaymentForm extends Component {
                 // disable the submit button as we await tokenization and make a payment request.
                 cardButton.disabled = true;
                 const token = await tokenize(paymentMethod);
-                const paymentResults = await createPayment(token);
+                const paymentResults = await createPayment(token, guid, amount);
                 displayPaymentResults('SUCCESS');
 
                 console.debug('Payment Success', paymentResults);
