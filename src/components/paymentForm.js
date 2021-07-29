@@ -207,7 +207,7 @@ export default class PaymentForm extends Component {
                 <div id="google-pay-button"></div>
                 <div id="apple-pay-button"></div>
                 <div id="card-container"></div>
-                <button id="card-button" type="button">Pay ${this.props.amount}</button>
+                <button id="card-button" type="button">Pay ${this.props.amount / 100}</button>
                 </form>
                 <div id="payment-status-container"></div>
             </div>
