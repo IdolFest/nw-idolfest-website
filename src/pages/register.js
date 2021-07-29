@@ -70,7 +70,7 @@ const badgeTiers = [
   },
   {
     badgeName: 'Super Sponsor',
-    price: '$450',
+    price: '$420.69',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
     perks: [
@@ -155,8 +155,6 @@ const RegisterPage = () => {
           fullName: Yup.string()
             .max(80, 'Must be 80 characters or less')
             .required('Required'),
-          badgeName: Yup.string()
-            .max(30, 'Must be 30 characters or less'),
           discordHandle: Yup.string().matches(/^.+#\d{4}$/, 'Please provide your full handle, including tag.'),
           email: Yup.string().email('Invalid email address').required('Required'),
           dateOfBirth: Yup.date().nullable().required('Required'),
@@ -175,9 +173,13 @@ const RegisterPage = () => {
               is: 'spiritBadge', 
               then: Yup.string().required('Required') 
             }),
-          country: Yup.string().required('Required'),
+          //country: Yup.string().required('Required'),
         })}
+        validate={values => {
+          console.log(values)
+        }}
         onSubmit={ async (values, { setSubmitting }) => {
+            console.log('Submitting form...')
             console.log(values)
             const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
               method: 'POST',
