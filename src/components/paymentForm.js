@@ -43,7 +43,7 @@ function buildPaymentRequest(payments, amount) {
         countryCode: 'US',
         currencyCode: 'USD',
         total: {
-            amount,
+            amount: amount.toString(),
             label: 'Total',
         },
     });
@@ -55,13 +55,6 @@ async function initializeGooglePay(payments, amount) {
     await googlePay.attach('#google-pay-button');
 
     return googlePay;
-}
-
-async function initializeApplePay(payments, amount) {
-    const paymentRequest = buildPaymentRequest(payments, amount);
-    const applePay = await payments.applePay(paymentRequest);
-    // Note: You do not need to `attach` applePay.
-    return applePay;
 }
 
 async function createPayment(token, guid, amount) {
@@ -158,15 +151,6 @@ export default class PaymentForm extends Component {
             // initialization failures, while still loading other applicable payment methods.
         }
 
-        try {
-            this.applePay = await initializeApplePay(payments, amount);
-        } catch (e) {
-            console.error('Initializing Apple Pay failed', e);
-            // There are a number of reason why Apple Pay may not be supported
-            // (e.g. Browser Support, Device Support, Account). Therefore you should handle
-            // initialization failures, while still loading other applicable payment methods.
-        }
-
         async function handlePaymentMethodSubmission(event, paymentMethod) {
             event.preventDefault();
 
@@ -213,7 +197,6 @@ export default class PaymentForm extends Component {
             <div>
                 <form id="payment-form">
                 <div id="google-pay-button"></div>
-                <div id="apple-pay-button"></div>
                 <div id="card-container"></div>
                 <button id="card-button" type="button">Pay ${this.props.amount / 100}</button>
                 </form>
