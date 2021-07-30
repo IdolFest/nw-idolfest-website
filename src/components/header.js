@@ -28,10 +28,6 @@ const headersData = [
     label: "Events",
     href: "/events",
   },
-  // {
-  //   label: "Guests",
-  //   href: "/guests",
-  // },
   {
     label: "Artist Alley",
     href: "/artistalley",
@@ -108,11 +104,10 @@ export default function Header() {
     mobileView: false,
     drawerOpen: false,
     anchorEl: null,
-    open: false,
   });
 
   const handleClick = (event) => {
-    setState({ open: true, anchorEl: event.currentTarget })
+    setState({ [event.currentTarget.id]: true, anchorEl: event.currentTarget })
   };
 
   const handleClose = () => {
@@ -253,7 +248,7 @@ export default function Header() {
         <Grid item key={label}>
           { children ? 
                 <>
-                <Button aria-controls="simple-menu" aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state.open ? `idolfest-menu-${label}` : null}>
+                <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state.open ? `idolfest-menu-${label}` : null}>
                   <Link
                     to={href}
                   >
@@ -265,7 +260,7 @@ export default function Header() {
                   anchorEl={state.anchorEl}
                   getContentAnchorEl={null}
                   keepMounted
-                  open={state.open}
+                  open={state[label]}
                   onClose={handleClose}
                   id={`idolfest-menu-${label}`}
                   MenuListProps={{ onMouseLeave: handleClose }}
