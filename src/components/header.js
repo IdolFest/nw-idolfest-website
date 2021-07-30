@@ -206,6 +206,12 @@ export default function Header() {
     return headersData.map(({ label, href, children }) => {
         return (
           <>
+          <Link
+            to={href}
+            key={href}
+          >
+            {label}
+          </Link>
           { children ? 
             <> 
             { children.map(({ label, href }) => {
@@ -213,6 +219,9 @@ export default function Header() {
                 <Link
                   to={href}
                   key={href}
+                  style={{
+                    marginLeft: '1em'
+                  }}
                 >
                   {label}
                 </Link>
@@ -220,12 +229,7 @@ export default function Header() {
             })}
             </>
           : 
-            <Link
-              to={href}
-              key={href}
-            >
-              {label}
-            </Link>
+            null
           }
           </>
         )
