@@ -3,8 +3,8 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { TextField, Select, CheckboxWithLabel } from 'formik-material-ui'
+import { Formik, Form, Field } from 'formik'
+import { TextField, CheckboxWithLabel } from 'formik-material-ui'
 import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
@@ -12,8 +12,6 @@ import MomentUtils from '@date-io/moment'
 import {
   Button, 
   Box,
-  MenuItem,
-  InputLabel,
   FormControl,
   FormHelperText,
   Grid,
@@ -205,27 +203,24 @@ const RegisterPage = () => {
         <Form>
           <Box margin={1}>
             <FormControl>
-              <InputLabel htmlFor="badgeType">* Badge Type</InputLabel>
+              <label htmlFor='badgeType'>* Badge Type</label>
               <Field
-                component={Select}
+                as="select"
                 name='badgeType'
-                inputProps={{
-                  id: 'badgeType'
-                }}
+                id='badgeType'
                 aria-describedby='badgeTypeHelperText'
-                fullWidth={true}
               >
+                <option value="" label='Select a badge type'>Select a badge type</option>
                 {badgeTiers.map((badge) => (
-                  <MenuItem 
+                  <option
                     value={badge.badgeName.toLowerCase().split(" ").join("_")} 
-                    key={badge.badgeName.toLowerCase().split(" ").join("_")}>
-                    <span dangerouslySetInnerHTML={{ __html: 
-                      badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price})` : badge.name }} />
-                  </MenuItem>
+                    key={badge.badgeName.toLowerCase().split(" ").join("_")}
+                    label={badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
+                  >
+                    {badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
+                  </option>
                 ))}
               </Field>
-              <FormHelperText id='badgeTypeHelperText'>Select your badge type. See above for what each comes with.</FormHelperText>
-              <div style={{ width: '100%', color: 'red' }}><ErrorMessage name='badgeType' /></div>
             </FormControl>
           </Box>
 
