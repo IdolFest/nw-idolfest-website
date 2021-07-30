@@ -47,7 +47,11 @@ const headersData = [
     {
       label: "Contact",
       href: "/contact"
-    }
+    },
+    {
+      label: "Policies",
+      href: "/policies"
+    },
     ]
   },
 ];
@@ -57,11 +61,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.primary.main,
     paddingRight: "79px",
     paddingLeft: "118px",
-    borderBottomColor: theme.palette.pink,
-    background: 'radial-gradient(circle, rgba(250,210,233,1) 0%, rgba(244,165,210,1) 100%) bottom no-repeat',
+    background: 'radial-gradient(circle, #470932 100%, #470932 100%) bottom no-repeat',
     backgroundSize: '100% 10px',
     position: 'sticky',
-    //height: '15vh',
     "@media (max-width: 1200px)": {
       paddingLeft: 0,
       paddingRight: 0

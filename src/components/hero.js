@@ -8,6 +8,7 @@ const HeroText = styled(Container)({
   color: 'black',
   alignSelf: 'center',
   justifySelf: 'center',
+  textAlign: 'center',
   '& span': {
     backgroundColor: 'white',
     borderRadius: '5px',
@@ -18,7 +19,7 @@ const HeroText = styled(Container)({
 
 export default function Hero({ header, body }) {
   return (
-    <div style={{ display: 'grid', marginBottom: '1.5em' }}>
+    <div style={{ display: 'grid' }}>
       <StaticImage
         style={{
           gridArea: '1/1',
