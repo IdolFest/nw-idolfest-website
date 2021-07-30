@@ -130,7 +130,7 @@ const RegisterPage = () => {
     <PageContent>
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgeTiers.map((badge) => (
-              <Grid item>
+              <Grid item key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
