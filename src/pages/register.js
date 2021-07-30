@@ -302,7 +302,12 @@ const RegisterPage = () => {
             />
           </Box>
 
-          {props.submitCount > 0 && !props.isValid ? <div style={{ color: 'red' }}>Please fix errors.</div> : null}
+          {props.submitCount > 0 && !props.isValid ? <div style={{ color: 'red' }}>Please fix errors: 
+          {Object.keys(props.errors).map((key) => (
+              <div>{key} - {props.errors[key]}</div>
+          ))}
+          </div>
+          : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
