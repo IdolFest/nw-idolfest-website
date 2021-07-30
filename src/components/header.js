@@ -110,8 +110,8 @@ export default function Header() {
     setState({ [event.currentTarget.id]: true, anchorEl: event.currentTarget })
   };
 
-  const handleClose = () => {
-    setState({ open: false, anchorEl: null })
+  const handleClose = (id) => {
+    setState({ [id]: false, anchorEl: null })
   };
 
   const { mobileView, drawerOpen } = state
@@ -248,7 +248,7 @@ export default function Header() {
         <Grid item key={label}>
           { children ? 
                 <>
-                <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state.open ? `idolfest-menu-${label}` : null}>
+                <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
                   <Link
                     to={href}
                   >
@@ -260,16 +260,16 @@ export default function Header() {
                   anchorEl={state.anchorEl}
                   getContentAnchorEl={null}
                   keepMounted
-                  open={state[label]}
-                  onClose={handleClose}
+                  open={state[label] ? state[label] : false}
+                  onClose={handleClose.bind(this, label)}
                   id={`idolfest-menu-${label}`}
-                  MenuListProps={{ onMouseLeave: handleClose }}
+                  MenuListProps={{ onMouseLeave: handleClose.bind(this, label) }}
                   anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                 >
                   {children.map(({ label: childLabel, href: childHref }) => {
                     return (
-                      <MenuItem onClick={handleClose} key={childLabel}>
+                      <MenuItem onClick={handleClose.bind(this, label)} key={childLabel}>
                         <Button>
                           <Link
                             to={childHref}
