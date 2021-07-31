@@ -22,6 +22,13 @@ const useStyles = makeStyles(theme => ({
         // color: 'white'
       },
     },
+  },
+  guestGrid: {
+    flexWrap: 'nowrap',
+    alignItems: 'center',
+    '@media (max-width: 678px)': {
+      flexDirection: 'column',
+    }
   }
 }))
 
@@ -32,7 +39,7 @@ const Biography = styled(Box)({
 
 function wrapGuestSocial(children) {
     return (
-        <Grid item key={children.icon} className='social'>
+        <Grid item className='social'>
             {children}
         </Grid>
     )
@@ -43,13 +50,13 @@ export default function Guest({ guestName, guestTitle, guestSocials, children })
 
   return (
     <Box className={classes.guest}>
-      <Grid container style={{ flexWrap: 'nowrap', alignItems: 'center' }}>
+      <Grid container className={classes.guestGrid}>
         <GuestStar guestName={guestName} showName={false} />
         <Biography>{children}</Biography>
       </Grid>
       <Grid container style={{ justifyContent: 'center' }}>
         {guestSocials.map(({ link, icon }) => {
-          return wrapGuestSocial(createSocialIcon(link, icon))
+          return <div key={icon}>{wrapGuestSocial(createSocialIcon(link, icon))}</div>
         })}
       </Grid>
       <h3><CenteredBox>{guestTitle}</CenteredBox></h3>
