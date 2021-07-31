@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   guestName: {
     textTransform: 'uppercase',
     fontFamily: 'Junegull',
-    margin: '1em 0',
+    margin: '.5em 0',
   },
   guestLink: {
     '&:hover': {
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function GuestStar({ guestName }) {
+export default function GuestStar({ guestName, showLink, showName=true }) {
   const classes = useStyles()
   
   const data = useStaticQuery(
@@ -61,7 +61,7 @@ export default function GuestStar({ guestName }) {
   return (
     <Grid container direction='column' style={{ maxWidth: '200px' }}>
       <Box className={classes.guest}>  
-      {guestName.toLowerCase() === 'coming soon' ?
+      {!showLink ?
         <>
         <GatsbyImage
           className={classes.guestStarImage}
@@ -70,9 +70,11 @@ export default function GuestStar({ guestName }) {
           loading='eager'
           placeholder='blurred'
         />
-        <div className={classes.guestName}>
-          Coming soon!
-        </div>
+        { showName ? 
+          <div className={classes.guestName}>
+            {guestName}
+          </div>
+          : null }
         </>
       : 
         <>
@@ -84,10 +86,11 @@ export default function GuestStar({ guestName }) {
             loading='eager'
             placeholder='blurred'
           />
-          <div className={`${classes.guestName}`}>
-            {guestName}
-            {/* <div className={classes.guestLink}>{guestName}</div> */}
-          </div>
+          { showName ? 
+            <div className={`${classes.guestName}`}>
+              {guestName}
+            </div>
+            : null }
         </Link>
         </>
       }

@@ -1,102 +1,58 @@
 import * as React from 'react'
 import { styled } from '@material-ui/styles'
 import { Box, Grid } from '@material-ui/core'
-import { graphql, useStaticQuery, Link } from 'gatsby'
 import { makeStyles } from '@material-ui/styles'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import GuestStar from '@components/guestStar'
+import CenteredBox from '@components/CenteredBox'
+import { createSocialIcon } from '@components/socialIcon'
 
 const useStyles = makeStyles(theme => ({
-  guestHeading: {
-    color: 'black',
-    backgroundColor: theme.palette.light_pink,
-    alignSelf: 'center',
-    justifySelf: 'center',
-    width: '100%',
-    borderRadius: '10px',
-    padding: '1em',
-    '& ul': {
-      paddingLeft: '1.5em',
+  guest: {
+    '& .social': {
+      padding: '1em',
+      fontSize: '.5em',
+      '& a': {
+        textDecoration: 'none',
+        boxShadow: 'none',
+        '& :hover': {
+          color: theme.palette.light_pink
+        },
+      },
+      '& svg': {
+        color: 'white'
+      },
     },
-  },
-  regularGuestText: {
-    height: '290px'
-  },
-  guestTextImage: {
-    maxHeight: '50px',
-    height: '50px',
-    '& img': {
-      objectFit: 'contain !important'
-    }
-  },
-  guestStarImage: {
-    maxHeight: '500px',
-    height: '500px',
-    paddingTop: '1em',
-    '& img': {
-      objectFit: 'contain !important'
-    }
-  },
+  }
 }))
 
-const HeroText = styled(Box)({
-  alignSelf: 'center',
-  margin: '1em 0',
-  '& span': {
-    size: '2em',
-    textTransform: 'uppercase',
-    fontWeight: 'bold',
-  }
+const Biography = styled(Box)({
+  paddingLeft: '1em',
+  fontSize: '1.25em'
 })
 
-export default function RegistrationGuest({ children, guestName, guestSocials }) {
-  const classes = useStyles()
-  
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allImageSharp {
-          edges {
-            node {
-              gatsbyImageData
-              fluid {
-                originalName
-              }
-            }
-          }
-        }
-      }
-    `)
+function wrapGuestSocial(children) {
+    return (
+        <Grid item key={children.icon} className='social'>
+            {children}
+        </Grid>
+    )
+}
 
-  const guestStarFilename = `${guestName.split(" ").join("").toLowerCase()}_star.png`
-  
-  const guestStarImageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName === guestStarFilename
-  ).node.gatsbyImageData
+export default function Guest({ guestName, guestTitle, guestSocials, children }) {
+  const classes = useStyles()
 
   return (
-    <Grid container direction='column' style={{ maxWidth: '200px', paddingTop: '1em' }}>
-      <GatsbyImage
-        //className={classes.guestStarImage}
-        alt=''
-        image={guestStarImageData}
-        loading='eager'
-        placeholder='blurred'
-      />
-      {guestName === 'Coming Soon' ?
-        <HeroText>
-          {guestName}
-        </HeroText>
-      : 
-        <>
-        <HeroText>
-          <Link to={`/guests/${guestName.toLowerCase()}`}>{guestName}</Link>
-        </HeroText>
-        <Box className={`${classes.guestHeading} ${classes.regularGuestText}`}>
-          <span>{children}</span>
-          <span>{guestSocials}</span>
-        </Box>
-        </>
-      }
-    </Grid>
+    <Box className={classes.guest}>
+      <Grid container style={{ flexWrap: 'nowrap', alignItems: 'center' }}>
+        <GuestStar guestName={guestName} showName={false} />
+        <Biography>{children}</Biography>
+      </Grid>
+      <Grid container style={{ justifyContent: 'center' }}>
+        {guestSocials.map(({ link, icon }) => {
+          return wrapGuestSocial(createSocialIcon(link, icon))
+        })}
+      </Grid>
+      <h3><CenteredBox>{guestTitle}</CenteredBox></h3>
+    </Box>
   )
 }

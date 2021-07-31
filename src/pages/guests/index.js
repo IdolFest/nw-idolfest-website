@@ -18,8 +18,8 @@ const GuestsPage = () => (
         <PageContent>
             <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
             <Grid container style={{ justifyContent: 'space-around' }}>
-                <GuestStar guestName="Rintaichou" />
-                <GuestStar guestName="Coming soon" />
+                <GuestStar guestName="Rintaichou" showLink={true} />
+                <GuestStar guestName="Coming soon" showLink={false} />
             </Grid>
 
             <h2><CenteredBox>Appearing Remotely</CenteredBox></h2>
