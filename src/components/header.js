@@ -25,6 +25,20 @@ const headersData = [
     href: "/hotel",
   },
   {
+    label: "Guests",
+    href: "/guests",
+    children: [
+    {
+      label: "All Guests",
+      href: "/guests",
+    },
+    {
+      label: "Rintaichou",
+      href: "/guests/rintaichou"
+    },
+    ]
+  },
+  {
     label: "Events",
     href: "/events",
   },
