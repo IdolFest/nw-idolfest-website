@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         },
       },
       '& svg': {
-        color: 'white'
+        // color: 'white'
       },
     },
   }
