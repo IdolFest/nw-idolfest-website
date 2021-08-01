@@ -6,7 +6,9 @@ let locationId
 
 if (process.env.NODE_ENV === 'development') {
     appId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA'
-    locationId = 'LKWP27DQ486HS'
+    // this is the dev NWIF main location
+    // there is a separate location for (At Event)
+    locationId = 'LWGKEFPEN4J9S'
 } else {
     appId = 'sq0idp-OyXssltwNQblNk9NOxKJ4w'
     locationId = 'L4RPAVMCK1MD7'
@@ -111,7 +113,7 @@ function displayPaymentResults(status, paymentResults) {
         statusContainer.classList.add('is-success');
         receiptContainer.style.visibility = 'visible';
         receiptContainer.style.visibility = 'visible';
-        receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! View <a href=${paymentResults.payment.receiptUrl}>your receipt</a>.`;
+        receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! View <a href=${paymentResults.payment.receiptUrl} target="_blank">your receipt</a>. You can now close this page.<br /><br />`;
     } else {
         statusContainer.classList.remove('is-success');
         statusContainer.classList.add('is-failure');
