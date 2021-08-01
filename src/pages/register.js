@@ -197,7 +197,7 @@ const RegisterPage = () => {
               //console.log(response)
               setSubmitting(false)
               response.json().then(data =>
-                navigate(`/payment?guid=${data.guid}&amount=${data.amount}`)
+                navigate(`/payment?guid=${data.guid}&amount=${data.amount}&tax=${data.tax}&badge_type=${data.badge_type}`)
               )
             }
         }}

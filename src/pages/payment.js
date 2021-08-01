@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
+import { Link } from 'gatsby'
 import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
+import CenteredBox from '@components/CenteredBox'
 import PaymentForm, { loadSquareSdk } from '@components/paymentForm'
 
 const PaymentPage = ({ location }) => {
@@ -18,6 +20,8 @@ const PaymentPage = ({ location }) => {
   const params = new URLSearchParams(location.search)
   const guid = params.get('guid')
   const amount = params.get('amount')
+  const tax = params.get('tax')
+  const badgeType = params.get('badge_type')
 
   // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
 
@@ -30,16 +34,22 @@ const PaymentPage = ({ location }) => {
       />
 
       <PageContent suppressHydrationWarning>
-        <p>GUID: {guid}</p>
-
-        <p>Amount: {amount}</p>
-
+        <CenteredBox>
+          
+          <p>Finish purchasing your {badgeType} below.</p>
+          <p>Total: ${(amount - tax) / 100} { tax > 0 ? <span>{tax / 100} tax</span> : null}</p>
+        </CenteredBox>
 
         {squareStatus === "ERROR" &&
         "Failed to load SquareSDK. Please refresh the page."}
         {squareStatus === "SUCCESS" && (
           <PaymentForm guid={guid} amount={amount} />
         )}
+        <CenteredBox>
+          <small>If you encounter errors, please <Link to='/contact'>contact us</Link> and provide reference ID {guid}.</small>
+          <br />
+          <small>Payment processing is provided by Square. NWIF never handles or stores your credit card details.</small>
+        </CenteredBox>
       </PageContent>
     </Layout>
   )
