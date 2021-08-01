@@ -132,6 +132,10 @@ button:disabled {
   visibility: hidden;
 }
 
+#receipt-container {
+  text-align: center;
+}
+
 #payment-status-container.missing-credentials {
   width: 350px;
 }

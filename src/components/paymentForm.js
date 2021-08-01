@@ -82,6 +82,7 @@ async function createPayment(token, guid, amount) {
 }
 
 async function tokenize(paymentMethod) {
+    console.log(paymentMethod)
     const tokenResult = await paymentMethod.tokenize();
     if (tokenResult.status === 'OK') {
         return tokenResult.token;
@@ -98,13 +99,19 @@ async function tokenize(paymentMethod) {
 }
 
 // status is either SUCCESS or FAILURE;
-function displayPaymentResults(status) {
+function displayPaymentResults(status, paymentResults) {
     const statusContainer = document.getElementById(
         'payment-status-container'
+    );
+    const receiptContainer = document.getElementById(
+        'receipt-container'
     );
     if (status === 'SUCCESS') {
         statusContainer.classList.remove('is-failure');
         statusContainer.classList.add('is-success');
+        receiptContainer.style.visibility = 'visible';
+        receiptContainer.style.visibility = 'visible';
+        receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! View <a href=${paymentResults.payment.receiptUrl}>your receipt</a>.`;
     } else {
         statusContainer.classList.remove('is-success');
         statusContainer.classList.add('is-failure');
@@ -144,6 +151,7 @@ export default class PaymentForm extends Component {
 
         try {
             this.googlePay = await initializeGooglePay(payments, amount);
+            console.log(this.googlePay)
         } catch (e) {
             console.error('Initializing Google Pay failed', e);
             // There are a number of reason why Google Pay may not be supported
@@ -159,7 +167,7 @@ export default class PaymentForm extends Component {
                 cardButton.disabled = true;
                 const token = await tokenize(paymentMethod);
                 const paymentResults = await createPayment(token, guid, amount);
-                displayPaymentResults('SUCCESS');
+                displayPaymentResults('SUCCESS', paymentResults);
 
                 console.debug('Payment Success', paymentResults);
             } catch (e) {
@@ -176,6 +184,8 @@ export default class PaymentForm extends Component {
         });
 
         // Checkpoint 2.
+        console.log('test')
+        console.log(this.googlePay)
         if (this.googlePay) {
             const googlePayButton = document.getElementById('google-pay-button');
             googlePayButton.addEventListener('click', async function (event) {
@@ -201,6 +211,7 @@ export default class PaymentForm extends Component {
                 <button id="card-button" type="button">Pay ${this.props.amount / 100}</button>
                 </form>
                 <div id="payment-status-container"></div>
+                <div id="receipt-container"></div>
             </div>
         )
     }
