@@ -43,6 +43,7 @@ const badgeTiers = [
   // },
   {
     badgeName: 'Attendee',
+    badgeKey: 'attendee',
     price: '<strike>$40</strike> $30',
     tierName: 'Silver',
     description: 'Early bird pricing available until Sept 12!',
@@ -54,6 +55,7 @@ const badgeTiers = [
   },
   {
     badgeName: 'Sponsor',
+    badgeKey: 'sponsor',
     price: '$75',
     tierName: 'Gold',
     description: 'Everything in Silver, plus:',
@@ -68,6 +70,7 @@ const badgeTiers = [
   },
   {
     badgeName: 'Super Sponsor',
+    badgeKey: 'superSponsor',
     price: '$420.69',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
@@ -213,8 +216,8 @@ const RegisterPage = () => {
                 <option value="" label='Select a badge type'>Select a badge type</option>
                 {badgeTiers.map((badge) => (
                   <option
-                    value={badge.badgeName.toLowerCase().split(" ").join("_")} 
-                    key={badge.badgeName.toLowerCase().split(" ").join("_")}
+                    value={badge.badgeKey} 
+                    key={badge.badgeKey}
                     label={badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
                   >
                     {badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
@@ -298,7 +301,6 @@ const RegisterPage = () => {
               type="checkbox" 
               Label={{ label: 'Sign up for email announcements' }} 
               component={CheckboxWithLabel} 
-              checked={true} 
             />
           </Box>
 
