@@ -102,22 +102,15 @@ export default function RegistrationTier({ badge }) {
       <HeroText>
         <span dangerouslySetInnerHTML={{ __html: tierHeading }}></span>
       </HeroText>
-      { tierName === 'Whale' ? 
-        <Box className={classes.tierHeading}>
-          <span dangerouslySetInnerHTML={{ __html: description}} />
-        </Box>
-      : 
         <Box className={`${classes.tierHeading} ${classes.regularTierText}`}>
-          <span>{description}</span>
+          <span dangerouslySetInnerHTML={{ __html: description}} />
           <ul>
             {perks.map((perk, index) => (
               <li key={index}>{perk}</li>
             ))}
 
           </ul>
-
         </Box>
-      }
     </Grid>
   )
 }
