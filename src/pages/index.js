@@ -5,6 +5,7 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import NewsletterSignup from '@components/NewsletterSignup'
+import BlogPosts from '@components/BlogPosts'
 import { Link } from 'gatsby'
 
 const IndexPage = () => {
@@ -22,7 +23,9 @@ const IndexPage = () => {
 
       <PageContent>
         <p>Northwest Idol Festival is a two day event featuring idols, anisong, and everything in between. Join us in Seattle on November 13-14, 2021 for an exciting weekend of guests, concerts, panels, cosplay, and more. Get ready for a whole new idol experience!</p>
-        <p>Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and <Link to="register">buy your badge</Link> today! You can also sign up for our email list below to find out more.</p>
+        <p>Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and <Link to="register">buy your badge</Link> today!</p>
+        <BlogPosts />
+        <p>Sign up for our email list below to get the scoop on guest announcements, giveaways, and more!</p>
         <NewsletterSignup />
       </PageContent>
     </Layout>

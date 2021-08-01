@@ -15,7 +15,7 @@ const NewsletterPage = () => {
       />
 
       <PageContent>
-        <p>Sign up for our email list below to get guest announcements, event updates, and more!</p>
+        <p>Sign up for our email list below to get the scoop on guest announcements, giveaways, and more!</p>
         <NewsletterSignup />
       </PageContent>
     </Layout>
