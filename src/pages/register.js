@@ -35,15 +35,11 @@ To add:
 * Text saying "You'll be able to add a t-shirt to your registration on the next page"
 */
 
-const badgeTiers = [
-  // {
-  //   name: 'Spirit Badge',
-  //   price: '$15',
-  //   tierName: ''
-  // },
+const allBadgeTiers = [
   {
     badgeName: 'Attendee',
     badgeKey: 'attendee',
+    hasTax: true,
     price: '<strike>$40</strike> $30',
     tierName: 'Silver',
     description: 'Early bird pricing available until Sept 12!',
@@ -56,6 +52,7 @@ const badgeTiers = [
   {
     badgeName: 'Sponsor',
     badgeKey: 'sponsor',
+    hasTax: true,
     price: '$75',
     tierName: 'Gold',
     description: 'Everything in Silver, plus:',
@@ -71,6 +68,7 @@ const badgeTiers = [
   {
     badgeName: 'Super Sponsor',
     badgeKey: 'superSponsor',
+    hasTax: false,
     price: '$420.69',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
@@ -81,15 +79,59 @@ const badgeTiers = [
       'Can badge set',
       'Closing Ceremonies special thanks',
     ]
+  },
+  {
+    badgeName: 'Spirit Badge',
+    badgeKey: 'spirit',
+    hasTax: true,
+    price: '$15',
+    tierName: 'Dekimasen',
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF.",
+    perks: [
+      'Badge and lanyard mailed to you',
+      'NWIF Discord role',
+    ]
   }
 ]
 
-const whaleBadge = {
-  badgeName: 'Whale',
-  price: '???',
-  tierName: 'Whale',
-  description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
-  perks: []
+const badgesRowOne = allBadgeTiers.slice(0, 3)
+
+const badgesRowTwo = [
+  {
+    badgeName: 'Spirit Badge',
+    badgeKey: 'spirit',
+    hasTax: true,
+    price: '$15',
+    tierName: 'Dekimasen',
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF.",
+    perks: [
+      'Badge and lanyard mailed to you',
+      'NWIF Discord role',
+  ]},
+  {
+    badgeName: 'Whale',
+    price: '???',
+    tierName: 'Whale',
+    description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
+    perks: [
+      'If you can dream it',
+      'We can do it!'
+    ]
+  }
+]
+
+function badgeDropdownText(badge) {
+  // remove the <strike> tags from our early bird reg
+  const badgePrice = badge.price.split("</strike> ").slice(-1)[0]
+  if (badge.tierName) {
+    if (badge.hasTax) {
+      return `${badge.tierName} - ${badge.badgeName} (${badgePrice} + tax)`
+    } else {
+      return `${badge.tierName} - ${badge.badgeName} (${badgePrice})`
+    }
+  } else {
+    return badge.badgeName
+  }
 }
 
 const RegisterPage = () => {
@@ -130,17 +172,19 @@ const RegisterPage = () => {
 
     <PageContent>
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
-            {badgeTiers.map((badge) => (
+            {badgesRowOne.map((badge) => (
               <Grid item key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
       </Grid>
 
-      <Grid container style={{ paddingTop: '2em' }} alignItems='stretch' justify='space-evenly'>
-        <Grid item>
-          <RegistrationTier badge={whaleBadge} />
-        </Grid>
+      <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
+            {badgesRowTwo.map((badge) => (
+              <Grid item key={badge.badgeName}>
+                <RegistrationTier badge={badge} />
+              </Grid>
+            ))}
       </Grid>
 
       <h2>Register</h2>
@@ -214,13 +258,13 @@ const RegisterPage = () => {
                 aria-describedby='badgeTypeHelperText'
               >
                 <option value="" label='Select a badge type'>Select a badge type</option>
-                {badgeTiers.map((badge) => (
+                {allBadgeTiers.map((badge) => (
                   <option
                     value={badge.badgeKey} 
                     key={badge.badgeKey}
-                    label={badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
+                    label={badgeDropdownText(badge)}
                   >
-                    {badge.tierName ? `${badge.tierName} - ${badge.badgeName} (${badge.price.split("</strike> ").slice(-1)[0]})` : badge.name}
+                    {badgeDropdownText(badge)}
                   </option>
                 ))}
               </Field>
