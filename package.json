@@ -30,6 +30,7 @@
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^3.6.0",
     "gatsby-source-filesystem": "^3.6.0",
+    "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
