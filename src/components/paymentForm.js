@@ -45,7 +45,7 @@ function buildPaymentRequest(payments, amount) {
         countryCode: 'US',
         currencyCode: 'USD',
         total: {
-            amount: amount.toString(),
+            amount: (amount / 100).toString(),
             label: 'Total',
         },
     });
@@ -84,7 +84,6 @@ async function createPayment(token, guid, amount) {
 }
 
 async function tokenize(paymentMethod) {
-    console.log(paymentMethod)
     const tokenResult = await paymentMethod.tokenize();
     if (tokenResult.status === 'OK') {
         return tokenResult.token;
@@ -151,9 +150,9 @@ export default class PaymentForm extends Component {
             return;
         }
 
+        let googlePay;
         try {
-            this.googlePay = await initializeGooglePay(payments, amount);
-            console.log(this.googlePay)
+            googlePay = await initializeGooglePay(payments, amount);
         } catch (e) {
             console.error('Initializing Google Pay failed', e);
             // There are a number of reason why Google Pay may not be supported
@@ -186,12 +185,11 @@ export default class PaymentForm extends Component {
         });
 
         // Checkpoint 2.
-        console.log('test')
-        console.log(this.googlePay)
-        if (this.googlePay) {
+        if (googlePay !== undefined) {
+            console.log('googlePay', googlePay)
             const googlePayButton = document.getElementById('google-pay-button');
             googlePayButton.addEventListener('click', async function (event) {
-                await handlePaymentMethodSubmission(event, this.googlePay);
+                await handlePaymentMethodSubmission(event, googlePay);
             });
         }
 
