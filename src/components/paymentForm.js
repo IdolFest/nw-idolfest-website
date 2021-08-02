@@ -115,13 +115,19 @@ function displayPaymentResults(status, paymentResults) {
         statusContainer.classList.add('is-success');
         receiptContainer.style.visibility = 'visible';
         receiptContainer.style.visibility = 'visible';
-        receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! View <a href=${paymentResults.payment.receiptUrl} target="_blank">your receipt</a>. You can now close this page.<br /><br />`;
+        receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! Please save <a href=${paymentResults.payment.receiptUrl} target="_blank">your receipt</a> before closing this page.<br /><br />`;
     } else {
         statusContainer.classList.remove('is-success');
         statusContainer.classList.add('is-failure');
     }
 
     statusContainer.style.visibility = 'visible';
+}
+
+function resetSource(allIframes) {
+    for (let i = 0; i < allIframes.length; i++) {
+        allIframes[i].src = ""
+    }
 }
 
 export default class PaymentForm extends Component {
@@ -174,6 +180,9 @@ export default class PaymentForm extends Component {
                 displayPaymentResults('SUCCESS', paymentResults);
 
                 console.debug('Payment Success', paymentResults);
+                try {
+                    resetSource(document.getElementsByTagName("iframe"))
+                } finally { }
             } catch (e) {
                 cardButton.disabled = false;
                 displayPaymentResults('FAILURE');
