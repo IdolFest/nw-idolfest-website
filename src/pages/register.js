@@ -36,8 +36,6 @@ const FormBox = styled(Box)({
 /*
 To add:
 
-* spirit badge tier that asks for full shipping address
-* Discord username (with help text saying "We'll use this to give you special role")
 * Name to credit on website (conditional for sponsor/super sponsor)
 * Newsletter opt-in
 * Text saying "You'll be able to add a t-shirt to your registration on the next page"
@@ -203,34 +201,39 @@ const RegisterPage = () => {
         initialValues={initialValues}
         validationSchema={Yup.object({
           badgeType: Yup.string()
-            .matches(/(spiritBadge|attendee|sponsor|superSponsor)/)
+            .matches(/(spirit|attendee|sponsor|superSponsor)/)
             .required('Required'),
           fullName: Yup.string()
             .max(80, 'Must be 80 characters or less')
             .required('Required'),
+          websiteName: Yup.string()
+            .when('badgeType', {
+              is: (value) => ['sponsor', 'superSponsor'].indexOf(value)  > -1,
+              then: Yup.string().required('Required') 
+            }),
           discordHandle: Yup.string().matches(/^.+#\d{4}$/, 'Please provide your full handle, including tag.'),
           email: Yup.string().email('Invalid email address').required('Required'),
           dateOfBirth: Yup.date().nullable().required('Required'),
           address1: Yup.string()
             .when('badgeType', {
-              is: 'spiritBadge', 
+              is: 'spirit', 
               then: Yup.string().required('Required') 
             }),
           city: Yup.string()
             .when('badgeType', {
-              is: 'spiritBadge', 
+              is: 'spirit', 
               then: Yup.string().required('Required') 
             }),
           state: Yup.string()
             .when('badgeType', {
-              is: 'spiritBadge', 
+              is: 'spirit', 
               then: Yup.string().required('Required') 
             }),
-          //country: Yup.string().required('Required'),
+          country: Yup.string().required('Required'),
         })}
-        validate={values => {
-          console.log(values)
-        }}
+        // validate={values => {
+        //   console.log(values)
+        // }}
         onSubmit={ async (values, { setSubmitting }) => {
             console.log('Submitting form...')
             console.log(values)
@@ -283,6 +286,12 @@ const RegisterPage = () => {
             <Field name="fullName" type="text" label="* Full Name" component={TextField} fullWidth={true} />
           </Box>
 
+          { (props.values.badgeType === 'sponsor' || props.values.badgeType === 'superSponsor') && (
+          <Box margin={1}>
+            <Field name="websiteName" type="text" label="* Name for Website Thank You" component={TextField} fullWidth={true} />
+            <FormHelperText id='websiteNameHelperText'>Let us know the name you'd like to go by on our website list of sponsors ("Anonymous" is okay).</FormHelperText>
+          </Box>
+          )}
           <Box margin={1}>
             <Field name="discordHandle" type="text" label="Discord Handle (optional)" component={TextField} fullWidth={true} aria-describedby='discordHandleHelperText' />
             <FormHelperText id='discordHandleHelperText'>If you provide your Discord handle and join our server, we'll give you a special role!</FormHelperText>
@@ -308,7 +317,7 @@ const RegisterPage = () => {
             />
           </Box>
 
-          { props.values.badgeType === 'spiritBadge' && (
+          { props.values.badgeType === 'spirit' && (
              <>
              <Box margin={1}>
               <Field name="address1" type="text" label="* Address (Line 1)" component={TextField} fullWidth={true} />
@@ -326,12 +335,12 @@ const RegisterPage = () => {
              <Box margin={1}>
               <Field name="state" type="text" label="* State/Province" component={TextField} fullWidth={true} />
              </Box>
-             
-             <Box margin={1}>
-              <Field name="country" type="text" label="* Country" component={TextField} fullWidth={true} />
-             </Box>
              </>
           )}
+                  
+          <Box margin={1}>
+            <Field name="country" type="text" label="* Country" component={TextField} fullWidth={true} />
+          </Box>
 
           <Box margin={1}>
             <Field name="zipCode" type="text" label="* Zip/Postal Code" component={TextField} fullWidth={true} />
