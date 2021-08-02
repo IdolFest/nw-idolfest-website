@@ -154,7 +154,7 @@ const RegisterPage = () => {
       heard: '',
       city: '',
       state: '',
-      country: '',
+      country: 'United States',
     }
   } else {
     initialValues = { 
@@ -165,6 +165,9 @@ const RegisterPage = () => {
       dateOfBirth: null,
       emailSignup: true,
       heard: '',
+      city: '',
+      state: '',
+      country: '',
     } 
   }
 
