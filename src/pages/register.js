@@ -23,9 +23,9 @@ import RegistrationTier from '@components/registrationTier'
 let lambdaUrl
 
 if (process.env.NODE_ENV === 'development') {
-  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1'
+  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg1'
 } else {
-  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1-prod'
+  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg1-prod'
 }
 
 const FormBox = styled(Box)({
@@ -267,6 +267,15 @@ const RegisterPage = () => {
                 name='badgeType'
                 id='badgeType'
                 aria-describedby='badgeTypeHelperText'
+                style={{
+                  height: '50px',
+                  background: '#f3a5d2',
+                  borderRadius: '0',
+                  padding: '10px',
+                  fontSize: '1em',
+                  WebkitAppearance: 'none',
+                  border: 'grey solid 1.5px',
+                }}
               >
                 <option value="" label='Select a badge type'>Select a badge type</option>
                 {allBadgeTiers.map((badge) => (
@@ -310,10 +319,11 @@ const RegisterPage = () => {
               format="yyyy/MM/DD"
               openTo="year"
               disableFuture={true}
-              fullWidth={true}
-              variant="inline"
+              fullWidth={false}
+              //variant="inline"
               placeholder="yyyy/mm/dd"
               autoOk={true}
+              //PopperProps={{ anchorEl: null }}
             />
           </Box>
 
