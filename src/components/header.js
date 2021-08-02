@@ -16,10 +16,10 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const headersData = [
-  // {
-  //   label: "Register",
-  //   href: "/register",
-  // },
+  {
+    label: "Register",
+    href: "/register",
+  },
   {
     label: "Hotel",
     href: "/hotel",
