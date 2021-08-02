@@ -25,7 +25,7 @@ let lambdaUrl
 if (process.env.NODE_ENV === 'development') {
   lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg1'
 } else {
-  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg1-prod'
+  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/nwif-reg1-prod'
 }
 
 const FormBox = styled(Box)({

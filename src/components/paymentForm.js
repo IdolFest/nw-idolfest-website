@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'development') {
 } else {
     appId = 'sq0idp-OyXssltwNQblNk9NOxKJ4w'
     locationId = 'L4RPAVMCK1MD7'
-    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg2-prod'
+    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/nwif-reg2-prod'
 }
 
 export const loadSquareSdk = () => {
