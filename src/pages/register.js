@@ -68,7 +68,7 @@ const allBadgeTiers = [
   {
     badgeName: 'Super Sponsor',
     badgeKey: 'superSponsor',
-    hasTax: false,
+    hasTax: true,
     price: '$420.69',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
@@ -86,7 +86,7 @@ const allBadgeTiers = [
     hasTax: true,
     price: '$15',
     tierName: 'Dekimasen',
-    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF.",
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! <br /><em>Please note this does not grant entry to NWIF.</em>",
     perks: [
       'Badge and lanyard mailed to you',
       'NWIF Discord role',
