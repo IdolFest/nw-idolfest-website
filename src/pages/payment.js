@@ -37,7 +37,7 @@ const PaymentPage = ({ location }) => {
         <CenteredBox>
           
           <p>Finish purchasing your {badgeType} below.</p>
-          <p>Total: ${(amount - tax) / 100} { tax > 0 ? <span>{tax / 100} tax</span> : null}</p>
+          <p>Total: ${(amount - tax) / 100} { tax > 0 ? <span>+ ${tax / 100} tax</span> : null}</p>
         </CenteredBox>
 
         {squareStatus === "ERROR" &&
