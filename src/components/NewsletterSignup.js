@@ -37,6 +37,11 @@ export default function NewsletterSignup() {
           } catch(e) {
             console.error(e)
             setState(e)
+            if (e.message === 'Timeout') {
+              this.setState({
+                warning: 'Looks like your browser is blocking this request. Please disable any tracker/ad-blocking and resubmit.'
+              })
+            }
           }
         }}
       >
