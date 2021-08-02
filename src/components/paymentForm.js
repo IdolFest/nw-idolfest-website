@@ -3,15 +3,18 @@ import "./paymentForm.css"
 
 let appId
 let locationId
+let lambdaUrl
 
 if (process.env.NODE_ENV === 'development') {
     appId = 'sandbox-sq0idb-S1xs9NDkn4cJR2JcDOupiA'
     // this is the dev NWIF main location
     // there is a separate location for (At Event)
     locationId = 'LWGKEFPEN4J9S'
+    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg2'
 } else {
     appId = 'sq0idp-OyXssltwNQblNk9NOxKJ4w'
     locationId = 'L4RPAVMCK1MD7'
+    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg2-prod'
 }
 
 export const loadSquareSdk = () => {
@@ -67,7 +70,7 @@ async function createPayment(token, guid, amount) {
         amount
     });
 
-    const paymentResponse = await fetch('https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg2', {
+    const paymentResponse = await fetch(lambdaUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -186,7 +189,6 @@ export default class PaymentForm extends Component {
 
         // Checkpoint 2.
         if (googlePay !== undefined) {
-            console.log('googlePay', googlePay)
             const googlePayButton = document.getElementById('google-pay-button');
             googlePayButton.addEventListener('click', async function (event) {
                 await handlePaymentMethodSubmission(event, googlePay);

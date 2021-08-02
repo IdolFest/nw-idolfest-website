@@ -20,6 +20,14 @@ import { styled } from '@material-ui/styles'
 import { navigate } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
 
+let lambdaUrl
+
+if (process.env.NODE_ENV === 'development') {
+  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1'
+} else {
+  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1-prod'
+}
+
 const FormBox = styled(Box)({
   width: '80%',
   paddingBottom: '1em'
@@ -226,7 +234,7 @@ const RegisterPage = () => {
         onSubmit={ async (values, { setSubmitting }) => {
             console.log('Submitting form...')
             console.log(values)
-            const response = await fetch(`https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/dev/reg1`, {
+            const response = await fetch(lambdaUrl, {
               method: 'POST',
               mode: 'cors',
               body: JSON.stringify(values),
