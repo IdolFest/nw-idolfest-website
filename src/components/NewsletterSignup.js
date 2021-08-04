@@ -24,8 +24,9 @@ export default function NewsletterSignup() {
         }}
         onSubmit={ async (values, { setSubmitting }) => {
           setState('Submitting...')
-          try { 
-            const response = await addToMailchimp(values.email, {})
+          try {
+            // add subscriber to the list and our "All Subscribers" group
+            const response = await addToMailchimp(values.email, { 'group[55326]': '8' })
             if (response.result !== 'succcess') {
               console.log(response)
               setState(response.msg)
