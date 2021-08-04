@@ -92,7 +92,7 @@ const allBadgeTiers = [
     hasTax: true,
     price: '$15',
     tierName: 'Dekimasen',
-    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! <br /><em>Please note this does not grant entry to NWIF.</em>",
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. Shipping available to US and CA only.",
     perks: [
       'Badge and lanyard mailed to you',
       'NWIF Discord role',
@@ -109,7 +109,7 @@ const badgesRowTwo = [
     hasTax: true,
     price: '$15',
     tierName: 'Dekimasen',
-    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF.",
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. Shipping available to US and CA only.",
     perks: [
       'Badge and lanyard mailed to you',
       'NWIF Discord role',
@@ -332,6 +332,8 @@ const RegisterPage = () => {
 
           { props.values.badgeType === 'spirit' && (
              <>
+            <em>Please note we are only able to ship to addresses in the US and Canada.</em>
+              
              <Box margin={1}>
               <Field name="address1" type="text" label="* Address (Line 1)" component={TextField} fullWidth={true} />
              </Box>
