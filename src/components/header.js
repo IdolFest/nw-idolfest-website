@@ -126,18 +126,17 @@ export default function Header() {
     mobileView: false,
     drawerOpen: false,
     anchorEl: null,
-    open: false,
   })
 
   const handleClick = useCallback(
     event => {
-      setState({ open: true, anchorEl: event.currentTarget })
+      setState({ [event.currentTarget.id]: true, anchorEl: event.currentTarget })
     },
     [setState]
   )
 
-  const handleClose = useCallback(() => {
-    setState({ open: false, anchorEl: null })
+  const handleClose = useCallback((id) => {
+    setState({[id]: false, anchorEl: null })
   }, [setState])
 
   const { mobileView, drawerOpen } = state
@@ -181,9 +180,10 @@ export default function Header() {
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
+                id={label}
                 onMouseOver={handleClick}
                 onClick={handleClick}
-                aria-owns={state.open ? `idolfest-menu-${label}` : null}
+                aria-owns={state[label] ? `idolfest-menu-${label}` : null}
               >
                 <Link to={href}>{label}</Link>
                 <FontAwesomeIcon
@@ -195,10 +195,11 @@ export default function Header() {
                 anchorEl={state.anchorEl}
                 getContentAnchorEl={null}
                 keepMounted
-                open={state.open}
-                onClose={handleClose}
+                open={state[label] || false}
+                onClose={handleClose.bind(this, label)}
+                onMouseLeave={handleClose.bind(this, label)}
                 id={`idolfest-menu-${label}`}
-                MenuListProps={{ onMouseLeave: handleClose }}
+                MenuListProps={{ onMouseLeave: handleClose.bind(this, label) }}
                 anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                 transformOrigin={{ vertical: "top", horizontal: "center" }}
               >
