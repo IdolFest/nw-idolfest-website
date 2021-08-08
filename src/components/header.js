@@ -282,6 +282,7 @@ export default function Header() {
                   anchorEl={state.anchorEl}
                   getContentAnchorEl={null}
                   keepMounted
+                  disableScrollLock
                   open={state[label] ? state[label] : false}
                   onClose={handleClose.bind(this, label)}
                   id={`idolfest-menu-${label}`}
