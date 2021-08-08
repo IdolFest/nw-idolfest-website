@@ -21,7 +21,7 @@ const PoliciesPage = () => (
             <p>Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and Nijiiro Events LLC from any claim for personal injuries or other damages or equity arising out of any individual's activities at NWIF, even if such injury or damage is caused by negligence by or on the part of NWIF.</p>
         
             <h2>COVID-19</h2>
-            <p>NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are expected to comply with any necessary COVID-19 preventative measures at the event at all times.</p>
+            <p>NWIF will require proof of vaccination as well as masking at all times in event space. These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.</p>
 
             <h2>Content Rating</h2>
             <p>All content at NWIF is expected to fall within a PG-13 rating. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!</p>
@@ -46,7 +46,7 @@ const PoliciesPage = () => (
             <h2>Cosplay</h2>
             <p>We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay:</p>
             <ul>
-            <li>Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make “invisible shoes”.</li>
+            <li>Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make <a href="https://www.andsewingishalfthebattle.com/invisible-shoes/" target="_blank" rel="noreferrer">“invisible shoes”</a>.</li>
             <li>Costumes and regular clothing should not expose the body in a way that would be deemed as indecent exposure. Private parts must be covered in an opaque material that will not slip or have gaps.</li>
             <li>Costumes worn in the event space can not be so large that they obstruct or impede the flow of traffic or entryways for all attendee’s safety. If the costume cannot fit through a standard doorway, you may be asked to store it. Exceptions may be made for Masquerade contestants.</li>
             <li>Attendees with bulky costumes, costumes that obscure vision, or costumes with large extensions such as wings or spikes, should have a designated “handler,” to assist them through the hallways and crowds.</li>
@@ -56,7 +56,7 @@ const PoliciesPage = () => (
             </ul>
 
             <h2>Accessibility</h2>
-            <p>NWIF is committed to making our event accessible to all. Our event space is fully wheelchair-accessible. The hotel will provide ADA rooms on request. Service animals are permitted. (Please note that emotional support animals do not qualify as service animals).</p>
+            <p>NWIF is committed to making our event accessible to all. Our event space is fully wheelchair-accessible. The hotel will provide ADA rooms on request. In accordance with the ADA, service animals are permitted in hotel and event space. Non-service animals may be permitted in hotel common areas and rooms but are not permitted in NWIF event space. Please contact the hotel directly for any questions relating to their pet policy.</p>
             <p>If you have further accessibility needs, please <Link to='contact'>contact us</Link>. Sign language interpretation requests require a minimum of one month’s notice.</p>
 
             <h2>Photos & Videos</h2>

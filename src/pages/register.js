@@ -33,14 +33,6 @@ const FormBox = styled(Box)({
   paddingBottom: '1em'
 })
 
-/*
-To add:
-
-* Name to credit on website (conditional for sponsor/super sponsor)
-* Newsletter opt-in
-* Text saying "You'll be able to add a t-shirt to your registration on the next page"
-*/
-
 const allBadgeTiers = [
   {
     badgeName: 'Attendee',
@@ -387,6 +379,7 @@ const RegisterPage = () => {
           </div>
           : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
+          <i>By registering for a badge, you agree to comply with all <a href='/policies' target='_blank'>NWIF policies</a>.</i>
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
           </Button>
