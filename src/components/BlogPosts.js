@@ -5,18 +5,19 @@ export default function BlogPosts() {
     const { blog } = useStaticQuery(
         graphql`
             query MyQuery {
-                blog: allMarkdownRemark {
-                posts: nodes {
+                blog: allMarkdownRemark(filter: {frontmatter: {template: {eq: "blogpost"}}}) {
+                    posts: nodes {
                     fields {
-                    slug
+                        slug
                     }
                     frontmatter {
-                    date(fromNow: true)
-                    title
+                        date(fromNow: true)
+                        title
+                        template
                     }
                     excerpt
                     id
-                }
+                    }
                 }
             }`
     )
