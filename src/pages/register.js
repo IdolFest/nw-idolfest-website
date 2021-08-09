@@ -17,7 +17,7 @@ import {
   Grid,
 } from '@material-ui/core'
 import { styled } from '@material-ui/styles'
-import { navigate } from 'gatsby'
+import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
 
 let lambdaUrl
@@ -380,6 +380,7 @@ const RegisterPage = () => {
           : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
           <i>By registering for a badge, you agree to comply with all <a href='/policies' target='_blank'>NWIF policies</a>.</i>
+          {props.values.badgeType === 'superSponsor' && (<><br /><br /><i>A credit card matching the name on your registration will be required for incidentals when checking into your Prism hotel room. The primary guest on the room must be over 18. Up to 2 additional guests may be added to the room by <Link to='/contact'>contacting us</Link>.</i></>) }
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
           </Button>
