@@ -4,11 +4,12 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export default function Page({
     data, // this prop will be injected by the GraphQL query below.
 }) {
-    const page = data.markdownRemark
+    const page = data.mdx
     return (
         <Layout>
             <Seo title={page.frontmatter.title} />
@@ -18,7 +19,7 @@ export default function Page({
             />
 
         <PageContent>
-          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+          <MDXRenderer>{page.body}</MDXRenderer>
         </PageContent>
         </Layout>
     )
@@ -26,8 +27,8 @@ export default function Page({
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
       }
