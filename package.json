@@ -21,6 +21,7 @@
     "formik-material-ui-pickers": "^0.0.12",
     "gatsby": "^3.6.2",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-catch-links": "^3.12.0",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-google-gtag": "^3.8.0",
     "gatsby-plugin-image": "^1.6.0",
