@@ -52,7 +52,8 @@ export default function GuestStar({ guestName, showLink, showName=true }) {
       }
     `)
 
-  const guestStarFilename = `${guestName.split(" ").join("").toLowerCase()}_star.png`
+  const guestNameSlug = guestName.split(" ").join("").toLowerCase()
+  const guestStarFilename = `${guestNameSlug}_star.png`
   
   const guestStarImageData = data.allImageSharp.edges.find(
       edge => edge.node.fluid.originalName === guestStarFilename
@@ -78,7 +79,7 @@ export default function GuestStar({ guestName, showLink, showName=true }) {
         </>
       : 
         <>
-          <Link to={`/guests/${guestName.toLowerCase()}`} className={`${classes.guestLink}`}>
+          <Link to={`/guests/${guestNameSlug}`} className={`${classes.guestLink}`}>
           <GatsbyImage
             className={classes.guestStarImage}
             alt=''
