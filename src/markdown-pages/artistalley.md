@@ -6,4 +6,4 @@ template: page
 
 Due to space limitations, our Artist Alley this year will be by invitation only.
 
-Although there is no formal application process, we encourage interested artists to <a href='mailto:contact@nwidolfest.com' target='_blank' rel='noreferrer'>email us</a>.
+Although there is no formal application process, we encourage interested artists to [contact us](/contact).
