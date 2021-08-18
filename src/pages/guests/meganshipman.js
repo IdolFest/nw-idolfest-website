@@ -7,7 +7,7 @@ import Guest from '@components/Guest'
 
 const MeganShipmanPage = () => {
     const guestSocials = [
-        { link: `https://www.tiktok.com/@meganshipmanva`, icon: 'youtube'},
+        { link: `https://www.tiktok.com/@meganshipmanva`, icon: 'tiktok'},
         { link: `https://www.twitter.com/18moptop`, icon: 'twitter'},
     ]
 
