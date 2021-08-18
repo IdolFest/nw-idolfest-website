@@ -20,4 +20,4 @@ Though our beginnings may be humble, our love for idols knows no bounds. With yo
 
 Our all-volunteer staff is made up of veteran convention runners from all backgrounds and professions. We operate under a policy of transparency and long-term planning to bring the best possible experience to the Pacific Northwest.
 
-Have questions or want to join up? <a href='mailto:contact@nwidolfest.com' target='_blank' rel='noreferrer'>Email us!</a>
+Have questions or want to join up? [Contact us!](/contact)
