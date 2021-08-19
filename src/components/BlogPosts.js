@@ -5,7 +5,7 @@ export default function BlogPosts() {
     const { blog } = useStaticQuery(
         graphql`
             query MyQuery {
-                blog: allMarkdownRemark {
+                blog: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
                 posts: nodes {
                     fields {
                     slug

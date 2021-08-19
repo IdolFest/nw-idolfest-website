@@ -25,9 +25,11 @@ const IndexPage = () => {
         <p>Northwest Idol Festival is a two day event featuring idols, anisong, and everything in between. Join us in Seattle on November 13-14, 2021 for an exciting weekend of guests, concerts, panels, cosplay, and more. Get ready for a whole new idol experience!</p>
         <p>Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and <Link to="register">buy your badge</Link> today!</p>
         
+        <div style={{ paddingTop: '1em' }} />
+        
         <BlogPosts />
         
-        <h2>Newsletter</h2>
+        <h2 style={{ paddingTop: '1em' }}>Newsletter</h2>
         <p>Sign up for our email list below to get the scoop on guest announcements, giveaways, and more!</p>
         <NewsletterSignup />
       </PageContent>

@@ -23,7 +23,7 @@ const RintaichouPage = () => {
             />
 
             <PageContent>
-                <Guest guestName="Rintaichou" guestTitle="Content Creator & You Watanabe Fan" showLink={false} guestSocials={guestSocials}>
+                <Guest guestName="Rintaichou" guestTitle="Content Creator & You Watanabe Fan" guestSocials={guestSocials}>
                     YouTuber and Twitch Partner, RinTaichou (formerly known as RinSenpai) has been a fan of Love Live since 2015. They've been creating videos focusing around the gacha part of a lot of different franchises with Love Live being one of the most popular featured. They've since focused more on Genshin Impact but still remains active in the Love Live community.
                 </Guest>
             </PageContent>

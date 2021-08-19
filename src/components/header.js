@@ -33,6 +33,10 @@ const headersData = [
       href: "/guests",
     },
     {
+      label: "Megan Shipman",
+      href: "/guests/meganshipman"
+    },
+    {
       label: "Rintaichou",
       href: "/guests/rintaichou"
     },
