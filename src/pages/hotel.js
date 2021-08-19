@@ -33,8 +33,8 @@ function createData(roomType, price) {
 }
 
 const rows = [
-  createData('Standard King', '$119'),
-  createData('Double Queen', '$139'),
+  createData('Standard King', '$109'),
+  createData('Double Queen', '$119'),
 ]
 
 const HotelPage = () => {
