@@ -6,7 +6,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   if (node.internal.type === `Mdx`) {
     let slug = createFilePath({ node, getNode, basePath: `pages` })
-    if (node.frontmatter.template === 'blogpost') {
+    if (node.frontmatter.template === `blogpost`) {
       slug = `/blog${slug}`
     }
     createNodeField({
