@@ -6,6 +6,7 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const useStyles = makeStyles({
     cta: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
 })
 
 export default function BlogPost({ data }) {
-    const post = data.markdownRemark
+    const post = data.mdx
     const classes = useStyles()
 
     return (
@@ -30,7 +31,7 @@ export default function BlogPost({ data }) {
 
         <PageContent>
             <p className={classes.date}>Posted {post.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <MDXRenderer>{post.body}</MDXRenderer>
                 
             <p className={classes.cta}>Want to get future announcements straight to your inbox? Sign up for our email list:</p>
             <NewsletterSignup />
@@ -41,8 +42,8 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query BlogQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

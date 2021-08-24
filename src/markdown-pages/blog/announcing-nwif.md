@@ -1,6 +1,7 @@
 ---
 title: Announcing NW IdolFest!
 date: 2021-08-02
+template: blogpost
 ---
 
 ## Announcing NW IdolFest!
