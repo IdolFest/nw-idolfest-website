@@ -72,7 +72,7 @@ const allBadgeTiers = [
     description: 'Everything in Gold, plus:',
     perks: [
       'Prism-only badge and lanyard',
-      'King bed hotel room for 2 nights',
+      'King bed hotel room for 2 nights (Fri/Sat)',
       'Badge delivery to hotel room',
       'Can badge set',
       'Closing Ceremonies special thanks',
