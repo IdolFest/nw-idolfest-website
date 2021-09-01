@@ -1,6 +1,7 @@
 ---
 title: Megan Shipman is heading to NWIF!
 date: 2021-08-18
+template: blogpost
 ---
 
 ## Megan Shipman is heading to NWIF!

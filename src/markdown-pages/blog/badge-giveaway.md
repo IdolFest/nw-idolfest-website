@@ -1,6 +1,7 @@
 ---
 title: Win a NWIF Badge!
 date: 2021-08-19
+template: blogpost
 ---
 
 ## Win a Pair of Silver Badges to NWIF!
