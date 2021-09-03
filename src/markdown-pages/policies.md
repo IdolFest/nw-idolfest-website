@@ -66,4 +66,6 @@ If you have further accessibility needs, please [contact us](/contact). Sign lan
 
 ## Photos & Videos
 
-Any photos or videos taken of cosplayers are allowed if the explicit consent of everyone in the photo or video is given. Photos and videos of panel content are not allowed unless approved by both the panelists and NWIF staff. You may ask any staff member if a panel allows photos or videos to be taken. If at any point you are caught taking photos or videos at a prohibited panel, you will be asked to leave the panel and delete any footage.
+NWIF attendees should be aware that audio and/or video recordings are frequently made in convention areas and that their likenesses may appear in those recordings. Individual members agree to assign without compensation the use of their likeness(es) at NWIF for the use of promotional material such as highlights and videos.
+
+Attendees must comply with our anti-harassment policy when taking photos or videos of other attendees. Be respectful and remember cosplay is not consent. Photos and videos of panel content are not allowed approved by both the panelists and NWIF staff. You may ask any staff member if a panel allows photos or videos.
