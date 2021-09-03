@@ -68,4 +68,4 @@ If you have further accessibility needs, please [contact us](/contact). Sign lan
 
 NWIF attendees should be aware that audio and/or video recordings are frequently made in convention areas and that their likenesses may appear in those recordings. Individual members agree to assign without compensation the use of their likeness(es) at NWIF for the use of promotional material such as highlights and videos.
 
-Attendees must comply with our anti-harassment policy when taking photos or videos of other attendees. Be respectful and remember cosplay is not consent. Photos and videos of panel content are not allowed approved by both the panelists and NWIF staff. You may ask any staff member if a panel allows photos or videos.
+Attendees must comply with the NWIF anti-harassment policy when taking photos or videos of other attendees. Be respectful and remember cosplay is not consent. Photos and videos of panel content are not allowed unless approved by both the panelists and NWIF staff. You may ask any staff member if a panel allows photos or videos.
