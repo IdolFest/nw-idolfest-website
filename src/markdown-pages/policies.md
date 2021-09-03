@@ -32,7 +32,7 @@ This policy applies without exception to everyone at the convention, including a
 
 ## Badges
 
-Badges must be visibly displayed on your person while in event space. In case of lost badge, one free replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
+Badges must be visibly displayed on your person while in event space. In case of lost badge, one $20 replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
 
 NWIF does not provide refunds. If you would like to transfer your badge, please [contact us](/contact).
 
