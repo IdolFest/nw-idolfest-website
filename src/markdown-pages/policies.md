@@ -34,7 +34,7 @@ This policy applies without exception to everyone at the convention, including a
 
 Badges must be visibly displayed on your person while in event space. In case of lost badge, one $20 replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
 
-NWIF does not provide refunds. If you would like to transfer your badge, please [contact us](/contact).
+If you are unable to attend due to border closures, illness, or other government restrictions, you may request a refund for your badge. Refunds are offered on a case-by-case basis, and documentation may be requested confirming your situation. To request a refund, email [registration@nwidolfest.com](mailto:registration@nwidolfest.com) no later than November 12, 2021. Refund requests made after this date will not be considered. Refunds are offered at the sole discretion of Nijiro Events LLC.
 
 ## Lost Items
 
