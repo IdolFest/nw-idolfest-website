@@ -41,6 +41,10 @@ const headersData = [
       href: "/guests/meganshipman"
     },
     {
+      label: "Amina du Jean",
+      href: "/guests/aminadujean"
+    },
+    {
       label: "Rintaichou",
       href: "/guests/rintaichou"
     },
