@@ -38,9 +38,9 @@ const allBadgeTiers = [
     badgeName: 'Attendee',
     badgeKey: 'attendee',
     hasTax: true,
-    price: '<strike>$40</strike> $30',
+    price: '$40',
     tierName: 'Silver',
-    description: 'Early bird pricing available until Sept 12!',
+    description: 'This badge grants:',
     perks: [
       'Access to all events at NWIF',
       'NWIF Discord role',
