@@ -79,6 +79,10 @@ const headersData = [
       href: "/policies"
     },
     {
+      label: "Partners",
+      href: "/partners"
+    },
+    {
       label: "Newsletter Signup",
       href: "/newsletter"
     },
