@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const useStyles = makeStyles(theme => ({
-  guest: {
+  person: {
     textDecoration: 'none',
     boxShadow: 'none',
     textAlign: 'center',
@@ -15,25 +15,25 @@ const useStyles = makeStyles(theme => ({
       boxShadow: 'none',
     }
   },
-  guestName: {
+  personName: {
     textTransform: 'uppercase',
     fontFamily: 'Junegull',
     margin: '.5em 0',
   },
-  guestLink: {
+  personLink: {
     '&:hover': {
       textDecoration: 'underline',
       color: theme.palette.light_pink,
     }
   },
-  guestStarImage: {
+  avatarImage: {
     '&:hover': {
       transform: 'rotate(10deg)',
     }
   },
 }))
 
-export default function GuestStar({ guestName, showLink, showName=true }) {
+export default function Avatar({ personName, showLink, showName=true }) {
   const classes = useStyles()
   
   const data = useStaticQuery(
@@ -52,44 +52,44 @@ export default function GuestStar({ guestName, showLink, showName=true }) {
       }
     `)
 
-  const guestNameSlug = guestName.split(" ").join("").toLowerCase()
-  const guestStarFilename = `${guestNameSlug}_star.png`
+  const personNameSlug = personName.split(" ").join("").toLowerCase()
+  const avatarFilename = `${personNameSlug}_star.png`
   
-  const guestStarImageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName === guestStarFilename
+  const avatarImageData = data.allImageSharp.edges.find(
+      edge => edge.node.fluid.originalName === avatarFilename
   ).node.gatsbyImageData
 
   return (
     <Grid container direction='column' style={{ maxWidth: '200px' }}>
-      <Box className={classes.guest}>  
+      <Box className={classes.person}>  
       {!showLink ?
         <>
         <GatsbyImage
-          className={classes.guestStarImage}
+          className={classes.avatarImage}
           alt=''
-          image={guestStarImageData}
+          image={avatarImageData}
           loading='eager'
           placeholder='blurred'
         />
         { showName ? 
-          <div className={classes.guestName}>
-            {guestName}
+          <div className={classes.personName}>
+            {personName}
           </div>
           : null }
         </>
       : 
         <>
-          <Link to={`/guests/${guestNameSlug}`} className={`${classes.guestLink}`}>
+          <Link to={`${personNameSlug}`} className={`${classes.personLink}`}>
           <GatsbyImage
-            className={classes.guestStarImage}
+            className={classes.avatarImage}
             alt=''
-            image={guestStarImageData}
+            image={avatarImageData}
             loading='eager'
             placeholder='blurred'
           />
           { showName ? 
-            <div className={`${classes.guestName}`}>
-              {guestName}
+            <div className={`${classes.personName}`}>
+              {personName}
             </div>
             : null }
         </Link>

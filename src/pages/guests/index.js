@@ -3,7 +3,7 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
-import GuestStar from '@components/guestStar'
+import Avatar from '@components/avatar'
 import CenteredBox from '@components/CenteredBox'
 import Grid from '@material-ui/core/Grid'
 
@@ -18,15 +18,15 @@ const GuestsPage = () => (
         <PageContent>
             <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
             <Grid container style={{ justifyContent: 'space-around' }}>
-                <GuestStar guestName="Phoebe" showLink={true} />
-                <GuestStar guestName="Megan Shipman" showLink={true} />
-                <GuestStar guestName="Amina du Jean" showLink={true} />
-                <GuestStar guestName="Rintaichou" showLink={true} />
+                <Avatar personName="Phoebe" showLink={true} />
+                <Avatar personName="Megan Shipman" showLink={true} />
+                <Avatar personName="Amina du Jean" showLink={true} />
+                <Avatar personName="Rintaichou" showLink={true} />
             </Grid>
 
             <h2><CenteredBox>Appearing Remotely</CenteredBox></h2>
             <Grid container style={{ justifyContent: 'space-around' }}>
-                <GuestStar guestName="Coming soon" />
+                <Avatar personName="Coming soon" />
             </Grid>
         </PageContent>
     </Layout>

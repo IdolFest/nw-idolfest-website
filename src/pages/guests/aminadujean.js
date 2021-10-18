@@ -19,7 +19,7 @@ export default function AminaduJeanPage() {
             />
 
             <PageContent>
-                <Guest guestName="Amina du Jean" guestTitle="Former J-Pop Idol" guestSocials={guestSocials}>
+                <Guest personName="Amina du Jean" guestTitle="Former J-Pop Idol" guestSocials={guestSocials}>
                     Amina du Jean aka Aminyan is a former professional idol in Japan. While in Tokyo she won the runner up award in Kodansha's Miss iD 2016, appeared on Japanese television and graced the stages of Akihabara. 
                 </Guest>
             </PageContent>

@@ -25,7 +25,7 @@ const PhoebePage = () => {
             />
 
             <PageContent>
-                <Guest guestName="Phoebe" guestTitle="Virtual Idol/Singer/Voice Actress" guestSocials={guestSocials}>
+                <Guest personName="Phoebe" guestTitle="Virtual Idol/Singer/Voice Actress" guestSocials={guestSocials}>
                     Get ready to sing, dance, and smile with 2.5D fairytale idol, Phoebe! Phoebe is a California-based vocalist, VA, and VTuber dedicated to her craft and making people smile. She loves singing and writing her own original songs in Japanese and English, and performing on both the IRL and virtual stage. She is also part of VTuber Agency Shirayuri Production and IRL idol group PhEri.
                     
                     <br /><br />

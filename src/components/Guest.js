@@ -2,7 +2,7 @@ import * as React from 'react'
 import { styled } from '@material-ui/styles'
 import { Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-import GuestStar from '@components/guestStar'
+import Avatar from '@components/avatar'
 import CenteredBox from '@components/CenteredBox'
 import { createSocialIcon } from '@components/socialIcon'
 
@@ -45,18 +45,18 @@ function wrapGuestSocial(children) {
     )
 }
 
-export default function Guest({ guestName, guestTitle, guestSocials, children }) {
+export default function Guest({ personName, guestTitle, guestSocials, children }) {
   const classes = useStyles()
 
   return (
     <Box className={classes.guest}>
       <Grid container className={classes.guestGrid}>
-        <GuestStar guestName={guestName} showName={false} />
+        <Avatar personName={personName} showName={false} />
         <Biography>{children}</Biography>
       </Grid>
       <Grid container style={{ justifyContent: 'center' }}>
-        {guestSocials.map(({ link, icon }) => {
-          return <div key={icon}>{wrapGuestSocial(createSocialIcon(link, icon))}</div>
+        {guestSocials.map(({ link, icon, iconLibrary='fab' }) => {
+          return <div key={icon}>{wrapGuestSocial(createSocialIcon(link, icon, null, iconLibrary))}</div>
         })}
       </Grid>
       <h3><CenteredBox>{guestTitle}</CenteredBox></h3>
