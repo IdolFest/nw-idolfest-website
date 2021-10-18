@@ -32,7 +32,7 @@ const IndexPage = () => {
       />
 
       <PageContent>
-        <p>Northwest IdolFest is proud to partner with some amazing organizations. Interested in joining? <Link to="/contact">Drop us a line!</Link></p>
+        <p>Northwest IdolFest is proud to partner with some amazing organizations. Interested in joining up? <Link to="/contact">Drop us a line!</Link></p>
 
         <Grid container style={{ justifyContent: 'space-around' }}>
           <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
@@ -47,6 +47,25 @@ const IndexPage = () => {
             />
           </a>
         </Grid>
+
+        <br />
+        <p>We also extend a huge THANK YOU to all our generous Gold and Prism badge sponsors! Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link></p>
+        <h3>Prism Sponsors</h3>
+        <ul>
+          <li>Sugar</li>
+          <li>LUwUigi</li>
+        </ul>
+
+        <h3>Gold Sponsors</h3>
+        <ul>
+          <li>Cinnamon18</li>
+          <li>Snow</li>
+          <li>Sturluson</li>
+          <li>Megumin Kousaka</li>
+          <li>Kanzakiii</li>
+          <li>Nekoromancy</li>
+        </ul>
+
       </PageContent>
     </Layout>
   )
