@@ -14,7 +14,9 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and N
 
 ## COVID-19
 
-NWIF will require proof of vaccination as well as masking at all times in event space. These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
+NWIF will require proof of COVID-19 vaccination as well as masking at all times in event space. A physical or digital copy of a COVID-19 vaccine card must be presented along with a valid photo ID at badge pickup. If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. 
+
+These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
 
 ## Content Rating
 
