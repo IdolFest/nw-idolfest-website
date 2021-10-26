@@ -23,11 +23,6 @@ const GuestsPage = () => (
                 <Avatar personName="Amina du Jean" showLink={true} />
                 <Avatar personName="Rintaichou" showLink={true} />
             </Grid>
-
-            <h2><CenteredBox>Appearing Remotely</CenteredBox></h2>
-            <Grid container style={{ justifyContent: 'space-around' }}>
-                <Avatar personName="Coming soon" />
-            </Grid>
         </PageContent>
     </Layout>
 )
