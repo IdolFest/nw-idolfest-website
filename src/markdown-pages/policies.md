@@ -18,7 +18,7 @@ NWIF will require proof of vaccination as well as masking at all times in event 
 
 ## Content Rating
 
-All content at NWIF is expected to fall within a PG-13 rating. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
+All content at NWIF is expected to fall within a PG-13 rating unless otherwise approved by event chairs. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
 
 ## Anti-Harassment
 
@@ -44,7 +44,7 @@ In the case of lost items, please reach out to hotel staff or call the front des
 
 You must comply with hotel and government rules while on hotel premises. What’s illegal outside the hotel is illegal inside the hotel. Please follow any instructions given to you by members of hotel staff. If you have concerns, contact any NWIF staff member.
 
-Do not stick anything to hotel walls. Any unapproved material on hotel walls will be removed, and any damage caused will be the responsibility of the poster. Flyer distributions are allowed as long as they comply with our PG-13 content rating.
+Do not stick anything to hotel walls. Any unapproved material on hotel walls will be removed, and any damage caused will be the responsibility of the poster. Flyer distributions are allowed as long as they comply with a PG-13 content rating.
 
 ## Cosplay
 
