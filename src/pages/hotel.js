@@ -34,7 +34,7 @@ function createData(roomType, price) {
 
 const rows = [
   createData('Standard King', '$109'),
-  createData('Double Queen', '$119'),
+  createData('Double Queen', '$109'),
 ]
 
 const HotelPage = () => {
@@ -53,7 +53,9 @@ const HotelPage = () => {
         alt=''
       />
       <p>
-          Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
+        Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
+          <br /><br />
+          Book your hotel room before November 9th to get the best price!
       </p>
       <CenteredBox>
         <RoomRateTable>
