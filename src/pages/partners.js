@@ -54,6 +54,7 @@ const IndexPage = () => {
         <ul>
           <li>Sugar</li>
           <li>LUwUigi</li>
+          <li>UtopicTomato</li>
         </ul>
 
         <h3>Gold Sponsors</h3>
