@@ -56,6 +56,8 @@ const HotelPage = () => {
         Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
           <br /><br />
           Book your hotel room before November 9th to get the best price!
+          <br /><br />
+        We offer a discounted $12/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
       </p>
       <CenteredBox>
         <RoomRateTable>
