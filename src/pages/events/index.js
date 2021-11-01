@@ -19,8 +19,8 @@ const EventsPage = () => (
 
             <Grid container style={{ padding: '1em 0', justifyContent: 'space-around', textAlign: 'center', fontSize: '2em' }}>
         
-                <Link to="MainAuditorium">Main Auditorium</Link>
-                <Link to="ClassA">Class A</Link>
+                <Link to="mainauditorium">Main Auditorium</Link>
+                <Link to="classa">Class A</Link>
             
             </Grid>
         </PageContent>
