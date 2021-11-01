@@ -65,6 +65,7 @@ const IndexPage = () => {
           <li>Megumin Kousaka</li>
           <li>Kanzakiii</li>
           <li>Nekoromancy</li>
+          <li>YuuniHD</li>
           <li>Anonymous</li>
         </ul>
 
