@@ -53,6 +53,20 @@ const headersData = [
   {
     label: "Events",
     href: "/events",
+    children: [
+    {
+        label: "Events",
+        href: "/events"
+    },
+    {
+        label: "Main Auditorium",
+        href: "/events/MainAuditorium"
+    },
+    {
+        label: "Class A",
+        href: "/events/ClassA"
+    },
+    ]
   },
   {
     label: "Artist Alley",

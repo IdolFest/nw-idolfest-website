@@ -45,6 +45,7 @@ const Schedule = ({ panels }) => {
     
   return (
     <>
+        <FontAwesomeIcon icon={['fas', 'star']} /> = special guest panel
         {panels.content.map((dailySchedule) => (
         <div className={classes.mobileSchedule}>
             <h3>{dailySchedule.day}</h3>
