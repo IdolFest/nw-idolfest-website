@@ -28,13 +28,6 @@ content:
         endTime: 2:00 PM
         isGuestPanel:
       -
-        title: Phoebe Meet & Greet
-        description: Meet & greet with NWIF guest, Phoebe!
-        panelists: Phoebe
-        startTime: 2:00
-        endTime: 3:00 PM
-        isGuestPanel: True
-      -
         title: Why Did You Come to Japan? To End Up On TV, Apparently
         description: "Step 1: Fly to Japan for concert. Step 2: Try to figure out how to use the train. Step 3: End up on TV...wait, what?! Come spend an hour learning what it is like to end up on TV in Japan, fun behind the scenes stories, and more!"
         panelists: Dexanth

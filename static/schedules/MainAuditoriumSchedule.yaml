@@ -107,6 +107,13 @@ content:
         endTime: 3:00 PM
         isGuestPanel: True
       -
+        title: Phoebe Meet & Greet
+        description: "Meet & greet with NWIF guest, Phoebe! Note: This event will take place in the vendor hall."
+        panelists: Phoebe
+        startTime: 3:00
+        endTime: 4:00 PM
+        isGuestPanel: True
+      -
         title: The Wonderful World of Idol Anime
         description: Do you want to learn about idol anime or find a new one to get into?  Join us on a discussion of the many idol shows out there.
         panelists: Bumpmaster
