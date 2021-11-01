@@ -52,7 +52,7 @@ const Schedule = ({ panels }) => {
             {dailySchedule.panels.map((panel) => (
             <div className={classes.panel} key={panel.title}>
                 <div className="name">{panel.title}</div>
-                <div className="time">{panel.day}, {panel.startTime} - {panel.endTime}</div>
+                <div className="time">{panel.startTime} - {panel.endTime}</div>
                 <div><span className="panelists">Panelists</span>: {panel.panelists}</div>
                 <div className="description">{panel.description}</div>
             </div>
