@@ -375,7 +375,7 @@ const RegisterPage = () => {
 
           {props.submitCount > 0 && !props.isValid ? <div style={{ color: 'red' }}>Please fix errors: 
           {Object.keys(props.errors).map((key) => (
-              <div>{key} - {props.errors[key]}</div>
+              <div>{key.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })} - {props.errors[key]}</div>
           ))}
           </div>
           : null}
