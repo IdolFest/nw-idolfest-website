@@ -60,11 +60,11 @@ const headersData = [
     },
     {
         label: "Main Auditorium",
-        href: "/events/MainAuditorium"
+        href: "/events/mainauditorium"
     },
     {
         label: "Class A",
-        href: "/events/ClassA"
+        href: "/events/classa"
     },
     ]
   },
