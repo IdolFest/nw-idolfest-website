@@ -59,14 +59,16 @@ const IndexPage = () => {
 
         <h3>Gold Sponsors</h3>
         <ul>
-          <li>Cinnamon18</li>
-          <li>Snow</li>
-          <li>Sturluson</li>
-          <li>Megumin Kousaka</li>
-          <li>Kanzakiii</li>
-          <li>Nekoromancy</li>
-          <li>YuuniHD</li>
-          <li>Anonymous</li>
+            <li>Cinnamon18</li>
+            <li>Snow</li>
+            <li>Sturluson</li>
+            <li>Megumin Kousaka</li>
+            <li>Kanzakiii</li>
+            <li>Nekoromancy</li>
+            <li>YuuniHD</li>
+            <li>Anonymous</li>
+            <li>De</li>
+            <li>Exteminator</li>
         </ul>
 
       </PageContent>
