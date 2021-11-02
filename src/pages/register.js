@@ -118,6 +118,8 @@ const badgesRowTwo = [
   }
 ]
 
+const tshirtSizes = ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL']
+
 function badgeDropdownText(badge) {
   // remove the <strike> tags from our early bird reg
   const badgePrice = badge.price.split("</strike> ").slice(-1)[0]
@@ -202,7 +204,18 @@ const RegisterPage = () => {
           fullName: Yup.string()
             .max(80, 'Must be 80 characters or less')
             .required('Required'),
+          badgeName: Yup.string()
+           .max(30, 'Must be 30 characters or less')
+           .required('Required'),
+          badgePronouns: Yup.string()
+           .max(30, 'Must be 30 characters or less'),
           websiteName: Yup.string()
+            .when('badgeType', {
+              is: (value) => ['sponsor', 'superSponsor'].indexOf(value)  > -1,
+              then: Yup.string().required('Required') 
+            }),
+          tshirtSize: Yup.string()
+            .matches(/(S|M|L|XL|2XL|3XL|4XL)/)
             .when('badgeType', {
               is: (value) => ['sponsor', 'superSponsor'].indexOf(value)  > -1,
               then: Yup.string().required('Required') 
@@ -291,12 +304,57 @@ const RegisterPage = () => {
             <Field name="fullName" type="text" label="* Full Name" component={TextField} fullWidth={true} />
           </Box>
 
+          <Box margin={1}>
+            <Field name="badgeName" type="text" label="* Badge Name" component={TextField} fullWidth={true} />
+            <FormHelperText id='badgeNameHelperText'>The name printed on your badge.</FormHelperText>
+          </Box>
+
+          <Box margin={1}>
+            <Field name="badgePronouns" type="text" label="Badge Pronouns (optional)" component={TextField} fullWidth={true} />
+            <FormHelperText id='badgePronounsHelperText'>The pronouns printed on your badge.</FormHelperText>
+          </Box>
+
           { (props.values.badgeType === 'sponsor' || props.values.badgeType === 'superSponsor') && (
           <Box margin={1}>
             <Field name="websiteName" type="text" label="* Name for Website Thank You" component={TextField} fullWidth={true} />
             <FormHelperText id='websiteNameHelperText'>Let us know the name you'd like to go by on our website list of sponsors ("Anonymous" is okay).</FormHelperText>
           </Box>
           )}
+
+          { (props.values.badgeType === 'sponsor' || props.values.badgeType === 'superSponsor') && (
+          <Box margin={1}>
+            <FormControl>
+              <label htmlFor='tshirtSize'>* T-Shirt Size</label>
+              <Field
+                as="select"
+                name='tshirtSize'
+                id='tshirtSize'
+                aria-describedby='tshirtSizeHelperText'
+                style={{
+                  height: '50px',
+                  background: '#f3a5d2',
+                  borderRadius: '0',
+                  padding: '10px',
+                  fontSize: '1em',
+                  WebkitAppearance: 'none',
+                  border: 'grey solid 1.5px',
+                }}
+              >
+                <option value="" label='Select a t-shirt size'>Select a t-shirt size</option>
+                {tshirtSizes.map((size) => (
+                  <option
+                    value={size} 
+                    key={size}
+                    label={size}
+                  >
+                    {size}
+                  </option>
+                ))}
+              </Field>
+            </FormControl>
+          </Box>
+          )}
+
           <Box margin={1}>
             <Field name="discordHandle" type="text" label="Discord Handle (optional)" component={TextField} fullWidth={true} aria-describedby='discordHandleHelperText' />
             <FormHelperText id='discordHandleHelperText'>If you provide your Discord handle and join our server, we'll give you a special role!</FormHelperText>
