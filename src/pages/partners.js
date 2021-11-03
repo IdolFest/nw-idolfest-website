@@ -69,6 +69,8 @@ const IndexPage = () => {
             <li>Anonymous</li>
             <li>De</li>
             <li>Exteminator</li>
+            <li>Steph S.</li>
+            <li>Tsuketoguu</li>
         </ul>
 
       </PageContent>
