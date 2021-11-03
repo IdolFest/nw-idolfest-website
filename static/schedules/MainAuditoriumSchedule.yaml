@@ -28,6 +28,14 @@ content:
         startTime: 12:00
         endTime: 1:00 PM
         isGuestPanel: True
+      - 
+        title: Megan Shipman Meet & Greet
+        description: "Meet & greet with NWIF guest, Megan Shipman! Note: This event will take place in the vendor hall."
+        panelists: Megan Shipman
+        day: Saturday
+        startTime: 1:00
+        endTime: 2:00 PM
+        isGuestPanel: True
       -
         title: "Idol Song Masters: Who Made the Idol Songs We Love?"
         description: An introduction to some of the well-known composers in the idol industry and their most noteworthy songs. A great way to learn about new songs or idols you might like!
