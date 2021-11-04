@@ -6,7 +6,7 @@ content:
     panels:
       -
         title: D4DJ Score Tournament
-        description: Compete against your friends to find out who can get the highest D4DJ score. Winner gets bragging rights!
+        description: "Compete against your friends to find out who can get the highest D4DJ score. Winner gets bragging rights! Note: For the best experience, please bring headphones."
         panelists:
         day: Saturday
         startTime: 11:00
@@ -72,7 +72,7 @@ content:
     panels:
       -
         title: Love Live! School Idol Festival Score Tournament
-        description: Compete against your friends to find out who can get the highest LLSIF score. Winner gets bragging rights!
+        description: "Compete against your friends to find out who can get the highest LLSIF score. Winner gets bragging rights! Note: For the best experience, please bring headphones."
         panelists:
         startTime: 10:00
         endTime: 11:00 AM
