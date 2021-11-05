@@ -70,7 +70,15 @@ content:
         isGuestPanel: 
       -
         title: Northern Lights Music Festival
-        description: Join us for a magical night of music under the starry sky!
+        description: | 
+          Join us for a magical night of music under the starry sky! FEATURING:
+          
+          Nyaru (virtual) •
+          Jenni Bon •
+          AphixSky •
+          Alex Pinku •
+          Phoebe •
+          Mikanmaru24
         panelists:
         day: Saturday
         startTime: 8:00
