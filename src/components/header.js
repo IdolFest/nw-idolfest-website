@@ -66,6 +66,10 @@ const headersData = [
         label: "Class A",
         href: "/events/classa"
     },
+    {
+        label: "Northern Lights",
+        href: "/events/northernlights"
+    },
     ]
   },
   {

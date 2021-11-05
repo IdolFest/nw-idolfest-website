@@ -4,8 +4,6 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import CenteredBox from '@components/CenteredBox'
-import Schedule from "@components/Schedule"
-import ClassAEvents from "../../../static/schedules/ClassASchedule.yaml"
 
 const NorthernLightsPage = () => {
     return (
