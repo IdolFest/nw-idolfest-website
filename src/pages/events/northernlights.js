@@ -24,7 +24,7 @@ const NorthernLightsPage = () => {
         <li>AphixSky</li>
         <li>Alex Pinku</li>
         <li>Phoebe</li>
-        <li>Mikanmaru</li>   
+        <li>mikanmaru24</li>   
         </ul>         
         </CenteredBox>
         </PageContent>
