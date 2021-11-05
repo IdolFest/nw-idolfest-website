@@ -14,13 +14,9 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and N
 
 ## COVID-19
 
-NWIF will require proof of COVID-19 vaccination as well as masking at all times in event space. A physical or digital copy of a COVID-19 vaccine card must be presented along with a valid photo ID at badge pickup. If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. 
+NWIF will require proof of COVID-19 vaccination as well as masking at all times in event space. A physical or digital copy of a COVID-19 vaccine card must be presented along with a valid photo ID at badge pickup. If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. If you are under 18, please review the Minor Attendees section below for additional details that may apply.
 
 These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
-
-## Content Rating
-
-All content at NWIF is expected to fall within a PG-13 rating unless otherwise approved by event chairs. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
 
 ## Anti-Harassment
 
@@ -31,6 +27,18 @@ Keep your hands to yourself. Respect your fellow attendees. Keep an eye on what 
 If you feel harassed or see someone else being harassed, notify a staff member immediately. You are also within your rights to ask the harasser to stop on your own. Once notified, NWIF staff will take any action necessary to stop the behavior, up to and including badge revocation and expulsion from convention premises. We will also take steps to help you feel safe again at your request, such as escorting you to a place you feel safe, contacting your friends or family for you, or contacting local law enforcement.
 
 This policy applies without exception to everyone at the convention, including attendees, panelists, vendors, guests, convention staff, and venue staff.
+
+## Minor Attendees
+
+All attendees who are under 18 during any time they are at NW IdolFest are required to provide a consent form signed by a legal guardian. The consent form can be downloaded [here](/Parental%20Consent%20Form.pdf). If the legal guardian will be present at the event with the minor, then the form can be signed in front of us. If the legal guardian will not be in attendance, the form may be brought pre-signed.
+
+Minors ages 13-17 may attend NW IdolFest without accompaniment, so long as they have a completed consent form. Either proof of vaccination or a negative test administered within 72 hours by an authorized medical professional may be presented. School IDs are accepted as proof of ID, or, if accompanied by a legal guardian, the legal guardian's ID will be accepted instead.
+
+Minors 12 years of age and under will need to be accompanied by an adult with a paid badge. A negative test administered within 72 hours by an authorized medical professional must be presented.
+
+## Content Rating
+
+All content at NWIF is expected to fall within a PG-13 rating unless otherwise approved by event chairs. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
 
 ## Badges
 
