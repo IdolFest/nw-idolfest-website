@@ -10,13 +10,13 @@ import ClassAEvents from "../../../static/schedules/ClassASchedule.yaml"
 const ClassAPage = () => {
     return (
     <Layout>
-        <Seo title="Events" />
+        <Seo title="Class A Schedule" />
         
-        <PageHeader title="Events" />
+        <PageHeader title="Class A Schedule" />
 
         <PageContent>
         <CenteredBox>
-            <h2>{ClassAEvents.title}</h2>
+            {/* <h2>{ClassAEvents.title}</h2> */}
             <Schedule panels={ClassAEvents} />
             
         </CenteredBox>

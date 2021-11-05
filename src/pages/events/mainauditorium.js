@@ -10,13 +10,13 @@ import MainAuditoriumEvents from "../../../static/schedules/MainAuditoriumSchedu
 const MainAuditoriumPage = () => {
     return (
     <Layout>
-        <Seo title="Events" />
+        <Seo title="Main Auditorium Schedule" />
         
-        <PageHeader title="Events" />
+        <PageHeader title="Main Auditorium Schedule" />
 
         <PageContent>
         <CenteredBox>
-            <h2>{MainAuditoriumEvents.title}</h2>
+            {/* <h2>{MainAuditoriumEvents.title}</h2> */}
             
             <Schedule panels={MainAuditoriumEvents} />
         </CenteredBox>
