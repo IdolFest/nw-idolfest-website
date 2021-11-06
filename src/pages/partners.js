@@ -67,7 +67,6 @@ const IndexPage = () => {
             <li>Nekoromancy</li>
             <li>YuuniHD</li>
             <li>Anonymous</li>
-            <li>De</li>
             <li>Exteminator</li>
             <li>Steph S.</li>
             <li>Tsuketoguu</li>
