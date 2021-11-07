@@ -64,21 +64,6 @@ const allBadgeTiers = [
     ]
   },
   {
-    badgeName: 'Super Sponsor',
-    badgeKey: 'superSponsor',
-    hasTax: true,
-    price: '$420.69',
-    tierName: 'Prism',
-    description: 'Everything in Gold, plus:',
-    perks: [
-      'Prism-only badge and lanyard',
-      'King bed hotel room for 2 nights (Fri/Sat)',
-      'Badge delivery to hotel room',
-      'Can badge set',
-      'Closing Ceremonies special thanks',
-    ]
-  },
-  {
     badgeName: 'Spirit Badge',
     badgeKey: 'spirit',
     hasTax: true,
@@ -92,7 +77,25 @@ const allBadgeTiers = [
   }
 ]
 
-const badgesRowOne = allBadgeTiers.slice(0, 3)
+// Move Prism outside of array to stop selling it
+// TODO: handle this differently
+const prismBadge = {
+    badgeName: 'Super Sponsor',
+    badgeKey: 'superSponsor',
+    hasTax: true,
+    price: '<strong>SOLD OUT</strong>',
+    tierName: 'Prism',
+    description: 'Everything in Gold, plus:',
+    perks: [
+      'Prism-only badge and lanyard',
+      'King bed hotel room for 2 nights (Fri/Sat)',
+      'Badge delivery to hotel room',
+      'Can badge set',
+      'Closing Ceremonies special thanks',
+    ]
+  }
+
+const badgesRowOne = allBadgeTiers.slice(0, 2)
 
 const badgesRowTwo = [
   {
@@ -180,6 +183,9 @@ const RegisterPage = () => {
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
+            <Grid item key="Prism">
+                <RegistrationTier badge={prismBadge} />
+            </Grid>
       </Grid>
 
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
