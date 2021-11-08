@@ -15,14 +15,22 @@ const EventsPage = () => (
         />
 
         <PageContent>
-            <p>NW IdolFest has 2 panel rooms this year with a variety of exciting content. Check out their schedules below!</p>
+            <p>NW IdolFest has 2 panel rooms this year with a variety of exciting content. We're also excited to bring you the inagural Northern Lights Music Festival on Saturday night. Check out their schedules below!</p>
 
             <Grid container style={{ padding: '1em 0', justifyContent: 'space-around', textAlign: 'center', fontSize: '2em' }}>
-        
                 <Link to="mainauditorium">Main Auditorium</Link>
                 <Link to="classa">Class A</Link>
-            
+                <Link to="northernlights">Northern Lights Music Festival</Link>
             </Grid>
+
+            <p><u>Registration Hours</u></p>
+            <p>Saturday: 9 AM-6 PM</p>
+            <p>Sunday: 9 AM-1 PM</p>
+
+            <p><u>Event Hours</u></p>
+
+            <p>Saturday: 10 AM-12 AM</p>
+            <p>Sunday: 10 AM-6 PM</p>
         </PageContent>
     </Layout>
 )
