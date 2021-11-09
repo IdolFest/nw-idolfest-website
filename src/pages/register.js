@@ -137,6 +137,14 @@ function badgeDropdownText(badge) {
   }
 }
 
+function isUnder18(date) {
+    if (!date || !date._isValid) { return false }
+    let year = date.year()
+    let month = date.month()
+    let day = date.date()
+    return new Date(year+18, month, day) >= new Date()
+}
+
 const RegisterPage = () => {
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
@@ -376,16 +384,21 @@ const RegisterPage = () => {
               label="* Date of Birth" 
               component={KeyboardDatePicker}
               //InputAdornmentProps={{ position: "start", variant: 'outlined' }}
-              format="yyyy/MM/DD"
+              format="MM/DD/yyyy"
               openTo="year"
               disableFuture={true}
               fullWidth={false}
               //variant="inline"
-              placeholder="yyyy/mm/dd"
+              placeholder="MM/DD/yyyy"
               autoOk={true}
               //PopperProps={{ anchorEl: null }}
             />
           </Box>
+
+            { (isUnder18(props.values.dateOfBirth) && props.values.badgeType !== 'spirit') && (
+                <>All attendees under 18 must bring a <a href="/Parental%20Consent%20Form.pdf" target="_blank">signed Parental Consent form</a>. <br />Please review our full <a href="/policies" target="_blank">Minor Policy</a> before proceeding.</> 
+            )
+            }
 
           { props.values.badgeType === 'spirit' && (
              <>
