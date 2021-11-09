@@ -44,7 +44,7 @@ All content at NWIF is expected to fall within a PG-13 rating unless otherwise a
 
 Badges must be visibly displayed on your person while in event space. In case of lost badge, one $20 replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
 
-If you are unable to attend due to border closures, illness, or other government restrictions, you may request a refund for your badge. Refunds are offered on a case-by-case basis, and documentation may be requested confirming your situation. To request a refund, email [registration@nwidolfest.com](mailto:registration@nwidolfest.com) no later than November 12, 2021. Refund requests made after this date will not be considered. Refunds are offered at the sole discretion of Nijiro Events LLC.
+If you are unable to attend due to border closures, illness, or other government restrictions, you may request a refund for your badge. Refunds are offered on a case-by-case basis, and documentation may be requested confirming your situation. To request a refund, email [registration@nwidolfest.com](mailto:registration@nwidolfest.com) no later than November 12, 2021. Refund requests made after this date will not be considered. Refunds are offered at the sole discretion of Nijiiro Events LLC.
 
 ## Lost Items
 
@@ -70,9 +70,19 @@ We’re excited to see cosplayers sharing their love of anime and idols! Keep th
 
 ## Accessibility
 
-NWIF is committed to making our event accessible to all. Our event space is fully wheelchair-accessible. The hotel will provide ADA rooms on request. In accordance with the ADA, service animals are permitted in hotel and event space. Non-service animals may be permitted in hotel common areas and rooms but are not permitted in NWIF event space. Please contact the hotel directly for any questions relating to their pet policy.
+NWIF is committed to making our event accessible to all. Our approach to some accessibility needs are detailed below, but this is not a complete list. If you have further accessibility needs, please [contact us](/contact)! 
 
-If you have further accessibility needs, please [contact us](/contact). Sign language interpretation requests require a minimum of one month’s notice.
+Our host hotel, the DoubleTree, complies with all ADA guidelines. Their website has a full list of [accessible amenities](https://doubletree3.hilton.com/en/hotels/washington/doubletree-by-hilton-hotel-seattle-airport-CTAC-DT/about/amenities.html).
+
+Our event space for 2021 is on the second floor of the DoubleTree. There are elevators to the second floor, and 4 small steps leading up to the panel rooms.
+
+For 2021, we do not anticipate having lines for any panels. All panels will be open seating.
+
+In accordance with the ADA, service animals are permitted in hotel and event space. Non-service animals may be permitted in hotel common areas and rooms but are not permitted in NWIF event space. Please contact the hotel directly for any questions relating to their pet policy.
+
+If you are d/Deaf or hard of hearing, we are happy to provide accommodations such as ASL interpretation or live captioning to make our content accessible to you. Please request these services with a minimum of one month’s notice.
+
+The Northern Lights Concert, which in 2021 will take place Saturday night at 8 PM, will use strobe lights. If you are photosensitive, please let us know ahead of time so we can review the lighting plan with you.
 
 ## Photos & Videos
 
