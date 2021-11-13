@@ -103,7 +103,7 @@ const HotelPage = () => {
       <p>From the light rail station, go down the stairs or elevator and cross 176th Street. Follow 176th for 0.6 of a mile, and the DoubleTree will be on your left. You can also cross the skybridge from the light rail station and take the complimentary shuttle.</p>
 
       <h3>Sea-Tac Airport</h3>
-        <p>Complimentary shuttles to the DoubleTree Hotel Seattle Airport leave every 15 minutes during the day. Call (207) 246-8600 to check when the next shuttle will be available.</p>
+        <p>Complimentary shuttles to the DoubleTree Hotel Seattle Airport leave every 15 minutes during the day. Call (206) 246-8600 to check when the next shuttle will be available.</p>
 
         <p>There are two DoubleTree shuttles available at the hotel. Make sure to get on the one bound for DoubleTree Hotel Seattle Airport. Do NOT get on the shuttle for DoubleTree Suites by Hilton Hotel Seattle Airport - Southcenter. That is a different hotel. If you are unsure about the destination of the shuttle you are boarding, please confirm with the driver.</p>
       
