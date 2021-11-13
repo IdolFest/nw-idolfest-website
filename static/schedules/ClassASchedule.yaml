@@ -22,7 +22,7 @@ content:
         isGuestPanel:
       -
         title: Cosplay Photoshoot
-        description: Rob Wanye, NWIF's professional photographer is here and ready to take pictures of you!
+        description: Rob Wayne, NWIF's professional photographer is here and ready to take pictures of you!
         panelists:
         startTime: 1:00
         endTime: 2:00 PM
@@ -107,7 +107,7 @@ content:
         isGuestPanel:
       -
         title: Cosplay Photoshoot
-        description: Rob Wanye, NWIF's professional photographer is here and ready to take pictures of you
+        description: Rob Wayne, NWIF's professional photographer is here and ready to take pictures of you
         panelists:
         startTime: 4:00
         endTime: 5:00 PM
