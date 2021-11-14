@@ -19,6 +19,8 @@ import {
 import { styled } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
+import Hero from "@components/hero"
+import NewsletterSignup from "@components/NewsletterSignup"
 
 let lambdaUrl
 
@@ -473,4 +475,23 @@ const RegisterPage = () => {
   </Layout>
 )}
 
-export default RegisterPage
+const ClosedRegisterPage = () => {
+  return (
+    <Layout>
+      <Seo title="Register" />
+
+      <Hero header="Thank you for attending NW IdolFest 2021!" />
+
+      <PageContent>
+        <p>
+          Registration is closed because Northwest Idol Festival 2021 is now
+          over. Sign up for our email list below to get notified when our next
+          convention will be!
+        </p>
+        <NewsletterSignup />
+      </PageContent>
+    </Layout>
+  )
+}
+
+export default ClosedRegisterPage
