@@ -38,7 +38,7 @@ const allBadgeTiers = [
     badgeName: 'Attendee',
     badgeKey: 'attendee',
     hasTax: true,
-    price: '$40',
+    price: '<strike>$40</strike> $20',
     tierName: 'Silver',
     description: 'This badge grants:',
     perks: [
@@ -51,7 +51,7 @@ const allBadgeTiers = [
     badgeName: 'Sponsor',
     badgeKey: 'sponsor',
     hasTax: true,
-    price: '$75',
+    price: ' <strike>$75</strike> $55',
     tierName: 'Gold',
     description: 'Everything in Silver, plus:',
     perks: [
