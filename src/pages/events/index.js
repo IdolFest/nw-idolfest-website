@@ -35,7 +35,7 @@ const EventsPage = () => (
                 <p>Sunday: 10 AM-6 PM</p>
             </CenteredBox>
 
-        <a href='../../../static/images/map.png'>
+        <a href='/images/map.png'>
             <StaticImage
                 layout='constrained'
                 // This is a presentational image, so the alt should be an empty string
