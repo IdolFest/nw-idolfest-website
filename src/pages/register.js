@@ -19,8 +19,6 @@ import {
 import { styled } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
-import Hero from '@components/hero'
-import NewsletterSignup from '@components/NewsletterSignup'
 
 let lambdaUrl
 
@@ -489,6 +487,14 @@ const RegisterPage = () => {
   </Layout>
 )}
 
+export default RegisterPage
+
+/*
+// Remove the export above and uncomment this block to disable reg
+
+import Hero from '@components/hero'
+import NewsletterSignup from '@components/NewsletterSignup'
+
 const ClosedRegisterPage = () => {
   return (
     <Layout>
@@ -508,5 +514,5 @@ const ClosedRegisterPage = () => {
   )
 }
 
-//export default ClosedRegisterPage
-export default RegisterPage
+export default ClosedRegisterPage
+*/
