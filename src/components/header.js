@@ -246,7 +246,7 @@ export default function Header() {
           {idolfestLogo}
         </Link>
         <div className={classes.dates} style={{ display: 'flex', flexDirection: 'column', marginLeft: 'auto', alignItems: 'flex-end' }}>
-          <div>Nov 13-14, 2021</div>
+          <div>Oct 21-23, 2022</div>
           <div>Seattle, WA</div>
         </div>
       </Toolbar>
