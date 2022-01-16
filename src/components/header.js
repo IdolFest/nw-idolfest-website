@@ -14,6 +14,7 @@ import React, { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const headersData = [
   {
@@ -154,7 +155,19 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {  
   const classes = useStyles()
-  //const theme = useTheme()
+const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        shortDates
+                    }
+                }            
+            }`
+    )
+
+const dates = site.siteMetadata.shortDates
+
 
   const [state, setState] = useState({
     mobileView: false,
@@ -198,7 +211,7 @@ export default function Header() {
           </Link>
         </Grid>
         <Grid item className={classes.dates}>
-          Nov 13-14, 2021 | Seattle, WA
+          {dates} | Seattle, WA
         </Grid>
         <header style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }} className={classes.item}>
           { getMenuButtonsDropdown(handleClick, handleClose, state) }
