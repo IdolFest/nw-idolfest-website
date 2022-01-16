@@ -494,11 +494,11 @@ const ClosedRegisterPage = () => {
     <Layout>
       <Seo title="Register" />
 
-      <Hero header="Thank you for attending NW IdolFest 2021!" />
+      <Hero header="Thank you for attending NW IdolFest 2022!" />
 
       <PageContent>
         <p>
-          Registration is closed because Northwest Idol Festival 2021 is now
+          Registration is closed because Northwest IdolFest 2022 is now
           over. Sign up for our email list below to get notified when our next
           convention will be!
         </p>
@@ -508,4 +508,5 @@ const ClosedRegisterPage = () => {
   )
 }
 
-export default ClosedRegisterPage
+//export default ClosedRegisterPage
+export default RegisterPage
