@@ -34,18 +34,6 @@ const headersData = [
       href: "/guests",
     },
     {
-      label: "Phoebe",
-      href: "/guests/phoebe"
-    },
-    {
-      label: "Megan Shipman",
-      href: "/guests/meganshipman"
-    },
-    {
-      label: "Amina du Jean",
-      href: "/guests/aminadujean"
-    },
-    {
       label: "Rintaichou",
       href: "/guests/rintaichou"
     },
@@ -58,14 +46,6 @@ const headersData = [
     {
         label: "Events",
         href: "/events"
-    },
-    {
-        label: "Main Auditorium",
-        href: "/events/mainauditorium"
-    },
-    {
-        label: "Class A",
-        href: "/events/classa"
     },
     {
         label: "Northern Lights",
@@ -86,6 +66,10 @@ const headersData = [
       href: "/about"
     },
     {
+      label: "Volunteer",
+      href: "/volunteer"
+    },
+    {
       label: "Blog",
       href: "/blog"
     },
@@ -101,10 +85,10 @@ const headersData = [
       label: "Partners",
       href: "/partners"
     },
-    {
-      label: "Newsletter Signup",
-      href: "/newsletter"
-    },
+    // {
+    //   label: "Newsletter Signup",
+    //   href: "/newsletter"
+    // },
     ]
   },
 ];
