@@ -13,20 +13,7 @@ const NorthernLightsPage = () => {
         <PageHeader title="Northern Lights Music Festival" />
 
         <PageContent>
-        <p>The inaugural Northern Lights Music Festival will take place Saturday, Nov 13, at 8 PM.</p>
-
-
-        <CenteredBox>
-        <p>Performers, in order of appearance:</p>
-        <ul style={{listStyle: 'none'}}>
-        <li>Nyaru (virtual)</li>
-        <li>Jenni Bon</li>
-        <li>AphixSky</li>
-        <li>Alex Pinku</li>
-        <li>Phoebe</li>
-        <li>mikanmaru24</li>   
-        </ul>         
-        </CenteredBox>
+        <p>What's an idol event without music? The Northern Lights Music Festival will be returning in 2022, bigger and better than ever! Stay tuned for information on how to apply.</p>
         </PageContent>
     </Layout>
 )}
