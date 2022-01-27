@@ -16,7 +16,7 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and N
 
 NWIF will determine a final COVID-19 policy no later than September 1st, 2022 (pending changes to government regulations after that date).
 
-In 2021, NWIF required proof of COVID-19 vaccination for all attendees over 18. It is likely this will be required again for 2022, along with at least one booster shot given within the last 6 months. However, we understand things can change significantly in a short period of time, and are waiting to make a final determination until closer to the event.
+In 2021, NWIF required proof of COVID-19 vaccination for all attendees over 18. It is likely this will be required again for 2022, with the final dose of the primary series OR a booster administered within 6 months prior to the event. However, we understand things can change significantly in a short period of time, and are waiting to make a final determination until closer to the event.
 
 If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. If you are under 18, please review the Minor Attendees section below for additional details that may apply.
 
