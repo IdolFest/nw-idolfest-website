@@ -18,10 +18,16 @@ const GuestsPage = () => (
         <PageContent>
             <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
             <Grid container style={{ justifyContent: 'space-around' }}>
-                <Avatar personName="Phoebe" showLink={true} />
-                <Avatar personName="Megan Shipman" showLink={true} />
-                <Avatar personName="Amina du Jean" showLink={true} />
                 <Avatar personName="Rintaichou" showLink={true} />
+                <Avatar personName="Coming soon" />
+                <Avatar personName="Coming soon" />
+                <Avatar personName="Coming soon" />
+            </Grid>
+
+            <h2><CenteredBox>Appearing Remotely</CenteredBox></h2>
+            <Grid container style={{ justifyContent: 'space-around' }}>
+                <Avatar personName="Coming soon" />
+                <Avatar personName="Coming soon" />
             </Grid>
         </PageContent>
     </Layout>
