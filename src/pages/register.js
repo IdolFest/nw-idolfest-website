@@ -23,9 +23,9 @@ import RegistrationTier from '@components/registrationTier'
 let lambdaUrl
 
 if (process.env.NODE_ENV === 'development') {
-  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg1'
+  lambdaUrl = 'https://9lr67gx861.execute-api.us-east-1.amazonaws.com/reg1'
 } else {
-  lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/nwif-reg1-prod'
+  lambdaUrl = 'https://9lr67gx861.execute-api.us-east-1.amazonaws.com/reg1-prod'
 }
 
 const FormBox = styled(Box)({
