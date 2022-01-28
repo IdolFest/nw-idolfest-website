@@ -95,14 +95,13 @@ const allBadgeTiers = [
   {
     badgeName: '5 and Under Badge',
     badgeKey: 'badge-5-and-under',
-    onSale: true,
+    onSale: false,
     hasTax: false,
     price: '0',
-    tierName: 'Dekimasen',
-    description: "Attendees 5 and under get in free. Must be accompanied by an adult with a paid badge.",
+    tierName: 'Chibi',
+    description: "Attendees 5 and under get in free when accompanied by an adult with a paid badge. No need to register! <br /> (Maximum 2 attendees under 5 per 1 paid badge.)",
     perks: [
       'Access to all events at NWIF',
-      'Special surprise at registration',
     ]
   },
   {
@@ -111,7 +110,7 @@ const allBadgeTiers = [
     onSale: true,
     hasTax: true,
     price: '30',
-    tierName: 'Dekimasen',
+    tierName: 'Chibi',
     description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
     perks: [
       'Access to all events at NWIF',
