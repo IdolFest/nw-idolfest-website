@@ -5,7 +5,7 @@ export default function BlogPosts() {
     const { blog } = useStaticQuery(
         graphql`
             query MyQuery {
-                blog: allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: {frontmatter: {template: {eq: "blogpost"}}}) {
+                blog: allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: {frontmatter: {template: {eq: "blogpost"}, date: {gt: "2022"}}}) {
                     posts: nodes {
                     fields {
                         slug

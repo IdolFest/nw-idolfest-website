@@ -10,11 +10,11 @@ if (process.env.NODE_ENV === 'development') {
     // this is the dev NWIF main location
     // there is a separate location for (At Event)
     locationId = 'LWGKEFPEN4J9S'
-    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/reg2'
+    lambdaUrl = 'https://9lr67gx861.execute-api.us-east-1.amazonaws.com/reg2'
 } else {
     appId = 'sq0idp-OyXssltwNQblNk9NOxKJ4w'
     locationId = 'L4RPAVMCK1MD7'
-    lambdaUrl = 'https://ejnd5apu72.execute-api.us-east-2.amazonaws.com/nwif-reg2-prod'
+    lambdaUrl = 'https://9lr67gx861.execute-api.us-east-1.amazonaws.com/reg2-prod'
 }
 
 export const loadSquareSdk = () => {

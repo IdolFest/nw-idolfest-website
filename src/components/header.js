@@ -14,14 +14,13 @@ import React, { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const headersData = [
-  /*
   {
     label: "Register",
     href: "/register",
   },
-  */
   {
     label: "Hotel",
     href: "/hotel",
@@ -33,18 +32,6 @@ const headersData = [
     {
       label: "All Guests",
       href: "/guests",
-    },
-    {
-      label: "Phoebe",
-      href: "/guests/phoebe"
-    },
-    {
-      label: "Megan Shipman",
-      href: "/guests/meganshipman"
-    },
-    {
-      label: "Amina du Jean",
-      href: "/guests/aminadujean"
     },
     {
       label: "Rintaichou",
@@ -59,14 +46,6 @@ const headersData = [
     {
         label: "Events",
         href: "/events"
-    },
-    {
-        label: "Main Auditorium",
-        href: "/events/mainauditorium"
-    },
-    {
-        label: "Class A",
-        href: "/events/classa"
     },
     {
         label: "Northern Lights",
@@ -87,6 +66,10 @@ const headersData = [
       href: "/about"
     },
     {
+      label: "Volunteer",
+      href: "/volunteer"
+    },
+    {
       label: "Blog",
       href: "/blog"
     },
@@ -102,10 +85,10 @@ const headersData = [
       label: "Partners",
       href: "/partners"
     },
-    {
-      label: "Newsletter Signup",
-      href: "/newsletter"
-    },
+    // {
+    //   label: "Newsletter Signup",
+    //   href: "/newsletter"
+    // },
     ]
   },
 ];
@@ -156,7 +139,19 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {  
   const classes = useStyles()
-  //const theme = useTheme()
+const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        shortDates
+                    }
+                }            
+            }`
+    )
+
+const dates = site.siteMetadata.shortDates
+
 
   const [state, setState] = useState({
     mobileView: false,
@@ -200,7 +195,7 @@ export default function Header() {
           </Link>
         </Grid>
         <Grid item className={classes.dates}>
-          Nov 13-14, 2021 | Seattle, WA
+          {dates} | Seattle, WA
         </Grid>
         <header style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }} className={classes.item}>
           { getMenuButtonsDropdown(handleClick, handleClose, state) }
@@ -248,7 +243,7 @@ export default function Header() {
           {idolfestLogo}
         </Link>
         <div className={classes.dates} style={{ display: 'flex', flexDirection: 'column', marginLeft: 'auto', alignItems: 'flex-end' }}>
-          <div>Nov 13-14, 2021</div>
+          <div>Oct 21-23, 2022</div>
           <div>Seattle, WA</div>
         </div>
       </Toolbar>

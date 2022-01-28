@@ -4,6 +4,9 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import NewsletterSignup from '@components/NewsletterSignup'
+import PageHeader from '@components/PageHeader'
+import BlogPosts from '@components/BlogPosts'
+import { Link } from 'gatsby'
 
 const IndexPage = () => {
   return (
@@ -11,11 +14,23 @@ const IndexPage = () => {
       <Seo title="Home" />
 
       <Hero 
-        header="Thank you for attending NW IdolFest 2021!"
+        header="Announcing NW IdolFest 2022!"
       />
-      
+
+      <PageHeader 
+        title="Welcome to Northwest IdolFest!" 
+      />
+
       <PageContent>
-        <p>Thank you for attending Northwest Idol Festival 2021! Sign up for our email list below to get notified when our next convention will be!</p>
+        <p>Northwest Idol Festival is a three day event featuring idols, anisong, and everything in between. Join us in Seattle on October 21-23, 2022 for our second year! Featuring guests, concerts, panels, cosplay, and more, get ready for a whole new idol experience.</p>
+        <p>Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and <Link to="register">buy your badge</Link> today!</p>
+
+        <div style={{ paddingTop: '1em' }} />
+
+        <BlogPosts />
+
+        <h2 style={{ paddingTop: '1em' }}>Newsletter</h2>
+        <p>Sign up for our email list below to get the scoop on guest announcements, giveaways, and more!</p>        
         <NewsletterSignup />
       </PageContent>
     </Layout>

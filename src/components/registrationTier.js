@@ -53,7 +53,7 @@ export default function RegistrationTier({ badge }) {
 
   const { badgeName, price, tierName, description, perks } = badge
 
-  const tierHeading = `${badgeName} - ${price}`
+  const tierHeading = `${badgeName} - $${price}`
   
   const data = useStaticQuery(
     graphql`
@@ -108,7 +108,6 @@ export default function RegistrationTier({ badge }) {
             {perks.map((perk, index) => (
               <li key={index}>{perk}</li>
             ))}
-
           </ul>
         </Box>
     </Grid>

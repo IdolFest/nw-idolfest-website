@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from '@material-ui/styles'
 import { Container, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import CenteredBox from '@components/CenteredBox'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',
@@ -34,11 +34,25 @@ function createData(roomType, price) {
 }
 
 const rows = [
-  createData('Standard King', '$109'),
-  createData('Double Queen', '$109'),
+  createData('Standard King', '$129'),
+  createData('Double Queen', '$129'),
 ]
 
+
 const HotelPage = () => {
+    const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        longDates
+                    }
+                }            
+            }`
+    )
+
+    const dates = site.siteMetadata.longDates
+    
   return (
   <Layout>
     <Seo title="Hotel" />
@@ -54,11 +68,13 @@ const HotelPage = () => {
         alt=''
       />
       <p>
-        Northwest IdolFest will be held on November 13-14, 2021, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
+        Northwest IdolFest will be held on {dates}, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
           <br /><br />
-          Online hotel booking is now closed. Please <Link to="/contact">contact us</Link> if you would like assistance booking a room at our discounted rates.
+          {/* 
+          Online hotel booking is now closed. Please <Link to="/contact">contact us</Link> if you would like assistance booking a room at our discounted rates. 
           <br /><br />
-        We offer a discounted $12/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
+          */}
+        We offer a discounted $15/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
       </p>
       <CenteredBox>
         <RoomRateTable>
@@ -85,10 +101,10 @@ const HotelPage = () => {
         <div>
           <sup>†</sup>Taxes and fees not included in price.
         </div>
-        {/* <Button variant="contained" className="cta" href='https://book.passkey.com/go/IDF21'>
+        <Button variant="contained" className="cta" href='https://book.passkey.com/go/NWIDF22'>
           Book online
         </Button>
-        <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group name "NW IdolFest".</div> */}
+        <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group name "NW IdolFest".</div>
       </CenteredBox>
       <CenteredBox>
         <ResponsiveMap>
