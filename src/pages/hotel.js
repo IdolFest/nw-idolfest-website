@@ -8,7 +8,6 @@ import { styled } from '@material-ui/styles'
 import { Container, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import CenteredBox from '@components/CenteredBox'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
 
 const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',

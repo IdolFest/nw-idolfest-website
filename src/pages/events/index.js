@@ -5,8 +5,6 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { Link } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
-import { StaticImage } from 'gatsby-plugin-image'
-import CenteredBox from '@components/CenteredBox'
 
 const EventsPage = () => (
     <Layout>
