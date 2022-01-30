@@ -61,6 +61,7 @@ const allBadgeTiers = [
       'Drawstring bag',
       'Sticker pack',
       'T-shirt',
+      'Exclusive poster',
       'Priority seating',
       'NWIF website special thanks',
     ]
@@ -75,8 +76,10 @@ const allBadgeTiers = [
     description: 'Everything in Gold, plus:',
     perks: [
       'Prism-only badge and lanyard',
-      'Hotel for 3 nights (Thu-Sun or Fri-Mon)',
+      'Hotel for 3 nights',
       'Badge delivery to hotel room',
+      'NWIF pen light',
+      'Exclusive bromide print set',
       'Can badge set',
       'Closing Ceremonies special thanks',
     ]
@@ -99,7 +102,7 @@ const allBadgeTiers = [
     hasTax: false,
     price: '0',
     tierName: 'Chibi',
-    description: "Attendees 5 and under get in free when accompanied by an adult with a paid badge. No need to register! <br /> (Maximum 2 attendees under 5 per 1 paid badge.)",
+    description: "Children 5 and under get in free when accompanied by an adult with a paid badge. No need to register! <br /> (Maximum 2 children under 5 per 1 paid badge.)",
     perks: [
       'Access to all events at NWIF',
     ]

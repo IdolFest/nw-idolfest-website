@@ -106,7 +106,7 @@ export default function RegistrationTier({ badge }) {
           <span dangerouslySetInnerHTML={{ __html: description}} />
           <ul>
             {perks.map((perk, index) => (
-              <li key={index}>{perk}</li>
+              <li style={{ fontSize: 'unset' }} key={index}>{perk}</li>
             ))}
           </ul>
         </Box>
