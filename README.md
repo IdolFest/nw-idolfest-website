@@ -4,7 +4,7 @@ This is the repo for https://nwidolfest.com/. It runs off of Gatsby with a Mater
 
 ## Set Up
 
-1. Have a working node/npm dev environment with node >= 12
+1. Have a working node/npm dev environment with node <= 16.8.0 (this is due to a [bug in PostCSS](https://github.com/facebook/create-react-app/issues/11565)) 
 1. `npm install -g gatsby-cli`
 1. `npm install`
 1. `gatsby develop`

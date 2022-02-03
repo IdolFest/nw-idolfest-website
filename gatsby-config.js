@@ -8,7 +8,7 @@ module.exports = {
     shortDates: 'Oct 21-23, 2022',
     longDates: 'October 21-23, 2022',
     siteUrl: 'https://nwidolfest.com',
-    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Nov 13-14, 2021.`,
+    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Oct 21-23, 2022.`,
     author: `The NW IdolFest Team`,
     social: {
       twitter: '@NWIdolFest',
@@ -16,21 +16,7 @@ module.exports = {
       instagram: 'NWIdolFest',
       discord: 'h5yJbXgTgE',
       email: 'contact@nwidolfest.com',
-    },
-    badgeTiers: [
-      { 
-        tierName: 'Attendee',
-        tierPrice: '$30'
-      },
-      {
-        tierName: 'Sponsor',
-        tierPrice: '$70'
-      },
-      {
-        tierName: 'Super Sponsor',
-        tierPrice: '$350'
-      }
-    ],
+    }
   },
   plugins: [
     `nw-idolfest-theme`,
