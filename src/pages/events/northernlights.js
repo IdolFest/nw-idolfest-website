@@ -12,7 +12,11 @@ const NorthernLightsPage = () => {
         <PageHeader title="Northern Lights Music Festival" />
 
         <PageContent>
-        <p>What's an idol event without music? The Northern Lights Music Festival will be returning in 2022, bigger and better than ever! Stay tuned for information on how to apply.</p>
+        <p>
+            What's an idol event without music? The Northern Lights Music Festival will be returning in 2022, bigger and better than ever!
+            <br />
+            If you'd like to apply, fill out <a href="https://idolfe.st/NL2022" target="_blank" rel="noreferrer">the application</a> by August 1st, 2022.
+        </p>
         </PageContent>
     </Layout>
 )}
