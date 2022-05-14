@@ -58,8 +58,8 @@ const headersData = [
     ]
   },
   {
-    label: "Artist Alley",
-    href: "/artistalley",
+    label: "Vendors",
+    href: "/vendors",
   },
   {
     label: "About",
