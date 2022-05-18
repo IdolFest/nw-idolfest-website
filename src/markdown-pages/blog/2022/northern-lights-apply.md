@@ -1,10 +1,10 @@
 ---
-title: 2022 Performer applications are open! 
+title: Performer applications are open! 
 date: 2022-04-02
 template: blogpost
 ---
 
-## 2022 Performer applications are open!
+## Performer applications are open!
 
 Northwest IdolFest is looking for idols, DJs, and performers to join our Northern Lights concert! Northern Lights is our main stage concert event and will feature a variety of DJs and performers who share a passion for Japanese idol culture.
 
