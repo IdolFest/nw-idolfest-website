@@ -41,6 +41,10 @@ const headersData = [
       label: "Jun (Lucia Hunter)",
       href: "/guests/jun"
     },
+    {
+      label: "Kaho Shibuya",
+      href: "/guests/kahoshibuya"
+    },
     ]
   },
   {
