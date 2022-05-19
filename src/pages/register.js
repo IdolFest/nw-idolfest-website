@@ -71,7 +71,7 @@ const allBadgeTiers = [
     badgeKey: 'badge-supersponsor',
     onSale: true,
     hasTax: true,
-    price: '620.49',
+    price: '694.20',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
     perks: [
