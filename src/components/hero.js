@@ -27,7 +27,7 @@ export default function Hero({ header, body }) {
         }}
         // This is a presentational image, so the alt should be an empty string
         alt=''
-        src='../images/hero_photo_collage.png'
+        src='../images/hero_photo_collage_text.png'
         layout='fullWidth'
         backgroundColor='rgba(0, 0, 0, 0.45)'
         // aspectRatio={16 / 9}

@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Seo title="Home" />
 
       <Hero 
-        header="Announcing NW IdolFest 2022!"
+        // header="Announcing NW IdolFest 2022!"
       />
 
       <PageHeader 
