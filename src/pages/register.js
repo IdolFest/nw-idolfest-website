@@ -101,8 +101,8 @@ const allBadgeTiers = [
     onSale: false,
     hasTax: false,
     price: '0',
-    tierName: 'Chibi',
-    description: "Children 5 and under get in free when accompanied by an adult with a paid badge. No need to register! <br /> (Maximum 2 children under 5 per 1 paid badge.)",
+    tierName: 'Mini Chibi',
+    description: "Children 5 and under are free when accompanied by an adult with a paid badge. (Max 2 children per adult.) <strong>No need to register them!</strong>",
     perks: [
       'Access to all events at NWIF',
     ]

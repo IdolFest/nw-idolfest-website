@@ -71,8 +71,9 @@ export default function RegistrationTier({ badge }) {
       }
     `)
 
-  const tierGemFilename = `${tierName.toLowerCase()}Gem.png`
-  const tierTextFilename = `${tierName.toLowerCase()}Text.png`
+  const cleanedTierName = tierName.split(" ").join("").toLowerCase()
+  const tierGemFilename = `${cleanedTierName}Gem.png`
+  const tierTextFilename = `${cleanedTierName}Text.png`
   
   const gemImageData = data.allImageSharp.edges.find(
       edge => edge.node.fluid.originalName === tierGemFilename
