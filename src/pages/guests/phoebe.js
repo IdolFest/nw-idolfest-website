@@ -7,13 +7,10 @@ import Guest from '@components/Guest'
 
 const PhoebePage = () => {
     const guestSocials = [
-        { link: `https://www.tiktok.com/@feebeechanchibi`, icon: 'tiktok'},
-        { link: `https://www.twitter.com/feebeechanchibi`, icon: 'twitter'},
-        { link: `https://www.instagram.com/feebeechanchibi`, icon: 'instagram'},
+        { link: `https://feebeechanchibi.com/`, icon: 'home', iconLibrary: 'fas' },
         { link: `https://www.twitch.tv/feebee`, icon: 'twitch'},
         { link: `https://youtube.com/c/feebeechanchibi`, icon: 'youtube'},
-        { link: `https://feebeechanchibi.bandcamp.com`, icon: 'bandcamp'},
-        { link: `https://open.spotify.com/artist/3AVEJlXqQJciNtMTZn2AjA`, icon: 'spotify'},
+        { link: `https://www.twitter.com/feebeechanchibi`, icon: 'twitter'}
     ]
 
     return (
@@ -25,11 +22,12 @@ const PhoebePage = () => {
             />
 
             <PageContent>
-                <Guest personName="Phoebe" guestTitle="Virtual Idol/Singer/Voice Actress" guestSocials={guestSocials}>
-                    Get ready to sing, dance, and smile with 2.5D fairytale idol, Phoebe! Phoebe is a California-based vocalist, VA, and VTuber dedicated to her craft and making people smile. She loves singing and writing her own original songs in Japanese and English, and performing on both the IRL and virtual stage. She is also part of VTuber Agency Shirayuri Production and IRL idol group PhEri.
+                <Guest personName="Phoebe" guestTitle="Idol, Voice Actor, V-Tuber" guestSocials={guestSocials}>
+                    Get ready to sing, dance, and smile with 2.5D fairytale idol, Phoebe! Phoebe (also known by her screen name "Feebeechanchibi") is a California-based singer, VA, and VTuber dedicated to making people smile and enchanting them on stage with her heartwarming timbre and fairy-like vocals. She loves singing and writing her own original songs in Japanese and English, and performing on both the IRL and virtual stage.  
                     
                     <br /><br />
-                    Phoebe streams primarily wholesome indie games, singing, and occasionally ASMR on her Twitch channel (@feebee). She is excited to return to a real stage at NW IdolFest with her first performance outside of California!
+                    A professional singer and voice actress, you can hear her voice in games such as Luminous Avenger iX 2, NOISZ STΔRLIVHT, Wildfire: Ticket to Rock, and many more upcoming projects! Phoebe streams primarily family friendly indie games, singing, crafts, and ASMR on her Twitch channel (@feebee).
+                    <br /><br />
                 </Guest>
             </PageContent>
         </Layout>
