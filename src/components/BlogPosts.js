@@ -11,7 +11,7 @@ export default function BlogPosts() {
                         slug
                     }
                     frontmatter {
-                        date(fromNow: true)
+                        date(formatString: "YYYY/MM/DD")
                         title
                         template
                     }
