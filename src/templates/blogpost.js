@@ -31,6 +31,7 @@ export default function BlogPost({ data }) {
 
         <PageContent>
             <p className={classes.date}>Posted {post.frontmatter.date}</p>
+            <h2>{post.frontmatter.title}</h2>
             <MDXRenderer>{post.body}</MDXRenderer>
                 
             <p className={classes.cta}>Want to get future announcements straight to your inbox? Sign up for our email list:</p>

@@ -4,8 +4,6 @@ date: 2022-05-15
 template: blogpost
 ---
 
-## Panelist & vendor applications are open!
-
 ### Panelists:
 
 Are you a local idol who's ready for the spotlight? Want to share your niche area of idol fandom with the world? Northwest IdolFest is now accepting applications for panels, workshops, performances, and game shows. 
