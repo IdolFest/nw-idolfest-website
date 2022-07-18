@@ -14,7 +14,7 @@ const EventsPage = () => (
         />
 
         <PageContent>
-            <p>NW IdolFest will be launching panel applications soon. Sign up for our email list to be the first to find out when they go live!</p>
+            <p>NW IdolFest is excited to provide a venue for your amazing panels and performances this year! To apply, please visit <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCHpYyQKkWbXG85OQihiy1g4yejhi8kqDJO-_oDg8DET_89w/viewform" target="_blank">the application</a>.</p>
 
             <NewsletterSignup />
         </PageContent>
