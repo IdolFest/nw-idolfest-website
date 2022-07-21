@@ -16,20 +16,18 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
     1. A single badge CANNOT be split among a group.  
 2. All attendees must follow proper [NWIF policies](https://nwidolfest.com/policies).
 3. All attendees must follow proper [COVID-19 policies](https://nwidolfest.com/policies) laid out by NWIF.
-    4. All contestants must wear a proper mask at all times. Masks can be taken off during time on stage or while eating or drinking.   
+    1. All contestants must wear a proper mask when not on stage. Masks can be taken off during time on stage or while eating or drinking.   
 4. All cosplay policies must be followed by all contestants. 
     1. This also includes immediate disqualification due to darkening or modification of human skin to appear a different human race. Things such as blackface, asian-fishing, and yellowface are included in this definition. 
     1. Examples of blackface/yellowface include darkening the skin to appear as a different human race.  
     1. Examples of Asian-fishing include changing the eye shape to look more narrow/elongated and taping eyelids.
     1. Unnatural colors like blue, purple, etc are appropriate.
-5.  Every contestant must sign a waiver form to participate in the Masquerade. This form must be signed and sent online for each individual in the entry.  	 
-    6.  Minors participating in the Masquerade must have the waiver signed by a parent or guardian prior to check in.   
-6. Minors under the age of 16 participating in the Masquerade must be accompanied by an attendee chaperone over the age of 18. This includes rehearsal, judging, and backstage green room. 
-7. Competitors in the Masquerade are not permitted to also participate in the Walk-On and vice-versa. 
+5. Minors under the age of 16 participating in the Masquerade must be accompanied by an attendee chaperone over the age of 18. This includes rehearsal, judging, and backstage green room. 
+6. Competitors in the Masquerade are not permitted to also participate in the Walk-On and vice-versa. 
     7. All contestants are allowed to have one appearance on stage.
-8. Everyone who is appearing on stage (i.e. helpers, handlers, chaperones for minors) must be mentioned within the application form. Access to the stage, green room, and craftsmanship judging areas will be restricted to individuals listed on the form.
-9. Entries accepted into the competition will be notified, at the latest, the week after the application closes (9/2). 
-10. NWIF Cosplay Events staff reserves the right to disqualify you for this year and/or future years if you break any of these rules, are caught cheating, or are disrespectful towards the staff, judges, or your fellow competitors (both in-person and online).
+7. Everyone who is appearing on stage (i.e. helpers, handlers, chaperones for minors) must be mentioned within the application form. Access to the stage, green room, and craftsmanship judging areas will be restricted to individuals listed on the form.
+8. Entries accepted into the competition will be notified, at the latest, the week after the application closes (9/2). 
+9. NWIF Cosplay Events staff reserves the right to disqualify you for this year and/or future years if you break any of these rules, are caught cheating, or are disrespectful towards the staff, judges, or your fellow competitors (both in-person and online).
 
 ### Entries and Divisions 
 
@@ -39,14 +37,14 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
     3. Masters: 5+ major awards   
         1. This refers to the number of major awards won in cosplay competitions.
 2. Contestants, if they so choose, can compete at a higher division but cannot compete at a lower division.  
-    4. Anyone can be a "Master", you just cannot be a Journeyman or Novice if you've exceeded the number of awards listed.  
-    5. Major Awards are defined as “Best in Show”, Best in Division, Runner-Up Awards, and numerical placements (1st, 2nd, 3rd). 
-        2. Judges' awards DO NOT count as major awards.
+    1. Anyone can be a "Master", you just cannot be a Journeyman or Novice if you've exceeded the number of awards listed.  
+    1. Major Awards are defined as “Best in Show”, Best in Division, Runner-Up Awards, and numerical placements (1st, 2nd, 3rd). 
+        1. Judges' awards DO NOT count as major awards.
 3. Contestants that are professional costume makers and/or make a majority of their income from costume/garment construction must compete at the Masters level.
 4. When entering as a group, division will be based on the member with the most major awards. (Ex: a group with a Novice and a Master must compete in the Masters’ division.)
 5. Judges & NWIF Cosplay Events staff can bump an entry up at their discretion if the skill level exceeds the entry after prejudging discussion. 
 6. Masquerade contestants have the option to enter for performance only, or performance with craftsmanship. 
-    6. Only entries judged on both craftsmanship and performance are eligible for Best in Craftsmanship awards and/or Best in Show.  
+    1. Only entries judged on both craftsmanship and performance are eligible for Best in Craftsmanship awards and/or Best in Show.  
 7. Contestants may choose to perform in bought/commissioned costumes but will only be eligible for Performance-related awards.
 
 
@@ -62,8 +60,8 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
 1. All skits must be family-friendly and follow NWIF policy. If the skit exceeds a PG-13 rating then it is not allowed. No cussing, inappropriate gestures, or sexual references are allowed. 
     1. Any portion of a skit that is deemed inappropriate for a family friendly audience must be altered to fit these guidelines.
 2. Each skit is allowed a maximum of 9 people. Anyone who is on stage during the skit is defined as a person, including handlers and stage ninjas. This is for the safety of all contestants. 
-3. Costumes from idol/idol-related source material are permitted, and can include but are not limited to: anime, manga, video games, movies, TV shows, fan designs, or original characters.This also includes OC Idols as well. 
-    2. This also includes idol specific designs from series such as Smewthie (Tokyo Mew Mew), Sera Myu dance performances (Sailor Moon), and other non-related characters imagined as idols.
+3. Costumes from idol/idol-related source material are permitted, and can include but are not limited to: anime, manga, video games, movies, TV shows, fan designs, or original characters. This also includes OC Idols. 
+    1. This also includes idol specific designs from series such as Smewthie (Tokyo Mew Mew), Sera Myu dance performances (Sailor Moon), and other non-related characters imagined as idols.
 4. No real weapons, airsoft guns, and/or live steel are allowed. All prop weapons must follow NWIF policies regarding weapons.  
 5. No nudity is allowed, according to NWIF policies. 
 6. Costumes must have unassisted freedom of movement on stage.
@@ -95,7 +93,7 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
 5. It is highly recommended that the contestants bring a backup USB drive with the audio in case of technical difficulties. USBs will be returned at the end of the masquerade.
     1. This back up USB must be submitted at check-in. 
     2. The USB must be labeled with the name of the performer/group and skit.
-6. No CD submissions will be accepted.   
+6. No CD submissions will be accepted.
 
 ### Walk-On Information
 
@@ -121,21 +119,21 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
 4. At least 75% of the costume must be made by the individual entering the contest. 
     1. No commissioned, rented, or professionally made costumes not created by the individual are allowed (unless the performer is a model, please see ##5 below). This also extends to store bought costumes.   
 5. A model may wear the costume during judging and on stage but the person who made the costume must be present for judging.   
-    2. The maker should be present at the awards ceremony should they receive an award.
+    1. The maker should be present at the awards ceremony should they receive an award.
 6. Costumes from idol/idol-related source material are permitted, and can include but are not limited to: anime, manga, video games, movies, TV shows, fan designs, or original characters.This also includes OC Idols as well. 
-    3. This also includes idol specific designs from series such as Smewthie (Tokyo Mew Mew), Sera Myu dance performances (Sailor Moon), and other non-related characters imagined as idols.
+    1. This also includes idol specific designs from series such as Smewthie (Tokyo Mew Mew), Sera Myu dance performances (Sailor Moon), and other non-related characters imagined as idols.
 7. References of the character are required for judging. References can be physically printed or digital (shown on a phone or tablet screen), however physical references are prefered.
-    4. For original designs and fan designs, a sketch, mood board, or some other form of visual inspiration counts as reference material.
-    5. Build books or work in progress photos are highly encouraged but not required. Build books or other physically printed material must be picked up by contestants after the Masquerade.
+    1. For original designs and fan designs, a sketch, mood board, or some other form of visual inspiration counts as reference material.
+    1. Build books or work in progress photos are highly encouraged but not required. Build books or other physically printed material must be picked up by contestants after the Masquerade.
 8. Costumes that have previously won awards in competition will be permitted, as long as there has been at least 30% improvement to the costume since it won the award.  
-    6. Costumes that have won Best in Show will not be allowed to enter.
-    7. Costumes that have won a Best in Category award must be entered at a higher level. (Ex: a Best in Novice costume with at least 30% improvement could be entered as a Journeyman costume.)  
+    1. Costumes that have won Best in Show will not be allowed to enter.
+    1. Costumes that have won a Best in Category award must be entered at a higher level. (Ex: a Best in Novice costume with at least 30% improvement could be entered as a Journeyman costume.)  
 9. Any costumes that require electricity must have a self-contained power source. Contestants will not have access to outlets.
 10. No costumes with confetti, loose glitter, live flames, smoke generators, or pyrotechnics are allowed.
 11. The craftsmanship judging room is not open to the general public. Only one additional person can join the contestant in the judging room.
-    8. This can include a parent/guardian, a handler for larger costumes, or someone for support/anxiety. 
+    1. This can include a parent/guardian, a handler for larger costumes, or someone for support/anxiety. 
 12. Winners will be announced during the awards ceremony at the end of the Masquerade. 
-    9. Contestants must retrieve their physical prizes at the end of the Masquerade.
+    1. Contestants must retrieve their physical prizes at the end of the Masquerade.
 
 ### At Convention
 
