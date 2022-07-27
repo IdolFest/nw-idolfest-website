@@ -49,6 +49,18 @@ const headersData = [
       label: "Jun (Lucia Hunter)",
       href: "/guests/jun"
     },
+    {
+      label: "Barri",
+      href: "/guests/barri"
+    },
+    {
+      label: "Eli Ebberts",
+      href: "/guests/eliebberts"
+    },
+    {
+      label: "Luluko",
+      href: "/guests/luluko"
+    },
     ]
   },
   {
