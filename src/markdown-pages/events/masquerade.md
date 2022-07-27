@@ -24,7 +24,7 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
     1. Unnatural colors like blue, purple, etc are appropriate.
 5. Minors under the age of 16 participating in the Masquerade must be accompanied by an attendee chaperone over the age of 18. This includes rehearsal, judging, and backstage green room. 
 6. Competitors in the Masquerade are not permitted to also participate in the Walk-On and vice-versa. 
-    7. All contestants are allowed to have one appearance on stage.
+    1. All contestants are allowed to have one appearance on stage.
 7. Everyone who is appearing on stage (i.e. helpers, handlers, chaperones for minors) must be mentioned within the application form. Access to the stage, green room, and craftsmanship judging areas will be restricted to individuals listed on the form.
 8. Entries accepted into the competition will be notified, at the latest, the week after the application closes (9/2). 
 9. NWIF Cosplay Events staff reserves the right to disqualify you for this year and/or future years if you break any of these rules, are caught cheating, or are disrespectful towards the staff, judges, or your fellow competitors (both in-person and online).
