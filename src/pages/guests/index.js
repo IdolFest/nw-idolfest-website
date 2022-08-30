@@ -21,6 +21,7 @@ const GuestsPage = () => (
                 <Avatar personName="Kaho Shibuya" showLink={true} />
                 <Avatar personName="Phoebe" showLink={true} />
                 <Avatar personName="Rintaichou" showLink={true} />
+                <Avatar personName="Non Sweet" showLink={true} />
                 <Avatar personName="Jun" showLink={true} />
                 <Avatar personName="Barri" showLink={true} />
                 <Avatar personName="Eli Ebberts" showLink={true} />
