@@ -79,9 +79,9 @@ If you'd like to participate in the masquerade, [apply here](https://idolfe.st/m
 ### Skit Length and Timing
 
 1. Skit length will be determined by the number of performers in a group. (Stage handlers and ninjas do not count towards the time limit.)
-    1. 1-2 performers: 1:30 minute maximum
-    2. 3-5 performers: 2:30 minute maximum
-    3. 6+: 3:00 minute maximum 
+    1. 1-2 performers: 3:00 minute maximum
+    2. 3-5 performers: 4:00 minute maximum
+    3. 6+: 5:00 minute maximum 
 2. The time limits mentioned above will be strictly enforced.
 
 ### Audio Submission
