@@ -6,7 +6,7 @@ template: page
 
 ## Masquerade Application
 
-If you'd like to participate in the masquerade, [apply here](https://idolfe.st/masqueradeapp) by August 26th, 2022 11:59 PM PST. Accepted entries will be notified by September 2nd, 2022, 11:59 PM PST.
+If you'd like to participate in the masquerade, [apply here](https://idolfe.st/masqueradeapp) by September 30th, 2022 11:59 PM PST. Accepted entries will be notified by October 7th, 2022, 11:59 PM PST.
 
 ## Masquerade Rules
 
