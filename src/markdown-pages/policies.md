@@ -14,11 +14,21 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and N
 
 ## COVID-19
 
-NWIF will determine a final COVID-19 policy no later than September 1st, 2022 (pending changes to government regulations after that date).
+NWIF will require proof of COVID-19 vaccination for any attendee over the age of 18, as well as masks in event space. Masks may be removed by panelists and performers while on stage but must be worn at all other times.
 
-In 2021, NWIF required proof of COVID-19 vaccination for all attendees over 18. It is likely this will be required again for 2022, with the final dose of the primary series OR a booster administered within 6 months prior to the event. However, we understand things can change significantly in a short period of time, and are waiting to make a final determination until closer to the event.
+A physical or digital copy of a COVID-19 vaccine card must be presented along with a valid photo ID at badge pickup.
 
-If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. If you are under 18, please review the Minor Attendees section below for additional details that may apply.
+Attendees must provide proof of either:
+
+- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZenica or 1 dose of J&J) and a booster shot, administered at any time prior to the convention
+
+OR
+
+- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZenica or 1 dose of J&J), with the final dose administered between April 21, 2022 and October 7, 2022
+
+If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. 
+
+Attendees under the age of 18 are permitted to present either proof of vaccination or a negative test administered within the last 72 hours by an authorized medical professional. Rapid tests administered at home are not accepted. Please review the "Minor Attendees" section below for more details.
 
 These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
 
@@ -36,11 +46,11 @@ This policy applies without exception to everyone at the convention, including a
 
 All attendees who are under 18 during any time they are at NW IdolFest are required to provide a consent form signed by a legal guardian. The consent form can be downloaded [here](/Parental%20Consent%20Form.pdf). If the legal guardian will be present at the event with the minor, then the form can be signed in front of us. If the legal guardian will not be in attendance, the form may be brought pre-signed.
 
-Minors ages 13-17 may attend NW IdolFest without accompaniment, so long as they have a completed consent form. Minors 12 years of age and under will need to be accompanied at all times by an adult with a paid badge.
+Minors ages 13-17 may attend NW IdolFest without accompaniment, so long as they have a completed consent form. Minors 12 years of age and under must be accompanied at all times by an adult with a paid badge.
 
 School IDs are accepted as proof of ID, or, if accompanied by an adult, the adult's ID may be accepted instead.
 
-Last year, to comply with our COVID-19 policy, minors were permitted to present either proof of vaccination or a negative test administered within 72 hours by an authorized medical professional. We will post a final determination on the COVID-19 policy for attendees under 18 no later than September 1st, 2022.
+Attendees under the age of 18 are permitted to present either proof of vaccination or a negative test administered within the last 72 hours by an authorized medical professional. Rapid tests administered at home are not accepted.
 
 ## Content Rating
 
