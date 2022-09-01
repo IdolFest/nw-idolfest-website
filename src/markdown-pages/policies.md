@@ -20,11 +20,11 @@ A physical or digital copy of a COVID-19 vaccine card must be presented along wi
 
 Attendees must provide proof of either:
 
-- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZenica or 1 dose of J&J) and a booster shot, administered at any time prior to the convention
+- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZeneca or 1 dose of J&J/Janssen) and a booster shot, administered at any time prior to the convention
 
 OR
 
-- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZenica or 1 dose of J&J), with the final dose administered between April 21, 2022 and October 7, 2022
+- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZeneca or 1 dose of J&J/Janssen), with the final dose administered between April 21, 2022 and October 7, 2022
 
 If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. 
 
