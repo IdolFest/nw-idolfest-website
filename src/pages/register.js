@@ -473,8 +473,13 @@ const RegisterPage = () => {
           </div>
           : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
-          <i>By registering for a badge, you agree to comply with all <a href='/policies' target='_blank'>NWIF policies</a>. <br />
-          Proof of COVID vaccination is required to attend. A booster shot is required if your primary series vaccination is more than 6 months old. Please read our <a href='/policies' target='_blank'>COVID policy</a> for full details.</i>
+          <i>
+          Photo ID and proof of COVID vaccination is required to pick up your badge.<br />
+          A booster shot is required if your primary series vaccination is more than 6 months old.<br />
+          Masks are required at all times.<br />
+          Please read our <a href='/policies' target='_blank'>COVID policy</a> for full details.<br /><br />
+          By registering for a badge, you agree to comply with all <a href='/policies' target='_blank'>NWIF policies</a>. 
+          </i>
           {props.values.badgeType === 'badge-supersponsor' && (<><br /><br /><i>A credit card matching the name on your registration will be required for incidentals when checking into your Prism hotel room (or you may ask them to disable incidentals). The primary guest on the room must be over 18. Up to 2 additional guests may be added to the room by <Link to='/contact'>contacting us</Link>.</i></>) }
           <Button variant="contained" className="cta" type="submit">
             Proceed to check out
