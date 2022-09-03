@@ -83,6 +83,10 @@ const headersData = [
         label: "Masquerade",
         href: "/events/masquerade"
     },
+    {
+        label: "Grand Prix Song Contest",
+        href: "/events/grandprix"
+    }
     ]
   },
   {
