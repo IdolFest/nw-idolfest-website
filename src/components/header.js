@@ -328,6 +328,7 @@ const dates = site.siteMetadata.shortDates
           width={300}
           transformOptions={{fit: "contain"}}
           src='../images/logo/Logo Pink.svg'
+          placeholder='none'
           />
   );
 
