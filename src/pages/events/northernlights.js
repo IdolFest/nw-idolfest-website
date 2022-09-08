@@ -15,7 +15,7 @@ const NorthernLightsPage = () => {
         <p>
             What's an idol event without music? The Northern Lights Music Festival will be returning in 2022, bigger and better than ever!
             <br /><br />
-            If you'd like to apply, fill out <a href="https://idolfe.st/NL2022" target="_blank" rel="noreferrer">the application</a> by August 1st, 2022. You'll find it at <a href="https://idolfe.st/NL2022" target="_blank" rel="noreferrer">https://idolfe.st/NL2022</a>.
+            Applications for Northern Lights are closed for this year. Stay tuned for performer lineup soon!
         </p>
         </PageContent>
     </Layout>
