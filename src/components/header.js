@@ -129,7 +129,11 @@ const headersData = [
     //   label: "Newsletter Signup",
     //   href: "/newsletter"
     // },
-    ]
+    ],
+  },
+  {
+    label: "Shop",
+    href: "https://idolfe.st/shop",
   },
 ];
 
