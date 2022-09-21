@@ -38,6 +38,10 @@ const headersData = [
       href: "/guests/kahoshibuya"
     },
     {
+      label: "Isiliel (Himari)",
+      href: "/guests/isiliel"
+    },
+    {
       label: "Phoebe",
       href: "/guests/phoebe"
     },
