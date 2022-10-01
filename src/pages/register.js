@@ -9,6 +9,8 @@ import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
+import CenteredBox from '@components/CenteredBox'
+
 import {
   Button, 
   Box,
@@ -41,11 +43,11 @@ const allBadgeTiers = [
     hasTax: true,
     price: '60',
     tierName: 'Silver',
-    description: 'This badge grants:',
+    description: '<strong>Price increases to $70 on 10/17!</strong><br /><br />This badge grants:',
     perks: [
       'Access to all events at NWIF',
       'NWIF Discord role',
-      'Special surprise at registration',
+      'Special surprise at registration'
     ]
   },
   {
@@ -114,7 +116,7 @@ const allBadgeTiers = [
     hasTax: true,
     price: '30',
     tierName: 'Chibi',
-    description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
+    description: "<strong>Price increases to $35 on 10/17!</strong><br /><br />Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
     perks: [
       'Access to all events at NWIF',
       'Special surprise at registration',
@@ -202,6 +204,12 @@ const RegisterPage = () => {
     />
 
     <PageContent>
+      <CenteredBox>
+        <i>October 3rd is the LAST DAY to buy Gold and Prism Badges!</i>
+        <br />
+        <i>On October 17th, Silver Badges will increase to $70.</i>
+      </CenteredBox>
+
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
               <Grid item key={badge.badgeName}>
