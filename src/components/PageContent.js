@@ -12,12 +12,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const PageContent = ({ children }) => {
+const PageContent = ({ children, maxWidth }) => {
   const classes = useStyles()
 
   return (
     <Container 
-      maxWidth="md"
+      maxWidth={maxWidth ? maxWidth : "md"}
       className={classes.container}>
       {children}
     </Container>
@@ -26,6 +26,7 @@ const PageContent = ({ children }) => {
 
 PageContent.propTypes = {
   children: PropTypes.node.isRequired,
+  maxWidth: PropTypes.string
 }
 
 export default PageContent
