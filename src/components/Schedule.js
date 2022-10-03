@@ -4,11 +4,14 @@ import { makeStyles } from '@material-ui/styles'
 import { styled } from '@material-ui/styles'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Toggle from "@components/toggle"
+import scheduleData from "../../static/schedules/schedule.json"
 
 const EventsTable = styled(TableContainer)({
-  margin: '0 auto',
-  maxWidth: '100%',
-  paddingBottom: '1em'
+    margin: '0 auto',
+    maxWidth: '100%',
+    paddingBottom: '1em',
+    fontSize: '1rem !important'
 })
 
 const useStyles = makeStyles(_ => ({
@@ -19,7 +22,8 @@ const useStyles = makeStyles(_ => ({
         textAlign: 'left',
         '& .name': {
             fontSize: 'larger',
-            paddingTop: '1em',
+            marginTop: '7px',
+            fontWeight: '600'
         },
         '& .time': {
         },
@@ -30,9 +34,15 @@ const useStyles = makeStyles(_ => ({
             paddingTop: '.5em',
         },
     },
-    '@media (max-width: 499px)': {
+    desktopPanel: {
+        fontSize: '1rem'
+    },
+    '@media (max-width: 799px)': {
         mobileSchedule: {
             display: 'block',
+            '& h3': {
+                margin: '8px 0 0 0'
+            }
         },
         desktopSchedule: {
             display: 'none'
@@ -40,65 +50,81 @@ const useStyles = makeStyles(_ => ({
     }
 }))
 
-const Schedule = ({ panels }) => {
+// 2022-10-21 11:00 AM => 11:00 AM
+function formatTime(time) {
+    return time.substring(time.indexOf(' ') + 1)
+}
+
+const Schedule = ({ day }) => {
   const classes = useStyles()
-    
+
   return (
     <>
         <FontAwesomeIcon icon={['fas', 'star']} /> = special guest panel
-        {panels.content.map((dailySchedule) => (
-        <div className={classes.mobileSchedule}>
-            <h3>{dailySchedule.day}</h3>
-            {dailySchedule.panels.map((panel) => (
-            <div className={classes.panel} key={panel.title}>
-                <div className="name">{panel.isGuestPanel ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null} {panel.title}</div>
-                <div className="time">{dailySchedule.day}, {panel.startTime} - {panel.endTime}</div>
-                {panel.panelists ? <div><span className="panelists">Panelists</span>: {panel.panelists}</div> : null }
-                <div className="description">{panel.description}</div>
+        {Object.entries(scheduleData.times).map(([time, panelArray]) => {
+            if (time.split(" ")[0] != day) { return }
+            return <div className={classes.mobileSchedule}>
+                <h3>{formatTime(time)}</h3>
+                {panelArray.map((panel) => (
+                <div className={classes.panel} key={panel.id}>
+                    <div className="name">{panel.isGuest ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null} {panel.title}</div>
+                    <div className="room">Room: {panel.room}</div>
+                    <div className="time">Time: {formatTime(panel.startTime)} - {formatTime(panel.endTime)}</div>
+                    {panel.panelists ? <div><span className="panelists">Panelists</span>: {panel.panelists}</div> : null }
+                    <div className="description">
+                        <span>
+                            <Toggle 
+                            title={`${panel.description.substring(0, panel.description.lastIndexOf(" ", 50))}…`} 
+                            content={panel.description} />
+                        </span>
+                    </div>
+                </div>
+                ))}
+                <hr />
             </div>
-            ))}
-        </div>
-        ))}
+        })}
           
         <div className={classes.desktopSchedule}>
-            {panels.content.map((dailySchedule) => (
             <>
-            <h3>{dailySchedule.day}</h3>
             <EventsTable>
             <Table aria-label="simple table">
                 <TableHead style={{ textTransform: 'uppercase' }}>
                 <TableRow>
-                    <TableCell>Panel</TableCell>
                     <TableCell>Time</TableCell>
+                    <TableCell>Room</TableCell>
+                    <TableCell>Panel</TableCell>
                     <TableCell>Description</TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
-                {dailySchedule.panels.map((panel) => (
-                    <TableRow key={panel.title}>
-                        <TableCell width="25%" component="th" scope="panel">
-                            {panel.isGuestPanel ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null}
-                            {`${panel.title}`}
-                        </TableCell>
-                        <TableCell width="20%">{panel.startTime}-{panel.endTime}</TableCell>
-                        <TableCell>
-                            {panel.description}
-                            {panel.panelists ? <><br /><br /> <i>Panelists: {panel.panelists}</i></> : null}
-                        </TableCell>
-                    </TableRow>
-                ))}
+                {Object.entries(scheduleData.times).map(([time, panelArray]) => {
+                    if (time.split(" ")[0] != day) { return }
+                    return panelArray.map((panel) => (
+                        <TableRow key={panel.title}>
+                            <TableCell className={classes.desktopPanel} width="10%" style={{ minWidth: '100px', whiteSpace: 'nowrap' }}>{formatTime(panel.startTime)}-{formatTime(panel.endTime)}</TableCell>
+                            <TableCell className={classes.desktopPanel} width="10%">{panel.room}</TableCell>
+                            <TableCell className={classes.desktopPanel} width="25%" component="th" scope="panel">
+                                {panel.isGuest ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null}
+                                {`${panel.title}`}
+                            </TableCell>
+                            <TableCell className={classes.desktopPanel}>
+                                {panel.description}
+                                {panel.panelists ? <><br /><br /> <i>Panelists: {panel.panelists}</i></> : null}
+                            </TableCell>
+                        </TableRow>
+                    ))
+                })}
                 </TableBody>
             </Table>
             </EventsTable>
             </>
-            ))}
-          </div>
+        </div>
     </>
   )
 }
 
 Schedule.propTypes = {
-  panels: PropTypes.node.isRequired,
+  day: PropTypes.string.isRequired,
 }
 
 export default Schedule
