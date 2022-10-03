@@ -16,7 +16,12 @@ class Toggle extends Component {
  
   render() {
     return (
-      <div onClick={ () => this.handleClick() }>
+      <div 
+        onClick={() => this.handleClick()} 
+        onKeyDown={() => this.handleClick()} 
+        role="button"
+        tabIndex='0'
+      >
         <span>
           <FontAwesomeIcon icon={['fas', 'caret-right']} style={{ marginRight: '3px' }}/> 
           {!this.state.show ? this.props.title : ''}

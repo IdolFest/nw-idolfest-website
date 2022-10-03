@@ -62,7 +62,7 @@ const Schedule = ({ day }) => {
     <>
         <FontAwesomeIcon icon={['fas', 'star']} /> = special guest panel
         {Object.entries(scheduleData.times).map(([time, panelArray]) => {
-            if (time.split(" ")[0] != day) { return }
+            if (time.split(" ")[0] !== day) { return null }
             return <div className={classes.mobileSchedule}>
                 <h3>{formatTime(time)}</h3>
                 {panelArray.map((panel) => (
@@ -98,7 +98,7 @@ const Schedule = ({ day }) => {
                 </TableHead>
                 <TableBody>
                 {Object.entries(scheduleData.times).map(([time, panelArray]) => {
-                    if (time.split(" ")[0] != day) { return }
+                    if (time.split(" ")[0] !== day) { return null }
                     return panelArray.map((panel) => (
                         <TableRow key={panel.title}>
                             <TableCell className={classes.desktopPanel} width="10%" style={{ minWidth: '100px', whiteSpace: 'nowrap' }}>{formatTime(panel.startTime)}-{formatTime(panel.endTime)}</TableCell>
