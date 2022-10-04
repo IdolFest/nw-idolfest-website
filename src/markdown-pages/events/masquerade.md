@@ -4,9 +4,9 @@ title: Masquerade
 template: page
 ---
 
-## Masquerade Application
+## Schedule
 
-If you'd like to participate in the masquerade, [apply here](https://idolfe.st/masqueradeapp) by September 30th, 2022 11:59 PM PST. Accepted entries will be notified by October 7th, 2022, 11:59 PM PST.
+Our Masquerade will take place on Saturday, October 22 from 5-6 PM. Featuring a special performance by Non Sweet, MCing by Kaho Shibuya, and guest judges Barri, Eli Ebberts, and Luluko, you won't want to miss it!
 
 ## Masquerade Rules
 
