@@ -29,10 +29,11 @@ const useStyles = makeStyles(_ => ({
         },
         '& .panelists': {
             paddingBottom: '.5em',
-        },
-        '& .description': {
-            paddingTop: '.5em',
-        },
+        }
+    },
+    description: {
+        paddingTop: '.5em',
+        whiteSpace: 'pre-line'
     },
     desktopPanel: {
         fontSize: '1rem'
@@ -71,13 +72,15 @@ const Schedule = ({ day }) => {
                     <div className="room">Room: {panel.room}</div>
                     <div className="time">Time: {formatTime(panel.startTime)} – {formatTime(panel.endTime)}</div>
                     {panel.panelists ? <div><span className="panelists">Panelists</span>: {panel.panelists}</div> : null }
-                    <div className="description">
+                    {panel.description ?
+                    <div className={classes.description}>
                         <span>
                             <Toggle 
                             title={`${panel.description.substring(0, panel.description.lastIndexOf(" ", 50))}…`} 
                             content={panel.description} />
                         </span>
                     </div>
+                    : null}
                 </div>
                 ))}
                 <hr />
@@ -108,7 +111,7 @@ const Schedule = ({ day }) => {
                                 {`${panel.title}`}
                             </TableCell>
                             <TableCell className={classes.desktopPanel}>
-                                {panel.description}
+                                <div className={classes.description}>{panel.description}</div>
                                 {panel.panelists ? <><br /><br /> <i>Panelists: {panel.panelists}</i></> : null}
                             </TableCell>
                         </TableRow>
