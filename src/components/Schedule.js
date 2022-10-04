@@ -53,7 +53,7 @@ const useStyles = makeStyles(_ => ({
 
 // 2022-10-21T11:00:00-7:00 => 11:00 AM
 function formatTime(datetime) {
-    return new Date(datetime).toLocaleTimeString([], {timeStyle: 'short'})
+    return new Date(datetime).toLocaleTimeString([], {timeStyle: 'short', timeZone: 'America/Los_Angeles'})
 }
 
 const Schedule = ({ day }) => {
