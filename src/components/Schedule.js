@@ -50,9 +50,9 @@ const useStyles = makeStyles(_ => ({
     }
 }))
 
-// 2022-10-21 11:00 AM => 11:00 AM
-function formatTime(time) {
-    return time.substring(time.indexOf(' ') + 1)
+// 2022-10-21T11:00:00-7:00 => 11:00 AM
+function formatTime(datetime) {
+    return new Date(datetime).toLocaleTimeString([], {timeStyle: 'short'})
 }
 
 const Schedule = ({ day }) => {
@@ -62,14 +62,14 @@ const Schedule = ({ day }) => {
     <>
         <FontAwesomeIcon icon={['fas', 'star']} /> = special guest panel
         {Object.entries(scheduleData.times).map(([time, panelArray]) => {
-            if (time.split(" ")[0] !== day) { return null }
+            if (time.split("T")[0] !== day) { return null }
             return <div className={classes.mobileSchedule}>
                 <h3>{formatTime(time)}</h3>
                 {panelArray.map((panel) => (
                 <div className={classes.panel} key={panel.id}>
                     <div className="name">{panel.isGuest ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null} {panel.title}</div>
                     <div className="room">Room: {panel.room}</div>
-                    <div className="time">Time: {formatTime(panel.startTime)} - {formatTime(panel.endTime)}</div>
+                    <div className="time">Time: {formatTime(panel.startTime)} – {formatTime(panel.endTime)}</div>
                     {panel.panelists ? <div><span className="panelists">Panelists</span>: {panel.panelists}</div> : null }
                     <div className="description">
                         <span>
@@ -98,7 +98,7 @@ const Schedule = ({ day }) => {
                 </TableHead>
                 <TableBody>
                 {Object.entries(scheduleData.times).map(([time, panelArray]) => {
-                    if (time.split(" ")[0] !== day) { return null }
+                    if (time.split("T")[0] !== day) { return null }
                     return panelArray.map((panel) => (
                         <TableRow key={panel.title}>
                             <TableCell className={classes.desktopPanel} width="10%" style={{ minWidth: '100px', whiteSpace: 'nowrap' }}>{formatTime(panel.startTime)}-{formatTime(panel.endTime)}</TableCell>
