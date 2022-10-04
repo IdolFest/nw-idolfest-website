@@ -133,6 +133,10 @@ const headersData = [
       label: "Partners",
       href: "/partners"
     },
+    {
+      label: "Discord",
+      href: "/about/discord"
+    },
     // {
     //   label: "Newsletter Signup",
     //   href: "/newsletter"
