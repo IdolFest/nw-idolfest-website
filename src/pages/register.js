@@ -53,9 +53,9 @@ const allBadgeTiers = [
   {
     badgeName: 'Sponsor',
     badgeKey: 'badge-sponsor',
-    onSale: true,
+    onSale: false,
     hasTax: true,
-    price: '98',
+    price: '<strike>98</strike> SOLD OUT',
     tierName: 'Gold',
     description: 'Everything in Silver, plus:',
     perks: [
@@ -71,9 +71,9 @@ const allBadgeTiers = [
   {
     badgeName: 'Super Sponsor',
     badgeKey: 'badge-supersponsor',
-    onSale: true,
+    onSale: false,
     hasTax: true,
-    price: '694.20',
+    price: '<strike>694.20</strike> SOLD OUT',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
     perks: [
@@ -205,8 +205,6 @@ const RegisterPage = () => {
 
     <PageContent>
       <CenteredBox>
-        <i>October 3rd is the LAST DAY to buy Gold and Prism Badges!</i>
-        <br />
         <i>On October 17th, Silver Badges will increase to $70.</i>
       </CenteredBox>
 

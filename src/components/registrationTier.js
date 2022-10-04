@@ -40,7 +40,9 @@ const useStyles = makeStyles(theme => ({
 
 const HeroText = styled(Box)({
   alignSelf: 'center',
-  margin: '1em 0',
+  margin: '1em 0 0 0',
+  height: '3em',
+  textAlign: 'center',
   '& span': {
     size: '2em',
     textTransform: 'uppercase',
