@@ -143,10 +143,6 @@ const headersData = [
     // },
     ],
   },
-  {
-    label: "Shop",
-    href: "https://idolfe.st/shop",
-  },
 ];
 
 const useStyles = makeStyles(theme => ({
