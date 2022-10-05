@@ -56,7 +56,7 @@ export default function Avatar({ personName, showLink, showName=true }) {
   const avatarFilename = `${personNameSlug}_star.png`
   
   const avatarImageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName === avatarFilename
+      edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
   ).node.gatsbyImageData
 
   return (
