@@ -49,27 +49,52 @@ const IndexPage = () => {
         </Grid>
 
         <br />
-        <p>We also extend a huge THANK YOU to all our generous Gold and Prism badge sponsors! Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link></p>
+        <p>We also extend a huge THANK YOU to all our generous 2022 Prism and Gold sponsors!</p>
+        {/* Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link> */}
         <h3>Prism Sponsors</h3>
         <ul>
-          <li>Sugar</li>
-          <li>LUwUigi</li>
           <li>UtopicTomato</li>
+          <li>LUwUigi</li>
+          <li>David Jones</li>
+          <li>Redmoon</li>
+          <li>Will Carr</li>
+          <li>Sugar</li>
+          <li>STEVEN</li>
         </ul>
 
         <h3>Gold Sponsors</h3>
         <ul>
-            <li>Cinnamon18</li>
-            <li>Snow</li>
-            <li>Sturluson</li>
-            <li>Megumin Kousaka</li>
-            <li>Kanzakiii</li>
-            <li>Nekoromancy</li>
-            <li>YuuniHD</li>
-            <li>Anonymous</li>
-            <li>Exteminator</li>
-            <li>Steph S.</li>
-            <li>Tsuketoguu</li>
+          <li>Payton</li>
+          <li>djsessum.com</li>
+          <li>Thomas H.</li>
+          <li>SoulDriveP</li>
+          <li>YuuniHD</li>
+          <li>Anonymous </li>
+          <li>Jonathan Martinez</li>
+          <li>Nalzir</li>
+          <li>Bryce Hawkins</li>
+          <li>Vicky</li>
+          <li>mittens</li>
+          <li>Kara Rose</li>
+          <li>Kyle Cornwell</li>
+          <li>Fish & Bird Virtual Planning</li>
+          <li>Anonymous</li>
+          <li>Anonymous</li>
+          <li>Randall</li>
+          <li>Anonymous</li>
+          <li>Anonymous</li>
+          <li>lentils09</li>
+          <li>Shrimp </li>
+          <li>Line</li>
+          <li>Big E</li>
+          <li>Exteminator</li>
+          <li>Anonymous</li>
+          <li>Zeta Flare </li>
+          <li>JOwOnah</li>
+          <li>kariohki</li>
+          <li>Clairy</li>
+          <li>Angel Payne Author</li>
+          <li>Fortune</li>
         </ul>
 
       </PageContent>
