@@ -35,6 +35,18 @@ const IndexPage = () => {
         <p>Northwest IdolFest is proud to partner with some amazing organizations. Interested in joining up? <Link to="/contact">Drop us a line!</Link></p>
 
         <Grid container style={{ justifyContent: 'space-around' }}>
+          <a href="https://rabuagain.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+            <StaticImage
+              // This is a presentational image, so the alt should be an empty string
+              alt=''
+              src='../images/partners/rabuagain.png'
+              loading='eager'
+              placeholder='blurred'
+              quality='100'
+              height={300}
+            />
+          </a>
+
           <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
