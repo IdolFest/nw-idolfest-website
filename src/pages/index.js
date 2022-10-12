@@ -23,7 +23,9 @@ const IndexPage = () => {
 
       <PageContent>
         <p>Northwest IdolFest is a three day event featuring idols, anisong, and everything in between. Join us in Seattle on October 21-23, 2022 for our second year! Featuring guests, concerts, panels, cosplay, and more, get ready for a whole new idol experience.</p>
-        <p>Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and <Link to="register">buy your badge</Link> today!</p>
+        <p><Link to="register">Buy your badge</Link> today!</p>
+
+        {/* Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and  */}
 
         <div style={{ paddingTop: '1em' }} />
 
