@@ -205,7 +205,13 @@ const RegisterPage = () => {
 
     <PageContent>
       <CenteredBox>
-        <i>On October 17th, Silver Badges will increase to $70.</i>
+        <h4>Badge Pick-Up Hours</h4>
+        <>
+          Thursday, October 20: 6-8 PM<br />
+          Friday, October 21: 10 AM-7 PM<br />
+          Saturday, October 22: 9:30 AM-7 PM<br />
+          Sunday, October 23: 9:30 AM-12 PM<br />
+        </>
       </CenteredBox>
 
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
