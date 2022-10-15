@@ -205,15 +205,28 @@ const RegisterPage = () => {
 
     <PageContent>
       <CenteredBox>
-        <h4>Badge Pick-Up Hours</h4>
-        <>
-          Thursday, October 20: 6-8 PM<br />
-          Friday, October 21: 10 AM-7 PM<br />
-          Saturday, October 22: 9:30 AM-7 PM<br />
-          Sunday, October 23: 9:30 AM-12 PM<br />
-        </>
+        <Grid container style={{ justifyContent: 'space-around' }}>
+          <div>
+          <h4>Badge Pick-Up Hours</h4>
+          <>
+            Thursday, October 20: 6-8 PM<br />
+            Friday, October 21: 10 AM-7 PM<br />
+            Saturday, October 22: 9:30 AM-7 PM<br />
+            Sunday, October 23: 9:30 AM-12 PM<br />
+          </>
+          </div>
+          <div>
+          <h4>Silver Badge Pricing</h4>
+          <>
+            Monday, Oct 17-Friday, Oct 21: $70<br />
+            Saturday, Oct 22: $50<br />
+            Sunday, Oct 23: $20<br />
+            <i>NWIF does not sell one day badges. <br />
+            Silver badges decrease in price as the weekend goes on.</i><br />
+          </>
+          </div>
+        </Grid>
       </CenteredBox>
-
       <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
               <Grid item key={badge.badgeName}>
