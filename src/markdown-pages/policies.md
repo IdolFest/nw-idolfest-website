@@ -104,4 +104,10 @@ The Northern Lights Concert will use strobe lights. A warning sign will be poste
 
 NWIF attendees should be aware that audio and/or video recordings are frequently made in convention areas and that their likenesses may appear in those recordings. Individual members agree to assign without compensation the use of their likeness(es) at NWIF for the use of promotional material such as highlights and videos.
 
-Attendees must comply with the NWIF anti-harassment policy when taking photos or videos of other attendees. Be respectful and remember cosplay is not consent. Photos and videos of panel content are not allowed unless approved by both the panelists and NWIF staff. You may ask any staff member if a panel allows photos or videos.
+Attendees must comply with the NWIF anti-harassment policy when taking photos or videos of others. Be respectful and remember cosplay is not consent.
+
+Any panels or non-Northern-Lights performances may be recorded with the consent of the panelist or performer.
+
+Northern Lights Day 1 has a no audio/video recording policy (photos are okay). 
+
+Northern Lights Day 2 allows audio/video recordings.
