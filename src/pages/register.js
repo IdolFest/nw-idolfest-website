@@ -65,6 +65,7 @@ const allBadgeTiers = [
       'T-shirt',
       'Exclusive poster',
       'Priority seating',
+      'Sponsor-only Discord channel',
       'NWIF website special thanks',
     ]
   },
