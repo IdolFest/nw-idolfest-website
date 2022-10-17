@@ -41,9 +41,9 @@ const allBadgeTiers = [
     badgeKey: 'badge-attendee',
     onSale: true,
     hasTax: true,
-    price: '60',
+    price: '70',
     tierName: 'Silver',
-    description: '<strong>Price increases to $70 on 10/17!</strong><br /><br />This badge grants:',
+    description: 'This badge grants:',
     perks: [
       'Access to all events at NWIF',
       'NWIF Discord role',
@@ -115,9 +115,9 @@ const allBadgeTiers = [
     badgeKey: 'badge-6-to-12',
     onSale: true,
     hasTax: true,
-    price: '30',
+    price: '35',
     tierName: 'Chibi',
-    description: "<strong>Price increases to $35 on 10/17!</strong><br /><br />Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
+    description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
     perks: [
       'Access to all events at NWIF',
       'Special surprise at registration',
