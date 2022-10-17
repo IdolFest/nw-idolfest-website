@@ -258,10 +258,11 @@ const RegisterPage = () => {
             .max(80, 'Must be 80 characters or less')
             .required('Required'),
           badgeName: Yup.string()
-           .max(30, 'Must be 30 characters or less')
-           .required('Required'),
+            .matches(/^[\w@./#&+\-()[\]]*$/, 'Only alphanumeric and special characters !@#$%^&*()[] are allowed.')
+            .max(30, 'Must be 30 characters or less')
+            .required('Required'),
           badgePronouns: Yup.string()
-           .max(30, 'Must be 30 characters or less'),
+            .max(30, 'Must be 30 characters or less'),
           websiteName: Yup.string()
             .when('badgeType', {
               is: (value) => ['badge-sponsor', 'badge-supersponsor'].indexOf(value)  > -1,
