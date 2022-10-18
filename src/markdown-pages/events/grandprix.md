@@ -6,7 +6,7 @@ template: page
 
 Calling all musicians! We’re hosting the first Northwest IdolFest Grand Prix song contest to showcase your original idol-themed songs. 
 
-Read the full rules below and then [submit your song](https://idolfe.st/grandprixapp).
+Entries are now closed. Vote for your favorite by [clicking here](https://docs.google.com/forms/d/e/1FAIpQLSf_Pfs8d8tZjWob7W63i4Vv8O5RvBCKIF5D4kWpcJCr3QkNwA/viewform)!
 
 ## Rules
 
