@@ -76,6 +76,10 @@ const headersData = [
     href: "/events",
     children: [
     {
+        label: "Thursday Schedule",
+        href: "/events/thursday"
+    },
+    {
         label: "Friday Schedule",
         href: "/events/friday"
     },
