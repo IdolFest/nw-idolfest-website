@@ -41,7 +41,7 @@ const allBadgeTiers = [
     badgeKey: 'badge-attendee',
     onSale: true,
     hasTax: true,
-    price: '70',
+    price: '50',
     tierName: 'Silver',
     description: 'This badge grants:',
     perks: [
@@ -115,7 +115,7 @@ const allBadgeTiers = [
     badgeKey: 'badge-6-to-12',
     onSale: true,
     hasTax: true,
-    price: '35',
+    price: '25',
     tierName: 'Chibi',
     description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
     perks: [
