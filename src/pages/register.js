@@ -1,6 +1,8 @@
 import * as React from "react"
 import Layout from '@components/layout'
 import Seo from '@components/seo'
+import Hero from "@components/hero"
+import NewsletterSignup from "@components/NewsletterSignup"
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import { Formik, Form, Field } from 'formik'
@@ -21,6 +23,8 @@ import {
 import { styled } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
+
+const registrationEnabled = false
 
 let lambdaUrl
 
@@ -165,7 +169,7 @@ function isUnder18(date) {
     return new Date(year+18, month, day) >= new Date()
 }
 
-const RegisterPage = () => {
+const OpenRegisterPage = () => {
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
     initialValues = { 
@@ -521,14 +525,6 @@ const RegisterPage = () => {
   </Layout>
 )}
 
-export default RegisterPage
-
-/*
-// Remove the export above and uncomment this block to disable reg
-
-import Hero from '@components/hero'
-import NewsletterSignup from '@components/NewsletterSignup'
-
 const ClosedRegisterPage = () => {
   return (
     <Layout>
@@ -538,8 +534,8 @@ const ClosedRegisterPage = () => {
 
       <PageContent>
         <p>
-          Registration is closed because Northwest IdolFest 2022 is now
-          over. Sign up for our email list below to get notified when our next
+          Registration is closed because Northwest IdolFest 2022 is now over.
+          Sign up for our email list below to get notified when our next
           convention will be!
         </p>
         <NewsletterSignup />
@@ -548,5 +544,12 @@ const ClosedRegisterPage = () => {
   )
 }
 
-export default ClosedRegisterPage
-*/
+const RegisterPage = () => {
+  if (registrationEnabled) {
+    return <OpenRegisterPage />
+  } else {
+    return <ClosedRegisterPage />
+  }
+}
+
+export default RegisterPage;
