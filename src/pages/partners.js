@@ -61,7 +61,7 @@ const IndexPage = () => {
         </Grid>
 
         <Grid container style={{ justifyContent: 'space-around' }}>
-          <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+          <a href="https://www.thefivewitswigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
               alt=''
