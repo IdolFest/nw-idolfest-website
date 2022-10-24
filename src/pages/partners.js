@@ -60,6 +60,20 @@ const IndexPage = () => {
           </a>
         </Grid>
 
+        <Grid container style={{ justifyContent: 'space-around' }}>
+          <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+            <StaticImage
+              // This is a presentational image, so the alt should be an empty string
+              alt=''
+              src='../images/partners/five_wits.png'
+              loading='eager'
+              placeholder='blurred'
+              quality='100'
+              height={300}
+            />
+          </a>
+        </Grid>
+        
         <br />
         <p>We also extend a huge THANK YOU to all our generous 2022 Prism and Gold sponsors!</p>
         {/* Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link> */}
