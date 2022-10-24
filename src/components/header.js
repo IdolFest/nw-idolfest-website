@@ -17,10 +17,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const headersData = [
+  /*
   {
     label: "Register",
     href: "/register",
   },
+  */
   {
     label: "Hotel",
     href: "/hotel",

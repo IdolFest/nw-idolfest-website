@@ -5,8 +5,6 @@ import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import NewsletterSignup from '@components/NewsletterSignup'
 import PageHeader from '@components/PageHeader'
-import BlogPosts from '@components/BlogPosts'
-import { Link } from 'gatsby'
 
 const IndexPage = () => {
   return (
@@ -18,21 +16,11 @@ const IndexPage = () => {
       />
 
       <PageHeader 
-        title="Welcome to Northwest IdolFest!" 
+        title="Thank you for attending NW IdolFest 2022!" 
       />
 
       <PageContent>
-        <p>Northwest IdolFest is a three day event featuring idols, anisong, and everything in between. Join us in Seattle on October 21-23, 2022 for our second year! Featuring guests, concerts, panels, cosplay, and more, get ready for a whole new idol experience.</p>
-        <p><Link to="register">Buy your badge</Link> today!</p>
-
-        {/* Ready to find out more? <Link to="/hotel">Book your hotel room</Link> and  */}
-
-        <div style={{ paddingTop: '1em' }} />
-
-        <BlogPosts />
-
-        <h2 style={{ paddingTop: '1em' }}>Newsletter</h2>
-        <p>Sign up for our email list below to get the scoop on guest announcements, giveaways, and more!</p>        
+        <p>Thank you for attending Northwest Idol Festival 2021! If you have any feedback for us, <a href="https://idolfe.st/feedback">we would love to know how we did</a>. Sign up for our email list below to get notified when our next convention will be!</p>
         <NewsletterSignup />
       </PageContent>
     </Layout>
