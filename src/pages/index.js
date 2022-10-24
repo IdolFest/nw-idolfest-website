@@ -20,7 +20,8 @@ const IndexPage = () => {
       />
 
       <PageContent>
-        <p>Thank you for attending Northwest Idol Festival 2021! If you have any feedback for us, <a href="https://idolfe.st/feedback">we would love to know how we did</a>. Sign up for our email list below to get notified when our next convention will be!</p>
+        <p>Thank you for attending Northwest IdolFest 2022! If you have any feedback for us, please tell us on the <a href="https://idolfe.st/feedback">feedback form</a>.</p><br />
+        <p>Sign up for our email list below to get notified when our next convention will be!</p>
         <NewsletterSignup />
       </PageContent>
     </Layout>
