@@ -30,6 +30,7 @@ export default function NewsletterSignup() {
             if (response.result !== 'succcess') {
               console.log(response)
               setState(response.msg)
+              window.location.reload()
             } else {
               setSubmitting(false)
               setState(response.msg)
