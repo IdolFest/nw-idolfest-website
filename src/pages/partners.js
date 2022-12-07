@@ -47,6 +47,18 @@ const IndexPage = () => {
             />
           </a>
 
+          <a href="https://intlidol.net/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+            <StaticImage
+              // This is a presentational image, so the alt should be an empty string
+              alt=''
+              src='../images/partners/iin.png'
+              loading='eager'
+              placeholder='blurred'
+              quality='100'
+              height={300}
+            />
+          </a>
+
           <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
@@ -60,6 +72,7 @@ const IndexPage = () => {
           </a>
         </Grid>
 
+        <br />
         <Grid container style={{ justifyContent: 'space-around' }}>
           <a href="https://www.thefivewitswigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
