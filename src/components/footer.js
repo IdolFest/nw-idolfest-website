@@ -93,7 +93,7 @@ export default function Footer() {
                     {wrapFooterSocial(createSocialIcon(`https://discord.gg/${socialSites.discord}`, 'discord'))}
                     <Grid item className='copyright'>
                         <Typography>
-                            &copy; {new Date().getFullYear()} <a href='https://nijiiroevents.com/' target='_blank' rel='noreferrer'>Nijiiro Events LLC</a>
+                            &copy; {new Date().getFullYear()} <a href='https://idolfest.org/' target='_blank' rel='noreferrer'>The IdolFest Foundation</a>
                         </Typography>
                     </Grid>
                 </Grid>
