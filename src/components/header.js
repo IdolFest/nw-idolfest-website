@@ -192,6 +192,9 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center',
       alignItems: 'center'
     }
+  },
+  menuButton: {
+    backgroundColor: 'transparent !important'
   }
 }))
 
@@ -202,13 +205,17 @@ const { site } = useStaticQuery(
             query {
                 site {
                     siteMetadata {
-                        shortDates
+                        shortDates,
+                        longDates,
+                        location
                     }
                 }            
             }`
     )
 
 const dates = site.siteMetadata.shortDates
+const longDates = site.siteMetadata.shortDates
+const location = site.siteMetadata.location
 
 
   const [state, setState] = useState({
@@ -223,6 +230,15 @@ const dates = site.siteMetadata.shortDates
 
   const handleClose = (id) => {
     setState({ [id]: false, anchorEl: null })
+  };
+
+  const handleMenuButtonClick = (label, event) => {
+    // If you click outside the button, move that click onto said button
+    const relevantChild = event.currentTarget?.querySelector("a[href]")
+    if (relevantChild) {
+      relevantChild.click();
+    }
+    handleClose(label);
   };
 
   const { mobileView, drawerOpen } = state
@@ -253,10 +269,10 @@ const dates = site.siteMetadata.shortDates
           </Link>
         </Grid>
         <Grid item className={classes.dates}>
-          {dates} | Seattle, WA
+          {dates} | {location}
         </Grid>
         <header style={{ display: 'flex', flexDirection: 'row', marginLeft: 'auto' }} className={classes.item}>
-          { getMenuButtonsDropdown(handleClick, handleClose, state) }
+          { getMenuButtonsDropdown(handleClick, handleClose, handleMenuButtonClick, state) }
         </header>
         </Grid>
       </Toolbar>
@@ -301,47 +317,72 @@ const dates = site.siteMetadata.shortDates
           {idolfestLogo}
         </Link>
         <div className={classes.dates} style={{ display: 'flex', flexDirection: 'column', marginLeft: 'auto', alignItems: 'flex-end' }}>
-          <div>Oct 21-23, 2022</div>
-          <div>Seattle, WA</div>
+          <div>{longDates}</div>
+          <div>{location}</div>
         </div>
       </Toolbar>
     );
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href, children }) => {
-        return (
-          <>
+    return headersData.map(({ label, href, external, children }) => {
+        const link = external ? (
+          <a 
+            href={href} 
+            key={href} 
+            target="_blank" 
+            rel="noreferrer"
+          >
+            {label}
+          </a>) : (
           <Link
             to={href}
             key={href}
           >
             {label}
-          </Link>
+          </Link>)
+        return (
+          <React.Fragment key={`${href}-wrapper`}>
+          {link}
           { children ? 
-            <> 
-            { children.map(({ label, href }) => {
-              return (
-                <Link
-                  to={href}
-                  key={href}
-                  style={{
-                    marginLeft: '1em'
-                  }}
-                >
-                  {label}
-                </Link>
-              )
+            <React.Fragment key={`${href}-children`}> 
+            { children.map(({ label, href, external }) => {
+              if (external) {
+                return (
+                  <a
+                    href={href}
+                    key={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      marginLeft: '1em'
+                    }}
+                  >
+                    {label}
+                  </a>
+                )
+              } else {
+                return (
+                  <Link
+                    to={href}
+                    key={href}
+                    style={{
+                      marginLeft: '1em'
+                    }}
+                  >
+                    {label}
+                  </Link>
+                )
+              }
             })}
-            </>
+            </React.Fragment>
           : 
             null
           }
-          </>
+          </React.Fragment>
         )
       })
   }
-
   const idolfestLogo = (
     <StaticImage
           layout='constrained'
@@ -355,60 +396,61 @@ const dates = site.siteMetadata.shortDates
           />
   );
 
-  const getMenuButtonsDropdown = (handleClick, handleClose, state) => {
-      return headersData.map(({ label, href, children }) => {
-        return (
-        <Grid item key={label}>
-          { children ? 
-                <>
-                <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
-                  <Link
-                    to={href}
-                  >
-                    {label}
-                  </Link>
-                  <FontAwesomeIcon icon={['fas', 'caret-down']} style={{ marginLeft: '10px' }} />
-                </Button>
-                <Menu
-                  anchorEl={state.anchorEl}
-                  getContentAnchorEl={null}
-                  keepMounted
-                  disableScrollLock
-                  open={state[label] ? state[label] : false}
-                  onClose={handleClose.bind(this, label)}
-                  id={`idolfest-menu-${label}`}
-                  MenuListProps={{ onMouseLeave: handleClose.bind(this, label) }}
-                  anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-                  transformOrigin={{ vertical: "top", horizontal: "center" }}
-                >
-                  {children.map(({ label: childLabel, href: childHref }) => {
-                    return (
-                      <MenuItem onClick={handleClose.bind(this, label)} key={childLabel}>
-                        <Button>
-                          <Link
-                            to={childHref}
-                          >
-                            {childLabel}
-                          </Link>
-                        </Button>
-                      </MenuItem>
-                    );
-                  })}
-                </Menu>
-                </>
-            :
-            <Button>
-              <Link
-                to={href}
+  const getMenuButtonsDropdown = (handleClick, handleClose, handleMenuButtonClick, state) => {
+    return headersData.map(({ label, href, external, children }) => {
+      const link = external ? 
+        (<a href={href} target="_blank" rel="noreferrer">
+          {label}
+        </a>) : (<Link to={href}>
+          {label}
+        </Link>);
+      return (
+      <Grid item key={label}>
+        { children ? 
+              <>
+              <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
+                {link}
+                <FontAwesomeIcon icon={['fas', 'caret-down']} style={{ marginLeft: '10px' }} />
+              </Button>
+              <Menu
+                anchorEl={state.anchorEl}
+                getContentAnchorEl={null}
+                keepMounted
+                disableScrollLock
+                open={state[label] ? state[label] : false}
+                onClose={handleClose.bind(this, label)}
+                id={`idolfest-menu-${label}`}
+                MenuListProps={{ onMouseLeave: handleClose.bind(this, label) }}
+                anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+                transformOrigin={{ vertical: "top", horizontal: "center" }}
               >
-                {label}
-              </Link>
-            </Button>
-          }
-          </Grid>
+                {children.map(({ label: childLabel, href: childHref, external: childExternal }) => {
+                  const childLink = childExternal ? 
+                    (<a href={href} target="_blank" rel="noreferrer">
+                      {childLabel}
+                    </a>) :
+                    (<Link to={childHref}>
+                      {childLabel}
+                    </Link>)
+                  return (
+                    <MenuItem onClick={handleMenuButtonClick.bind(this, label)} key={childLabel}>
+                      <Button className={classes.menuButton}>
+                        {childLink}
+                      </Button>
+                    </MenuItem>
+                  );
+                })}
+              </Menu>
+              </>
+          :
+          <Button>
+            {link}
+          </Button>
+        }
+        </Grid>
       )
     })
-}
+  }
 
   return (
     <header>

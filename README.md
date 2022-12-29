@@ -15,3 +15,9 @@ The site uses gh-pages to deploy. Assuming you have collaborator access to this 
 
 1. Locally, run `npm run deploy`.
 2. From GitHub, go to "Actions" and manually invoke Gatsby Publish.
+
+## Random annoyances
+
+#### All the images are broken!! 
+
+Try stoppping the server, running `npx gatsy clean` and starting back up.

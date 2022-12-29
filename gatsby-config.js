@@ -7,6 +7,7 @@ module.exports = {
     title: `NW IdolFest`,
     shortDates: 'Oct 21-23, 2022',
     longDates: 'October 21-23, 2022',
+    location: 'Seattle, WA',
     siteUrl: 'https://nwidolfest.com',
     description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Oct 21-23, 2022.`,
     author: `The NW IdolFest Team`,
