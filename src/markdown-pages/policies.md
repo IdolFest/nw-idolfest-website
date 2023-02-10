@@ -14,21 +14,9 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and N
 
 ## COVID-19
 
-NWIF will require proof of COVID-19 vaccination for any attendee over the age of 18, as well as masks in event space. Masks may be removed by panelists and performers while on stage but must be worn at all other times.
+NWIF will determine a final COVID-19 policy no later than September 1st, 2023 (pending changes to government regulations after that date).
 
-A physical or digital copy of a COVID-19 vaccine card must be presented along with a valid photo ID at badge pickup.
-
-Attendees must provide proof of either:
-
-- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZeneca or 1 dose of J&J/Janssen) and a booster shot, administered at any time prior to the convention
-
-OR
-
-- a primary series vaccination (2 doses of Pfizer, Moderna, AstraZeneca or 1 dose of J&J/Janssen), with the final dose administered between April 21, 2022 and October 7, 2022
-
-If you have a medical condition that does not allow you to be vaccinated, please [email us](mailto:chairs@nwidolfest.com) about potential accommodations. 
-
-Attendees under the age of 18 are permitted to present either proof of vaccination or a negative test administered within the last 72 hours by an authorized medical professional. Rapid tests administered at home are not accepted. Please review the "Minor Attendees" section below for more details.
+In 2022, NWIF required proof of COVID-19 vaccination and booster series for all attendees over 18. Masks were also required. In 2023, we are likely to continue requiring masks, and not require vaccines. However, we understand things can change significantly in a short period of time, and are waiting to make a final determination until closer to the event.
 
 These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
 
