@@ -25,8 +25,8 @@ function createData(roomType, price) {
 }
 
 const rows = [
-  createData('Standard King', '$129'),
-  createData('Double Queen', '$129'),
+  createData('Standard King', '$134'),
+  createData('Double Queen', '$134'),
 ]
 
 const ResponsiveMap = styled(Container)({
