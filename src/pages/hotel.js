@@ -7,12 +7,12 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from '@material-ui/styles'
 import CenteredBox from '@components/CenteredBox'
 import { useStaticQuery, graphql } from 'gatsby'
-// the following 2 imports are used when hotel booking is CLOSED
-import { Link } from 'gatsby'
-import { Container } from '@material-ui/core'
 
-// the following is used when hotel booking is OPEN
-/*
+// UNCOMMENT TO CLOSE BOOKING
+// import { Link } from 'gatsby'
+// import { Container } from '@material-ui/core'
+
+// UNCOMMENT TO OPEN BOOKING
 import { Container, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 const RoomRateTable = styled(TableContainer)({
   margin: '0 auto',
@@ -28,7 +28,6 @@ const rows = [
   createData('Standard King', '$129'),
   createData('Double Queen', '$129'),
 ]
-*/
 
 const ResponsiveMap = styled(Container)({
     overflow: 'hidden',
@@ -74,15 +73,16 @@ const HotelPage = () => {
       />
       <p>
         Northwest IdolFest will be held on {dates}, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
-          <br /><br />
+          {/* Use when hotel booking is closed  */}
+          {/* <br /><br />
           
           Online hotel booking is now closed. Please <Link to="/contact">contact us</Link> if you would like assistance booking a room at our discounted rates. 
-          <br /><br />
+          <br /><br /> */}
          
         We offer a discounted $15/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
       </p>
       { /* the following is used when hotel booking is OPEN */ }
-      {/* <CenteredBox>
+      <CenteredBox>
         <RoomRateTable>
           <Table aria-label="simple table">
             <TableHead style={{ textTransform: 'uppercase' }}>
@@ -107,11 +107,11 @@ const HotelPage = () => {
         <div>
           <sup>†</sup>Taxes and fees not included in price.
         </div>
-        <Button variant="contained" className="cta" href='https://book.passkey.com/go/NWIDF22'>
+        <Button variant="contained" className="cta" href='https://book.passkey.com/go/NWIF23'>
           Book online
         </Button>
-        <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group name "NW IdolFest".</div>
-      </CenteredBox> */}
+        <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group code "IDF" or group name "NW IdolFest".</div>
+      </CenteredBox>
       <CenteredBox>
         <ResponsiveMap>
           <iframe title="Hotel map" maxwidth="600" height="450" style={{ border: 0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK3JMX6dckFQR7lXNagC5B9Q&key=AIzaSyDk8pOuoUbrYKocNBn6QzLe9j-bUAx7GvA"></iframe>
