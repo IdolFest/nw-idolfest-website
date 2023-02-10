@@ -20,7 +20,7 @@ const PaymentPage = ({ location }) => {
   const params = new URLSearchParams(location.search)
   const guid = params.get('guid')
   const amount = params.get('amount')
-  const tax = params.get('tax')
+  // const tax = params.get('tax')
   const badgeType = params.get('badge_type')
 
   // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
@@ -37,7 +37,7 @@ const PaymentPage = ({ location }) => {
         <CenteredBox>
           
           <p>Finish purchasing your {badgeType} below.</p>
-          <p>Total: ${(amount - tax) / 100} { tax > 0 ? <span>+ ${(tax / 100).toFixed(2)} tax</span> : null}</p>
+          <p>Total: ${amount / 100}</p>
         </CenteredBox>
 
         {squareStatus === "ERROR" &&
