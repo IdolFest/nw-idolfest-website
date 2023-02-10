@@ -12,16 +12,16 @@ const IndexPage = () => {
       <Seo title="Home" />
 
       <Hero 
-        // header="Announcing NW IdolFest 2022!"
+        header="Announcing NW IdolFest 2023!"
       />
 
       <PageHeader 
-        title="Thank you for attending NW IdolFest 2022!" 
+        title="Announcing NW IdolFest 2023!" 
       />
 
       <PageContent>
-        <p>Thank you for attending Northwest IdolFest 2022! If you have any feedback for us, please tell us on the <a href="https://idolfe.st/feedback">feedback form</a>.</p><br />
-        <p>Sign up for our email list below to get notified when our next convention will be!</p>
+        <p>Get ready for NW IdolFest 2023!</p><br />
+        <p>Sign up for our email list below to get notifications for future announcements.</p>
         <NewsletterSignup />
       </PageContent>
     </Layout>
