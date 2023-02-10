@@ -5,11 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `NW IdolFest`,
-    shortDates: 'Oct 21-23, 2022',
-    longDates: 'October 21-23, 2022',
+    shortDates: 'Oct 20-22, 2023',
+    longDates: 'October 20-22, 2023',
     location: 'Seattle, WA',
     siteUrl: 'https://nwidolfest.com',
-    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Oct 21-23, 2022.`,
+    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Oct 20-22, 2023.`,
     author: `The NW IdolFest Team`,
     social: {
       twitter: '@NWIdolFest',
