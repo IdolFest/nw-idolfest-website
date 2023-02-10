@@ -11,7 +11,6 @@ import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
-import CenteredBox from '@components/CenteredBox'
 
 import {
   Button, 
@@ -24,7 +23,7 @@ import { styled } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
 
-const registrationEnabled = false
+const registrationEnabled = true
 
 let lambdaUrl
 
@@ -44,62 +43,53 @@ const allBadgeTiers = [
     badgeName: 'Attendee',
     badgeKey: 'badge-attendee',
     onSale: true,
-    hasTax: true,
-    price: '20',
+    hasTax: false,
+    price: '80',
     tierName: 'Silver',
     description: 'This badge grants:',
     perks: [
       'Access to all events at NWIF',
-      'NWIF Discord role',
-      'Special surprise at registration'
+      'NWIF Discord role'
     ]
   },
   {
     badgeName: 'Sponsor',
     badgeKey: 'badge-sponsor',
-    onSale: false,
-    hasTax: true,
-    price: '<strike>98</strike> SOLD OUT',
+    onSale: true,
+    hasTax: false,
+    price: '150',
     tierName: 'Gold',
     description: 'Everything in Silver, plus:',
     perks: [
       'Gold-only badge and lanyard',
-      'Drawstring bag',
-      'Sticker pack',
-      'T-shirt',
-      'Exclusive poster',
-      'Priority seating',
+      'Gold-only penlight keychain',
+      'Sponsor Drawstring Bag',
+      'Sponsor Ribbon',
+      '2023 Sponsor T-shirt',
+      '2023 Sponsor Poster',
+      '2023 Sponsor Enamel pin',
+      'Priority seating for Main Events',
       'Sponsor-only Discord channel',
-      'NWIF website special thanks',
+      'NWIF website special thanks'
     ]
   },
   {
     badgeName: 'Super Sponsor',
     badgeKey: 'badge-supersponsor',
-    onSale: false,
-    hasTax: true,
-    price: '<strike>694.20</strike> SOLD OUT',
+    onSale: true,
+    hasTax: false,
+    price: '876',
     tierName: 'Prism',
     description: 'Everything in Gold, plus:',
     perks: [
       'Prism-only badge and lanyard',
+      'Prism-only penlight keychain',
+      'Prism-only penlight',
+      'Prism-only jet tag',
       'Hotel for 3 nights',
-      'Badge delivery to hotel room',
-      'NWIF pen light',
-      'Exclusive bromide print set',
-      'Can badge set',
+      'Badge & swag delivery to hotel room',
       'Closing Ceremonies special thanks',
-    ]
-  },
-  {
-    badgeName: 'Whale',
-    price: '???',
-    onSale: false,
-    tierName: 'Whale',
-    description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
-    perks: [
-      'If you can dream it',
-      'We can do it!'
+      'Signed letter of thanks from NWIF chairs'
     ]
   },
   {
@@ -118,8 +108,8 @@ const allBadgeTiers = [
     badgeName: '6 to 12 Badge',
     badgeKey: 'badge-6-to-12',
     onSale: true,
-    hasTax: true,
-    price: '10',
+    hasTax: false,
+    price: '40',
     tierName: 'Chibi',
     description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
     perks: [
@@ -131,21 +121,32 @@ const allBadgeTiers = [
     badgeName: 'Spirit Badge',
     badgeKey: 'badge-spirit',
     onSale: true,
-    hasTax: true,
-    price: '15',
+    hasTax: false,
+    price: '20',
     tierName: 'Dekimasen',
     description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. Shipping available to US and CA only.",
     perks: [
       'Badge and lanyard mailed to you',
       'NWIF Discord role',
     ]
+  },
+  {
+    badgeName: 'Whale',
+    price: '???',
+    onSale: false,
+    tierName: 'Whale',
+    description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
+    perks: [
+      'If you can dream it',
+      'We can do it!'
+    ]
   }
 ]
 
-const badgesRowOne = allBadgeTiers.slice(0, 4)
-const badgesRowTwo = allBadgeTiers.slice(4)
+const badgesRowOne = allBadgeTiers.slice(0, 3)
+const badgesRowTwo = allBadgeTiers.slice(3)
 
-const tshirtSizes = ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL']
+const tshirtSizes = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL']
 
 function badgeDropdownText(badge) {
   // remove the <strike> tags from our early bird reg
@@ -175,6 +176,7 @@ const OpenRegisterPage = () => {
     initialValues = { 
       badgeType: '',
       fullName: 'Foo', 
+      badgeName: 'bar',
       discordHandle: 'abcd#1234',
       email: 'test@test.com',
       dateOfBirth: new Date('2010', '07', '25'),
@@ -209,6 +211,8 @@ const OpenRegisterPage = () => {
     />
 
     <PageContent>
+      {/* 
+      import CenteredBox from '@components/CenteredBox'
       <CenteredBox>
         <Grid container style={{ justifyContent: 'space-around' }}>
           <div>
@@ -231,18 +235,19 @@ const OpenRegisterPage = () => {
           </>
           </div>
         </Grid>
-      </CenteredBox>
-      <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
+      </CenteredBox> 
+      */}
+      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
-              <Grid item key={badge.badgeName}>
+              <Grid item xs={12} sm key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
       </Grid>
 
-      <Grid container alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
+      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowTwo.map((badge) => (
-              <Grid item key={badge.badgeName}>
+              <Grid item xs={12} sm key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
@@ -505,10 +510,8 @@ const OpenRegisterPage = () => {
           : null}
           {!props.isValidating && props.isSubmitting ? <div>Submitting your registration, do not refresh the page!</div> : null}
           <i>
-          Photo ID and proof of COVID vaccination is required to pick up your badge.<br />
-          A booster shot is required if your primary series vaccination is more than 6 months old.<br />
-          Masks are required at all times.<br />
-          Please read our <a href='/policies' target='_blank'>COVID policy</a> for full details.<br /><br />
+          Photo ID is required to pick up your badge.<br />
+          Masks are required at all times. Please read our <a href='/policies' target='_blank'>COVID policy</a> for full details.<br /><br />
           By registering for a badge, you agree to comply with all <a href='/policies' target='_blank'>NWIF policies</a>. 
           </i>
           {props.values.badgeType === 'badge-supersponsor' && (<><br /><br /><i>A credit card matching the name on your registration will be required for incidentals when checking into your Prism hotel room (or you may ask them to disable incidentals). The primary guest on the room must be over 18. Up to 2 additional guests may be added to the room by <Link to='/contact'>contacting us</Link>.</i></>) }

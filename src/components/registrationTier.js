@@ -86,7 +86,7 @@ export default function RegistrationTier({ badge }) {
   ).node.gatsbyImageData
 
   return (
-    <Grid container direction='column' style={{ maxWidth: '200px', paddingTop: '1em' }}>
+    <Grid container direction='column' style={{ paddingTop: '1em' }}>
       <GatsbyImage
         className={classes.tierGemImage}
         // This is a presentational image, so the alt should be an empty string
