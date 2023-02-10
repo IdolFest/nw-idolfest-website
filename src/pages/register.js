@@ -239,7 +239,7 @@ const OpenRegisterPage = () => {
       */}
       <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
-              <Grid item xs={12} sm key={badge.badgeName}>
+              <Grid item xs={12} sm={12} md key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
@@ -247,7 +247,7 @@ const OpenRegisterPage = () => {
 
       <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowTwo.map((badge) => (
-              <Grid item xs={12} sm key={badge.badgeName}>
+              <Grid item xs={12} sm={12} md key={badge.badgeName}>
                 <RegistrationTier badge={badge} />
               </Grid>
             ))}
