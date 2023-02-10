@@ -11,6 +11,7 @@ import { KeyboardDatePicker } from 'formik-material-ui-pickers'
 import * as Yup from 'yup'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
+import CenteredBox from '@components/CenteredBox'
 
 import {
   Button, 
@@ -211,9 +212,10 @@ const OpenRegisterPage = () => {
     />
 
     <PageContent>
-      {/* 
-      import CenteredBox from '@components/CenteredBox'
+      
       <CenteredBox>
+        <i>Tax is included in all badge prices!</i>
+      {/* 
         <Grid container style={{ justifyContent: 'space-around' }}>
           <div>
           <h4>Badge Pick-Up Hours</h4>
@@ -235,8 +237,8 @@ const OpenRegisterPage = () => {
           </>
           </div>
         </Grid>
-      </CenteredBox> 
       */}
+      </CenteredBox> 
       <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
               <Grid item xs={12} sm={12} md key={badge.badgeName}>
