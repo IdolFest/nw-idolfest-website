@@ -28,82 +28,82 @@ const headersData = [
   {
     label: "Guests",
     href: "/guests",
-    children: [
-    {
-      label: "All Guests",
-      href: "/guests",
-    },
-    {
-      label: "Kaho Shibuya",
-      href: "/guests/kahoshibuya"
-    },
-    {
-      label: "Isiliel (Himari)",
-      href: "/guests/isiliel"
-    },
-    {
-      label: "Phoebe",
-      href: "/guests/phoebe"
-    },
-    {
-      label: "Rintaichou",
-      href: "/guests/rintaichou"
-    },
-    {
-      label: "Non Sweet",
-      href: "/guests/nonsweet"
-    },
-    {
-      label: "Jun (Lucia Hunter)",
-      href: "/guests/jun"
-    },
-    {
-      label: "Barri",
-      href: "/guests/barri"
-    },
-    {
-      label: "Eli Ebberts",
-      href: "/guests/eliebberts"
-    },
-    {
-      label: "Luluko",
-      href: "/guests/luluko"
-    },
-    ]
+    // children: [
+    // {
+    //   label: "All Guests",
+    //   href: "/guests",
+    // },
+    // {
+    //   label: "Kaho Shibuya",
+    //   href: "/guests/kahoshibuya"
+    // },
+    // {
+    //   label: "Isiliel (Himari)",
+    //   href: "/guests/isiliel"
+    // },
+    // {
+    //   label: "Phoebe",
+    //   href: "/guests/phoebe"
+    // },
+    // {
+    //   label: "Rintaichou",
+    //   href: "/guests/rintaichou"
+    // },
+    // {
+    //   label: "Non Sweet",
+    //   href: "/guests/nonsweet"
+    // },
+    // {
+    //   label: "Jun (Lucia Hunter)",
+    //   href: "/guests/jun"
+    // },
+    // {
+    //   label: "Barri",
+    //   href: "/guests/barri"
+    // },
+    // {
+    //   label: "Eli Ebberts",
+    //   href: "/guests/eliebberts"
+    // },
+    // {
+    //   label: "Luluko",
+    //   href: "/guests/luluko"
+    // },
+    // ]
   },
   {
     label: "Events",
     href: "/events",
-    children: [
-    {
-        label: "Thursday Schedule",
-        href: "/events/thursday"
-    },
-    {
-        label: "Friday Schedule",
-        href: "/events/friday"
-    },
-    {
-        label: "Saturday Schedule",
-        href: "/events/saturday"
-    },
-    {
-        label: "Sunday Schedule",
-        href: "/events/sunday"
-    },
-    {
-        label: "Northern Lights",
-        href: "/events/northernlights"
-    },
-    {
-        label: "Masquerade",
-        href: "/events/masquerade"
-    },
-    {
-        label: "Grand Prix Song Contest",
-        href: "/events/grandprix"
-    }
-    ]
+    // children: [
+    // {
+    //     label: "Thursday Schedule",
+    //     href: "/events/thursday"
+    // },
+    // {
+    //     label: "Friday Schedule",
+    //     href: "/events/friday"
+    // },
+    // {
+    //     label: "Saturday Schedule",
+    //     href: "/events/saturday"
+    // },
+    // {
+    //     label: "Sunday Schedule",
+    //     href: "/events/sunday"
+    // },
+    // {
+    //     label: "Northern Lights",
+    //     href: "/events/northernlights"
+    // },
+    // {
+    //     label: "Masquerade",
+    //     href: "/events/masquerade"
+    // },
+    // {
+    //     label: "Grand Prix Song Contest",
+    //     href: "/events/grandprix"
+    // }
+    // ]
   },
   {
     label: "Vendors",

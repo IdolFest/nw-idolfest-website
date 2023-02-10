@@ -6,4 +6,4 @@ template: page
 
 Northwest IdolFest is a passion project founded by experienced event organizers. Our goal is to create an event space where idol fans of all types can gather and share in the unique joy that idols bring to our lives. Whether you’re a long-time wota or just getting into the scene, NWIF has a place for you!
 
-We're no longer accepting volunteer applications for 2022. Please watch this page (or sign up for our [email list](/newsletter/)) to hear when we open applications for 2023.
+Please watch this page (or sign up for our [email list](/newsletter/)) to hear when we open applications for 2023.
