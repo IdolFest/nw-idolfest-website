@@ -56,7 +56,7 @@ const IndexPage = () => {
         <p>Sign up for our email list below to get notifications for future announcements.</p>
         <NewsletterSignup />
         <div style={{marginTop: "16px", marginBottom: "-18px"}}>
-          <ImageMarquee images={imageFiles} animationDuration="60s" />
+          <ImageMarquee images={imageFiles} animationDuration="120s" />
         </div>
       </PageContent>
     </Layout>
