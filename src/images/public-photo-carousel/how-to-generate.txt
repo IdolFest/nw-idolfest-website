@@ -1,0 +1,8 @@
+# How To Generate
+
+1. Install imagemagick if not installed `apt-get install imagemagick`
+2. Download the full public folder from drive or wherever, with all images, cd to directory
+3. Run this to shrink the images: `mkdir -p webfriendly; for i in *.jpg; do convert "$i" -resize 1024x "./webfriendly/$i"; done;`
+4. Delete what's here if needed, then drop the smaller files here. 
+
+(This isn't a markdown file because it confuses gatsby)
