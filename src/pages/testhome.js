@@ -14,12 +14,14 @@ const useStyles = makeStyles(theme => ({
   },
   introText: {
     position: "absolute",
-    top: "calc(50% - 36px)",
     backgroundColor: "#fff",
     borderRadius: "5px",
     opacity: "0.85",
-    left: "calc(50vw - 300px)",
-    padding: "4px 16px"
+    top: "calc(50% - 8px)",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    padding: "4px 16px",
+    textAlign: "center"
   },
   introLine: {
     width: "100%",
