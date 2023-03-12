@@ -5,11 +5,32 @@ import PageContent from '@components/PageContent'
 import NewsletterSignup from '@components/NewsletterSignup'
 import PageHeader from '@components/PageHeader'
 import { graphql, useStaticQuery } from 'gatsby'
+import { makeStyles } from '@material-ui/core'
 import ImageMarquee from '../components/ImageMarquee'
-import Carousel from '../components/Carousel'
+
+const useStyles = makeStyles(theme => ({
+  introWrapper: {
+    position: "relative"
+  },
+  introText: {
+    position: "absolute",
+    top: "calc(50% - 36px)",
+    backgroundColor: "#fff",
+    borderRadius: "5px",
+    opacity: "0.85",
+    left: "calc(50vw - 300px)",
+    padding: "4px 16px"
+  },
+  introLine: {
+    width: "100%",
+    backgroundColor: "#fff",
+    height: "4px"
+  }
+}))
 
 
 const IndexPage = () => {
+  const classes = useStyles()
 
   const query = useStaticQuery(graphql`
   query { 
@@ -18,17 +39,7 @@ const IndexPage = () => {
         relativePath
         childImageSharp {
           gatsbyImageData(
-            height: 64
-          )
-        }
-      }
-    },
-    carouselImages: allFile (filter: {sourceInstanceName: {eq: "images"}, relativePath: {glob: "public-photo-carousel/*.jpg"}}) {
-      nodes {
-        relativePath
-        childImageSharp {
-          gatsbyImageData(
-            height: 512
+            height: 250
           )
         }
       }
@@ -36,15 +47,19 @@ const IndexPage = () => {
   }`)
   
   const imageFiles = query.images.nodes;
-  const carouselImages = query.carouselImages.nodes;
   return (
     <Layout>
       <Seo title="Home" />
 
-      <PageContent>
+      <div className={classes.introWrapper}>
 
-        <Carousel images={carouselImages} />
-      </PageContent>
+          <ImageMarquee images={imageFiles} animationDuration="120s" direction="left" />
+          <div className={classes.introLine} />
+          <ImageMarquee images={imageFiles} animationDuration="120s" direction="right" />
+          <h1 className={classes.introText}>
+            Announcing NW IdolFest 2023!
+          </h1>
+      </div>
 
       <PageHeader 
         title="Announcing NW IdolFest 2023!" 
@@ -55,9 +70,6 @@ const IndexPage = () => {
         <p>Get ready for NW IdolFest 2023!</p><br />
         <p>Sign up for our email list below to get notifications for future announcements.</p>
         <NewsletterSignup />
-        <div style={{marginTop: "16px", marginBottom: "-18px"}}>
-          <ImageMarquee images={imageFiles} animationDuration="120s" />
-        </div>
       </PageContent>
     </Layout>
   )

@@ -18,12 +18,17 @@ const useStyles = makeStyles(theme => ({
     minWidth: '100%',
     position: 'relative',
     animation: '$marquee 30s linear infinite',
-    '& > *': {
+    '&.left': {
+      animation: '$marquee-left 30s linear infinite'
     }
   },
   '@keyframes marquee': {
     'from':   { transform: 'translateX(0%)' },
     'to': { transform: 'translateX(calc(-100% - 2px))' }
+  },
+  '@keyframes marquee-left': {
+    'to':   { transform: 'translateX(0%)' },
+    'from': { transform: 'translateX(calc(-100% - 2px))' }
   },
 }))
 
@@ -33,11 +38,11 @@ const ImageMarquee = (props) => {
 
   const imageFiles = props.images;
   return (
-      <div className={classes.marqueeBar}>
-        <div className={classes.marqueeInner} style={{animationDuration: props.animationDuration}}>
+      <div className={`${classes.marqueeBar} ${props.direction}`}>
+        <div className={`${classes.marqueeInner} ${props.direction}`} style={{animationDuration: props.animationDuration}}>
           {imageFiles.map(img => <GatsbyImage key={img.relativePath} image={img.childImageSharp.gatsbyImageData} alt="Prior event" />)}
         </div>
-        <div className={classes.marqueeInner} style={{animationDuration: props.animationDuration}}>
+        <div className={`${classes.marqueeInner} ${props.direction}`} style={{animationDuration: props.animationDuration}}>
           {imageFiles.map(img => <GatsbyImage key={img.relativePath} image={img.childImageSharp.gatsbyImageData} alt="Prior event" />)}
         </div>
       </div>
