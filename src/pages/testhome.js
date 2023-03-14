@@ -55,9 +55,9 @@ const IndexPage = () => {
 
       <div className={classes.introWrapper}>
 
-          <ImageMarquee images={imageFiles} animationDuration="120s" direction="left" />
+          <ImageMarquee images={imageFiles} animationDuration="300s" direction="left" />
           <div className={classes.introLine} />
-          <ImageMarquee images={imageFiles} animationDuration="120s" direction="right" />
+          <ImageMarquee images={imageFiles} animationDuration="300s" direction="right" />
           <h1 className={classes.introText}>
             Announcing NW IdolFest 2023!
           </h1>
