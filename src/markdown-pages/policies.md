@@ -78,13 +78,11 @@ NWIF is committed to making our event accessible to all. Our approach to some ac
 
 Our host hotel, the DoubleTree, complies with ADA guidelines in most spaces. Their website has a full list of [accessible amenities](https://doubletree3.hilton.com/en/hotels/washington/doubletree-by-hilton-hotel-seattle-airport-CTAC-DT/about/amenities.html).
 
-Our event space for 2022 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor. All rooms can be accessed without steps. 
+Our event space for 2023 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor. All rooms can be accessed without steps. 
 
-For 2022, we do not anticipate having lines for any panels. All panels will be open seating.
+If you are unable to stand in line for a panel, please contact a member of our Safety team. They can assist you with either a chair to wait to the side of the line, or an early seat at the panel.
 
 In accordance with the ADA, service animals are permitted in hotel and event space. Non-service animals may be permitted in hotel common areas and rooms but are not permitted in NWIF event space. Please contact the hotel directly for any questions relating to their pet policy.
-
-If you are d/Deaf or hard of hearing, we are happy to provide accommodations such as ASL interpretation or live captioning to make our content accessible to you. Please request these services with a minimum of one month’s notice.
 
 The Northern Lights Concert will use strobe lights. A warning sign will be posted on the door of the Main Auditorium during the concert indicating that flashing lights may be in use. If you are photosensitive and would like to attend the concert, please let us know ahead of time so we can review the lighting plan with you.
 
