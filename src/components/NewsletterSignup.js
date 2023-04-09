@@ -31,8 +31,11 @@ function initMailerlite(w,d,e,u,f,l,n){
 export default function NewsletterSignup() {
   const classes = useStyles()
 
-  initMailerlite(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml')
-  window.ml('account', '386801')
+  // Work around some weirdness with prod builds and node
+  if (typeof window !== "undefined") {
+    initMailerlite(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml')
+    window.ml('account', '386801')
+  }
   return (
     <div className={classes.mailerliteWrapper}>
 
