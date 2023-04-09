@@ -1,66 +1,43 @@
-import React, { useState } from  'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { Formik, Form, Field } from 'formik'
-import { TextField } from 'formik-material-ui'
-import { Button, Box } from '@material-ui/core'
-import * as Yup from 'yup'
+import React from  'react'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles(theme => ({
+  mailerliteWrapper: {
+    // Make the form look closer to what we normally use.
+    margin: "-32px -16px -24px",
+    "& div": {
+        // Make the huge whitespace around the form not hide anything it overlaps with
+      backgroundColor: "transparent !important"
+    }
+  },
+  pHelper: {
+    position: "relative",
+    zIndex: 1
+  }
+}))
+
+
+// Embed code from mailerlite, made to cooperate with our linter
+function initMailerlite(w,d,e,u,f,l,n){
+  // eslint-disable-next-line
+  w[f]=w[f] || function(){(w[f].q=w[f].q || []).push(arguments)},l=d.createElement(e),
+  l.async=1,
+  l.src=u,
+  n=d.getElementsByTagName(e)[0],
+  n.parentNode.insertBefore(l,n)
+}
+
 
 export default function NewsletterSignup() {
-  const [msg, setState] = useState(null)
+  const classes = useStyles()
 
+  initMailerlite(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml')
+  window.ml('account', '386801')
   return (
-    <Box>
-      <Formik
-        initialValues={{ email: '' }}
-        validationSchema={Yup.object({
-          email: Yup.string().email('Invalid email address').required('Required'),
-        })}
-        validate={values => {
-          const errors = {}
-          if (!values.email) {
-            errors.email = 'Please fill out your email to join our list.'
-          }
-          return errors
-        }}
-        onSubmit={ async (values, { setSubmitting }) => {
-          setState('Submitting...')
-          try {
-            // add subscriber to the list and our "All Subscribers" group
-            const response = await addToMailchimp(values.email, { 'group[55326]': '8' })
-            if (response.result !== 'succcess') {
-              console.log(response)
-              setState(response.msg)
-              window.location.reload()
-            } else {
-              setSubmitting(false)
-              setState(response.msg)
-              console.log(msg)
-            }
-          } catch(e) {
-            console.error(e)
-            setState(e)
-            if (e.message === 'Timeout') {
-              this.setState({
-                warning: 'Looks like your browser is blocking this request. Please disable any tracker/ad-blocking and resubmit.'
-              })
-            }
-          }
-        }}
-      >
+    <div className={classes.mailerliteWrapper}>
 
-        <Form>
-          <Box margin={1}>
-            <Field name="email" type="email" label="Email" component={TextField} fullWidth={true} />
-          </Box>
 
-          {msg ? <div dangerouslySetInnerHTML={{ __html: msg }}>
-          </div> : null }
-          <Button variant="contained" className="cta" type="submit">
-            Sign up
-          </Button>
-        </Form>
-
-      </Formik>
-      </Box>
+      <div className="ml-embedded" data-form="LaMkWp"></div>
+    </div>
   )
 }
