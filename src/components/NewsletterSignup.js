@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+// New: <iframe src="https://cdn.forms-content.sg-form.com/5a148981-d952-11ed-a113-4e969da5ff55"/>
 
 // Embed code from mailerlite, made to cooperate with our linter
 function initMailerlite(w,d,e,u,f,l,n){

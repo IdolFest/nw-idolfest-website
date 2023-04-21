@@ -10,11 +10,14 @@ import { Button, makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   buttonHolder: {
     display: "flex",
+    flexWrap: "wrap",
     "& > a": {
       flexGrow: 1,
       margin: "4px 32px",
       width: "200px",
-      marginTop: "24px"
+      flexBasis: "200px",
+      marginTop: "24px",
+      textAlign: "center"
     }
   },
 }))
