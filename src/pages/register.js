@@ -425,7 +425,7 @@ const OpenRegisterPage = () => {
 
           <Box margin={1}>
             <Field name="discordHandle" type="text" label="Discord Handle (optional)" component={TextField} fullWidth={true} aria-describedby='discordHandleHelperText' />
-            <FormHelperText id='discordHandleHelperText'>If you provide your Discord handle and join our server, we'll give you a special role!</FormHelperText>
+            <FormHelperText id='discordHandleHelperText'>If you're in our server and provide your Discord handle, we'll give you a special role!</FormHelperText>
           </Box>
     
           <Box margin={1}>
