@@ -269,7 +269,7 @@ const OpenRegisterPage = () => {
             .max(80, 'Must be 80 characters or less')
             .required('Required'),
           badgeName: Yup.string()
-            .matches(/^[\w@./#&+\-()[\]]*$/, 'Only alphanumeric and special characters !@#$%^&*()[] are allowed.')
+            .matches(/^[\w @./#&+\-()[\]]*$/, 'Only letters, numbers, spaces and special characters !@#$%^&*()[] are allowed.')
             .max(30, 'Must be 30 characters or less')
             .required('Required'),
           badgePronouns: Yup.string()
