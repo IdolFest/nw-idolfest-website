@@ -42,7 +42,7 @@ const IndexPage = () => {
         <p>We've recently opened applications for vendors, performers, and our Northern Lights concert! Click the links below to apply!</p>
         <div className={classes.buttonHolder}>
           <Button variant="contained" className="cta" href='https://idolfe.st/vendorapp'>Apply as a Vendor</Button>
-          <Button variant="contained" className="cta" href='http://idolfe.st/panelapp'>Apply as a Guest or Performer</Button>
+          <Button variant="contained" className="cta" href='http://idolfe.st/panelapp'>Apply as a Panelist or Performer</Button>
           <Button variant="contained" className="cta" href='https://idolfe.st/nlapp'>Apply for a Northern Lights performance</Button>
         </div>
         <br />
