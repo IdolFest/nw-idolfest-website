@@ -76,7 +76,7 @@ const ImageCarousel = (props) => {
 
   const goNext = useCallback(() => {
     console.info('next', currentSlide, props.images, updateSlide)
-    if (currentSlide < props.images.length) {
+    if (currentSlide < props.images.length - 1) {
       updateSlide(currentSlide + 1)
     } else {
       updateSlide(0);
