@@ -75,7 +75,6 @@ const ImageCarousel = (props) => {
   }, [hasInitialized, setInitialized, classes, currentSlide, sliderRef])
 
   const goNext = useCallback(() => {
-    console.info('next', currentSlide, props.images, updateSlide)
     if (currentSlide < props.images.length - 1) {
       updateSlide(currentSlide + 1)
     } else {
@@ -84,7 +83,6 @@ const ImageCarousel = (props) => {
   }, [currentSlide, updateSlide, props])
 
   const goPrev = useCallback(() => {
-    console.info('prev', currentSlide, props.images, updateSlide)
 
     if (currentSlide > 0) {
       updateSlide(currentSlide - 1)
