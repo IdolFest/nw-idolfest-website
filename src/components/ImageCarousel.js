@@ -9,19 +9,33 @@ const useStyles = makeStyles(theme => ({
     height: "400px",
     position: "relative",
     overflow: "hidden",
+    '@media (max-width: 800px)': {
+      width: "calc(100vw - 4em)",
+      height: "200px",
+      "& img": {
+        objectFit: "scale-down !important"
+      }
+    }
   },
   carouselSlide: {
     width: "100%",
-    maxWidth: "800px",
+    maxWidth: "100vw",
     height: "400px",
     position: "absolute",
-    transition: "all 0.5s",
     textAlign: "center",
 
     '& > div': {
-      height: "100%",
+      height: "400px",
       objectFit: "cover"
+    },
+
+    '@media (max-width: 800px)': {
+      '& > div': {
+        height: "200px",
+      },
+      height: "auto",
     }
+
   },
   btn: {
     position: "absolute",
@@ -35,6 +49,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.light_pink,
     fontSize: "18px",
     lineHeight: "18px",
+    top: "45%",
+
+    '@media (max-width: 800px)': {
+      top: "40%",
+    },
 
     '&:active': {
       transform: "scale(1.1)",
@@ -42,11 +61,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   btnPrev: {
-    top: "45%",
     left: "2%"
   },
   btnNext: {
-    top: "45%",
     right: "2%"
   }
 }))
@@ -57,10 +74,10 @@ const ImageCarousel = (props) => {
   const sliderRef = createRef()
   const [currentSlide, updateSlide] = useState(0)
   const [hasInitialized, setInitialized] = useState(false)
+  const [hasInteracted, setHasInteracted] = useState(false)
   
   useEffect(() => {
     if (!hasInitialized) { 
-      setInitialized(true)
       const slides = document.querySelectorAll(`.${classes.carouselSlide}`)
       slides.forEach((slide, idx) => {
         slide.style.transform = `translateX(${idx * 100}%)`
@@ -70,11 +87,22 @@ const ImageCarousel = (props) => {
       const slides = sliderRef.current.querySelectorAll(`.${classes.carouselSlide}`)
       slides.forEach((slide, idx) => {
         slide.style.transform = `translateX(${100 * (idx - currentSlide)}%)`
+        slide.style.transition = "all 0.5s";
       })
     }
   }, [hasInitialized, setInitialized, classes, currentSlide, sliderRef])
 
-  const goNext = useCallback(() => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!hasInteracted) {
+        goNextRaw()
+      }
+    }, 4000)
+    return () => clearInterval(interval)
+  })
+
+  const goNextRaw = useCallback(() => {
+    setInitialized(true)
     if (currentSlide < props.images.length - 1) {
       updateSlide(currentSlide + 1)
     } else {
@@ -82,8 +110,14 @@ const ImageCarousel = (props) => {
     }
   }, [currentSlide, updateSlide, props])
 
-  const goPrev = useCallback(() => {
+  const goNext = useCallback(() => {
+    setHasInteracted(true)
+    goNextRaw()
+  }, [setHasInteracted, goNextRaw])
 
+  const goPrev = useCallback(() => {
+    setInitialized(true)
+    setHasInteracted(true)
     if (currentSlide > 0) {
       updateSlide(currentSlide - 1)
     } else {
