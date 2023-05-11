@@ -42,7 +42,8 @@ https://idolfe.st/grandprixapp to apply and submit your song!
 * Entries will be judged by the song alone. A music video, animation, or dance is not necessary for entries to be accepted.
 * Staff Pick awards will be determined by a vote of NWIF staff alongside Feris, our guest judge and experienced idol composer! All judges will provide feedback that will be distributed to entrants after winners have been announced.
 * The Fan Favorite award will be determined by a vote of the public.
-* The Fan Favorite vote will be opened October 1st, and will remain open until October 20th at 11:59p PT.
+* There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions. In addition, a live stream will be announced at a later date where all the entries will be premiered before voting opens!
+* The Fan Favorite vote will be opened October 1st, and will remain open until October 21st at 10:59a PT.
 * The winners will be announced during Northwest IdolFest 2023, and announced to all people not in attendance at some point after Closing Ceremonies!
 
 ## Awards:
@@ -51,8 +52,8 @@ https://idolfe.st/grandprixapp to apply and submit your song!
   * $175 Amazon Gift Card or cash equivalent
   * The opportunity for either your submitted theme to be used as a theme song for Northwest IdolFest 2024 or to create a new theme for it!
 * Staff Pick: Original Cover/Remix
-  * A full-length song composed and arranged by TomStrike, a Northwest Idolfest staffer and musician for 15 years!
   * $100 Amazon Gift Card or cash equivalent
+  * A full-length song composed and arranged by TomStrike, a Northwest Idolfest staffer and musician for 15 years!
 * Staff Pick: Emerging Composer (Selected by Feris!)
   * $75 Amazon Gift Card or cash equivalent
   * An arrangement by Feris for the next original song you compose!
