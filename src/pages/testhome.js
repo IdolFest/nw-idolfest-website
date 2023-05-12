@@ -54,7 +54,7 @@ const IndexPage = () => {
 
   const query = useStaticQuery(graphql`
   query { 
-    images: allFile (filter: {sourceInstanceName: {eq: "images"}, relativePath: {glob: "public-photo-carousel/*.jpg"}}) {
+    images: allFile (filter: {sourceInstanceName: {eq: "images"}, relativePath: {glob: "public-photo-carousel/*.[j|J][p|P][g|G]"}}) {
       nodes {
         relativePath
         childImageSharp {
