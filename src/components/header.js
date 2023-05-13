@@ -74,7 +74,7 @@ const headersData = [
   {
     label: "Events",
     href: "/events",
-    // children: [
+    children: [
     // {
     //     label: "Thursday Schedule",
     //     href: "/events/thursday"
@@ -99,11 +99,11 @@ const headersData = [
     //     label: "Masquerade",
     //     href: "/events/masquerade"
     // },
-    // {
-    //     label: "Grand Prix Song Contest",
-    //     href: "/events/grandprix"
-    // }
-    // ]
+    {
+        label: "Grand Prix Song Contest",
+        href: "/events/grandprix"
+    }
+    ]
   },
   {
     label: "Vendors",
