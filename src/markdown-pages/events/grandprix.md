@@ -62,7 +62,7 @@ https://idolfe.st/grandprixapp to apply and submit your song!
 
 These prizes are guaranteed, and other prize opportunities are in the works, so stay tuned for updates!
 
-If you have any questions about the song contest guidelines or application process, please join our Discord [https://discord.gg/h5yJbXgTgE] 
+If you have any questions about the song contest guidelines or application process, please join [our Discord](https://discord.gg/h5yJbXgTgE)
 and ask in [#visitors-center](https://discordapp.com/channels/857780787599900684/866833137752080414), or send an email to 
 thomas@nwidolfest.com!
 
