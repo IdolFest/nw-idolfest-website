@@ -71,3 +71,7 @@ a {
 .nav-holder li {
     list-style: none;
 }
+
+.hidden {
+    display: none;
+}

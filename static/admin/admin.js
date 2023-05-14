@@ -71,16 +71,14 @@ CMS.registerPreviewTemplate("events", PagePreview)
 var NavPreview = createClass({
     render: function() {
         const entry = this.props.entry;
-        console.info('entry', entry, this.props.fieldsMetaData.getIn(['data', 'headersData']))
         const navItems = entry.getIn(['data', 'headersData'])        
   
         return h('div', {className: "nav-holder"},
-            // h('h1', {}, title),
             h('ul', {},
                 ...navItems.map(navItem => 
-                    h('li', {"className": navItem.getIn(['disabled'] === true ? "hidden": "visible")}, navItem.getIn(['label']), 
+                    h('li', {"className": navItem.getIn(['disabled']) === true ? "hidden": "visible"}, navItem.getIn(['label']), 
                         (navItem.getIn(['children']) ?? []).map(navChild => 
-                            h('li', {"style": {marginLeft: "1em"}, "className": navChild.getIn(['disabled'] === true ? "hidden": "visible")}, navChild.getIn(['label']))))
+                            h('li', {"style": {marginLeft: "1em"}, "className": navChild.getIn(['disabled']) === true ? "hidden": "visible"}, navChild.getIn(['label']))))
                 )
   
             )
