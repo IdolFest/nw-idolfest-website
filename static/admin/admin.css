@@ -1,0 +1,28 @@
+.site-headsup {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 6px;
+    box-shadow: rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px;
+    border-radius: 5px;    
+}
+
+.site-headsup button {
+    padding: 2px;
+    line-height: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #aaa;
+    color: #999;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+body {
+    background-color: rgb(255, 246, 254) !important;
+}

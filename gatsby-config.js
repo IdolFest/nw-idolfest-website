@@ -1,24 +1,15 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+const siteMetadata = require('./siteMetadata.json');
 
 module.exports = {
   siteMetadata: {
-    title: `NW IdolFest`,
-    shortDates: 'Oct 20-22, 2023',
-    longDates: 'October 20-22, 2023',
-    location: 'Seattle, WA',
-    siteUrl: 'https://nwidolfest.com',
-    description: `Get ready to experience idol like you never have before! Coming to the Seattle Airport DoubleTree on Oct 20-22, 2023.`,
-    author: `The NW IdolFest Team`,
-    showSisterBanner: true,
-    social: {
-      twitter: '@NWIdolFest',
-      facebook: 'NWIdolFest',
-      instagram: 'NWIdolFest',
-      discord: 'h5yJbXgTgE',
-      email: 'contact@nwidolfest.com',
-    }
+
+    // This looks dumb because it is! Gatsby does some weird things to patch this file, and
+    // this works around them, so we can pull from a separate json file. The json is editable from the admin area.
+    ...siteMetadata,
+    unusedProperty: true
   },
   plugins: [
     `nw-idolfest-theme`,

@@ -1,0 +1,99 @@
+[{
+    "label": "Register",
+    "href": "/register"
+},
+{
+    "label": "Hotel",
+    "href": "/hotel"
+},
+{
+    "label": "Guests",
+    "href": "/guests",
+    "children": [{
+        "label": "All Guests",
+        "href": "/guests",
+        "disabled": true
+    }]
+},
+{
+    "label": "Events",
+    "href": "/events",
+    "children": [{
+            "label": "Grand Prix Song Contest",
+            "href": "/events/grandprix"
+        },
+        {
+            "label": "Thursday Schedule",
+            "href": "/events/thursday",
+            "disabled": true
+        },
+        {
+            "label": "Friday Schedule",
+            "href": "/events/friday",
+            "disabled": true
+        },
+        {
+            "label": "Saturday Schedule",
+            "href": "/events/saturday",
+            "disabled": true
+        },
+        {
+            "label": "Sunday Schedule",
+            "href": "/events/sunday",
+            "disabled": true
+        },
+        {
+            "label": "Northern Lights",
+            "href": "/events/northernlights",
+            "disabled": true
+        },
+        {
+            "label": "Masquerade",
+            "href": "/events/masquerade",
+            "disabled": true
+        }
+    ]
+},
+{
+    "label": "Vendors",
+    "href": "/vendors"
+},
+{
+    "label": "About",
+    "href": "/about",
+    "children": [{
+            "label": "The Team",
+            "href": "/about"
+        },
+        {
+            "label": "Volunteer",
+            "href": "/volunteer"
+        },
+        {
+            "label": "Blog",
+            "href": "/blog"
+        },
+        {
+            "label": "Contact",
+            "href": "/contact"
+        },
+        {
+            "label": "Policies",
+            "href": "/policies"
+        },
+        {
+            "label": "Partners",
+            "href": "/partners"
+        },
+        {
+            "label": "Discord",
+            "href": "/about/discord"
+        },
+        {
+            "label": "Newsletter Signup",
+            "href": "/newsletter",
+            "disabled": true
+        }
+    ]
+}
+]
