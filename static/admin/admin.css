@@ -26,3 +26,16 @@
 body {
     background-color: rgb(255, 246, 254) !important;
 }
+
+/* Stolen css from gatsby */
+body {
+    color: rgba(0, 0, 0, 0.87);
+    height: 100%;
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: "Open Sans", "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    background-color: #ffffff;
+    background: linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), center center;
+}
