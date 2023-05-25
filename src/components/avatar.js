@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function Avatar({ personName, showLink, showName=true }) {
+export default function Avatar({ personName, showLink, showName=true, year }) {
   const classes = useStyles()
   
   const data = useStaticQuery(
@@ -52,12 +52,12 @@ export default function Avatar({ personName, showLink, showName=true }) {
       }
     `)
 
-  const personNameSlug = personName.split(" ").join("").toLowerCase()
+  const personNameSlug = `${personName.split(" ").join("").toLowerCase()}`
   const avatarFilename = `${personNameSlug}_star.png`
   
   const avatarImageData = data.allImageSharp.edges.find(
       edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
-  ).node.gatsbyImageData
+  )?.node?.gatsbyImageData
 
   return (
     <Grid container direction='column' style={{ maxWidth: '200px' }}>
@@ -79,7 +79,7 @@ export default function Avatar({ personName, showLink, showName=true }) {
         </>
       : 
         <>
-          <Link to={`${personNameSlug}`} className={`${classes.personLink}`}>
+          <Link to={`/guests/${year}/${personNameSlug}`} className={`${classes.personLink}`}>
           <GatsbyImage
             className={classes.avatarImage}
             alt=''

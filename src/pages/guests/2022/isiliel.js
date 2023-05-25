@@ -5,6 +5,8 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import Guest from '@components/Guest'
 
+// eslint-disable-next-line limited-exports-page-templates
+export const name = "Isiliel"
 const JunPage = () => {
     const guestSocials = [
         { link: `https://twitter.com/himari_tsuki`, icon: 'twitter'},
@@ -22,7 +24,7 @@ const JunPage = () => {
             />
 
             <PageContent>
-                <Guest personName="Isiliel" guestTitle="Solo Idol" guestSocials={guestSocials}>
+                <Guest personName={name} guestTitle="Solo Idol" guestSocials={guestSocials}>
                     for a defiled world,<br />
                     phantasmal beauty shining<br />
                     for a wounded heart,<br />

@@ -5,6 +5,8 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import Guest from '@components/Guest'
 
+// eslint-disable-next-line limited-exports-page-templates
+export const name = "Kaho Shibuya"
 const KahoShibuyaPage = () => {
     const guestSocials = [
         { link: `https://www.twitch.tv/shibuya_kaho`, icon: 'twitch'},
@@ -14,14 +16,14 @@ const KahoShibuyaPage = () => {
 
     return (
         <Layout>
-            <Seo title="Kaho Shibuya" />
+            <Seo title={name} />
 
             <PageHeader
-                title="Kaho Shibuya"
+                title={name}
             />
 
             <PageContent>
-                <Guest personName="Kaho Shibuya" guestTitle="Content Creator, Published Author, and Anisong DJ" guestSocials={guestSocials}>
+                <Guest personName={name} guestTitle="Content Creator, Published Author, and Anisong DJ" guestSocials={guestSocials}>
                     Born and raised in Tokyo, Japan, Kaho has been making waves on the cosplay, convention, and idol scene! She has released several of her own cosplay artbooks, is a former host on the YouTube channel “Omochan,” hosts her own radio show, writes columns for multiple publications, and is an accomplished author as well. Her first Japanese-only book, "Everything Girls Should Know About The JAV Industry", is being translated, repurposed, and soon published for her English-speaking audience! She's even working on her second book, soon to be released in Japan. Her debut idol single "Electric Town," a collaboration with Around Akiba was released in 2021, with some new singles on the way in 2022!
                     <br /><br />
                     Kaho is excited to make her Pacific Northwest debut at Northwest IdolFest! Follow her on Twitter and Instagram @shibukaho to keep up-to-date with her appearances throughout the weekend!

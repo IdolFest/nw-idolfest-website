@@ -5,6 +5,8 @@ import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
 import Guest from '@components/Guest'
 
+// eslint-disable-next-line limited-exports-page-templates
+export const name = "Phoebe"
 const PhoebePage = () => {
     const guestSocials = [
         { link: `https://feebeechanchibi.com/`, icon: 'home', iconLibrary: 'fas' },
@@ -15,14 +17,14 @@ const PhoebePage = () => {
 
     return (
         <Layout>
-            <Seo title="Phoebe" />
+            <Seo title={name} />
 
             <PageHeader
-                title="Phoebe"
+                title={name}
             />
 
             <PageContent>
-                <Guest personName="Phoebe" guestTitle="Idol, Voice Actor, V-Tuber" guestSocials={guestSocials}>
+                <Guest personName={name} guestTitle="Idol, Voice Actor, V-Tuber" guestSocials={guestSocials}>
                     Get ready to sing, dance, and smile with 2.5D fairytale idol, Phoebe! Phoebe (also known by her screen name "Feebeechanchibi") is a California-based singer, VA, and VTuber dedicated to making people smile and enchanting them on stage with her heartwarming timbre and fairy-like vocals. She loves singing and writing her own original songs in Japanese and English, and performing on both the IRL and virtual stage.  
                     
                     <br /><br />

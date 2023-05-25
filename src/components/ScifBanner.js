@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useCallback, createRef} from  'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -11,7 +11,6 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "45px",
       border: "1px solid #aaa",
       borderRadius: "10px",
-      padding: 0,
       marginBottom: "16px",
       padding: "5px",
       "& a": {

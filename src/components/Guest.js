@@ -45,13 +45,13 @@ function wrapGuestSocial(children) {
     )
 }
 
-export default function Guest({ personName, guestTitle, guestSocials, children }) {
+export default function Guest({ personName, guestTitle, guestSocials, children, year }) {
   const classes = useStyles()
 
   return (
     <Box className={classes.guest}>
       <Grid container className={classes.guestGrid}>
-        <Avatar personName={personName} showName={false} />
+        <Avatar personName={personName} year={year} showName={false} />
         <Biography>{children}</Biography>
       </Grid>
       <Grid container style={{ justifyContent: 'center' }}>

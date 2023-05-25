@@ -22,6 +22,12 @@ const GuestsPage = () => (
                 <Avatar personName="Coming Soon" showLink={false} />
                 <Avatar personName="Coming Soon" showLink={false} />
             </Grid>
+
+            <br />
+            <p style={{textAlign: "center"}}>
+                Want to see guests from prior years? See our{' '}
+                <a href="/guests/prior">prior guests</a>!
+            </p>
         </PageContent>
     </Layout>
 )
