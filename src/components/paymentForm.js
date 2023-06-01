@@ -117,7 +117,9 @@ function displayPaymentResults(status, paymentResults) {
         receiptContainer.style.visibility = 'visible';
         receiptContainer.innerHTML = `Thank you for purchasing a NWIF badge! Please save <a href=${paymentResults.payment.receiptUrl} target="_blank">your receipt</a> before closing this page.<br /><br /><a href="https://discord.gg/h5yJbXgTgE" target="_blank">Join our Discord</a> and claim your role now!<br /><br />`;
         if (typeof window !== "undefined" && typeof window.gtag !== "undefined") { 
-            const params = new URLSearchParams(document.location.search);
+            let params = {}
+            // In case someone's buying a badge in something ancient...
+            try { params = new URLSearchParams(document.location.search); } catch (e) {}
             window.gtag("event", "badge-purchase", {badgeType: params.get("badge_type") ?? "Unknown"})
         }
     } else {
