@@ -68,7 +68,7 @@ const allBadgeTiers = [
       'Sponsor Ribbon',
       '2023 Sponsor T-shirt',
       '2023 Sponsor Poster',
-      '2023 Sponsor Enamel pin',
+      '2023 Sponsor Can Badge set',
       'Priority seating for Main Events',
       'Sponsor-only Discord channel',
       'NWIF website special thanks'
