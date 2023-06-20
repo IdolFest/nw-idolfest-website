@@ -64,8 +64,10 @@ Do not stick anything to hotel walls. Any unapproved material on hotel walls wil
 
 We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay:
 
+*   Our coverage policy is gender-neutral. All clothing or costumes must cover the complete groin, buttocks, and breasts.
+*   All clothing worn in convention space must be appropriate for our PG-13 rating. This includes text on costumes or accessories attached to costumes.
+*   Clothing printed with pornographic imagery, including any ahegao clothing, is not permitted.
 *   Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make [“invisible shoes”](https://www.andsewingishalfthebattle.com/invisible-shoes/).
-*   Costumes and regular clothing should not expose the body in a way that would be deemed as indecent exposure. Private parts must be covered in an opaque material that will not slip or have gaps.
 *   Costumes worn in the event space can not be so large that they obstruct or impede the flow of traffic or entryways for all attendee’s safety. If the costume cannot fit through a standard doorway, you may be asked to store it. Exceptions may be made for Masquerade contestants.
 *   Attendees with bulky costumes, costumes that obscure vision, or costumes with large extensions such as wings or spikes, should have a designated “handler,” to assist them through the hallways and crowds.
 *   Functioning wheels cannot be used as part of a costume or prop (i.e. anything that you might ride, push, or pull). Costumes made with wheelchairs in mind are an exception as long as they do not impede traffic flow.
