@@ -15,8 +15,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useStaticQuery, graphql } from 'gatsby'
-import { headersData } from './HeaderData.json';
+import HeaderData from './HeaderData.json'
 
+const headersData = HeaderData.headersData
 const useStyles = makeStyles(theme => ({
   header: {
     backgroundColor: theme.palette.primary.main,
@@ -192,7 +193,7 @@ const location = site.siteMetadata.location
 
   const getDrawerChoices = () => {
     return headersData.filter(h => !h.disabled).map(({ label, href, external, children }) => {
-        children = children.filter(c => !c.disabled)
+        children = children?.filter(c => !c.disabled)
         const link = external ? (
           <a 
             href={href} 
@@ -211,7 +212,7 @@ const location = site.siteMetadata.location
         return (
           <React.Fragment key={`${href}-wrapper`}>
           {link}
-          { children ? 
+          { children && children.length ? 
             <React.Fragment key={`${href}-children`}> 
             { children.map(({ label, href, external }) => {
               if (external) {
@@ -265,7 +266,7 @@ const location = site.siteMetadata.location
 
   const getMenuButtonsDropdown = (handleClick, handleClose, handleMenuButtonClick, state) => {
     return headersData.filter(h => !h.disabled).map(({ label, href, external, children }) => {
-      children = children.filter(c => !c.disabled)
+      children = children?.filter(c => !c.disabled)
       const link = external ? 
         (<a href={href} target="_blank" rel="noreferrer">
           {label}
@@ -274,7 +275,7 @@ const location = site.siteMetadata.location
         </Link>);
       return (
       <Grid item key={label}>
-        { children ? 
+        { children && children.length ? 
               <>
               <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
                 {link}

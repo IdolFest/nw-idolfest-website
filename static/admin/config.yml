@@ -5,8 +5,10 @@ backend:
   repo: saralain/nw-idolfest-website-cms-fork
   cms_label_prefix: web-editor/
   # Comment this next line out to use this locally
-  base_url: https://idolfest-auth-picluster.cpprograms.net
-site_url: https://nwidolfest.com/
+  # base_url: https://idolfest-auth-picluster.cpprograms.net
+# FIXME: Swap these for prod
+site_url: https://saralain88.github.io/nw-idolfest-website-cms-fork
+# site_url: https://nwidolfest.com/
 # FIXME: Swap with the below once deploying
 logo_url: https://nwidolfest.com/static/8556a9b691450f2853f5e49679ae87bf/ff82a/Logo%20Pink.webp
 # logo_url: https://nwidolfest.com/admin/logo.svg

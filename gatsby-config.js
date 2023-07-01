@@ -5,7 +5,6 @@ const siteMetadata = require('./siteMetadata.json');
 
 module.exports = {
   siteMetadata: {
-
     // This looks dumb because it is! Gatsby does some weird things to patch this file, and
     // this works around them, so we can pull from a separate json file. The json is editable from the admin area.
     ...siteMetadata,
