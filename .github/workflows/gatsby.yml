@@ -90,4 +90,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: nwidolfest.com
+          # FIXME uncomment
+          # cname: nwidolfest.com
