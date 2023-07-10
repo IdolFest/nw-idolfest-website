@@ -125,7 +125,7 @@ const allBadgeTiers = [
     hasTax: false,
     price: '20',
     tierName: 'Dekimasen',
-    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. Shipping available to US and CA only.",
+    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. <br><br>Shipping available to US and CA only. Badges will ship after the event.",
     perks: [
       'Badge and lanyard mailed to you',
       'NWIF Discord role',
