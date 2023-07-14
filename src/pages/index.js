@@ -95,7 +95,7 @@ const IndexPage = () => {
         <div className={classes.buttonHolder}>
           <Button variant="contained" className="cta" href='https://idolfe.st/vendorapp'>Apply as a Vendor</Button>
           <Button variant="contained" className="cta" href='https://idolfe.st/panelapp'>Apply as a Panelist or Performer</Button>
-          <Button variant="contained" className="cta" href='https://idolfe.st/2023djapp'>Apply to DJ</Button>
+          <Button variant="contained" className="cta" href='https://idolfe.st/nlapp'>Apply for a Northern Lights performance</Button>
         </div>
         <br />
         <br />
