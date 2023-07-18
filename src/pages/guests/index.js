@@ -15,6 +15,7 @@ const GuestsPage = () => (
             title="Guests"
         />
 
+        {/* TODO: Make this dynamic, with a switch for this view (or if count = 0) */}
         <PageContent>
             <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
             <Grid container style={{ justifyContent: 'space-around' }}>

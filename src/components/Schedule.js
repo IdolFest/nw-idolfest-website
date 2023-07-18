@@ -1,11 +1,10 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import { styled } from '@material-ui/styles'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Toggle from "@components/toggle"
-import scheduleData from "../../static/schedules/schedule.json"
 
 const EventsTable = styled(TableContainer)({
     margin: '0 auto',
@@ -58,6 +57,35 @@ function formatTime(datetime) {
 
 const Schedule = ({ day }) => {
   const classes = useStyles()
+
+  const [scheduleData, setScheduleData] = useState({loading: true})
+
+  useEffect(() => {
+    const url = `https://nw-idolfest-webstuff.s3.amazonaws.com/schedule/schedule.json`
+
+    
+    const getSchedule = async () => {
+      try {
+        const response = await fetch(url)
+        const res = await response.json()
+        setScheduleData(res)
+        console.info('honk', await res)
+
+      } catch (e) {
+        setScheduleData({error: true})
+      }
+    }
+
+    if (scheduleData.loading) {
+      getSchedule()
+    }
+  })
+
+  if (scheduleData.loading) {
+    return <h3><em>Loading...</em></h3>
+  } else if (scheduleData.error) {
+    return <h3><em>Loading schedule failed. Please refresh the page!</em></h3>
+  }
 
   return (
     <>
