@@ -93,7 +93,6 @@ const IndexPage = () => {
           <Button variant="contained" size="large" className="cta" href="/register">Buy a Badge</Button>
         </div>
         <div className={classes.buttonHolder}>
-          <Button variant="contained" className="cta" href='https://idolfe.st/vendorapp'>Apply as a Vendor</Button>
           <Button variant="contained" className="cta" href='https://idolfe.st/panelapp'>Apply as a Panelist or Performer</Button>
           <Button variant="contained" className="cta" href='https://idolfe.st/2023djapp'>Apply to DJ</Button>
         </div>
