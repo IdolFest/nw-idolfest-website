@@ -59,6 +59,10 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
   )?.node?.gatsbyImageData
 
+  if (!avatarImageData) {
+    console.warn("Avatar image not found", avatarFilename)
+  }
+  
   return (
     <Grid container direction='column' style={{ maxWidth: '200px' }}>
       <Box className={classes.person}>  
