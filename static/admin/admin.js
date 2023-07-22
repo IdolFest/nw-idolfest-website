@@ -88,7 +88,7 @@ var NavPreview = createClass({
 
 CMS.registerPreviewTemplate("navigation", NavPreview)
 
-window.addEventListener('message', (a, b, c) => {
+window.addEventListener('message', (event) => {
     // authorization:github:success:
-    console.info('a b c', a, b, c)
+    console.info('a b c', event.data)
 })
