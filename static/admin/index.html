@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
 <head>
+  <!-- FIXME: Remove /nw-idolfest-website-cms-fork base before deploying to prod -->
+  <base href="/nw-idolfest-website-cms-fork">
+  <!-- FIXME: This too -->
+  <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon-32x32.png?v=d675ce8358abdda6297f903ec647a7bd" type="image/png">
   <title>[Admin] Idolfest Content Manager</title>
   <link rel="stylesheet" type="text/css" href="/admin/admin.css?cb={{CACHEBUST}}" />
-  <!-- FIXME: Remove base before deploying to prod -->
-  <base href="/nw-idolfest-website-cms-fork" />
 </head>
 <body>
   <div class="site-headsup">
