@@ -1,16 +1,15 @@
 <!doctype html>
 <html>
 <head>
-  <!-- FIXME: Remove /nw-idolfest-website-cms-fork base before deploying to prod -->
+  <!-- FIXME: Remove /nw-idolfest-website-cms-fork base in everything in this file before deploying to prod -->
   <base href="/nw-idolfest-website-cms-fork">
-  <!-- FIXME: This too -->
   <link rel="cms-config-url" type="text/yaml" href="/nw-idolfest-website-cms-fork/admin/config.yml" />
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon-32x32.png?v=d675ce8358abdda6297f903ec647a7bd" type="image/png">
   <title>[Admin] Idolfest Content Manager</title>
-  <link rel="stylesheet" type="text/css" href="/admin/admin.css?cb={{CACHEBUST}}" />
+  <link rel="stylesheet" type="text/css" href="/nw-idolfest-website-cms-fork/admin/admin.css?cb={{CACHEBUST}}" />
 </head>
 <body>
   <div class="site-headsup">
@@ -19,6 +18,6 @@
   </div>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  <script type="text/javascript" src="/admin/admin.js?cb={{CACHEBUST}}"></script>
+  <script type="text/javascript" src="/nw-idolfest-website-cms-fork/admin/admin.js?cb={{CACHEBUST}}"></script>
 </body>
 </html>
