@@ -3,6 +3,7 @@ backend:
   branch: main
   # FIXME:  Replace before prod
   repo: saralain/nw-idolfest-website-cms-fork
+  # FIXME: Find and replace nw-idolfest-website-cms-fork anywhere it appears
   cms_label_prefix: web-editor/
   # Comment this next line out to use this locally
   base_url: https://c03m0wt68h.execute-api.us-east-1.amazonaws.com

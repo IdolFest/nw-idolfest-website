@@ -25,8 +25,8 @@ CMS.registerEventListener({
 });
 
 // Replaced with generated css during build process
-CMS.registerPreviewStyle("/admin/editor-preview.css")
-CMS.registerPreviewStyle("{{GATSBY_CSS}}");
+CMS.registerPreviewStyle("/nw-idolfest-website-cms-fork/admin/editor-preview.css")
+CMS.registerPreviewStyle("/nw-idolfest-website-cms-fork/{{GATSBY_CSS}}");
 
 
 var PostPreview = createClass({
