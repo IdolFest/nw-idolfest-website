@@ -67,7 +67,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Template", name: "template", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Site Settings"
+  - label: "Site Settings & Navigation"
     name: "general"
     files: 
     - label: "Site Metadata"
