@@ -23,7 +23,7 @@ collections:
     label: "Blog Entries"
     label_singular: "Blog Entry"
     # NOTE: This needs to be updated for each event to make blogs work
-    folder: "src/markdown-pages/blog/2022"
+    folder: "src/markdown-pages/blog/2023"
     create: true
     delete: true
     summary: "{{fields.title}} ({{fields.date}})"
