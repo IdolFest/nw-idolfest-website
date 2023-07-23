@@ -87,3 +87,13 @@ var NavPreview = createClass({
 })
 
 CMS.registerPreviewTemplate("navigation", NavPreview)
+
+// SCREW IT, just reimplement the version that worked as a lambda. It's dead simple.
+window.addEventListener('message', (event) => {
+    // authorization:github:success:
+    console.info('a b c', event.data)
+    if (event.data.startsWith('authorization:github:success:')) {
+        const data = JSON.parse(event.data.replace('authorization:github:success:', ''))
+        console.info('I parsed it... I guess', data)
+    }
+})
