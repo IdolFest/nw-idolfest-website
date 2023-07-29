@@ -8,6 +8,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     let slug = createFilePath({ node, getNode, basePath: `pages` })
     if (node.frontmatter.template === `blogpost`) {
       slug = `/blog${slug}`
+    } else if (node.frontmatter.template === 'guest') {
+      slug = `/guests${slug}`
     }
     createNodeField({
       node,

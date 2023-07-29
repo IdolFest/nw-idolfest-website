@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {  
   const classes = useStyles()
-const { site } = useStaticQuery(
+const { site, allMdx } = useStaticQuery(
         graphql`
             query {
                 site {
@@ -76,9 +76,28 @@ const { site } = useStaticQuery(
                         longDates,
                         location
                     }
-                }            
-            }`
+                }
+                allMdx (filter: {slug: {regex: "/^2023\/"}}) {
+                  nodes {
+                    id
+                    frontmatter {
+                      template
+                      name
+                    }
+                    slug
+                  }
+                }
+          
+            }
+            `
     )
+const thisYearGuests = allMdx.nodes.filter(g => g?.frontmatter.template === "guest")
+
+// Inject this year's guests into headersData, if applicable
+const guestIdx = headersData.findIndex(h => h.href === "/guests")
+if (!headersData[guestIdx].children[0].disabled && headersData[guestIdx].children.length === 1) {
+  headersData[guestIdx].children.push(...thisYearGuests.map(g => ({label: g.frontmatter.name, href: `/guests/${g.slug}`})))
+}
 
 const dates = site.siteMetadata.shortDates
 const longDates = site.siteMetadata.shortDates

@@ -6,31 +6,61 @@ import PageHeader from '@components/PageHeader'
 import Avatar from '@components/avatar'
 import CenteredBox from '@components/CenteredBox'
 import Grid from '@material-ui/core/Grid'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const GuestsPage = () => (
-    <Layout>
-        <Seo title="Guests" />
 
-        <PageHeader
-            title="Guests"
-        />
+const GuestsPage = () => {
 
-        {/* TODO: Make this dynamic, with a switch for this view (or if count = 0) */}
-        <PageContent>
-            <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
-            <Grid container style={{ justifyContent: 'space-around' }}>
-                <Avatar personName="Coming Soon" showLink={false} />
-                <Avatar personName="Coming Soon" showLink={false} />
-                <Avatar personName="Coming Soon" showLink={false} />
-            </Grid>
+    const year = 2023
+    const data = useStaticQuery(
+        graphql`
+        {
+            allMdx (filter: {slug: {regex: "/^2023\//"}}) {
+              nodes {
+                id
+                frontmatter {
+                  template
+                  slug
+                  name
+                }
+                slug
+              }
+            }
+          }
+        `)
 
-            <br />
-            <p style={{textAlign: "center"}}>
-                Want to see guests from prior years? See our{' '}
-                <a href="/guests/prior">prior guests</a>!
-            </p>
-        </PageContent>
-    </Layout>
-)
+    const noGuests = (<>
+        <Avatar personName="Coming Soon" showLink={false} />
+        <Avatar personName="Coming Soon" showLink={false} />
+        <Avatar personName="Coming Soon" showLink={false} />
+    </>)
+    const guests = data?.allMdx?.nodes?.filter(n => n?.frontmatter?.template === "guest") ?? []
+    console.info('guests', guests)
+
+    return (
+        <Layout>
+            <Seo title="Guests" />
+
+            <PageHeader
+                title="Guests"
+            />
+
+            <PageContent>
+                <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
+                <Grid container style={{ justifyContent: 'space-around' }}>
+                    {guests.length > 0 ? 
+                        guests.map(g => guests.map(guest => (<Avatar key={guest.slug} personName={guest.frontmatter.name} year={year} showLink={true} />))) 
+                        : noGuests}
+                </Grid>
+
+                <br />
+                <p style={{textAlign: "center"}}>
+                    Want to see guests from prior years? See our{' '}
+                    <a href="/guests/prior">prior guests</a>!
+                </p>
+            </PageContent>
+        </Layout>
+    )
+}
 
 export default GuestsPage
