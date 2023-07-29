@@ -35,7 +35,7 @@ export default function Guest({
             />
 
             <PageContent>
-              <GuestComponent personName={fmt.name} guestSocials={socials}>
+              <GuestComponent personName={fmt.name} guestTitle={fmt.descriptor} guestSocials={socials}>
                 <MDXRenderer>{page.body}</MDXRenderer>
               </GuestComponent>
             </PageContent>

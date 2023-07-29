@@ -70,6 +70,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "guests"
     # FIXME: Needs images
+    # FIXME: Get rid of phoebe test page before prod
     label: "Guests"
     label_singular: "Guest"
     folder: "src/markdown-pages/guests/2023"
