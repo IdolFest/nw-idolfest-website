@@ -14,7 +14,7 @@ const PriorGuestsPage = () => {
     const data = useStaticQuery(
         graphql`
         {
-            allMdx (filter: {slug: {regex: "/^(2021|2022)/"}}) {
+            allMdx (filter: {slug: {regex: "/^guests\/(2021|2022)/"}}) {
               nodes {
                 id
                 frontmatter {
@@ -30,7 +30,7 @@ const PriorGuestsPage = () => {
 
 
     const guestsByYear = data.allMdx.nodes.filter(a => a?.frontmatter?.template === 'guest').reduce((prev, curr) => {
-        const thisYear = curr.slug.split('/')[0]
+        const thisYear = curr.slug.split('/')[1]
         let theYear = prev.findIndex(year => year.year === thisYear);
         const niceName = curr.frontmatter.name
         if (theYear === -1) {

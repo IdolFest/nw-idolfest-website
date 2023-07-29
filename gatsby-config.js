@@ -70,13 +70,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `guest-pages`,
-        path: `${__dirname}/src/pages/guests`
-      }
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         useResolveUrlLoader: true,

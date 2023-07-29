@@ -11,9 +11,9 @@ bandcamp: https://isiliel.bandcamp.com/
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 
-for a defiled world,
-phantasmal beauty shining
-for a wounded heart,
+for a defiled world,<br />
+phantasmal beauty shining<br />
+for a wounded heart,<br />
 songs of anger resound
 
 

@@ -15,7 +15,7 @@ const GuestsPage = () => {
     const data = useStaticQuery(
         graphql`
         {
-            allMdx (filter: {slug: {regex: "/^2023\//"}}) {
+            allMdx (filter: {slug: {regex: "/^guests\/2023\//"}}) {
               nodes {
                 id
                 frontmatter {
@@ -35,7 +35,6 @@ const GuestsPage = () => {
         <Avatar personName="Coming Soon" showLink={false} />
     </>)
     const guests = data?.allMdx?.nodes?.filter(n => n?.frontmatter?.template === "guest") ?? []
-    console.info('guests', guests)
 
     return (
         <Layout>

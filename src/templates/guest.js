@@ -3,13 +3,15 @@ import Layout from '@components/layout'
 import Seo from '@components/seo'
 import PageContent from '@components/PageContent'
 import PageHeader from '@components/PageHeader'
-import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Guest from "@components/Guest"
+import { graphql } from "gatsby"
+import GuestComponent from "@components/Guest"
 
-const socialChannels = ['twitch', 'youtube', 'twitter', 'homepage', 'instagram', 'bandcamp', 'spotify', 'facebook', 'patreon']
+// Adding fields? Make sure to add them to the query below, too. And that at least one
+// guest has them. If all else fails, add it to one of our 2021 guests with a blank value. 
+const socialChannels = ['twitch', 'youtube', 'twitter', 'homepage', 'instagram', 'bandcamp', 'spotify', 'facebook', 'tiktok', 'patreon']
 
-export default function GuestPage({
+export default function Guest({
   data, // this prop will be injected by the GraphQL query below.
 }) {
     const page = data?.mdx || {}
@@ -33,9 +35,9 @@ export default function GuestPage({
             />
 
             <PageContent>
-              <Guest personName={fmt.name} guestSocials={socials}>
+              <GuestComponent personName={fmt.name} guestSocials={socials}>
                 <MDXRenderer>{page.body}</MDXRenderer>
-              </Guest>
+              </GuestComponent>
             </PageContent>
         </Layout>
     )
@@ -50,9 +52,10 @@ export const query = graphql`
         name,
         descriptor,
 
-        twitch,
-        youtube,
         twitter,
+        twitch,
+        tiktok,
+        youtube,
         homepage,
         instagram,
         bandcamp,
