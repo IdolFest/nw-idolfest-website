@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     line-height: 1.43;
     background-color: #ffffff;
+    /* FIXME: Change before prod */
     background: linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/nw-idolfest-website-cms-fork/images/diamondsSolidPink.svg'), center center;
 }
 
@@ -16,9 +17,9 @@ body {
     min-height: 100vh;
 }
 
-.post-container {
+.post-container, .guest-container {
     max-width: 600px;
-    margin: 1em auto 0 auto;
+    margin: 1em auto 3em auto;
     padding: 2em;
     border-radius: 10px;
     background-color: #ffffff;
@@ -74,4 +75,15 @@ a {
 
 .hidden {
     display: none;
+}
+
+.guest-header {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.dummy-container {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 1em;
 }

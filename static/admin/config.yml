@@ -69,11 +69,10 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "guests"
-    # FIXME: Needs preview
-    # FIXME: Need to get them back into performers/prior page AND navigation
+    # FIXME: Needs images
     label: "Guests"
     label_singular: "Guest"
-    folder: "src/pages/guests/2023"
+    folder: "src/markdown-pages/guests/2023"
     create: true
     delete: true
     slug: "{{slug}}" # (     o_O) slug
@@ -88,6 +87,9 @@ collections:
       - {label: "Homepage", name: "homepage", widget: "string"}
       - {label: "Instagram", name: "instagram", widget: "string"}
       - {label: "Bandcamp", name: "bandcamp", widget: "string"}
+      - {label: "Spotify", name: "spotify", widget: "string"}
+      - {label: "Facebook", name: "facebook", widget: "string"}
+      - {label: "Patreon", name: "patreon", widget: "string"}
       - {label: "Note", name: "NOTE", widget: "hidden", default: "Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png"}
 
       - {label: "Body", name: "body", widget: "markdown"}

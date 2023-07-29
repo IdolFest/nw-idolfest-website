@@ -25,6 +25,7 @@ CMS.registerEventListener({
 });
 
 // Replaced with generated css during build process
+// FIXME Update these for prod
 CMS.registerPreviewStyle("/nw-idolfest-website-cms-fork/admin/editor-preview.css")
 CMS.registerPreviewStyle("/nw-idolfest-website-cms-fork/{{GATSBY_CSS}}");
 
@@ -87,3 +88,21 @@ var NavPreview = createClass({
 })
 
 CMS.registerPreviewTemplate("navigation", NavPreview)
+
+var GuestPreview = createClass({
+    render: function() {
+        const entry = this.props.entry.toJS();
+        return h('div', {},
+            h('div', {"className": "heading-wrapper"},
+                h('h1', {}, entry.data.title)),
+            h('div', {"className": "text guest-container"}, 
+                this.props.widgetFor('body'),
+                h('div', {className: "text dummy-container"},
+                    "[ Social Icons ]"),
+                h('h3', {},
+                    h('div', {className: "guest-header"},
+                        entry.data.descriptor)))
+        )
+    }
+})
+CMS.registerPreviewTemplate("guests", GuestPreview)
