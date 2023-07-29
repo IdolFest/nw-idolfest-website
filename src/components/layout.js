@@ -26,7 +26,8 @@ const useStyles = makeStyles(theme => ({
       height: '100%',
     },
     content: {
-      background: `linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/images/diamondsSolidPink.svg'), center center`,
+      // FIXME Remove thing
+      background: `linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/nw-idolfest-website-cms-fork/images/diamondsSolidPink.svg'), center center`,
       paddingBottom: '1em',
       flexGrow: '1'
     }
