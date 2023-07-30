@@ -15,140 +15,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useStaticQuery, graphql } from 'gatsby'
+import HeaderData from './HeaderData.json'
 
-const headersData = [
-  {
-    label: "Register",
-    href: "/register",
-  },
-  {
-    label: "Hotel",
-    href: "/hotel",
-  },
-  {
-    label: "Guests",
-    href: "/guests",
-    // children: [
-    // {
-    //   label: "All Guests",
-    //   href: "/guests",
-    // },
-    // {
-    //   label: "Kaho Shibuya",
-    //   href: "/guests/kahoshibuya"
-    // },
-    // {
-    //   label: "Isiliel (Himari)",
-    //   href: "/guests/isiliel"
-    // },
-    // {
-    //   label: "Phoebe",
-    //   href: "/guests/phoebe"
-    // },
-    // {
-    //   label: "Rintaichou",
-    //   href: "/guests/rintaichou"
-    // },
-    // {
-    //   label: "Non Sweet",
-    //   href: "/guests/nonsweet"
-    // },
-    // {
-    //   label: "Jun (Lucia Hunter)",
-    //   href: "/guests/jun"
-    // },
-    // {
-    //   label: "Barri",
-    //   href: "/guests/barri"
-    // },
-    // {
-    //   label: "Eli Ebberts",
-    //   href: "/guests/eliebberts"
-    // },
-    // {
-    //   label: "Luluko",
-    //   href: "/guests/luluko"
-    // },
-    // ]
-  },
-  {
-    label: "Events",
-    href: "/events",
-    children: [
-    // {
-    //     label: "Thursday Schedule",
-    //     href: "/events/thursday"
-    // },
-    // {
-    //     label: "Friday Schedule",
-    //     href: "/events/friday"
-    // },
-    // {
-    //     label: "Saturday Schedule",
-    //     href: "/events/saturday"
-    // },
-    // {
-    //     label: "Sunday Schedule",
-    //     href: "/events/sunday"
-    // },
-    // {
-    //     label: "Northern Lights",
-    //     href: "/events/northernlights"
-    // },
-    // {
-    //     label: "Masquerade",
-    //     href: "/events/masquerade"
-    // },
-    {
-        label: "Grand Prix Song Contest",
-        href: "/events/grandprix"
-    }
-    ]
-  },
-  {
-    label: "Vendors",
-    href: "/vendors",
-  },
-  {
-    label: "About",
-    href: "/about",
-    children: [
-    {
-      label: "The Team",
-      href: "/about"
-    },
-    {
-      label: "Volunteer",
-      href: "/volunteer"
-    },
-    {
-      label: "Blog",
-      href: "/blog"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
-    },
-    {
-      label: "Policies",
-      href: "/policies"
-    },
-    {
-      label: "Partners",
-      href: "/partners"
-    },
-    {
-      label: "Discord",
-      href: "/about/discord"
-    },
-    // {
-    //   label: "Newsletter Signup",
-    //   href: "/newsletter"
-    // },
-    ],
-  },
-];
-
+const headersData = HeaderData.headersData
 const useStyles = makeStyles(theme => ({
   header: {
     backgroundColor: theme.palette.primary.main,
@@ -198,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {  
   const classes = useStyles()
-const { site } = useStaticQuery(
+const { site, allMdx } = useStaticQuery(
         graphql`
             query {
                 site {
@@ -207,9 +76,28 @@ const { site } = useStaticQuery(
                         longDates,
                         location
                     }
-                }            
-            }`
+                }
+                allMdx (filter: {slug: {regex: "/^guests\/2023\/"}}) {
+                  nodes {
+                    id
+                    frontmatter {
+                      template
+                      name
+                    }
+                    slug
+                  }
+                }
+          
+            }
+            `
     )
+const thisYearGuests = allMdx.nodes.filter(g => g?.frontmatter.template === "guest")
+
+// Inject this year's guests into headersData, if applicable
+const guestIdx = headersData.findIndex(h => h.href === "/guests")
+if (!headersData[guestIdx].children[0].disabled && headersData[guestIdx].children.length === 1) {
+  headersData[guestIdx].children.push(...thisYearGuests.map(g => ({label: g.frontmatter.name, href: `/guests/${g.slug}`})))
+}
 
 const dates = site.siteMetadata.shortDates
 const longDates = site.siteMetadata.shortDates
@@ -323,7 +211,8 @@ const location = site.siteMetadata.location
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href, external, children }) => {
+    return headersData.filter(h => !h.disabled).map(({ label, href, external, children }) => {
+        children = children?.filter(c => !c.disabled)
         const link = external ? (
           <a 
             href={href} 
@@ -342,7 +231,7 @@ const location = site.siteMetadata.location
         return (
           <React.Fragment key={`${href}-wrapper`}>
           {link}
-          { children ? 
+          { children && children.length ? 
             <React.Fragment key={`${href}-children`}> 
             { children.map(({ label, href, external }) => {
               if (external) {
@@ -395,7 +284,8 @@ const location = site.siteMetadata.location
   );
 
   const getMenuButtonsDropdown = (handleClick, handleClose, handleMenuButtonClick, state) => {
-    return headersData.map(({ label, href, external, children }) => {
+    return headersData.filter(h => !h.disabled).map(({ label, href, external, children }) => {
+      children = children?.filter(c => !c.disabled)
       const link = external ? 
         (<a href={href} target="_blank" rel="noreferrer">
           {label}
@@ -404,7 +294,7 @@ const location = site.siteMetadata.location
         </Link>);
       return (
       <Grid item key={label}>
-        { children ? 
+        { children && children.length ? 
               <>
               <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
                 {link}

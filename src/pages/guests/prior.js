@@ -13,25 +13,28 @@ const PriorGuestsPage = () => {
     
     const data = useStaticQuery(
         graphql`
-          query {
-            allFile(filter: {sourceInstanceName: {eq: "guest-pages"}, name: {ne: "index"}, ext: {eq: ".js"}, relativeDirectory: {in: ["2021", "2022"]}}) {
-                edges {
-                  node {
-                    name
-                    relativeDirectory
-                    relativePath
-                  }
+        {
+            allMdx (filter: {slug: {regex: "/^guests\/(2021|2022)/"}}) {
+              nodes {
+                id
+                frontmatter {
+                  template
+                  slug
+                  name
                 }
+                slug
               }
+            }
           }
         `)
 
 
-    const guestsByYear = data.allFile.edges.reduce((prev, curr) => {
-        let theYear = prev.findIndex(year => year.year === curr.node.relativeDirectory);
-        const niceName = require(`./${curr.node.relativePath}`).name ?? curr.node.name
+    const guestsByYear = data.allMdx.nodes.filter(a => a?.frontmatter?.template === 'guest').reduce((prev, curr) => {
+        const thisYear = curr.slug.split('/')[1]
+        let theYear = prev.findIndex(year => year.year === thisYear);
+        const niceName = curr.frontmatter.name
         if (theYear === -1) {
-            theYear = prev.push({year: curr.node.relativeDirectory, guests: [niceName]})
+            theYear = prev.push({year: thisYear, guests: [niceName]})
         } else {
             prev[theYear].guests.push(niceName)
         }
