@@ -1,20 +1,14 @@
 backend:
   name: github
   branch: main
-  # FIXME:  Replace before prod
-  repo: saralain/nw-idolfest-website-cms-fork
-  # FIXME: Find and replace nw-idolfest-website-cms-fork anywhere it appears
+  repo: IdolFest/nw-idolfest-website
   cms_label_prefix: web-editor/
   # Comment this next line out to use this locally
   base_url: https://c03m0wt68h.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /auth
-# FIXME: Swap these for prod
-site_url: https://saralain.github.io/nw-idolfest-website-cms-fork
-site_domain: saralain.github.io
-# site_url: https://nwidolfest.com/
-# FIXME: Swap with the below once deploying
-logo_url: https://nwidolfest.com/static/8556a9b691450f2853f5e49679ae87bf/ff82a/Logo%20Pink.webp
-# logo_url: https://nwidolfest.com/admin/logo.svg
+site_domain: nwidolfest.com
+site_url: https://nwidolfest.com/
+logo_url: https://nwidolfest.com/admin/logo.svg
 # This is where it's stored in the repo
 media_folder: "/static/images/uploads"
 # This is where it is url-wise
@@ -69,8 +63,6 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "guests"
-    # FIXME: Needs images
-    # FIXME: Get rid of phoebe test page before prod
     label: "Guests"
     label_singular: "Guest"
     folder: "src/markdown-pages/guests/2023"

@@ -8,8 +8,7 @@ body {
     font-weight: 400;
     line-height: 1.43;
     background-color: #ffffff;
-    /* FIXME: Change before prod */
-    background: linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/nw-idolfest-website-cms-fork/images/diamondsSolidPink.svg'), center center;
+    background: linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), url('/images/diamondsSolidPink.svg'), center center;
 }
 
 body {
