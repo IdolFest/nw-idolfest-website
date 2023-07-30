@@ -7,11 +7,10 @@ template: guest
 descriptor: Idol, Voice Actor, V-Tuber
 twitch: https://www.twitch.tv/feebee
 twitter: https://www.twitter.com/feebeechanchibi
-homepage: https://feebeechanchibi.com/
-guestimg: /images/guests/heroimage.png
-NOTE: Make sure image of the guest is in the media folder, named
-  guest_(YEAR)_(GUEST_SLUG).png
+guestimg: /images/guests/2022_phoebe_star.png
+NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
+
 DISCLAIMER: This is a test page using a guest from last year. If you see this, don't take this guest showing up at 
 NWIF 2023 for granted :) 
 

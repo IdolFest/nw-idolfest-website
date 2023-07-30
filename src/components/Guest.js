@@ -45,7 +45,7 @@ function wrapGuestSocial(children) {
     )
 }
 
-export default function Guest({ personName, guestTitle, guestSocials, children, year }) {
+export default function Guest({ personName, guestTitle, guestSocials, children, year, image}) {
   const classes = useStyles()
 
   return (

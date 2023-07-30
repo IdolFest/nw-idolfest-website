@@ -12,6 +12,7 @@ tiktok: https://www.tiktok.com/@feebeechanchibi
 instagram: https://www.instagram.com/feebeechanchibi
 bandcamp: https://feebeechanchibi.bandcamp.com
 spotify: https://open.spotify.com/artist/3AVEJlXqQJciNtMTZn2AjA
+guestimg: /images/guests/2022_phoebe_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

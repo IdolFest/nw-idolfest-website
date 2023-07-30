@@ -8,6 +8,7 @@ homepage: https://feebeechanchibi.com/
 twitch: https://www.twitch.tv/feebee
 youtube: https://youtube.com/c/feebeechanchibi
 twitter: https://www.twitter.com/feebeechanchibi
+guestimg: /images/guests/2022_phoebe_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

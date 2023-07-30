@@ -8,6 +8,7 @@ homepage: https://www.isiliel.com/
 instagram: https://www.instagram.com/himari_tsuki/
 twitter: https://twitter.com/himari_tsuki
 bandcamp: https://isiliel.bandcamp.com/
+guestimg: /images/guests/2022_isiliel_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

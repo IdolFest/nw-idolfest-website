@@ -6,6 +6,7 @@ descriptor: Idol Cosplayer and Craftsmanship Judge
 template: guest
 twitter: https://twitter.com/omgitsbarri
 instagram: https://instagram.com/omgitsbarri
+guestimg: /images/guests/2022_barri_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

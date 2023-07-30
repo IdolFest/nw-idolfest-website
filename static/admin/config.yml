@@ -74,6 +74,10 @@ collections:
     label: "Guests"
     label_singular: "Guest"
     folder: "src/markdown-pages/guests/2023"
+    # This is where it's stored in the repo
+    media_folder: "/static/images/guests"
+    # This is where it is url-wise
+    public_folder: "/images/guests"
     create: true
     delete: true
     slug: "{{slug}}" # (     o_O) slug
@@ -82,15 +86,16 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "guest"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Descriptor", name: "descriptor", widget: "string"}
-      - {label: "Twitch", name: "twitch", widget: "string"}
-      - {label: "Youtube", name: "youtube", widget: "string"}
-      - {label: "Twitter", name: "twitter", widget: "string"}
-      - {label: "Homepage", name: "homepage", widget: "string"}
-      - {label: "Instagram", name: "instagram", widget: "string"}
-      - {label: "Bandcamp", name: "bandcamp", widget: "string"}
-      - {label: "Spotify", name: "spotify", widget: "string"}
-      - {label: "Facebook", name: "facebook", widget: "string"}
-      - {label: "Patreon", name: "patreon", widget: "string"}
+      - {label: "Twitch", name: "twitch", widget: "string", required: false}
+      - {label: "Youtube", name: "youtube", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "Homepage", name: "homepage", widget: "string", required: false}
+      - {label: "Instagram", name: "instagram", widget: "string", required: false}
+      - {label: "Bandcamp", name: "bandcamp", widget: "string", required: false}
+      - {label: "Spotify", name: "spotify", widget: "string", required: false}
+      - {label: "Facebook", name: "facebook", widget: "string", required: false}
+      - {label: "Patreon", name: "patreon", widget: "string", required: false}
+      - {label: "Guest \"star\" Image", name: "guestimg", widget: "image", hint: "Please surround the image with the event's star image border. This will not be done for you! Use only the outside border.\r\nFile: https://github.com/IdolFest/nw-idolfest-website/blob/main/src/images/Star.svg"}
       - {label: "Note", name: "NOTE", widget: "hidden", default: "Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png"}
 
       - {label: "Body", name: "body", widget: "markdown"}

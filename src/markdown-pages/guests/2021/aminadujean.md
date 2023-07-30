@@ -5,6 +5,7 @@ title: Amina du Jean
 descriptor: Former J-Pop Idol
 template: guest
 twitter: https://www.twitter.com/aminadujean
+guestimg: /images/guests/2021_aminadujean_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

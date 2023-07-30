@@ -9,6 +9,7 @@ youtube: https://www.youtube.com/rintaichou
 facebook: https://facebook.com/rintaichousa
 twitter: https://www.twitter.com/rintaichou
 instagram: https://www.instagram.com/rintaichou
+guestimg: /images/guests/2022_rintaichou_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

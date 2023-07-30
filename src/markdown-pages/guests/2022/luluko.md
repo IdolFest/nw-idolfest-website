@@ -8,6 +8,7 @@ twitter: https://twitter.com/lulukohime
 instagram: https://instagram.com/lulukohime
 tiktok: https://tiktok.com/@lulukohime
 facebook: https://facebook.com/lulukocosplay
+guestimg: /images/guests/2022_luluko_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

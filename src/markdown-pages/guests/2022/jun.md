@@ -5,6 +5,7 @@ title: Jun
 descriptor: Community Manager & Cat Herder
 template: guest
 twitter: https://twitter.com/bushi_jun
+guestimg: /images/guests/2022_jun_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

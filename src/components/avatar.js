@@ -35,7 +35,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function Avatar({ personName, showLink, showName=true, year }) {
   const classes = useStyles()
-  
+  const personNameSlug = `${personName.split(" ").join("").toLowerCase()}`
+
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -49,18 +51,55 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
             }
           }
         }
+        allMdx(filter: {slug: {regex: "/^guests\//"}}) {
+          nodes {
+            slug,
+            frontmatter {
+              name,
+              slug,
+              guestimg,
+            }
+          }
+        }
       }
     `)
 
-  const personNameSlug = `${personName.split(" ").join("").toLowerCase()}`
-  const avatarFilename = `${personNameSlug}_star.png`
-  
-  const avatarImageData = data.allImageSharp.edges.find(
-      edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
-  )?.node?.gatsbyImageData
+  const mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug)
 
-  if (!avatarImageData) {
-    console.warn("Avatar image not found", avatarFilename)
+  let imageTag
+
+  // Try to find the image from frontmatter on any current guest
+  if (mdxEntry?.frontmatter?.guestimg) {
+    imageTag = (
+      <img
+        src={mdxEntry.frontmatter.guestimg}
+        className={classes.avatarImage}
+        alt=''
+      />
+    )
+  } else {
+    // If an image isn't found, find it from the filesystem
+
+
+    const avatarFilename = `${personNameSlug}_star.png`
+    
+    const avatarImageData = data.allImageSharp.edges.find(
+        edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
+    )?.node?.gatsbyImageData
+
+    if (!avatarImageData) {
+      console.warn("Avatar image not found", avatarFilename)
+    }
+
+    imageTag = (
+      <GatsbyImage
+        className={classes.avatarImage}
+        alt=''
+        image={avatarImageData}
+        loading='eager'
+        placeholder='blurred'
+      />
+    )
   }
   
   return (
@@ -68,13 +107,7 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       <Box className={classes.person}>  
       {!showLink ?
         <>
-        <GatsbyImage
-          className={classes.avatarImage}
-          alt=''
-          image={avatarImageData}
-          loading='eager'
-          placeholder='blurred'
-        />
+        {imageTag}
         { showName ? 
           <div className={classes.personName}>
             {personName}
@@ -84,13 +117,7 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       : 
         <>
           <Link to={`/guests/${year}/${personNameSlug}`} className={`${classes.personLink}`}>
-          <GatsbyImage
-            className={classes.avatarImage}
-            alt=''
-            image={avatarImageData}
-            loading='eager'
-            placeholder='blurred'
-          />
+          {imageTag}
           { showName ? 
             <div className={`${classes.personName}`}>
               {personName}

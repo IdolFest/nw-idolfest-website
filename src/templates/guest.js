@@ -35,7 +35,12 @@ export default function Guest({
             />
 
             <PageContent>
-              <GuestComponent personName={fmt.name} guestTitle={fmt.descriptor} guestSocials={socials}>
+              <GuestComponent 
+                personName={fmt.name} 
+                guestTitle={fmt.descriptor} 
+                guestSocials={socials}
+                image={fmt.guestimg}
+              >
                 <MDXRenderer>{page.body}</MDXRenderer>
               </GuestComponent>
             </PageContent>
@@ -51,6 +56,7 @@ export const query = graphql`
         title,
         name,
         descriptor,
+        guestimg,
 
         twitter,
         twitch,
