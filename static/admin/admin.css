@@ -23,6 +23,11 @@
     margin-left: 4px;
 }
 
+.site-headsup a {
+    font-size: 10px;
+    font-weight: bold;
+}
+
 body {
     background-color: rgb(255, 246, 254) !important;
 }
