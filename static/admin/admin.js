@@ -92,13 +92,14 @@ CMS.registerPreviewTemplate("navigation", NavPreview)
 var GuestPreview = createClass({
     render: function() {
         const entry = this.props.entry.toJS();
+        const guestimg = this.props.getAsset(this.props.entry.getIn(['data', 'guestimg'])).toString()
         return h('div', {},
             h('div', {"className": "heading-wrapper"},
                 h('h1', {}, entry.data.title)),
             h('div', {"className": "text guest-container"}, 
                 h('div', {className: "guest-parent"}, 
                     h('div', {className: "image-preview"}, 
-                        h("img", {src: this.props.getAsset(entry.guestimg).toString()})),
+                        h("img", {src: guestimg})),
                     h('div', {className: "guest-text"},
                         this.props.widgetFor('body'))),
                 h('div', {className: "text dummy-container"},
