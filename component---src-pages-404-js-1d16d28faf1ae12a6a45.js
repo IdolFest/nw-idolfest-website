@@ -1,0 +1,2 @@
+(self.webpackChunknw_idolfest_website=self.webpackChunknw_idolfest_website||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var l=n(7294),u=n(7095),s=n(5583),a=n(6273),o=n(5954);t.default=function(){return l.createElement(u.Z,null,l.createElement(s.Z,{title:"404: Not found"}),l.createElement(o.Z,{title:"404: Not Found"}),l.createElement(a.Z,null,l.createElement("p",null,"You just found a page that doesn't exist... the sadness.")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-1d16d28faf1ae12a6a45.js.map
