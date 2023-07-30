@@ -93,5 +93,9 @@ a {
 }
 
 .guest-container .image-preview {
+    margin-left: 16px;
+}
+
+.guest-container .image-preview img {
     max-width: 200px;
 }
