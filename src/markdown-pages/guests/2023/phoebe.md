@@ -1,18 +1,21 @@
 ---
-slug: phoebe
 name: Phoebe
-title: Phoebe
-descriptor: Idol, Voice Actor, V-Tuber
-template: guest
-homepage: https://feebeechanchibi.com/
-twitch: https://www.twitch.tv/feebee
 youtube: https://youtube.com/c/feebeechanchibi
+slug: phoebe
+title: Phoebe
+template: guest
+descriptor: Idol, Voice Actor, V-Tuber
+twitch: https://www.twitch.tv/feebee
 twitter: https://www.twitter.com/feebeechanchibi
-NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
+homepage: https://feebeechanchibi.com/
+guestimg: /images/guests/heroimage.png
+NOTE: Make sure image of the guest is in the media folder, named
+  guest_(YEAR)_(GUEST_SLUG).png
 ---
-
 DISCLAIMER: This is a test page using a guest from last year. If you see this, don't take this guest showing up at 
-NWIF 2023 for granted :)
+NWIF 2023 for granted :) 
+
+Also, I replaced her image. Sorry :<
 
 Get ready to sing, dance, and smile with 2.5D fairytale idol, Phoebe! Phoebe (also known by her screen name "Feebeechanchibi") is a California-based singer, VA, and VTuber dedicated to making people smile and enchanting them on stage with her heartwarming timbre and fairy-like vocals. She loves singing and writing her own original songs in Japanese and English, and performing on both the IRL and virtual stage.  
 
