@@ -20,7 +20,3 @@ Though our beginnings may be humble, our love for idols knows no bounds. With yo
 Our all-volunteer staff is made up of veteran convention runners from all backgrounds and professions. We operate under a policy of transparency and long-term planning to bring the best possible experience to the Pacific Northwest.
 
 Want to join up? Learn about [volunteering](/volunteer)!
-
-## Test image I need to delete
-
-![](/images/uploads/lain.jpeg)
