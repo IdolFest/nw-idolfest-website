@@ -74,9 +74,9 @@ collections:
     delete: true
     slug: "{{slug}}" # (     o_O) slug
     fields: 
-      - {label: "Title", name: "title", widget: "string"}
       - {label: "Template", name: "template", widget: "hidden", default: "guest"}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Guest Name", name: "name", widget: "string"}
+      - {label: "Page Title (or guest name again)", name: "title", widget: "string"}
       - {label: "Descriptor", name: "descriptor", widget: "string"}
       - {label: "Twitch", name: "twitch", widget: "string", required: false}
       - {label: "Youtube", name: "youtube", widget: "string", required: false}
