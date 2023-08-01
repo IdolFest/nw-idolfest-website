@@ -62,9 +62,10 @@ Do not stick anything to hotel walls. Any unapproved material on hotel walls wil
 
 ## Cosplay
 
-We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay:
+We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay, and please see the following section on Weapons for more information.
 
 *   Our coverage policy is gender-neutral. All clothing or costumes must cover the complete groin, buttocks, and breasts.
+
 *   All clothing worn in convention space must be appropriate for our PG-13 rating. This includes text on costumes or accessories attached to costumes.
 *   Clothing printed with pornographic imagery, including any ahegao clothing, is not permitted.
 *   Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make [“invisible shoes”](https://www.andsewingishalfthebattle.com/invisible-shoes/).
@@ -74,13 +75,31 @@ We’re excited to see cosplayers sharing their love of anime and idols! Keep th
 *   No costumes may be realistic depictions of American law enforcement, current American military uniforms, first responders, emergency medical personnel, or any official government agent.
 *   Costumes may not target or harass any specific person, culture, nationality, or anything else that may come off as rude or inappropriate. Our anti-harassment policy applies at all times.
 
+## Weapons
+
+**Live Steel**
+
+Live steel props are any props crafted from metal with a pointed end or blade-like edge, whether blunt or sharp. All such objects are strictly prohibited in convention spaces. This rule does not apply to objects with only the appearance of metal, such as wooden swords wrapped in aluminum foil.
+
+**Weapons**
+
+Projectile weapons such as bows, slings, or crossbows must be disabled and unloaded. Bows must be unstrung or strung with a flimsy and loose material such as twine. No bolts or arrows may be carried as part of a costume unless they are fake, not fireable, and not sharp or dangerous.
+
+**Gun-like Props**
+
+All props that can reasonably be perceived to be a real firearm due to their color, size, shape, or other characteristics are prohibited from the convention. Gun-like props that do not fall under this restriction must have an orange tip as part of the prop at the point of manufacture. (That is, using orange tape or paint on the tip does not qualify unless you made the prop yourself, e.g. out of Styrofoam.) Furthermore, no airsoft guns of any kind are allowed in convention space, disabled or otherwise, and no ammunition of any kind may be carried. Toy guns (such as NERF guns) must be unloaded and their magazines, if present, must be removed except during photos. In all cases, take care to avoid gun-like props with color schemes commonly found on real firearms such as black, gunmetal gray, or tan.
+
+**Guns**
+
+Real firearms, even if disabled or unloaded, are strictly prohibited in all convention spaces. If you are an off-duty law enforcement officer, carrying your sidearm through convention space is at the discretion of the Head of Security. Please come see the Head of Security when you enter the con so there are no unfortunate misunderstandings.
+
 ## Accessibility
 
 NWIF is committed to making our event accessible to all. Our approach to some accessibility needs are detailed below, but this is not a complete list. If you have further accessibility needs, please [contact us](/contact)! 
 
 Our host hotel, the DoubleTree, complies with ADA guidelines in most spaces. Their website has a full list of [accessible amenities](https://doubletree3.hilton.com/en/hotels/washington/doubletree-by-hilton-hotel-seattle-airport-CTAC-DT/about/amenities.html).
 
-Our event space for 2023 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor. All rooms can be accessed without steps. 
+Our event space for 2023 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor, to the right of our registration tables. A convention staff member or hotel staff member will be able to direct you. All rooms can be accessed without steps
 
 If you are unable to stand in line for a panel, please contact a member of our Safety team. They can assist you with either a chair to wait to the side of the line, or an early seat at the panel.
 
