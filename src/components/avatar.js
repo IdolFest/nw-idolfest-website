@@ -3,6 +3,7 @@ import { Box, Grid } from '@material-ui/core'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { makeStyles } from '@material-ui/styles'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { slugifyGuestName } from './Guest'
 
 const useStyles = makeStyles(theme => ({
   person: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Avatar({ personName, showLink, showName=true, year }) {
   const classes = useStyles()
-  const personNameSlug = `${personName.split(" ").join("").toLowerCase()}`
+  const personNameSlug = slugifyGuestName(personName)
 
 
   const data = useStaticQuery(

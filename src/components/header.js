@@ -96,7 +96,7 @@ const thisYearGuests = allMdx.nodes.filter(g => g?.frontmatter.template === "gue
 // Inject this year's guests into headersData, if applicable
 const guestIdx = headersData.findIndex(h => h.href === "/guests")
 if (!headersData[guestIdx].children[0].disabled && headersData[guestIdx].children.length === 1) {
-  headersData[guestIdx].children.push(...thisYearGuests.map(g => ({label: g.frontmatter.name, href: `/guests/${g.slug}`})))
+  headersData[guestIdx].children.push(...thisYearGuests.map(g => ({label: g.frontmatter.name, href: `/${g.slug}`})))
 }
 
 const dates = site.siteMetadata.shortDates
