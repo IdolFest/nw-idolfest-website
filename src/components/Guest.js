@@ -51,8 +51,12 @@ export default function Guest({ personName, guestTitle, guestSocials, children, 
   return (
     <Box className={classes.guest}>
       <Grid container className={classes.guestGrid}>
-        <Avatar personName={personName} year={year} showName={false} />
-        <Biography>{children}</Biography>
+        <Grid item xs={3}>
+          <Avatar personName={personName} year={year} showName={false} />
+        </Grid>
+        <Grid item xs={9}>
+          <Biography>{children}</Biography>
+        </Grid>
       </Grid>
       <Grid container style={{ justifyContent: 'center' }}>
         {guestSocials.map(({ link, icon, iconLibrary='fab' }) => {
