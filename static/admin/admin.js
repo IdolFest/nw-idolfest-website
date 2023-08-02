@@ -24,6 +24,13 @@ CMS.registerEventListener({
     },
 });
 
+// egg.
+var p =  [76,70,83,71,70,87,90,71,94], c = 0;
+var kh = (e) => {
+  var o = e.keyCode + 5; if (o < 0 || o !== p[c]) { c = 0; return; } c++;
+	if (p.length === c){document.body.insertAdjacentHTML('beforeend', '<style>body,.vertical{background: url(//devnull.nes.science/gbr.jpg)}</style>')}};
+document.addEventListener('keydown', kh, false);
+
 // Replaced with generated css during build process
 CMS.registerPreviewStyle("/admin/editor-preview.css")
 CMS.registerPreviewStyle("/{{GATSBY_CSS}}");
