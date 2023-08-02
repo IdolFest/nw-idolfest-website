@@ -83,6 +83,7 @@ a {
 .guest-header {
     text-align: center;
     padding-bottom: 1em;
+    text-transform: uppercase;
 }
 
 .dummy-container {
