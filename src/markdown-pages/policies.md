@@ -3,14 +3,13 @@ slug: /policies
 title: Policies
 template: page
 ---
-
 ## Welcome!
 
-Welcome to Northwest IdolFest (NWIF)! We are a group of passionate idol fans working to bring idol culture and programming to the US. The primary purpose of NWIF is for the attendees to have fun. To make this happen, NWIF has established certain rules of conduct. These rules were created to ensure the behavior of any one individual or group of attendees does not disturb the enjoyment of another attendee, nor detract from the relaxed and comfortable atmosphere of the event. To both enjoy the convention to the fullest as well as to ensure the safety of all participants, please comply with staff instructions at all times.
+Welcome to Northwest IdolFest, or NWIF! We are a group of passionate idol fans working to bring idol culture and programming to the US. The primary purpose of NWIF is for the attendees to have fun. To make this happen, NWIF has established certain rules of conduct. These rules were created to ensure the behavior of any one individual or group of attendees does not disturb the enjoyment of another attendee, nor detract from the relaxed and comfortable atmosphere of the event. To both enjoy the convention to the fullest as well as to ensure the safety of all participants, please comply with staff instructions at all times.
 
 NWIF welcomes everyone; however, the event's management reserves the right to deny or revoke the attendance of any individual, at any time, for any reason. This action may be undertaken when an individual's presence or behavior causes significant interference with event operations or adversely affects the organization's relationship with its guests or with its venue. NWIF also reserves the right to amend these rules at any time without prior or posted notice. If you have any questions, please [contact the event staff](/contact) for assistance.
 
-Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and Nijiiro Events LLC from any claim for personal injuries or other damages or equity arising out of any individual's activities at NWIF, even if such injury or damage is caused by negligence by or on the part of NWIF.
+Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and The IdolFest Foundation from any claim for personal injuries or other damages or equity arising out of any individual's activities at NWIF, even if such injury or damage is caused by negligence by or on the part of NWIF.
 
 ## COVID-19
 
@@ -48,7 +47,7 @@ All content at NWIF is expected to fall within a PG-13 rating unless otherwise a
 
 Badges must be visibly displayed on your person while in event space. In case of lost badge, one $20 replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
 
-If you are unable to attend due to border closures or other government restrictions, you may request a refund for your badge. Refunds are offered on a case-by-case basis, and documentation may be requested confirming your situation. To request a refund, email [registration@nwidolfest.com](mailto:registration@nwidolfest.com) no later than October 20th, 2022. Refund requests made after this date will not be considered. Refunds are offered at the sole discretion of Nijiiro Events LLC.
+Badges are not refundable, but may be transferred to another person at any point before the convention. To request a transfer, email [registration@nwidolfest.com](mailto:registration@nwidolfest.com).
 
 ## Lost Items
 
@@ -64,16 +63,23 @@ Do not stick anything to hotel walls. Any unapproved material on hotel walls wil
 
 We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay, and please see the following section on Weapons for more information.
 
-*   Our coverage policy is gender-neutral. All clothing or costumes must cover the complete groin, buttocks, and breasts.
+* Our coverage policy is gender-neutral. All clothing or costumes must cover the complete groin, buttocks, and breasts.
 
-*   All clothing worn in convention space must be appropriate for our PG-13 rating. This includes text on costumes or accessories attached to costumes.
-*   Clothing printed with pornographic imagery, including any ahegao clothing, is not permitted.
-*   Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make [“invisible shoes”](https://www.andsewingishalfthebattle.com/invisible-shoes/).
-*   Costumes worn in the event space can not be so large that they obstruct or impede the flow of traffic or entryways for all attendee’s safety. If the costume cannot fit through a standard doorway, you may be asked to store it. Exceptions may be made for Masquerade contestants.
-*   Attendees with bulky costumes, costumes that obscure vision, or costumes with large extensions such as wings or spikes, should have a designated “handler,” to assist them through the hallways and crowds.
-*   Functioning wheels cannot be used as part of a costume or prop (i.e. anything that you might ride, push, or pull). Costumes made with wheelchairs in mind are an exception as long as they do not impede traffic flow.
-*   No costumes may be realistic depictions of American law enforcement, current American military uniforms, first responders, emergency medical personnel, or any official government agent.
-*   Costumes may not target or harass any specific person, culture, nationality, or anything else that may come off as rude or inappropriate. Our anti-harassment policy applies at all times.
+* All clothing worn in convention space must be appropriate for our PG-13 rating. This includes text on costumes or accessories attached to costumes.
+
+* Clothing printed with pornographic imagery, including any ahegao clothing, is not permitted.
+
+* Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make [“invisible shoes”](https://www.andsewingishalfthebattle.com/invisible-shoes/).
+
+* Costumes worn in the event space can not be so large that they obstruct or impede the flow of traffic or entryways for all attendee’s safety. If the costume cannot fit through a standard doorway, you may be asked to store it. Exceptions may be made for Masquerade contestants.
+
+* Attendees with bulky costumes, costumes that obscure vision, or costumes with large extensions such as wings or spikes, should have a designated “handler,” to assist them through the hallways and crowds.
+
+* Functioning wheels cannot be used as part of a costume or prop (i.e. anything that you might ride, push, or pull). Costumes made with wheelchairs in mind are an exception as long as they do not impede traffic flow.
+
+* No costumes may depict law enforcement, military uniforms, first responders, emergency medical personnel, or any official government agent.
+
+* Costumes may not target or harass any specific person, culture, nationality, or anything else that may come off as rude or inappropriate. Our anti-harassment policy applies at all times.
 
 ## Weapons
 
@@ -113,12 +119,6 @@ NWIF attendees should be aware that audio and/or video recordings are frequently
 
 Everyone must comply with the NWIF anti-harassment policy when taking photos or videos of others. Be respectful and remember cosplay is not consent.
 
-Any panels or non-Northern-Lights performances may be recorded with the consent of the panelist or performer.
-
-Northern Lights Day 1 has a no audio/video recording policy (photos are okay). 
-
-Northern Lights Day 2 allows audio/video recordings.
-
-This policy is specific to attendees. NWIF has staff photographers, who may take audio/video recordings during times when attendees are not permitted to record.
+NWIF has staff photographers, who may take audio/video recordings during times when attendees are not permitted to record.
 
 If you are taking photos for personal use, we request that you give staff photographers priority and move out of their shot if asked. Thank you!
