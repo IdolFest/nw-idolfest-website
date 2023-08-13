@@ -104,6 +104,8 @@ collections:
         - {label: "Short Dates", name: "shortDates", widget: "string"}
         - {label: "Long Dates", name: "longDates", widget: "string"}
         - {label: "Location", name: "location", widget: "string"}
+        - {label: "Sister Event Banner", name: "showSisterBanner", widget: "boolean"}
+        - {label: "Sister Banner Text", name: "sisterBannerText", widget: "text"}
         - label: Social
           name: social
           widget: object
