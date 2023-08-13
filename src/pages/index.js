@@ -7,7 +7,7 @@ import PageHeader from '@components/PageHeader'
 import { graphql, useStaticQuery } from 'gatsby'
 import { makeStyles, Button } from '@material-ui/core'
 import ImageCarousel from "../components/ImageCarousel"
-import ScifBanner from "../components/ScifBanner"
+import SisterBanner from "../components/SisterBanner"
 
 const useStyles = makeStyles(theme => ({
   introWrapper: {
@@ -80,7 +80,7 @@ const IndexPage = () => {
       />
 
       <PageContent>
-        <ScifBanner />
+        <SisterBanner />
         <div className={classes.carouselHolder}>
           <ImageCarousel images={imageFiles} />
         </div>

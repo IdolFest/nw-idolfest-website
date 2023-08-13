@@ -42,32 +42,38 @@ const scIdolfestLogo = (
           />
   );
 
-const ScifBanner = (props) => {
+const SisterBanner = (props) => {
     const classes = useStyles()
-    const { site: {siteMetadata: {showSisterBanner, sisterBannerText }}} = useStaticQuery(
+    const { site: {siteMetadata: {sisterBannerEvent, sisterBannerText}}} = useStaticQuery(
         graphql`
             query {
                 site {
                     siteMetadata {
-                        showSisterBanner,
+                        sisterBannerEvent,
                         sisterBannerText
                     }
                 }            
             }`
     )
-
-  if (!showSisterBanner) {
-    return <></>
-  }
+  let sisterBannerIcon = <></>
     
+  switch (sisterBannerEvent) {
+    case "scif":
+      sisterBannerIcon = scIdolfestLogo;
+      break;
+    case "none":
+    default:
+      return <></>
+  }
+
   return (
       <div className={classes.banner}>
         <a href="https://scidolfest.com" target="_blank" rel="noreferrer">
-            {scIdolfestLogo}
+            {sisterBannerIcon}
             {sisterBannerText}
         </a>
       </div>
   )
 }
 
-export default ScifBanner
+export default SisterBanner
