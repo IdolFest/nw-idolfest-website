@@ -44,23 +44,27 @@ const scIdolfestLogo = (
 
 const ScifBanner = (props) => {
     const classes = useStyles()
-    const { site } = useStaticQuery(
+    const { site: {siteMetadata: {showSisterBanner, sisterBannerText }}} = useStaticQuery(
         graphql`
             query {
                 site {
                     siteMetadata {
-                        showSisterBanner
+                        showSisterBanner,
+                        sisterBannerText
                     }
                 }            
             }`
     )
-    
 
+  if (!showSisterBanner) {
+    return <></>
+  }
+    
   return (
       <div className={classes.banner}>
         <a href="https://scidolfest.com" target="_blank" rel="noreferrer">
             {scIdolfestLogo}
-            SoCal IdolFest is coming to LA on August 12! Click here to find out more!
+            {sisterBannerText}
         </a>
       </div>
   )
