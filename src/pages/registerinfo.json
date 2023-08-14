@@ -1,5 +1,5 @@
 {
-    "registrationEnabled": false,
+    "registrationEnabled": true,
     "showBadgePickupHours": false,
     "badgePickupHoursText": "Thursday, October 20: 6-8 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM\n",
     "showBadgePricingNote": false,
