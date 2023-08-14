@@ -118,6 +118,33 @@ collections:
             - {label: "Instagram", name: "instagram", widget: "string"}
             - {label: "Discord", name: "discord", widget: "string"}
             - {label: "Email", name: "email", widget: "string"}
+    - label: "Registration"
+      name: "registration"
+      file: "src/pages/registerinfo.json"
+      extension: "json"
+      description: "Enable or disable registration, set badge prices, etc"
+      fields: 
+        - {label: "Registration Enabled", name: "registrationEnabled", widget: "boolean"}
+        - {label: "Show Badge Pickup Text", name: "showBadgePickupHours", widget: "boolean"}
+        - {label: "Badge Pickup Text (html ok)", name: "badgePickupHoursText", widget: "text"}
+        - {label: "Show Weekend Pricing Text", name: "showBadgePricingNote", widget: "boolean"}
+        - {label: "Weekend Pricing Text (html ok)", name: "badgePricingHoursText", widget: "text"}
+        - {label: "Heading to show when registration closed", name: "regClosedHeading", widget: "string"}
+        - {label: "Text to show when registration closed", name: "regClosedText", widget: "text"}
+
+        - label: Badge Tiers
+          name: allBadgeTiers
+          widget: list
+          fields: 
+            - {label: "Badge Name", name: "badgeName", widget: "string"}
+            - {label: "Badge Key (airtable - DO NOT CHANGE)", name: "badgeKey", widget: "string"}
+            - {label: "Currently Available", name: "onSale", widget: "boolean"}
+            - {label: "Has Tax", name: "hasTax", widget: "boolean"}
+            - {label: "Price (Does not affect square price)", name: "price", widget: "string"}
+            - {label: "Tier Name", name: "tierName", widget: "string"}
+            - {label: "Desciption", name: "description", widget: "string"}
+            - {label: "Perks", name: "perks", widget: "list"}
+
     - label: "Navigation Items"
       label_singular: "Navigation Item"
       name: "navigation"
