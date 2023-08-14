@@ -40,7 +40,6 @@ const useStyles = makeStyles(theme => ({
   htmlBody: {
     whiteSpace: "pre-wrap",
     fontSize: "1.5em",
-    fontFamily: 'Open Sans", "Source Sans Pro", sans-serif',
     fontWeight: 400,
     lineHeight: 1.25,
     paddingBottom: "1em"
