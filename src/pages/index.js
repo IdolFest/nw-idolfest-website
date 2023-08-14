@@ -9,7 +9,8 @@ import { makeStyles, Button } from '@material-ui/core'
 import ImageCarousel from "../components/ImageCarousel"
 import SisterBanner from "../components/SisterBanner"
 
-import { title, body, registerButtonEnabled, buttons } from "./homepage.json"
+import homepageData from "./homepage.json"
+const { title, body, registerButtonEnabled, buttons } = homepageData
 
 const useStyles = makeStyles(theme => ({
   introWrapper: {
