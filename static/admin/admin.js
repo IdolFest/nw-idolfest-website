@@ -117,3 +117,47 @@ var GuestPreview = createClass({
     }
 })
 CMS.registerPreviewTemplate("guests", GuestPreview)
+
+var RegisterPreview = createClass({
+    render: function() {
+        const data = this.props.entry.toJS().data
+        let regPageItself
+        let preStuff
+        if (data.registrationEnabled) {
+            let prestuff1, prestuff2
+            if (data.showBadgePickupHours) {
+                prestuff1 = h('div', {className: "badge-text"}, h('h4', {}, 'Badge Pick-Up Hours'), 
+                    h('div', {dangerouslySetInnerHTML: {__html: data.badgePickupHoursText}}))
+            }
+            if (data.showBadgePricingNote) {
+                prestuff2 = h('div', {className: "badge-text"}, h('h4', {}, 'Silver Badge Pricing'), 
+                    h('div', {dangerouslySetInnerHTML: {__html: data.badgePricingHoursText}}))
+            }
+            if (prestuff1 || prestuff2) {
+                preStuff = h('div', {}, prestuff1, prestuff2)
+            }
+
+            regPageItself = h('div', {}, 
+                h('small', {}, 'Tax is included in all badge prices!'),
+                preStuff,
+                h('div', {className: 'badge-previews'}, 
+                    data.allBadgeTiers.map(tier => h('div', {className: 'badge-preview'}, 
+                        h('strong', {}, `${tier.tierName} - $${tier.price}`),
+                        h('p', {dangerouslySetInnerHTML: {__html: tier.description}}),
+                        h('ul', {}, tier.perks.map(p => h('li', {}, p)))))),
+                    h('strong', {}, '[ Register Form ]'))
+        } else {
+            regPageItself = h('div', {}, 
+                h('h1', {}, data.regClosedHeading),
+                h('div', {dangerouslySetInnerHTML:{__html: data.regClosedText}}),
+                h('p', {style:{fontWeight: "bold"}}, '[ Email Subscription Area ]'))
+        }
+        return h('div', {}, 
+            h('div',{"className": "heading-wrapper"},
+                h('h1', {}, 'Attend')),
+            h('small', {}, 'Note: Please imagine this looks like the real register page. I know it doesn\'t line up perfectly.'),
+            h('div', {className: 'generic-container badge-container'},
+                regPageItself))
+    }
+})
+CMS.registerPreviewTemplate("registration", RegisterPreview)
