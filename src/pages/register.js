@@ -23,7 +23,7 @@ import {
 import { styled, makeStyles } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
-import { allBadgeTiers, registrationEnabled, showBadgePricingNote, showBadgePickupHours, badgePickupHoursText, badgePricingHoursText } from './registerinfo.json'
+import { allBadgeTiers, registrationEnabled, showBadgePricingNote, showBadgePickupHours, badgePickupHoursText, badgePricingHoursText, regClosedText } from './registerinfo.json'
 
 let lambdaUrl
 
@@ -440,10 +440,8 @@ const ClosedRegisterPage = () => {
 
       <PageContent>
         {/* FIXME: CUSTOM TEXT */}
-        <p>
-          Registration is closed because Northwest IdolFest 2022 is now over.
-          Sign up for our email list below to get notified when our next
-          convention will be!
+        <p dangerouslySetInnerHTML={regClosedText}>
+          
         </p>
         <NewsletterSignup />
       </PageContent>
