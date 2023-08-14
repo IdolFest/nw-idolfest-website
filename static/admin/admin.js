@@ -145,12 +145,12 @@ var RegisterPreview = createClass({
                         h('strong', {}, `${tier.tierName} - $${tier.price}`),
                         h('p', {dangerouslySetInnerHTML: {__html: tier.description}}),
                         h('ul', {}, tier.perks.map(p => h('li', {}, p)))))),
-                    h('strong', {}, '[ Register Form ]'))
+                    h('div', {className: "dummy-container"}, '[ Register Form ]'))
         } else {
             regPageItself = h('div', {}, 
                 h('h1', {}, data.regClosedHeading),
                 h('div', {dangerouslySetInnerHTML:{__html: data.regClosedText}}),
-                h('p', {style:{fontWeight: "bold"}}, '[ Email Subscription Area ]'))
+                h('div', {className: "dummy-container"}, '[ Email Subscription Area ]'))
         }
         return h('div', {}, 
             h('div',{"className": "heading-wrapper"},
@@ -161,3 +161,29 @@ var RegisterPreview = createClass({
     }
 })
 CMS.registerPreviewTemplate("registration", RegisterPreview)
+
+var HomepagePreview = createClass({
+    render: function() {
+        const entry = this.props.entry.toJS()
+        const data = entry.data
+        let regBtn = h()
+        let btns = data.buttons.map(b => h('button',{href:b.href}, b.text))
+        if (data.registerButtonEnabled) {
+            regBtn = h('button', {className: "reg-button"}, 'Buy a Badge')
+        }
+
+
+        return h('div', {},
+            h('div', {"className": "heading-wrapper"},
+                h('h1', {}, data.title)),
+            h('div', {"className": "text post-container pre-line home-preview"}, 
+                h('div', {className: "dummy-container"}, "[ IMAGE CAROUSEL ]"),
+                this.props.widgetFor('body'),
+                regBtn,
+                h('div', {className: 'buttons'}, btns),
+                h('div', {className: "dummy-container"}, "[ NEWSLETTER SIGNUP ]"),
+                )
+        )
+    }
+})
+CMS.registerPreviewTemplate('homepage', HomepagePreview)

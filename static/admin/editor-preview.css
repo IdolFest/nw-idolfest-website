@@ -112,13 +112,9 @@ a {
 .badge-preview {
     border-radius: 15px;
     background-color: #f4a5d2;
-    width: 250px;
+    width: 160px;
     margin: 4px;
     padding: 10px;
-}
-
-.badge-container {
-    max-width: 900px;
 }
 
 .badge-text {
@@ -129,4 +125,30 @@ a {
 
 .badge-text h4 {
     font-size: 110%;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
+
+.home-preview .reg-button {
+    width: 100%;
+    margin: 16px auto;
+    background-color: #f4a5d2;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 42px;
+}
+
+.home-preview .buttons {
+    display: flex;
+}
+
+.home-preview .buttons button {
+    margin: 16px 8px;
+    background-color: #f4a5d2;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 36px;
+    flex-grow: 1;
 }
