@@ -9,6 +9,8 @@ import { makeStyles, Button } from '@material-ui/core'
 import ImageCarousel from "../components/ImageCarousel"
 import SisterBanner from "../components/SisterBanner"
 
+import { title, body, registerButtonEnabled, buttons } from "./homepage.json"
+
 const useStyles = makeStyles(theme => ({
   introWrapper: {
     position: "relative"
@@ -34,6 +36,14 @@ const useStyles = makeStyles(theme => ({
     display: "grid",
     placeItems: "center",
     marginBottom: "24px",
+  },
+  htmlBody: {
+    whiteSpace: "pre-wrap",
+    fontSize: "1.5em",
+    fontFamily: 'Open Sans", "Source Sans Pro", sans-serif',
+    fontWeight: 400,
+    lineHeight: 1.25,
+    paddingBottom: "1em"
   },
   buttonHolder: {
     display: "flex",
@@ -75,25 +85,20 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" />
 
-      <PageHeader 
-        title="Announcing NW IdolFest 2023!" 
-      />
+      <PageHeader title={title}/>
 
       <PageContent>
         <SisterBanner />
         <div className={classes.carouselHolder}>
           <ImageCarousel images={imageFiles} />
         </div>
-        <p>Get ready for NW IdolFest 2023!</p><br />
-        <p>
-          Back for our third year, Northwest IdolFest is a three day convention all about idols, anisong, and j-pop! 
-          Featuring your favorite idol performers, vendors, and tons of amazing panels, join us in Seattle, WA from October 20-22, 2023.
-        </p>
-        <div className={classes.buttonHolder}>
-          <Button variant="contained" size="large" className="cta" href="/register">Buy a Badge</Button>
-        </div>
-        <div className={classes.buttonHolder} style={{width: "50%", margin: "auto"}}>
-          <Button variant="contained" className="cta" href='https://idolfe.st/2023djapp'>Apply to DJ</Button>
+        <div className={classes.htmlBody} dangerouslySetInnerHTML={{__html: body}} />
+        {registerButtonEnabled ? 
+          <div className={classes.buttonHolder}>
+            <Button variant="contained" size="large" className="cta" href="/register">Buy a Badge</Button>
+          </div> :<></> }
+        <div className={classes.buttonHolder} style={{width: buttons.length === 1 ? "50%" : "100%", margin: "auto"}}>
+          {buttons.map(b => <Button key={b.href} variant="contained" className="cta" href={b.href}>{b.text}</Button>)}
         </div>
         <br />
         <br />
