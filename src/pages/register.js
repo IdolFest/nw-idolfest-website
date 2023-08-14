@@ -20,11 +20,10 @@ import {
   FormHelperText,
   Grid,
 } from '@material-ui/core'
-import { styled } from '@material-ui/styles'
+import { styled, makeStyles } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
-
-const registrationEnabled = true
+import { allBadgeTiers, registrationEnabled, showBadgePricingNote, showBadgePickupHours, badgePickupHoursText, badgePricingHoursText } from './registerinfo.json'
 
 let lambdaUrl
 
@@ -34,115 +33,17 @@ if (process.env.NODE_ENV === 'development') {
   lambdaUrl = 'https://9lr67gx861.execute-api.us-east-1.amazonaws.com/reg1-prod'
 }
 
+const useStyles = makeStyles(theme => ({
+  cmsContent: {
+    whiteSpace: "pre-line"
+  }
+}))
+
+
 const FormBox = styled(Box)({
   width: '80%',
   paddingBottom: '1em'
 })
-
-const allBadgeTiers = [
-  {
-    badgeName: 'Attendee',
-    badgeKey: 'badge-attendee',
-    onSale: true,
-    hasTax: false,
-    price: '80',
-    tierName: 'Silver',
-    description: 'This badge grants:',
-    perks: [
-      'Access to all events at NWIF',
-      'NWIF Discord role'
-    ]
-  },
-  {
-    badgeName: 'Sponsor',
-    badgeKey: 'badge-sponsor',
-    onSale: true,
-    hasTax: false,
-    price: '150',
-    tierName: 'Gold',
-    description: 'Everything in Silver, plus:',
-    perks: [
-      'Gold-only badge and lanyard',
-      'Gold-only penlight keychain',
-      'Sponsor Drawstring Bag',
-      'Sponsor Ribbon',
-      '2023 Sponsor T-shirt',
-      '2023 Sponsor Poster',
-      '2023 Sponsor Can Badge set',
-      'Priority seating for Main Events',
-      'Sponsor-only Discord channel',
-      'NWIF website special thanks'
-    ]
-  },
-  {
-    badgeName: 'Super Sponsor',
-    badgeKey: 'badge-supersponsor',
-    onSale: true,
-    hasTax: false,
-    price: '876',
-    tierName: 'Prism',
-    description: 'Everything in Gold, plus:',
-    perks: [
-      'Prism-only badge and lanyard',
-      'Prism-only penlight keychain',
-      'Prism-only penlight',
-      'Prism-only jet tag',
-      'Hotel for 3 nights',
-      'Badge & swag delivery to hotel room',
-      'Closing Ceremonies special thanks',
-      'Signed letter of thanks from NWIF chairs'
-    ]
-  },
-  {
-    badgeName: '5 and Under Badge',
-    badgeKey: 'badge-5-and-under',
-    onSale: false,
-    hasTax: false,
-    price: '0',
-    tierName: 'Mini Chibi',
-    description: "Children 5 and under are free when accompanied by an adult with a paid badge. (Max 2 children per adult.) <strong>No need to register them!</strong>",
-    perks: [
-      'Access to all events at NWIF',
-    ]
-  },
-  {
-    badgeName: '6 to 12 Badge',
-    badgeKey: 'badge-6-to-12',
-    onSale: true,
-    hasTax: false,
-    price: '40',
-    tierName: 'Chibi',
-    description: "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
-    perks: [
-      'Access to all events at NWIF',
-      'Special surprise at registration',
-    ]
-  },
-  {
-    badgeName: 'Spirit Badge',
-    badgeKey: 'badge-spirit',
-    onSale: true,
-    hasTax: false,
-    price: '20',
-    tierName: 'Dekimasen',
-    description: "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. <br><br>Shipping available to US and CA only. Badges will ship after the event.",
-    perks: [
-      'Badge and lanyard mailed to you',
-      'NWIF Discord role',
-    ]
-  },
-  {
-    badgeName: 'Whale',
-    price: '???',
-    onSale: false,
-    tierName: 'Whale',
-    description: "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
-    perks: [
-      'If you can dream it',
-      'We can do it!'
-    ]
-  }
-]
 
 const badgesRowOne = allBadgeTiers.slice(0, 3)
 const badgesRowTwo = allBadgeTiers.slice(3)
@@ -172,6 +73,7 @@ function isUnder18(date) {
 }
 
 const OpenRegisterPage = () => {
+  const classes = useStyles()
   let initialValues = {}
   if (process.env.NODE_ENV === 'development') {
     initialValues = { 
@@ -203,6 +105,25 @@ const OpenRegisterPage = () => {
     } 
   }
 
+  let boxNotes = <></>
+
+  if (showBadgePickupHours || showBadgePricingNote) {
+    let childNodes = []
+
+    if (showBadgePickupHours) {
+      childNodes.push(<h4>Badge Pick-Up Hours</h4>, <div className={classes.cmsContent} dangerouslySetInnerHTML={{__html: badgePickupHoursText}} />)
+    }
+    if (showBadgePricingNote) {
+      childNodes.push(<h4>Silver Badge Pricing</h4>, <div className={classes.cmsContent} dangerouslySetInnerHTML={{__html: badgePricingHoursText}} />)
+    }
+    boxNotes = (
+      <Grid container style={{ justifyContent: 'space-around' }}>
+        <div>
+          {childNodes}
+        </div>
+      </Grid>);
+  }
+
   return (
   <Layout>
     <Seo title="Register" />
@@ -215,29 +136,9 @@ const OpenRegisterPage = () => {
       
       <CenteredBox>
         <i>Tax is included in all badge prices!</i>
-      {/* 
-        <Grid container style={{ justifyContent: 'space-around' }}>
-          <div>
-          <h4>Badge Pick-Up Hours</h4>
-          <>
-            Thursday, October 20: 6-8 PM<br />
-            Friday, October 21: 10 AM-7 PM<br />
-            Saturday, October 22: 9:30 AM-7 PM<br />
-            Sunday, October 23: 9:30 AM-12 PM<br />
-          </>
-          </div>
-          <div>
-          <h4>Silver Badge Pricing</h4>
-          <>
-            Monday, Oct 17-Friday, Oct 21: $70<br />
-            Saturday, Oct 22: $50<br />
-            Sunday, Oct 23: $20<br />
-            <i>NWIF does not sell one day badges. <br />
-            Silver badges decrease in price as the weekend goes on.</i><br />
-          </>
-          </div>
-        </Grid>
-      */}
+      
+        {boxNotes}
+    
       </CenteredBox> 
       <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
             {badgesRowOne.map((badge) => (
@@ -538,6 +439,7 @@ const ClosedRegisterPage = () => {
       <Hero header="Thank you for attending NW IdolFest 2022!" />
 
       <PageContent>
+        {/* FIXME: CUSTOM TEXT */}
         <p>
           Registration is closed because Northwest IdolFest 2022 is now over.
           Sign up for our email list below to get notified when our next
