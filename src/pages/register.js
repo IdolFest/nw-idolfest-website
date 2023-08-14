@@ -23,7 +23,7 @@ import {
 import { styled, makeStyles } from '@material-ui/styles'
 import { navigate, Link } from 'gatsby'
 import RegistrationTier from '@components/registrationTier'
-import { allBadgeTiers, registrationEnabled, showBadgePricingNote, showBadgePickupHours, badgePickupHoursText, badgePricingHoursText, regClosedText } from './registerinfo.json'
+import { allBadgeTiers, registrationEnabled, showBadgePricingNote, showBadgePickupHours, badgePickupHoursText, badgePricingHoursText, regClosedHeading, regClosedText } from './registerinfo.json'
 
 let lambdaUrl
 
@@ -436,11 +436,10 @@ const ClosedRegisterPage = () => {
     <Layout>
       <Seo title="Register" />
 
-      <Hero header="Thank you for attending NW IdolFest 2022!" />
+      <Hero header={regClosedHeading} />
 
       <PageContent>
-        {/* FIXME: CUSTOM TEXT */}
-        <p dangerouslySetInnerHTML={regClosedText}>
+        <p dangerouslySetInnerHTML={{__html: regClosedText}}>
           
         </p>
         <NewsletterSignup />
