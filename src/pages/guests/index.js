@@ -48,7 +48,7 @@ const GuestsPage = () => {
                 <h2><CenteredBox>Appearing In Person</CenteredBox></h2>
                 <Grid container style={{ justifyContent: 'space-around' }}>
                     {guests.length > 0 ? 
-                        guests.map(g => guests.map(guest => (<Avatar key={guest.slug} personName={guest.frontmatter.name} year={year} showLink={true} />))) 
+                        guests.map(guest => (<Avatar key={guest.slug} personName={guest.frontmatter.name} year={year} showLink={true} />))
                         : noGuests}
                 </Grid>
 
