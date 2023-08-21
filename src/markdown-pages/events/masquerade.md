@@ -13,7 +13,7 @@ Our Masquerade will take place on Saturday, October 21.
 
 1. All contestants and all individuals in a group must have a valid badge to attend NWIF 2023.  
 
-1. A single badge CANNOT be split among a group.  
+   1. A single badge CANNOT be split among a group.  
 2. All attendees must follow proper [NWIF policies](https://nwidolfest.com/policies).
 3. All attendees must follow proper [COVID-19 policies](https://nwidolfest.com/policies) laid out by NWIF.
 
