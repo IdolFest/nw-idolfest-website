@@ -55,7 +55,7 @@
         {
           "label": "Masquerade",
           "href": "/events/masquerade",
-          "disabled": true
+          "disabled": false
         }
       ]
     },
