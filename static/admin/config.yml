@@ -126,13 +126,14 @@ collections:
       fields: 
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Register Button Visible", name: "registerButtonEnabled", widget: "boolean"}
-        - {label: "Body Text (html ok)", name: "body", widget: "text"}
+        - {label: "Body Text (html ok)", name: "body", widget: "text", default: 3}
         - label: Buttons (Max 3)
           name: buttons
           widget: list
           fields: 
             - {label: "Button Text", name: "text", widget: "string"}
             - {label: "Link URL", name: href, widget: "string" }
+        - {label: "Number of event schedule days", name: "scheduleDays", widget: "number"}
     - label: "Registration"
       name: "registration"
       file: "src/pages/registerinfo.json"

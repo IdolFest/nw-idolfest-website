@@ -8,6 +8,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { makeStyles, Button } from '@material-ui/core'
 import ImageCarousel from "../components/ImageCarousel"
 import SisterBanner from "../components/SisterBanner"
+import moment from 'moment'
 
 import homepageData from "./homepage.json"
 const { title, body, registerButtonEnabled, buttons } = homepageData
@@ -59,6 +60,22 @@ const useStyles = makeStyles(theme => ({
     "& > .MuiButton-sizeLarge": {
       fontSize: "150%"
     }
+  },
+  scheduleBanner: {
+    fontSize: "20px",
+    lineHeight: "45px",
+    border: "1px solid #aaa",
+    borderRadius: "10px",
+    marginBottom: "16px",
+    padding: "5px 20px",
+    "& a": {
+      boxShadow: "none",
+    },
+    '@media (max-width: 800px)': {
+      fontSize: "16px",
+      lineHeight: "32px",
+      textAlign: "center"
+    }
   }
 }))
 
@@ -78,7 +95,41 @@ const IndexPage = () => {
         }
       }
     }
+    site {
+      siteMetadata {
+          shortDates
+      } 
+    }  
   }`)
+
+  const firstDayText = query.site.siteMetadata.shortDates
+  const now = moment()
+  const firstDay = moment(firstDayText.split(/[-,]/)[0] + firstDayText.split(/[-,]/)[2], "MMM DD YYYY", true)
+  const mondayBefore = firstDay.clone().startOf('week').add(1, 'day')
+  const days = []
+  for (let i = 0; i < homepageData.scheduleDays; i++) {
+    days.push(firstDay.clone().add(i, 'days'))
+  }
+
+  const scheduleDay = days.filter(d => now.isSame(d, 'day'))
+
+  const isLeadup = now.isAfter(mondayBefore) && now.isBefore(days[0])
+  let scheduleObj = <></>
+
+  if (isLeadup) {
+    const theDay = days[0].format('dddd')
+    scheduleObj = (
+      <div className={classes.scheduleBanner}>
+        <a href={`/events/${theDay.toLowerCase()}`}>Click here for the {theDay} schedule!</a>
+      </div>)
+  } else if (scheduleDay.length > 0) {
+    const theDay = scheduleDay[0].format('dddd')
+    scheduleObj = (
+      <div className={classes.scheduleBanner}>
+        <a href={`/events/${theDay.toLowerCase()}`}>Click here for today's schedule!</a>
+      </div>)
+  }
+  
   
   const imageFiles = query.images.nodes;
   return (
@@ -89,6 +140,7 @@ const IndexPage = () => {
 
       <PageContent>
         <SisterBanner />
+        {scheduleObj}
         <div className={classes.carouselHolder}>
           <ImageCarousel images={imageFiles} />
         </div>
