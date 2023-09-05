@@ -13,9 +13,7 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and T
 
 ## COVID-19
 
-NWIF will determine a final COVID-19 policy no later than September 1st, 2023 (pending changes to government regulations after that date).
-
-In 2022, NWIF required proof of COVID-19 vaccination and booster series for all attendees over 18. Masks were also required. In 2023, we are likely to continue requiring masks, and not require vaccines. However, we understand things can change significantly in a short period of time, and are waiting to make a final determination until closer to the event.
+For 2023, NWIF will require masks inside the Vendor Hall. Other areas of the convention will not require masks. COVID vaccination is strongly recommended, but not required.
 
 These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
 
@@ -64,21 +62,13 @@ Do not stick anything to hotel walls. Any unapproved material on hotel walls wil
 We’re excited to see cosplayers sharing their love of anime and idols! Keep the following rules in mind when designing your costume or cosplay, and please see the following section on Weapons for more information.
 
 * Our coverage policy is gender-neutral. All clothing or costumes must cover the complete groin, buttocks, and breasts.
-
 * All clothing worn in convention space must be appropriate for our PG-13 rating. This includes text on costumes or accessories attached to costumes.
-
 * Clothing printed with pornographic imagery, including any ahegao clothing, is not permitted.
-
 * Footwear is required at all times. Socks are not footwear. If you are cosplaying a character that’s barefoot, check out this tutorial on how to make [“invisible shoes”](https://www.andsewingishalfthebattle.com/invisible-shoes/).
-
 * Costumes worn in the event space can not be so large that they obstruct or impede the flow of traffic or entryways for all attendee’s safety. If the costume cannot fit through a standard doorway, you may be asked to store it. Exceptions may be made for Masquerade contestants.
-
 * Attendees with bulky costumes, costumes that obscure vision, or costumes with large extensions such as wings or spikes, should have a designated “handler,” to assist them through the hallways and crowds.
-
 * Functioning wheels cannot be used as part of a costume or prop (i.e. anything that you might ride, push, or pull). Costumes made with wheelchairs in mind are an exception as long as they do not impede traffic flow.
-
 * No costumes may depict law enforcement, military uniforms, first responders, emergency medical personnel, or any official government agent.
-
 * Costumes may not target or harass any specific person, culture, nationality, or anything else that may come off as rude or inappropriate. Our anti-harassment policy applies at all times.
 
 ## Weapons
