@@ -16,6 +16,23 @@ The site uses gh-pages to deploy. Assuming you have collaborator access to this 
 1. Locally, run `npm run deploy`.
 2. From GitHub, go to "Actions" and manually invoke Gatsby Publish.
 
+## Running the CMS (netlify-cms) locally
+
+If you're looking to test the CMS locally, it's not too hard. You'll need to run the site
+in production mode, which will also run on a different port. You'll have to do a full 
+build, which is very slow, but only needs to be done once. 
+
+**IMPORTANT**: Running the CMS locally points you at the real github repo, so publishing 
+**will deploy changes to the real site**. We don't currently have a good way to fake 
+this out.
+
+How: 
+1. Run `npm run start-compiled` to start the server
+2. Go to https://localhost/admin/
+3. As you make changes, run `npm run build-admin` in another tab to copy admin files over
+4. If you're making a bunch of changes, run `npm run watch-static-admin` - that will auto-copy things over.
+
+
 ## Random annoyances
 
 #### All the images are broken!! 
