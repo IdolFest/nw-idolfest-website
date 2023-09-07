@@ -1,48 +1,55 @@
-import * as React from 'react'
-import { Box, Grid } from '@material-ui/core'
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import { makeStyles } from '@material-ui/styles'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { slugifyGuestName } from './Guest'
+import * as React from "react"
+import { Box, Grid } from "@material-ui/core"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import { makeStyles } from "@material-ui/styles"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { slugifyGuestName, slugifyGuestNameForAvatars } from "./Guest"
 
 const useStyles = makeStyles(theme => ({
   person: {
-    textDecoration: 'none',
-    boxShadow: 'none',
-    textAlign: 'center',
-    fontSize: '2em',
-    '& a': {
-      textDecoration: 'none',
-      boxShadow: 'none',
-    }
+    textDecoration: "none",
+    boxShadow: "none",
+    textAlign: "center",
+    fontSize: "2em",
+    "& a": {
+      textDecoration: "none",
+      boxShadow: "none",
+    },
   },
   personName: {
-    textTransform: 'uppercase',
-    fontFamily: 'Junegull',
-    margin: '.5em 0',
+    textTransform: "uppercase",
+    fontFamily: "Junegull",
+    margin: ".5em 0",
   },
   personLink: {
-    '&:hover': {
-      textDecoration: 'underline',
+    "&:hover": {
+      textDecoration: "underline",
       color: theme.palette.light_pink,
-    }
+    },
   },
   avatarImage: {
-    '&:hover': {
-      transform: 'rotate(10deg)',
-    }
+    "&:hover": {
+      transform: "rotate(10deg)",
+    },
   },
 }))
 
-export default function Avatar({ personName, showLink, showName=true, year }) {
+export default function Avatar({
+  personName,
+  showLink,
+  showName = true,
+  year,
+}) {
   const classes = useStyles()
+  const personNameSlugAvatar = slugifyGuestNameForAvatars(personName)
   const personNameSlug = slugifyGuestName(personName)
-
 
   const data = useStaticQuery(
     graphql`
       query {
-        allImageSharp(filter: {fluid: {originalName: {glob: "*_star.png"}}}) {
+        allImageSharp(
+          filter: { fluid: { originalName: { glob: "*_star.png" } } }
+        ) {
           edges {
             node {
               gatsbyImageData
@@ -52,20 +59,23 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
             }
           }
         }
-        allMdx(filter: {slug: {regex: "/^guests\//"}}) {
+        allMdx(filter: { slug: { regex: "/^guests//" } }) {
           nodes {
-            slug,
+            slug
             frontmatter {
-              name,
-              slug,
-              guestimg,
+              name
+              slug
+              guestimg
             }
           }
         }
       }
-    `)
+    `
+  )
 
-  const mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug)
+  const mdxEntry = data.allMdx.nodes.find(
+    mdx => mdx?.frontmatter?.slug === personNameSlugAvatar
+  )
 
   let imageTag
 
@@ -75,17 +85,16 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       <img
         src={mdxEntry.frontmatter.guestimg}
         className={classes.avatarImage}
-        alt=''
+        alt=""
       />
     )
   } else {
     // If an image isn't found, find it from the filesystem
 
-
     const avatarFilename = `${personNameSlug}_star.png`
-    
+
     const avatarImageData = data.allImageSharp.edges.find(
-        edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
+      edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
     )?.node?.gatsbyImageData
 
     if (!avatarImageData) {
@@ -95,38 +104,37 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
     imageTag = (
       <GatsbyImage
         className={classes.avatarImage}
-        alt=''
+        alt=""
         image={avatarImageData}
-        loading='eager'
-        placeholder='blurred'
+        loading="eager"
+        placeholder="blurred"
       />
     )
   }
-  
+
   return (
-    <Grid container direction='column' style={{ maxWidth: '200px' }}>
-      <Box className={classes.person}>  
-      {!showLink ?
-        <>
-        {imageTag}
-        { showName ? 
-          <div className={classes.personName}>
-            {personName}
-          </div>
-          : null }
-        </>
-      : 
-        <>
-          <Link to={`/guests/${year}/${personNameSlug}`} className={`${classes.personLink}`}>
-          {imageTag}
-          { showName ? 
-            <div className={`${classes.personName}`}>
-              {personName}
-            </div>
-            : null }
-        </Link>
-        </>
-      }
+    <Grid container direction="column" style={{ maxWidth: "200px" }}>
+      <Box className={classes.person}>
+        {!showLink ? (
+          <>
+            {imageTag}
+            {showName ? (
+              <div className={classes.personName}>{personName}</div>
+            ) : null}
+          </>
+        ) : (
+          <>
+            <Link
+              to={`/guests/${year}/${personNameSlug}`}
+              className={`${classes.personLink}`}
+            >
+              {imageTag}
+              {showName ? (
+                <div className={`${classes.personName}`}>{personName}</div>
+              ) : null}
+            </Link>
+          </>
+        )}
       </Box>
     </Grid>
   )
