@@ -1,5 +1,5 @@
 ---
-slug: nonsweet
+slug: non-sweet
 name: Non Sweet
 title: Non Sweet
 descriptor: Content Creator, Published Author, and Anisong DJ
@@ -8,7 +8,7 @@ twitter: https://twitter.com/nonsweet_ca
 instagram: https://instagram.com/nonsweet_ca
 youtube: https://youtube.com/nonsweettv
 patreon: https://patreon.com/nonsweet
-guestimg: /images/guests/2022_nonsweet_star.png
+guestimg: /images/guests/2022_non_sweet_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

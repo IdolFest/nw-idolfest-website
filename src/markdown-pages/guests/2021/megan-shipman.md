@@ -1,12 +1,12 @@
 ---
-slug: meganshipman
+slug: megan-shipman
 name: Megan Shipman
 title: Megan Shipman
 descriptor: Voice Actor and ADR Director for anime, video games, and more
 template: guest
 tiktok: https://www.tiktok.com/@meganshipmanva
 twitter: https://www.twitter.com/18moptop
-guestimg: /images/guests/2021_meganshipman_star.png
+guestimg: /images/guests/2021_megan_shipman_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 
