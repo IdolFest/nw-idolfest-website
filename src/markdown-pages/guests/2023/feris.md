@@ -4,7 +4,7 @@ youtube: https://www.youtube.com/c/FerisMusic/featured
 slug: feris
 template: guest
 title: Feris
-descriptor: Composer for Idols and VTubers
+descriptor: Test change by Kai!!! Composer for Idols and VTubers
 twitter: https://twitter.com/Feris_Music
 homepage: https://ferismusic.carrd.co/
 spotify: https://open.spotify.com/playlist/5c9UWdiDiKVHbSfGn0xAzZ?si=0caab67493dc4214
