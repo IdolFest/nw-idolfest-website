@@ -72,7 +72,7 @@ collections:
     public_folder: "/images/guests"
     create: true
     delete: true
-    slug: "{{slug}}" # (     o_O) slug
+    slug: "{{fields.slug}}" # (     o_O) slug
     fields: 
       - {label: "Template", name: "template", widget: "hidden", default: "guest"}
       - {label: "Guest Name", name: "name", widget: "string"}
