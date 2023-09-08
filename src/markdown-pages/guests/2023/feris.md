@@ -1,5 +1,5 @@
 ---
-name: Feris2
+name: Feris
 youtube: https://www.youtube.com/c/FerisMusic/featured
 slug: feris
 template: guest
@@ -12,4 +12,4 @@ guestimg: /images/guests/2023_feris_star.png
 NOTE: Make sure image of the guest is in the media folder, named
   guest_(YEAR)_(GUEST_SLUG).png
 ---
-Ever since first discovering the Love Live! series, Feris has been aiming to be a top idol composer. Working with acts like Phoebe and Rin Penrose, Feris has taken the next step by founding virtual group Idolusion. We're excited to welcome Feris to our sparkling stage! Kai is testing something rq
+Ever since first discovering the Love Live! series, Feris has been aiming to be a top idol composer. Working with acts like Phoebe and Rin Penrose, Feris has taken the next step by founding virtual group Idolusion. We're excited to welcome Feris to our sparkling stage!
