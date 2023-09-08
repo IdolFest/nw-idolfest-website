@@ -46,7 +46,7 @@ collections:
     folder: "src/markdown-pages/about"
     create: true
     delete: true
-    slug: "{{fields.slug}}" # (    o_o) slug
+    slug: "{{slug}}" # (    o_o) slug
     fields: 
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Template", name: "template", widget: "hidden", default: "page"}
@@ -72,7 +72,7 @@ collections:
     public_folder: "/images/guests"
     create: true
     delete: true
-    slug: "{{slug}}" # (     o_O) slug
+    slug: "{{fields.slug}}" # (     o_O) slug
     fields: 
       - {label: "Template", name: "template", widget: "hidden", default: "guest"}
       - {label: "Guest Name", name: "name", widget: "string"}

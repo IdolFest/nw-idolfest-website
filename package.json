@@ -58,7 +58,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "start-compiled": "npm run build && npm run start-static-server",
-    "start-static-server": "npx http-server public -p 8000",
+    "start-static-server": "npx http-server public",
     "watch-static-admin": "npx nodemon --watch static/admin -e '*' --exec npm run build-admin",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
