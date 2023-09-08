@@ -1,5 +1,5 @@
 ---
-slug: kaho-shibuya
+slug: kahoshibuya
 name: Kaho Shibuya
 title: Kaho Shibuya
 descriptor: Content Creator, Published Author, and Anisong DJ
@@ -7,7 +7,7 @@ template: guest
 twitter: https://www.twitter.com/shibukaho
 instagram: https://www.instagram.com/shibukaho
 twitch: https://www.twitch.tv/shibuya_kaho
-guestimg: /images/guests/2022_kaho_shibuya_star.png
+guestimg: /images/guests/2022_kahoshibuya_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 

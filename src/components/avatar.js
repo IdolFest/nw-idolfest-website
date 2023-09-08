@@ -3,7 +3,7 @@ import { Box, Grid } from '@material-ui/core'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { makeStyles } from '@material-ui/styles'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import {slugifyGuestName, slugifyGuestNameForAvatars} from './Guest'
+import { slugifyGuestName } from './Guest'
 
 const useStyles = makeStyles(theme => ({
   person: {
@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
 export default function Avatar({ personName, showLink, showName=true, year }) {
   const classes = useStyles()
   const personNameSlug = slugifyGuestName(personName)
-  const avatarPersonNameSlug = slugifyGuestNameForAvatars(personName)
 
   const data = useStaticQuery(
     graphql`
@@ -65,7 +64,7 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       }
     `)
 
-  const mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === avatarPersonNameSlug)
+  const mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug)
   let imageTag
 
   // Try to find the image from frontmatter on any current guest
@@ -79,11 +78,15 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
     )
   } else {
     // If an image isn't found, find it from the filesystem
-    let avatarFilename = `${avatarPersonNameSlug}_star.png`
+    const avatarFilename = `${personNameSlug}_star.png`
 
-    let avatarImageData = data.allImageSharp.edges.find(
+    const avatarImageData = data.allImageSharp.edges.find(
       edge => edge.node.fluid.originalName.toLowerCase() === avatarFilename
       )?.node?.gatsbyImageData
+
+    if (!avatarImageData) {
+      console.warn("Avatar image not found", avatarFilename)
+    }
 
     imageTag = (
       <GatsbyImage
@@ -98,7 +101,7 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
 
   return (
     <Grid container direction='column' style={{ maxWidth: '200px' }}>
-      <Box className={classes.person}>  
+      <Box className={classes.person}>
         {!showLink ?
         <>
         {imageTag}
@@ -110,14 +113,14 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
         </>
       : 
         <>
-        <Link to={`/guests/${year}/${personNameSlug}`} className={`${classes.personLink}`}>
-          {imageTag}
-          { showName ? 
-            <div className={`${classes.personName}`}>
-              {personName}
-            </div>
+          <Link to={`/guests/${year}/${personNameSlug}`} className={`${classes.personLink}`}>
+            {imageTag}
+            { showName ?
+              <div className={`${classes.personName}`}>
+                {personName}
+              </div>
             : null }
-        </Link>
+          </Link>
         </>
       }
       </Box>

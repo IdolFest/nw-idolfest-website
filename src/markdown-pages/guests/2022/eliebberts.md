@@ -1,5 +1,5 @@
 ---
-slug: eli-ebberts
+slug: eliebberts
 name: Eli Ebberts
 title: Eli Ebberts
 descriptor: Cosplayer, Crafter, & Performer
@@ -8,7 +8,7 @@ tiktok: https://tiktok.com/@eliebberts
 instagram: https://instagram.com/eliebberts
 youtube: https://youtube.com/eliebberts
 twitter: https://twitter.com/eliebberts
-guestimg: /images/guests/2022_eli_ebberts_star.png
+guestimg: /images/guests/2022_eliebberts_star.png
 NOTE: Make sure image of the guest is in the media folder, named guest_(YEAR)_(GUEST_SLUG).png
 ---
 
