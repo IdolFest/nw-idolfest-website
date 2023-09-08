@@ -1,5 +1,5 @@
 ---
-name: Feris
+name: Feris2
 youtube: https://www.youtube.com/c/FerisMusic/featured
 slug: feris
 template: guest
