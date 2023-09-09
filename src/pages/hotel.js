@@ -72,7 +72,7 @@ const HotelPage = () => {
         alt=''
       />
       <p>
-        Northwest IdolFest will be held on {dates}, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
+        <strong>Book your hotel room by September 25, 2023 for the best price!</strong> Northwest IdolFest will be held on {dates}, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
           {/* Use when hotel booking is closed  */}
           {/* <br /><br />
           
