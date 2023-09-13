@@ -2,7 +2,7 @@
 slug: nonsweet
 name: Non Sweet
 title: Non Sweet
-descriptor: Content Creator, Published Author, and Anisong DJ
+descriptor: Canadian Idol Group
 template: guest
 twitter: https://twitter.com/nonsweet_ca
 instagram: https://instagram.com/nonsweet_ca

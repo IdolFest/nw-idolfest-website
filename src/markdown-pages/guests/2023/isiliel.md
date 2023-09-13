@@ -1,6 +1,6 @@
 ---
 name: Isiliel
-slug: isilielhimaritsukishiro
+slug: isiliel
 template: guest
 title: Isiliel (Himari Tsukishiro)
 descriptor: Solo Idol
