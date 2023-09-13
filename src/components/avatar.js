@@ -65,7 +65,11 @@ export default function Avatar({ personName, showLink, showName=true, year }) {
       }
     `)
 
-  const mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug)
+  let mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug && mdx?.slug?.startsWith(`guests/${year}`))
+  if (!mdxEntry) {
+    // Try again without year
+    mdxEntry = data.allMdx.nodes.find(mdx => mdx?.frontmatter?.slug === personNameSlug)
+  }
 
   let imageTag
 
