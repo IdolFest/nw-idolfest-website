@@ -26,6 +26,7 @@ export default function Guest({
           }
         }
     })
+    const year = page?.slug?.split('/')[1]
     return (
         <Layout>
             <Seo title={fmt.title} />
@@ -40,6 +41,7 @@ export default function Guest({
                 guestTitle={fmt.descriptor} 
                 guestSocials={socials}
                 image={fmt.guestimg}
+                year={year}
               >
                 <MDXRenderer>{page.body}</MDXRenderer>
               </GuestComponent>
@@ -52,6 +54,7 @@ export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      slug
       frontmatter {
         title,
         name,
