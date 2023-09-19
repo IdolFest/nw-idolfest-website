@@ -1,113 +1,115 @@
 {
-    "registrationEnabled": true,
-    "showBadgePickupHours": false,
-    "badgePickupHoursText": "Thursday, October 20: 6-8 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM\n",
-    "showBadgePricingNote": false,
-    "badgePricingHoursText": "Monday, Oct 17-Friday, Oct 21: $70\nSaturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
-    "regClosedHeading": "Thank you for attending NW IdolFest 2022!",
-    "regClosedText": "Registration is closed because Northwest IdolFest 2022 is now over. Sign up for our email list below to get notified when our next convention will be!",
-    "allBadgeTiers": [
-        {
-          "badgeName": "Attendee",
-          "badgeKey": "badge-attendee",
-          "onSale": true,
-          "hasTax": false,
-          "price": "80",
-          "tierName": "Silver",
-          "description": "This badge grants:",
-          "perks": [
-            "Access to all events at NWIF",
-            "NWIF Discord role"
-          ]
-        },
-        {
-          "badgeName": "Sponsor",
-          "badgeKey": "badge-sponsor",
-          "onSale": true,
-          "hasTax": false,
-          "price": "150",
-          "tierName": "Gold",
-          "description": "Everything in Silver, plus:",
-          "perks": [
-            "Gold-only badge and lanyard",
-            "Gold-only penlight keychain",
-            "Sponsor Drawstring Bag",
-            "Sponsor Ribbon",
-            "2023 Sponsor T-shirt",
-            "2023 Sponsor Poster",
-            "2023 Sponsor Can Badge set",
-            "Priority seating for Main Events",
-            "Sponsor-only Discord channel",
-            "NWIF website special thanks"
-          ]
-        },
-        {
-          "badgeName": "Super Sponsor",
-          "badgeKey": "badge-supersponsor",
-          "onSale": true,
-          "hasTax": false,
-          "price": "876",
-          "tierName": "Prism",
-          "description": "Everything in Gold, plus:",
-          "perks": [
-            "Prism-only badge and lanyard",
-            "Prism-only penlight keychain",
-            "Prism-only penlight",
-            "Prism-only jet tag",
-            "Hotel for 3 nights",
-            "Badge & swag delivery to hotel room",
-            "Closing Ceremonies special thanks",
-            "Signed letter of thanks from NWIF chairs"
-          ]
-        },
-        {
-          "badgeName": "5 and Under Badge",
-          "badgeKey": "badge-5-and-under",
-          "onSale": false,
-          "hasTax": false,
-          "price": "0",
-          "tierName": "Mini Chibi",
-          "description": "Children 5 and under are free when accompanied by an adult with a paid badge. (Max 2 children per adult.) <strong>No need to register them!</strong>",
-          "perks": [
-            "Access to all events at NWIF"
-          ]
-        },
-        {
-          "badgeName": "6 to 12 Badge",
-          "badgeKey": "badge-6-to-12",
-          "onSale": true,
-          "hasTax": false,
-          "price": "40",
-          "tierName": "Chibi",
-          "description": "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
-          "perks": [
-            "Access to all events at NWIF",
-            "Special surprise at registration"
-          ]
-        },
-        {
-          "badgeName": "Spirit Badge",
-          "badgeKey": "badge-spirit",
-          "onSale": true,
-          "hasTax": false,
-          "price": "20",
-          "tierName": "Dekimasen",
-          "description": "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. <br><br>Shipping available to US and CA only. Badges will ship after the event.",
-          "perks": [
-            "Badge and lanyard mailed to you",
-            "NWIF Discord role"
-          ]
-        },
-        {
-          "badgeName": "Whale",
-          "price": "???",
-          "onSale": false,
-          "tierName": "Whale",
-          "description": "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
-          "perks": [
-            "If you can dream it",
-            "We can do it!"
-          ]
-        }
+  "registrationEnabled": true,
+  "showBadgePickupHours": true,
+  "badgePickupHoursText": "Coming soon.\n\n<strong>Note</strong>: Gold and Prism badge sales will end September 30th! Buy one soon if you're interested! \n\n<!-- This is a comment! Remove the <!-- and the end part to hide it when the time comes\nThursday, October 20: 6-8 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM -->\n",
+  "showBadgePricingNote": false,
+  "badgePricingHoursText": "Monday, Oct 17-Friday, Oct 21: $70\nSaturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
+  "regClosedHeading": "Thank you for attending NW IdolFest 2023!",
+  "regClosedText": "Registration is closed because Northwest IdolFest 2023 is now over. Sign up for our email list below to get notified when our next convention will be!",
+  "allBadgeTiers": [
+    {
+      "badgeName": "Attendee",
+      "badgeKey": "badge-attendee",
+      "onSale": true,
+      "hasTax": false,
+      "price": "80",
+      "tierName": "Silver",
+      "description": "This badge grants:",
+      "perks": [
+        "Access to all events at NWIF",
+        "NWIF Discord role"
       ]
+    },
+    {
+      "badgeName": "Sponsor",
+      "badgeKey": "badge-sponsor",
+      "onSale": true,
+      "hasTax": false,
+      "price": "150",
+      "tierName": "Gold",
+      "description": "Everything in Silver, plus:",
+      "perks": [
+        "Gold-only badge and lanyard",
+        "Gold-only penlight keychain",
+        "Sponsor Drawstring Bag",
+        "Sponsor Ribbon",
+        "2023 Sponsor T-shirt",
+        "2023 Sponsor Poster",
+        "2023 Sponsor Can Badge set",
+        "Priority seating for Main Events",
+        "Sponsor-only Discord channel",
+        "NWIF website special thanks"
+      ]
+    },
+    {
+      "badgeName": "Super Sponsor",
+      "badgeKey": "badge-supersponsor",
+      "onSale": true,
+      "hasTax": false,
+      "price": "876",
+      "tierName": "Prism",
+      "description": "Everything in Gold, plus:",
+      "perks": [
+        "Prism-only badge and lanyard",
+        "Prism-only penlight keychain",
+        "Prism-only penlight",
+        "Prism-only jet tag",
+        "Hotel for 3 nights",
+        "Badge & swag delivery to hotel room",
+        "Closing Ceremonies special thanks",
+        "Signed letter of thanks from NWIF chairs"
+      ]
+    },
+    {
+      "badgeName": "5 and Under Badge",
+      "badgeKey": "badge-5-and-under",
+      "onSale": false,
+      "hasTax": false,
+      "price": "0",
+      "tierName": "Mini Chibi",
+      "description": "Children 5 and under are free when accompanied by an adult with a paid badge. (Max 2 children per adult.) <strong>No need to register them!</strong>",
+      "perks": [
+        "Access to all events at NWIF"
+      ]
+    },
+    {
+      "badgeName": "6 to 12 Badge",
+      "badgeKey": "badge-6-to-12",
+      "onSale": true,
+      "hasTax": false,
+      "price": "40",
+      "tierName": "Chibi",
+      "description": "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
+      "perks": [
+        "Access to all events at NWIF",
+        "Special surprise at registration"
+      ]
+    },
+    {
+      "badgeName": "Spirit Badge",
+      "badgeKey": "badge-spirit",
+      "onSale": true,
+      "hasTax": false,
+      "price": "20",
+      "tierName": "Dekimasen",
+      "description": "Can't attend, but want to show your support anyway? Purchase a Dekimasen badge! Please note this does not grant entry to NWIF. <br><br>Shipping available to US and CA only. Badges will ship after the event.",
+      "perks": [
+        "Badge and lanyard mailed to you",
+        "NWIF Discord role"
+      ]
+    },
+    {
+      "badgeName": "Whale",
+      "price": "???",
+      "onSale": false,
+      "tierName": "Whale",
+      "description": "We have dreams. Big dreams, involving a bigger event with more things and visitors from abroad, but going beyond the Pacific is expensive! If you're the sort of aquatic beast that can help out, <a href='/contact'>get in touch</a>.",
+      "perks": [
+        "If you can dream it",
+        "We can do it!"
+      ],
+      "badgeKey": "you-cant-buy-this",
+      "hasTax": false
+    }
+  ]
 }
