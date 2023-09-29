@@ -313,7 +313,7 @@ const location = site.siteMetadata.location
                 transformOrigin={{ vertical: "top", horizontal: "center" }}
               >
                 {children.map(({ label: childLabel, href: childHref, external: childExternal }) => {
-                  const childLink = childExternal ? 
+                  const childLink = external ? 
                     (<a href={href} target="_blank" rel="noreferrer">
                       {childLabel}
                     </a>) :
