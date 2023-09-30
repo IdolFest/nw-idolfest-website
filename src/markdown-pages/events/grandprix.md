@@ -6,8 +6,7 @@ template: page
 Calling all musicians! The Northwest IdolFest Grand Prix Song Contest is returning for its second year! Once again, it is time to showcase your original 
 idol-themed songs alongside your idol-themed covers and remixes!
 
-Have you read the guidelines below and seen the cool cash and prizes in store this year? Is your song ready to go? Head on over to 
-https://idolfe.st/grandprixapp to apply and submit your song!
+Song submissions are now closed. Look forward to hearing more soon!
 
 ## General Guidelines
 
