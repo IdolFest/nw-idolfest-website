@@ -5,6 +5,8 @@ import { styled } from '@material-ui/styles'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Toggle from "@components/toggle"
+import { useStaticQuery, graphql } from 'gatsby'
+import moment from 'moment'
 
 const EventsTable = styled(TableContainer)({
     margin: '0 auto',
@@ -55,13 +57,37 @@ function formatTime(datetime) {
     return new Date(datetime).toLocaleTimeString([], {timeStyle: 'short', timeZone: 'America/Los_Angeles'})
 }
 
-const Schedule = ({ day }) => {
+const Schedule = ({ dayOfWeek }) => {
+
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            shortDates
+          }
+        }      
+      }
+    `
+  )
+  const shortDates = site.siteMetadata.shortDates
+  const firstDay = shortDates.substring(0, shortDates.indexOf('-')) + shortDates.substring(shortDates.indexOf(', ') + 1)
+  const momentFirstDay = moment(firstDay, "MMM D, YYYY")
+  if (dayOfWeek.toLowerCase() === 'sunday') {
+    // Sunday is technically the start of the week, so this would reset us to the sunday before.
+    // Work around that...
+    dayOfWeek = 7
+  }
+  momentFirstDay.day(dayOfWeek)
+  const day = momentFirstDay.format('YYYY-MM-DD')
   const classes = useStyles()
 
   const [scheduleData, setScheduleData] = useState({loading: true})
 
   useEffect(() => {
-    const url = `https://nw-idolfest-webstuff.s3.amazonaws.com/schedule/schedule.json`
+    // const url = `https://nw-idolfest-webstuff.s3.amazonaws.com/schedule/schedule.json`
+    // FIXME
+    const url = 'http://localhost:8080/schedule-by-time'
 
     
     const getSchedule = async () => {
@@ -69,7 +95,6 @@ const Schedule = ({ day }) => {
         const response = await fetch(url)
         const res = await response.json()
         setScheduleData(res)
-        console.info('honk', await res)
 
       } catch (e) {
         setScheduleData({error: true})

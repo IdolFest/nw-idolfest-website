@@ -15,7 +15,7 @@ const SaturdaySchedulePage = () => {
 
         <PageContent maxWidth="xl">
         <CenteredBox>
-            <Schedule day="2022-10-22" />
+            <Schedule dayOfWeek="saturday" />
         </CenteredBox>
         </PageContent>
     </Layout>
