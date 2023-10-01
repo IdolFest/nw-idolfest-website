@@ -1,7 +1,7 @@
 {
   "registrationEnabled": true,
   "showBadgePickupHours": true,
-  "badgePickupHoursText": "Coming soon.\n\n<strong>Note</strong>: Gold and Prism badge sales will end September 30th! Buy one soon if you're interested! \n\n<!-- This is a comment! Remove the <!-- and the end part to hide it when the time comes\nThursday, October 20: 6-8 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM -->\n",
+  "badgePickupHoursText": "Thursday, October 20: 6-8 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM \n",
   "showBadgePricingNote": false,
   "badgePricingHoursText": "Monday, Oct 17-Friday, Oct 21: $70\nSaturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
   "regClosedHeading": "Thank you for attending NW IdolFest 2023!",
@@ -23,7 +23,7 @@
     {
       "badgeName": "Sponsor",
       "badgeKey": "badge-sponsor",
-      "onSale": true,
+      "onSale": false,
       "hasTax": false,
       "price": "150",
       "tierName": "Gold",
@@ -44,7 +44,7 @@
     {
       "badgeName": "Super Sponsor",
       "badgeKey": "badge-supersponsor",
-      "onSale": true,
+      "onSale": false,
       "hasTax": false,
       "price": "876",
       "tierName": "Prism",
