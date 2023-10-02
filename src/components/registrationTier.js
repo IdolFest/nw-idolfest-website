@@ -53,9 +53,13 @@ const HeroText = styled(Box)({
 export default function RegistrationTier({ badge }) {
   const classes = useStyles()
 
-  const { badgeName, price, tierName, description, perks } = badge
+  const { badgeName, price, tierName, description, perks, onSale } = badge
+  const badgePriceInt = parseInt(price, 10)
 
-  const tierHeading = `${badgeName} - $${price}`
+  let tierHeading = `${badgeName} - $${price}`
+  if (!onSale && badgePriceInt > 0 && !isNaN(badgePriceInt)) {
+    tierHeading = `${badgeName} <strike>$${price}</strike> Sold Out`
+  }
   
   const data = useStaticQuery(
     graphql`
