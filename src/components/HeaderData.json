@@ -37,6 +37,11 @@
           "href": "/events/arcade"
         },
         {
+          "label": "Meet and Greet Schedule",
+          "href": "/events/meetandgreet",
+          "disabled": true
+        },
+        {
           "label": "Thursday Schedule",
           "href": "/events/thursday",
           "disabled": true
