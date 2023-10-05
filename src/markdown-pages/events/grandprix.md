@@ -32,7 +32,7 @@ Voting is now **OPEN** for the Fan Favorite award! Please go listen to all of th
 
 * Entrant(s) must submit their work at https://idolfe.st/grandprixapp.
 * Entrants must upload their song to YouTube. If you do not have a video for your song, you can use an online converter to convert your audio file to a video file with an image of your choice, which can then be uploaded to YouTube. Please make sure your video is uploaded either "Public" or "Unlisted"!
-* Entrant(s) are encouraged (but not required) to also upload their song to their own social media or platforms with the hashtag #NWIFGrandPrix. Northwest Idolfest may reupload your entry on your behalf with credit for the purpose of fan voting if you are not able to share an accessible link to your entry.
+* Entrant(s) are encouraged (but not required) to also upload their song to their own social media or platforms with the hashtag #NWIFGrandPrix. Northwest IdolFest may reupload your entry on your behalf with credit for the purpose of fan voting if you are not able to share an accessible link to your entry.
 * Entry deadline is September 29, 2023 at 11:59p PT.
 
 ## Judging:
