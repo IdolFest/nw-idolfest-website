@@ -14,6 +14,7 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 * 1﻿:00 - 2:00p: Phoebe
 * 2﻿:30 - 3:30p: Melancholiaah!
 * 4﻿:00 - 5:00p: Jenni Bon
+* 5﻿:00 - 6:00p: Isiliel
 * 5﻿:45 - 6:45p: Pan Ranger
 * 8﻿:00 - 9:00p: SHIHORI
 * 1﻿0:30 - 11:30p: Daybreak Live! Performers
@@ -31,8 +32,6 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 * 1﻿1:30a - 12:30p: Northern Lights Music Festival Performers
 * 1﻿:00 - 2:00p: PAiDA
 * 2:30 - 3:30p: Non Sweet
-
-
 
 # V﻿endors Hall Meet and Greets
 
