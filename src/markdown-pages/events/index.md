@@ -3,6 +3,6 @@ slug: /events
 title: Events
 template: page
 ---
-NW IdolFest is excited to provide a venue for your amazing panels and performances this year!
+NW IdolFest is excited to provide a venue for your amazing panels and performances this year! 
 
-Want to host a panel or performance? Submit [an application](http://idolfe.st/panelapp) by July 31st to have your event considered.
+The pages in this section can show you just what we have in store. If there's not much here yet, check back closer to the event.
