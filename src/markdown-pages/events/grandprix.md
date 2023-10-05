@@ -59,7 +59,7 @@ Voting is now **OPEN** for the Fan Favorite award! Please go listen to all of th
 * Staff Pick: Original Cover/Remix
 
   * $100 Amazon Gift Card or cash equivalent
-  * A full-length song composed and arranged by TomStrike, a Northwest Idolfest staffer and musician for 15 years!
+  * A full-length song composed and arranged by TomStrike, a Northwest IdolFest staffer and musician for 15 years!
 * Staff Pick: Emerging Composer (Selected by Feris!)
 
   * $75 Amazon Gift Card or cash equivalent
