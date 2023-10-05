@@ -28,6 +28,15 @@
           "href": "/events/grandprix"
         },
         {
+          "label": "Masquerade",
+          "href": "/events/masquerade",
+          "disabled": false
+        },
+        {
+          "label": "Arcade",
+          "href": "/events/arcade"
+        },
+        {
           "label": "Thursday Schedule",
           "href": "/events/thursday",
           "disabled": true
@@ -51,11 +60,6 @@
           "label": "Northern Lights",
           "href": "/events/northernlights",
           "disabled": true
-        },
-        {
-          "label": "Masquerade",
-          "href": "/events/masquerade",
-          "disabled": false
         }
       ]
     },
