@@ -6,7 +6,9 @@ template: page
 Calling all musicians! The Northwest IdolFest Grand Prix Song Contest is returning for its second year! Once again, it is time to showcase your original 
 idol-themed songs alongside your idol-themed covers and remixes!
 
-Song submissions are now closed. Look forward to hearing more soon!
+## V﻿oting
+
+Voting is now **OPEN** for the Fan Favorite award! Please go listen to all of the songs on our [YouTube playlist,](https://www.youtube.com/playlist?list=PL_rc9TOYSWfFadGGtISUTkEZodSRQANfC) and then vote for up to three of your favorite songs you'd like to see win [here!](https://idolfe.st/grandprixvote)
 
 ## General Guidelines
 
