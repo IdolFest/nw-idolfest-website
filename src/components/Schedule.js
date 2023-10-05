@@ -85,9 +85,7 @@ const Schedule = ({ dayOfWeek }) => {
   const [scheduleData, setScheduleData] = useState({loading: true})
 
   useEffect(() => {
-    // const url = `https://nw-idolfest-webstuff.s3.amazonaws.com/schedule/schedule.json`
-    // FIXME
-    const url = 'http://localhost:8080/schedule-by-time'
+    const url = `https://nw-idolfest-webstuff.s3.amazonaws.com/schedule/schedule.json`
 
     
     const getSchedule = async () => {
