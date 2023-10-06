@@ -5,4 +5,9 @@ template: page
 ---
 NW IdolFest is excited to provide a venue for your amazing panels and performances this year! 
 
-The pages in this section can show you just what we have in store. If there's not much here yet, check back closer to the event.
+Here's our daily schedule:
+
+* [Thursday Schedule](https://nwidolfest.com/events/thursday) (registration and day 0 party)
+* [Friday Schedule](https://nwidolfest.com/events/friday)
+* [Saturday Schedule](https://nwidolfest.com/events/saturday)
+* [Sunday Schedule](https://nwidolfest.com/events/sunday)
