@@ -24,8 +24,34 @@
       "href": "/events",
       "children": [
         {
-          "label": "Grand Prix Song Contest",
-          "href": "/events/grandprix"
+          "label": "Thursday Schedule",
+          "href": "/events/thursday",
+          "disabled": false
+        },
+        {
+          "label": "Friday Schedule",
+          "href": "/events/friday",
+          "disabled": false
+        },
+        {
+          "label": "Saturday Schedule",
+          "href": "/events/saturday",
+          "disabled": false
+        },
+        {
+          "label": "Sunday Schedule",
+          "href": "/events/sunday",
+          "disabled": false
+        },
+        {
+          "label": "Meet and Greet Schedule",
+          "href": "/events/meet-and-greet-schedule",
+          "disabled": true
+        },
+        {
+          "label": "Northern Lights",
+          "href": "/events/northernlights",
+          "disabled": true
         },
         {
           "label": "Masquerade",
@@ -34,37 +60,13 @@
         },
         {
           "label": "Arcade",
-          "href": "/events/arcade"
+          "href": "/events/arcade",
+          "disabled": false
         },
         {
-          "label": "Meet and Greet Schedule",
-          "href": "/events/meet-and-greet-schedule",
-          "disabled": true
-        },
-        {
-          "label": "Thursday Schedule",
-          "href": "/events/thursday",
-          "disabled": true
-        },
-        {
-          "label": "Friday Schedule",
-          "href": "/events/friday",
-          "disabled": true
-        },
-        {
-          "label": "Saturday Schedule",
-          "href": "/events/saturday",
-          "disabled": true
-        },
-        {
-          "label": "Sunday Schedule",
-          "href": "/events/sunday",
-          "disabled": true
-        },
-        {
-          "label": "Northern Lights",
-          "href": "/events/northernlights",
-          "disabled": true
+          "label": "Grand Prix Song Contest",
+          "href": "/events/grandprix",
+          "disabled": false
         }
       ]
     },
