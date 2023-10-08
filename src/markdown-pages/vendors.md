@@ -14,6 +14,5 @@ W﻿e're excited to host some amazing vendors at NWIF 2023!
 * [MartyPCSR ](https://www.martypcsr.com)
 * [Tiribrush](https://tiribrush.carrd.co/)
 * [orri](https://0harv.carrd.co)
-* [Starshine Maid Cafe ](https://www.starshinemaids.com/)
 * [Akiba2U Imports](https://www.ebay.com/str/akiba2uelectronicsandanime)
 * [International Idol Network](https://intlidol.net/)
