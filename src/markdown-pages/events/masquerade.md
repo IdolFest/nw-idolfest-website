@@ -24,12 +24,10 @@ Our Masquerade will take place on Saturday, October 21.
       modification of human skin to appear a different human race. Things such
       as blackface, asian-fishing, and yellowface are included in this definition.
 
-      ```
-       1. Examples of blackface/yellowface include darkening the skin to appear as a different human race.
-       2. Examples of asian-fishing include changing the eye shape to look more narrow/elongated and taping eyelids.
-       3. Unnatural colors like blue, purple, etc are appropriate
-       4. No hate symbols or symbols of political ideology
-      ```
+      1. Examples of blackface/yellowface include darkening the skin to appear as a different human race.
+      2. Examples of asian-fishing include changing the eye shape to look more narrow/elongated and taping eyelids.
+      3. Unnatural colors like blue, purple, etc are appropriate
+      4. No hate symbols or symbols of political ideology
 5. Every contestant must sign a waiver form to participate in the Masquerade. This
      form must be signed and sent online for each individual in the entry. (This will be
      attached to the application form).
@@ -252,7 +250,5 @@ Our Masquerade will take place on Saturday, October 21.
    2. Please be prompt and on time so staff can move things smoothly.
 
 ### <DIV ALIGN="CENTER">APPLICATIONS</DIV>
-
-### <DIV ALIGN="CENTER">CLICK [HERE](https://forms.gle/LdqZnkgn39W35zTj6) FOR PERFORMANCE</DIV>
 
 ### <DIV ALIGN="CENTER">C﻿LICK [HERE](https://forms.gle/QyHisT7wxNE1hpUp6) FOR CRAFTSMANSHIP</DIV>
