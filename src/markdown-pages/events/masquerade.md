@@ -249,6 +249,6 @@ Our Masquerade will take place on Saturday, October 21.
       their slot in the competition.
    2. Please be prompt and on time so staff can move things smoothly.
 
-### <DIV ALIGN="CENTER">APPLICATIONS</DIV>
+### <DIV ALIGN="CENTER">APPLICATION</DIV>
 
 ### <DIV ALIGN="CENTER">C﻿LICK [HERE](https://forms.gle/QyHisT7wxNE1hpUp6) FOR CRAFTSMANSHIP</DIV>
