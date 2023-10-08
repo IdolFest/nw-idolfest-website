@@ -49,5 +49,5 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 * 1﻿2:30 - 1:00p: RinTaichou
 * 1﻿:00 - 2:00p: Signals
-* 2﻿:00 - 3:00p: CM, FLO
+* 2﻿:15 - 3:15p: CM, FLO`
 * 3﻿:30 - 4:00p: mspaint palette
