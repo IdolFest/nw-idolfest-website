@@ -26,6 +26,7 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 * 1﻿:00 - 2:00p: Isiliel
 * 2﻿:30 -3:30p: Idolusion!!
 * 5﻿:00 - 6:30p: Non Sweet
+* 6﻿:30 - 7:00p: RinTaichou
 
 ### S﻿unday
 
@@ -35,6 +36,10 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 # V﻿endors Hall Meet and Greets
 
+### F﻿riday
+
+* 3﻿:30 - 4:00p: RinTaichou
+
 ### Saturday
 
 * 1﻿2:00 - 1:00p: CODE: MiAO
@@ -42,6 +47,7 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 ### S﻿unday
 
+* 1﻿2:30 - 1:00p: RinTaichou
 * 1﻿:00 - 2:00p: Signals
 * 2﻿:00 - 3:00p: CM, FLO
 * 3﻿:30 - 4:00p: mspaint palette
