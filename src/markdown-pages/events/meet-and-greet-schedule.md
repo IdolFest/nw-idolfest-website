@@ -7,6 +7,10 @@ W﻿e are excited to announce our meet and greet schedule for this year, featuri
 
 A﻿ll guests will have at least 1 one-hour meet and greet directly following their main concerts, and will be included in the following schedule.
 
+﻿﻿Whether the meet and greet is a paid or free meet and greet is at the discretion of each performer.
+
+
+
 # Lobby/Foyer Meet and Greets
 
 ### ﻿Friday
