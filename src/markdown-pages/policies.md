@@ -35,8 +35,6 @@ Minors ages 13-17 may attend NW IdolFest without accompaniment, so long as they 
 
 School IDs are accepted as proof of ID, or, if accompanied by an adult, the adult's ID may be accepted instead.
 
-Attendees under the age of 18 are permitted to present either proof of vaccination or a negative test administered within the last 72 hours by an authorized medical professional. Rapid tests administered at home are not accepted.
-
 ## Content Rating
 
 All content at NWIF is expected to fall within a PG-13 rating unless otherwise approved by event chairs. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
