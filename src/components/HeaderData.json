@@ -46,7 +46,7 @@
         {
           "label": "Meet and Greet Schedule",
           "href": "/events/meet-and-greet-schedule",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Northern Lights",
