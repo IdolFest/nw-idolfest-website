@@ -35,17 +35,6 @@ const IndexPage = () => {
         <p>Northwest IdolFest is proud to partner with some amazing organizations. Interested in joining up? <Link to="/contact">Drop us a line!</Link></p>
 
         <Grid container style={{ justifyContent: 'space-around' }}>
-          <a href="https://rabuagain.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
-            <StaticImage
-              // This is a presentational image, so the alt should be an empty string
-              alt=''
-              src='../images/partners/rabuagain.png'
-              loading='eager'
-              placeholder='blurred'
-              quality='100'
-              height={300}
-            />
-          </a>
 
           <a href="https://intlidol.net/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
@@ -59,17 +48,29 @@ const IndexPage = () => {
             />
           </a>
 
-          <a href="https://rosecitycomiccon.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+          <a href="https://www.parfaitpins.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{margin: "56px 0"}}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
               alt=''
-              src='../images/partners/RCCC_Circle.png'
+              src='../images/partners/parfait_pins.png'
               loading='eager'
               placeholder='blurred'
               quality='100'
-              height={300}
+              width={300}
             />
           </a>
+          <a href="https://bigzfabric.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+            <StaticImage
+              // This is a presentational image, so the alt should be an empty string
+              alt=''
+              src='../images/partners/big_z.png'
+              loading='eager'
+              placeholder='blurred'
+              quality='100'
+              width={300}
+            />
+          </a>
+
         </Grid>
 
         <br />
@@ -85,6 +86,17 @@ const IndexPage = () => {
               height={300}
             />
           </a>
+          <a href="https://arda-wigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+            <StaticImage
+              // This is a presentational image, so the alt should be an empty string
+              alt=''
+              src='../images/partners/arda_wigs.png'
+              loading='eager'
+              placeholder='blurred'
+              quality='100'
+              height={300}
+            />
+          </a>
         </Grid>
         
         <br />
@@ -92,48 +104,37 @@ const IndexPage = () => {
         {/* Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link> */}
         <h3>Prism Sponsors</h3>
         <ul>
-          <li>UtopicTomato</li>
+          <li>Vivian / Seri</li>
           <li>LUwUigi</li>
-          <li>David Jones</li>
-          <li>Redmoon</li>
-          <li>Will Carr</li>
-          <li>Sugar</li>
-          <li>STEVEN</li>
+          <li>@mrdangphotos</li>
+          <li>Kaye</li>
         </ul>
 
         <h3>Gold Sponsors</h3>
         <ul>
-          <li>Payton</li>
-          <li>djsessum.com</li>
-          <li>Thomas H.</li>
-          <li>SoulDriveP</li>
-          <li>YuuniHD</li>
-          <li>Anonymous </li>
-          <li>Jonathan Martinez</li>
-          <li>Nalzir</li>
-          <li>Bryce Hawkins</li>
-          <li>Vicky</li>
-          <li>mittens</li>
-          <li>Kara Rose</li>
-          <li>Kyle Cornwell</li>
-          <li>Fish & Bird Virtual Planning</li>
-          <li>Anonymous</li>
-          <li>Anonymous</li>
-          <li>Randall</li>
-          <li>Anonymous</li>
-          <li>Anonymous</li>
+          <li>Megumin Kousaka</li>
+          <li>tsubasa83_ch</li>
+          <li>Jordan </li>
+          <li>Koko Wang</li>
+          <li>Bebe</li>
+          <li>mittens / vince </li>
+          <li>Jojo</li>
+          <li>Paturiku the Procastinator</li>
+          <li>Erose</li>
+          <li>Jay</li>
+          <li>FakeName</li>
+          <li>SarahLynne</li>
+          <li>AFR0</li>
+          <li>Valraiser</li>
+          <li>Bird</li>
+          <li>Des</li>
+          <li>Mayra - Jagi</li>
+          <li>Darkshadowcosplays</li>
+          <li>Autumn Jones</li>
           <li>lentils09</li>
-          <li>Shrimp </li>
-          <li>Line</li>
-          <li>Big E</li>
-          <li>Exteminator</li>
-          <li>Anonymous</li>
-          <li>Zeta Flare </li>
-          <li>JOwOnah</li>
-          <li>kariohki</li>
-          <li>Clairy</li>
-          <li>Angel Payne Author</li>
-          <li>Fortune</li>
+          <li>ZetaFlare</li>
+          <li>Haewon</li>
+          <li>NaraMoore</li>
         </ul>
 
       </PageContent>
