@@ -9,8 +9,6 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 ﻿﻿Whether the meet and greet is a paid or free meet and greet is at the discretion of each performer.
 
-
-
 # Lobby/Foyer Meet and Greets
 
 ### ﻿Friday
@@ -25,16 +23,15 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 ### Saturday
 
-* 1﻿0:30 - 11:30a: bunny☆kaisui
 * 1﻿1:30a - 12:30p: Alex Pinku
 * 1﻿:00 - 2:00p: Isiliel
 * 2﻿:30 -3:30p: Idolusion!!
 * 5﻿:00 - 6:30p: Non Sweet
 * 6﻿:30 - 7:00p: RinTaichou
+* 1﻿0:30 - 11:30p: Northern Lights Music Festival Performers
 
 ### S﻿unday
 
-* 1﻿1:30a - 12:30p: Northern Lights Music Festival Performers
 * 1﻿:00 - 2:00p: PAiDA
 * 2:30 - 3:30p: Non Sweet
 
@@ -43,6 +40,7 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 ### F﻿riday
 
 * 3﻿:30 - 4:00p: RinTaichou
+* 5﻿:00 - 6:00p: bunny☆kaisui
 
 ### Saturday
 
