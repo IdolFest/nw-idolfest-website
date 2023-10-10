@@ -59,22 +59,33 @@ const IndexPage = () => {
               width={300}
             />
           </a>
-          <a href="https://bigzfabric.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
+          <a href="https://www.dreamlandmaidcafe.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{margin: "56px 0"}}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
               alt=''
-              src='../images/partners/big_z.png'
+              src='../images/partners/dreamland_maid_cafe.png'
               loading='eager'
               placeholder='blurred'
               quality='100'
-              width={300}
+              width={200}
             />
           </a>
-
         </Grid>
 
         <br />
         <Grid container style={{ justifyContent: 'space-around' }}>
+          <a href="https://bigzfabric.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{marginTop: "32px"}}>
+              <StaticImage
+                // This is a presentational image, so the alt should be an empty string
+                alt=''
+                src='../images/partners/big_z.png'
+                loading='eager'
+                placeholder='blurred'
+                quality='100'
+                width={200}
+              />
+            </a>
+
           <a href="https://www.thefivewitswigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
@@ -83,7 +94,7 @@ const IndexPage = () => {
               loading='eager'
               placeholder='blurred'
               quality='100'
-              height={300}
+              height={200}
             />
           </a>
           <a href="https://arda-wigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
