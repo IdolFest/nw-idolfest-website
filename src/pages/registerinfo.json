@@ -1,7 +1,7 @@
 {
   "registrationEnabled": true,
   "showBadgePickupHours": true,
-  "badgePickupHoursText": "Thursday, October 20: 5-7 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM \n",
+  "badgePickupHoursText": "Thursday, October 20: 5-7 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM \n\nAll badge prices will increase by $5 at 11:59pm on October 17th!",
   "showBadgePricingNote": false,
   "badgePricingHoursText": "Monday, Oct 17-Friday, Oct 21: $70\nSaturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
   "regClosedHeading": "Thank you for attending NW IdolFest 2023!",
