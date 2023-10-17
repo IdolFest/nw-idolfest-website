@@ -12,3 +12,15 @@ Here's our daily schedule and our meet and greet schedule:
 * [Saturday Schedule](https://nwidolfest.com/events/saturday)
 * [Sunday Schedule](https://nwidolfest.com/events/sunday)
 * [M﻿eet and Greet Schedule](https://nwidolfest.com/events/meet-and-greet-schedule)
+
+
+
+### Venue Map
+
+Ground Floor
+
+![](/images/uploads/venue-map-2-sarahhack-2023.png)
+
+Second Floor
+
+![](/images/uploads/venue-map-1-2023.png)
