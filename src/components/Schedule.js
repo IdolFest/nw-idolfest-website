@@ -10,7 +10,7 @@ import moment from 'moment'
 
 const EventsTable = styled(TableContainer)({
     margin: '0 auto',
-    maxWidth: '100%',
+    maxWidth: '1366px',
     paddingBottom: '1em',
     fontSize: '1rem !important'
 })
