@@ -2,7 +2,7 @@
   "registrationEnabled": true,
   "showBadgePickupHours": true,
   "badgePickupHoursText": "Thursday, October 20: 5-7 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM ",
-  "showBadgePricingNote": false,
+  "showBadgePricingNote": true,
   "badgePricingHoursText": "Friday, Oct 21: $85\nSaturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
   "regClosedHeading": "Thank you for attending Northwest IdolFest 2023!",
   "regClosedText": "Registration is closed because Northwest IdolFest 2023 is now over. Sign up for our email list below to get notified when our next convention will be!",
