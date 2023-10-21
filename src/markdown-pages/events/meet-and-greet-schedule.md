@@ -47,7 +47,6 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 * 1﻿2:00 - 1:00p: CODE: MiAO
 * 3﻿:00 - 3:30p: ember*night
 * 5﻿:00 - 6:00p: Isiliel
-* 5﻿:00 - 6:00p: Phoebe
 
 ### S﻿unday
 
