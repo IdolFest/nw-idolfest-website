@@ -31,7 +31,8 @@ A﻿ll guests will have at least 1 one-hour meet and greet directly following th
 
 ### S﻿unday
 
-* 1﻿:00 - 2:00p: PAiDA
+* 12:00 - 1:00p: Isiliel
+* ﻿1:00 - 2:00p: PAiDA
 * 2:30 - 4:00p: Non Sweet
 
 # V﻿endors Hall Meet and Greets
