@@ -1,11 +1,11 @@
 {
-  "title": "NW IdolFest 2023 Schedule  Live!",
-  "body": "Get ready for Northwest IdolFest 2023! <a target=\"_blank\" href=\"/events\">Our schedule is now live!</a>\n\nBack for our third year, Northwest IdolFest is a three day convention all about idols, anisong, and j-pop! Featuring your favorite idol performers, vendors, and tons of amazing panels, join us in Seattle, WA from October 20-22, 2023.",
-  "registerButtonEnabled": true,
+  "title": "Thank you for attending NW IdolFest 2023!",
+  "body": "Thank you for attending NW IdolFest 2023! \n\n<!-- Back for our third year, Northwest IdolFest is a three day convention all about idols, anisong, and j-pop! Featuring your favorite idol performers, vendors, and tons of amazing panels, join us in Seattle, WA from October 20-22, 2023. -->",
+  "registerButtonEnabled": false,
   "buttons": [
     {
-      "text": "Schedule",
-      "href": "https://nwidolfest.com/events"
+      "text": "Give us feedback!",
+      "href": "https://idolfe.st/feedback"
     }
   ],
   "scheduleDays": 3
