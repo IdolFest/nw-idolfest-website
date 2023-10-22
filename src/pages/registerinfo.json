@@ -3,7 +3,7 @@
   "showBadgePickupHours": true,
   "badgePickupHoursText": "Thursday, October 20: 5-7 PM\nFriday, October 21: 10 AM-7 PM\nSaturday, October 22: 9:30 AM-7 PM\nSunday, October 23: 9:30 AM-12 PM ",
   "showBadgePricingNote": true,
-  "badgePricingHoursText": "Saturday, Oct 22: $50\nSunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
+  "badgePricingHoursText": "Sunday, Oct 23: $20\n<i>NWIF does not sell one day badges.</i>\nSilver badges decrease in price as the weekend goes on.",
   "regClosedHeading": "Thank you for attending Northwest IdolFest 2023!",
   "regClosedText": "Registration is closed because Northwest IdolFest 2023 is now over. Sign up for our email list below to get notified when our next convention will be!",
   "allBadgeTiers": [
@@ -12,7 +12,7 @@
       "badgeKey": "badge-attendee",
       "onSale": true,
       "hasTax": false,
-      "price": "<strike>85</strike> 50",
+      "price": "<strike>85</strike> 20",
       "tierName": "Silver",
       "description": "This badge grants:",
       "perks": [
@@ -77,7 +77,7 @@
       "badgeKey": "badge-6-to-12",
       "onSale": true,
       "hasTax": false,
-      "price": "<strike>45</strike> 25",
+      "price": "<strike>45</strike> 10",
       "tierName": "Chibi",
       "description": "Attendees 6-12 can register for half price. Must be accompanied by an adult with a paid badge.",
       "perks": [
