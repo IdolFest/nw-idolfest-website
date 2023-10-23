@@ -126,6 +126,7 @@ collections:
       fields: 
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Register Button Visible", name: "registerButtonEnabled", widget: "boolean"}
+        - {label: "Feedback Button Visible", name: "feedbackButtonEnabled", widget: "boolean"}
         - {label: "Body Text (html ok)", name: "body", widget: "text", default: 3}
         - label: Buttons (Max 3)
           name: buttons

@@ -11,7 +11,7 @@ import SisterBanner from "../components/SisterBanner"
 import moment from 'moment'
 
 import homepageData from "./homepage.json"
-const { title, body, registerButtonEnabled, buttons } = homepageData
+const { title, body, registerButtonEnabled, buttons, feedbackButtonEnabled } = homepageData
 
 const useStyles = makeStyles(theme => ({
   introWrapper: {
@@ -148,6 +148,10 @@ const IndexPage = () => {
         {registerButtonEnabled ? 
           <div className={classes.buttonHolder}>
             <Button variant="contained" size="large" className="cta" href="/register">Buy a Badge</Button>
+          </div> :<></> }
+        {feedbackButtonEnabled ?
+          <div className={classes.buttonHolder}>
+            <Button variant="contained" size="large" className="cta" href="https://idolfe.st/feedback">Give us Feedback</Button>
           </div> :<></> }
         <div className={classes.buttonHolder} style={{width: buttons.length === 1 ? "50%" : "100%", margin: "auto"}}>
           {buttons.map(b => <Button key={b.href} variant="contained" className="cta" href={b.href}>{b.text}</Button>)}
