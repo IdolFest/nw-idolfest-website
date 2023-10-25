@@ -111,7 +111,7 @@ const IndexPage = () => {
         </Grid>
         
         <br />
-        <p>We also extend a huge THANK YOU to all our generous 2022 Prism and Gold sponsors!</p>
+        <p>We also extend a huge THANK YOU to all our generous 2023 Prism and Gold sponsors!</p>
         {/* Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link> */}
         <h3>Prism Sponsors</h3>
         <ul>
