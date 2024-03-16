@@ -154,7 +154,7 @@ collections:
           widget: list
           fields: 
             - {label: "Badge Name", name: "badgeName", widget: "string"}
-            - {label: "Badge Key (airtable - DO NOT CHANGE)", name: "badgeKey", widget: "string"}
+            - {label: "Badge Key (internal - DO NOT CHANGE)", name: "badgeKey", widget: "string"}
             - {label: "Currently Available", name: "onSale", widget: "boolean"}
             - {label: "Has Tax", name: "hasTax", widget: "boolean"}
             - {label: "Price (Does not affect square price)", name: "price", widget: "string"}
