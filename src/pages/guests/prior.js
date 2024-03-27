@@ -14,7 +14,7 @@ const PriorGuestsPage = () => {
     const data = useStaticQuery(
         graphql`
         {
-            allMdx (filter: {slug: {regex: "/^guests\/(2021|2022)/"}}) {
+            allMdx (filter: {slug: {regex: "/^guests\/(2021|2022|2023)/"}}) {
               nodes {
                 id
                 frontmatter {

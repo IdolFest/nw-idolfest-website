@@ -74,10 +74,16 @@ const HotelPage = () => {
       <p>
         Northwest IdolFest will be held on {dates}, at the DoubleTree by Hilton Hotel Seattle Airport. Access the venue by complimentary shuttle from Sea-Tac Airport, or by light rail from downtown Seattle.
           {/* Use when hotel booking is closed  */}
+          {/*
            <br /><br />
           
           Online hotel booking is now closed. Please <Link to="/contact">contact us</Link> if you would like assistance booking a room at our discounted rates. 
-          <br /><br /> 
+           <br /><br />*/}
+
+           {/* Use when hotel booking waiting to open (plz someone get this into editor) */}
+           <br /><br />
+           Online hotel booking is not yet available. Stay tuned, we'll announce hotels soon!
+           <br /><br />
          
         We offer a discounted $15/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
       </p>

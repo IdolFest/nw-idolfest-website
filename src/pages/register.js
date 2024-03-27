@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState, useRef } from "react"
 import Layout from '@components/layout'
 import Seo from '@components/seo'
 import Hero from "@components/hero"
@@ -76,6 +77,15 @@ function isUnder18(date) {
 const OpenRegisterPage = () => {
   const classes = useStyles()
   let initialValues = {}
+  const formArea = useRef(null)
+
+  const selectBadge = (badge, props) => {
+    if (badge.onSale) {
+      props.setFieldValue('badgeType', badge.badgeKey, true)
+      formArea.current.scrollIntoView({behavior: 'smooth'})
+    }
+  }
+
   if (process.env.NODE_ENV === 'development') {
     initialValues = { 
       badgeType: '',
@@ -134,34 +144,7 @@ const OpenRegisterPage = () => {
     />
 
     <PageContent>
-      
-      <CenteredBox>
-        <i>Tax is included in all badge prices!</i>
-      
-        {boxNotes}
-    
-      </CenteredBox> 
-      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
-            {badgesRowOne.map((badge) => (
-              <Grid item xs={12} sm={12} md key={badge.badgeName}>
-                <RegistrationTier badge={badge} />
-              </Grid>
-            ))}
-      </Grid>
-
-      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
-            {badgesRowTwo.map((badge) => (
-              <Grid item xs={12} sm={12} md key={badge.badgeName}>
-                <RegistrationTier badge={badge} />
-              </Grid>
-            ))}
-      </Grid>
-
-      <h2>Register</h2>
-
-      <MuiPickersUtilsProvider utils={MomentUtils}>
-      <FormBox>
-      <Formik
+    <Formik
         initialValues={initialValues}
         validationSchema={Yup.object({
           badgeType: Yup.string()
@@ -233,8 +216,35 @@ const OpenRegisterPage = () => {
             }
         }}
       >
-      {props => (
-        <Form>
+      {props => (<div>
+      
+      <CenteredBox>
+        <i>Tax is included in all badge prices!</i>
+      
+        {boxNotes}
+    
+      </CenteredBox> 
+      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
+            {badgesRowOne.map((badge) => (
+              <Grid item xs={12} sm={12} md key={badge.badgeName}>
+                <RegistrationTier badge={badge} onClick={() => selectBadge(badge, props)} />
+              </Grid>
+            ))}
+      </Grid>
+
+      <Grid container spacing={2} alignItems='stretch' justify='space-evenly' align-content='space-evenly'>
+            {badgesRowTwo.map((badge) => (
+              <Grid item xs={12} sm={12} md key={badge.badgeName}>
+                <RegistrationTier badge={badge} onClick={() => selectBadge(badge, props)} />
+              </Grid>
+            ))}
+      </Grid>
+
+      <h2>Register</h2>
+
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+      <FormBox>
+        <Form ref={formArea}>
           <Box margin={1}>
             <FormControl>
               <label htmlFor='badgeType'>* Badge Type</label>
@@ -423,11 +433,10 @@ const OpenRegisterPage = () => {
             Proceed to check out
           </Button>
         </Form>
-    )}
-    </Formik>
     </FormBox>
     </MuiPickersUtilsProvider>
-      
+    </div>)}
+    </Formik>
     </PageContent>
   </Layout>
 )}

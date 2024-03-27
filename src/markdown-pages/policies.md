@@ -13,7 +13,7 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and T
 
 ## COVID-19
 
-For 2023, NWIF will require masks inside the Vendor Hall. Other areas of the convention will not require masks. COVID vaccination is strongly recommended, but not required.
+For 2024, NWIF will require masks inside the Vendor Hall. Other areas of the convention will not require masks. COVID vaccination is strongly recommended, but not required.
 
 These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
 
@@ -93,7 +93,7 @@ NWIF is committed to making our event accessible to all. Our approach to some ac
 
 Our host hotel, the DoubleTree, complies with ADA guidelines in most spaces. Their website has a full list of [accessible amenities](https://doubletree3.hilton.com/en/hotels/washington/doubletree-by-hilton-hotel-seattle-airport-CTAC-DT/about/amenities.html).
 
-Our event space for 2023 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor, to the right of our registration tables. A convention staff member or hotel staff member will be able to direct you. All rooms can be accessed without steps
+Our event space for 2024 is on the first and second floors of the DoubleTree. There is a wheelchair-friendly elevator route to the second floor, to the right of our registration tables. A convention staff member or hotel staff member will be able to direct you. All rooms can be accessed without steps
 
 If you are unable to stand in line for a panel, please contact a member of our Safety team. They can assist you with either a chair to wait to the side of the line, or an early seat at the panel.
 

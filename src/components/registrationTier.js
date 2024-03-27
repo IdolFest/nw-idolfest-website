@@ -18,6 +18,12 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: '1.5em',
     },
   },
+  onSaleTier: {
+    '&:hover': {
+      boxShadow: '5px 5px 0 0 rgba(0,0,0,0.2)',
+      cursor: 'pointer'
+    },
+  },
   regularTierText: {
     height: '320px'
   },
@@ -50,7 +56,7 @@ const HeroText = styled(Box)({
   }
 })
 
-export default function RegistrationTier({ badge }) {
+export default function RegistrationTier({ badge, onClick }) {
   const classes = useStyles()
 
   const { badgeName, price, tierName, description, perks, onSale } = badge
@@ -109,7 +115,7 @@ export default function RegistrationTier({ badge }) {
       <HeroText>
         <span dangerouslySetInnerHTML={{ __html: tierHeading }}></span>
       </HeroText>
-        <Box className={`${classes.tierHeading} ${classes.regularTierText}`}>
+        <Box className={`${classes.tierHeading} ${classes.regularTierText} ${onSale ? classes.onSaleTier : ""}`} onClick={onClick ?? function() {}}>
           <span dangerouslySetInnerHTML={{ __html: description}} />
           <ul>
             {perks.map((perk, index) => (

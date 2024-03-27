@@ -26,27 +26,27 @@
         {
           "label": "Thursday Schedule",
           "href": "/events/thursday",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Friday Schedule",
           "href": "/events/friday",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Saturday Schedule",
           "href": "/events/saturday",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Sunday Schedule",
           "href": "/events/sunday",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Meet and Greet Schedule",
           "href": "/events/meet-and-greet-schedule",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Northern Lights",
@@ -56,7 +56,7 @@
         {
           "label": "Masquerade",
           "href": "/events/masquerade",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Arcade",
@@ -66,7 +66,7 @@
         {
           "label": "Grand Prix Song Contest",
           "href": "/events/grandprix",
-          "disabled": false
+          "disabled": true
         }
       ]
     },
