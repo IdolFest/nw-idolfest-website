@@ -13,20 +13,20 @@ import { Link } from 'gatsby'
 import { Container } from '@material-ui/core'
 
 // UNCOMMENT TO OPEN BOOKING
-// import { Container, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
-// const RoomRateTable = styled(TableContainer)({
-//   margin: '0 auto',
-//  //width: '70%',
-//   paddingBottom: '1em'
-// })
+import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core'
+const RoomRateTable = styled(TableContainer)({
+  margin: '0 auto',
+ //width: '70%',
+  paddingBottom: '1em'
+})
 
 function createData(roomType, price) {
   return { roomType, price };
 }
 
 const rows = [
-  createData('Standard King', '$134'),
-  createData('Double Queen', '$134'),
+  createData('Standard King', '$139'),
+  createData('Double Queen', '$139'),
 ]
 
 const ResponsiveMap = styled(Container)({
@@ -80,15 +80,17 @@ const HotelPage = () => {
           Online hotel booking is now closed. Please <Link to="/contact">contact us</Link> if you would like assistance booking a room at our discounted rates. 
            <br /><br />*/}
 
-           {/* Use when hotel booking waiting to open (plz someone get this into editor) */}
+           {/* Use when hotel booking waiting to open (plz someone get this into editor) */ }
+           {/*
            <br /><br />
            Online hotel booking is not yet available. Stay tuned, we'll announce hotels soon!
            <br /><br />
+          */}
          
         We offer a discounted $15/day parking rate to all attendees. This discount will be automatically applied if you book a hotel room in our block and charge parking to your room. If you do not have a hotel room, we will have vouchers available at registration.
       </p>
       { /* the following is used when hotel booking is OPEN */ }
-      {/*
+      {
       <CenteredBox>
         <RoomRateTable>
           <Table aria-label="simple table">
@@ -114,12 +116,12 @@ const HotelPage = () => {
         <div>
           <sup>†</sup>Taxes and fees not included in price.
         </div>
-        <Button variant="contained" className="cta" href='https://book.passkey.com/go/NWIF23'>
+        <Button variant="contained" className="cta" href='https://book.passkey.com/go/NWIF24'>
           Book online
         </Button>
         <div>If you prefer to book by phone, you can call the hotel toll-free at 1-800-222-8733 and reference the group code "IDF" or group name "NW IdolFest".</div>
       </CenteredBox>
-              */}
+              }
       <CenteredBox>
         <ResponsiveMap>
           <iframe title="Hotel map" maxwidth="600" height="450" style={{ border: 0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK3JMX6dckFQR7lXNagC5B9Q&key=AIzaSyDk8pOuoUbrYKocNBn6QzLe9j-bUAx7GvA"></iframe>
