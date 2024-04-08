@@ -1,2 +1,0 @@
-(self.webpackChunknw_idolfest_website=self.webpackChunknw_idolfest_website||[]).push([[816],{4859:function(e,t,l){"use strict";l.r(t);var a=l(7294),n=l(7095),u=l(5583),r=l(6273),c=l(5954),d=l(6900),i=l(554);t.default=function(){return a.createElement(n.Z,null,a.createElement(u.Z,{title:"Saturday Schedule"}),a.createElement(c.Z,{title:"Saturday Schedule"}),a.createElement(r.Z,{maxWidth:"xl"},a.createElement(d.Z,null,a.createElement(i.Z,{dayOfWeek:"saturday"}))))}}}]);
-//# sourceMappingURL=component---src-pages-events-saturday-js-4cfc035fab943feede31.js.map
