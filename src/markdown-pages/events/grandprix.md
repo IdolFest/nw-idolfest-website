@@ -3,26 +3,26 @@ slug: grandprix
 title: Grand Prix Song Contest
 template: page
 ---
-Calling all musicians! The Northwest IdolFest Grand Prix Song Contest is returning for its second year! Once again, it is time to showcase your original 
-idol-themed songs alongside your idol-themed covers and remixes!
+Calling all musicians! We're hosting the third annual Northwest IdolFest Grand Prix Song Contest to showcase your original idol-themed compositions, covers and remixes!
 
-## V﻿oting
+## Application
 
-Voting is now **OPEN** for the Fan Favorite award! Please go listen to all of the songs on our [YouTube playlist,](https://www.youtube.com/playlist?list=PL_rc9TOYSWfFadGGtISUTkEZodSRQANfC) and then vote for up to three of your favorite songs you'd like to see win [here!](https://idolfe.st/grandprixvote)
+F﻿ollowing feedback from entrants and last year's judges, some rules have been clarified or changed from last year. Please make sure to read **all** of the rules below and then [submit your song here](https://idolfe.st/grandprixapp)!
 
 ## General Guidelines
 
-* The general theme for this song contest is the same as our convention: idols! Please reflect the spirit of Japanese idols in your music in some way. Any style and genre of music with or without vocals will be accepted so long as it follows this theme in some way.
+* The general theme for this song contest is the same as our convention: idols! Please reflect the styles of music found in Japanese idols in your entry in some way. See the Judging section below for more details.
+* Entries must include a melody and lyrics. This year will not include a category for instrumental or acapella entries.
 * Entrant(s) do not have to be attending NWIF to enter. 
 * With the exception of judges, all NWIF staff are also permitted to enter.
 * One entry per person or group. All people working on an entry must be credited with their role in the entry if working as a group.
-* For the original song category, a person must only participate in creating one song in the composer/arranger/producer role. Otherwise, for other roles and in all other categories entrants may participate in up to three (3) entries.
+* **All individuals who have worked on an entry must have given their consent for the song to be entered in the contest, understand they can only be credited for one entry, and that they will only be eligible for one award.**
 
 ## Song Guidelines
 
 * Songs must be between 1:30 and 5:00 long and can be in any language! They do not need to be able to be performed live.
 * Please keep song content "PG-13" and refrain from any kind of triggering, inappropriate, or offensive content.
-* Any content released prior to the time the contest was announced (May 12, 2023) will not be allowed.
+* Any content released prior to the time the contest was announced (May xx, 2024) will not be allowed.
 * Original song submissions must be an entirely original work, or will be judged as a remix/cover.
 * Remixes/covers must credit the original work in the entry form.
 * The entrant(s) retain 100% of any rights and ownership of submitted songs. By submitting a song to this contest, entrant(s) permit NWIF to use their song for purposes related to this year’s contest. This may include posting the song on social media or playing it at the event.
@@ -31,45 +31,28 @@ Voting is now **OPEN** for the Fan Favorite award! Please go listen to all of th
 ## Submission Guidelines
 
 * Entrant(s) must submit their work at https://idolfe.st/grandprixapp.
-* Entrants must upload their song to YouTube. If you do not have a video for your song, you can use an online converter to convert your audio file to a video file with an image of your choice, which can then be uploaded to YouTube. Please make sure your video is uploaded either "Public" or "Unlisted"!
-* Entrant(s) are encouraged (but not required) to also upload their song to their own social media or platforms with the hashtag #NWIFGrandPrix. Northwest IdolFest may reupload your entry on your behalf with credit for the purpose of fan voting if you are not able to share an accessible link to your entry.
-* Entry deadline is September 29, 2023 at 11:59p PT.
+* Entrant(s) must upload their song to YouTube, with “This work is a submission for the 2024 Northwest IdolFest Grand Prix Song Contest” included in the description.
+* E﻿ntrant(s) must also post their entry on at least one social media with the hashtag #NWIFGrandPrix2024, and include this post in the entry form. This will allow your work to be a part of the fan voting process.
+* Entry deadline is September 28, 2024 at 11:59pm PT.
 
 ## Judging:
 
-* There are 4 categories available for judging:
+* There are 3 categories available for judging:
 
   * Staff Pick: Original Song
   * Staff Pick: Original Cover/Remix
-  * Staff Pick: Emerging Composer
   * Fan Favorite
-* Entries will be judged by the song alone. A music video, animation, or dance is not necessary for entries to be accepted.
-* Staff Pick awards will be determined by a vote of NWIF staff alongside Feris, our guest judge and experienced idol composer! All judges will provide feedback that will be distributed to entrants after winners have been announced.
+* Entries should be reflective of the styles of music found in Japanese idol culture. We are looking for works that fall under a J-pop-like genre, and capture the spirit of idols shining brightly on a stage. We hope to see entries that we can point to as an example of idols as a whole!
+* Entries will be judged by the song alone. A choreographed music video, animation, or dance is not necessary for entries to be accepted, and will not factor into judging.
+* Staff Pick awards will be determined by a panel of NWIF staff and guest judges. All entrants will receive notes and feedback from our judges which will be released after the award winners have been announced.
 * The Fan Favorite award will be determined by a vote of the public.
-* There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions. In addition, a live stream will be announced at a later date where all the entries will be premiered before voting opens!
-* The Fan Favorite vote will be opened October 1st, and will remain open until October 21st at 10:59a PT.
-* The winners will be announced during Northwest IdolFest 2023, and announced to all people not in attendance at some point after Closing Ceremonies!
+* There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions.
+* The Fan Favorite vote will be opened September 28th, 2024 and will be open until October 12th, 2024 at 
+* The winners will be announced during Northwest IdolFest 2024, and announced to all people not in attendance at some point after Closing Ceremonies!
 
 ## Awards:
 
-* Staff Pick: Original Song
-
-  * $175 Amazon Gift Card or cash equivalent
-  * The opportunity for either your submitted theme to be used as a theme song for Northwest IdolFest 2024 or to create a new theme for it!
-* Staff Pick: Original Cover/Remix
-
-  * $100 Amazon Gift Card or cash equivalent
-  * A full-length song composed and arranged by TomStrike, a Northwest IdolFest staffer and musician for 15 years!
-* Staff Pick: Emerging Composer (Selected by Feris!)
-
-  * $75 Amazon Gift Card or cash equivalent
-  * An arrangement by Feris for the next original song you compose!
-* Fan Favorite
-
-  * $50 Amazon Gift Card or cash equivalent
-
-These prizes are guaranteed, and other prize opportunities are in the works, so stay tuned for updates!
+* A prize will be awarded in each category. Stay tuned for more information on prizes this year!
 
 If you have any questions about the song contest guidelines or application process, please join [our Discord](https://discord.gg/h5yJbXgTgE)
-and ask in [\#visitors-center](https://discordapp.com/channels/857780787599900684/866833137752080414), or send an email to 
-thomas@nwidolfest.com!
+and ask in [\#visitors-center](https://discordapp.com/channels/857780787599900684/866833137752080414), or send an email to [events@nwidolfest.com](mailto:events@nwidolfest.com)!
