@@ -44,3 +44,7 @@ body {
     background-color: #ffffff;
     background: linear-gradient(rgba(251, 250, 251, 0.79), 65.97%, rgba(255, 255, 255, 0)), center center;
 }
+
+[data-slate-editor] { 
+    -webkit-user-modify: read-write !important; 
+}
