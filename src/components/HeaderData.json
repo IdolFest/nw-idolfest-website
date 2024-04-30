@@ -61,14 +61,16 @@
         {
           "label": "Arcade",
           "href": "/events/arcade",
-          "disabled": false
+          "disabled": true
         },
         {
           "label": "Grand Prix Song Contest",
           "href": "/events/grandprix",
           "disabled": true
         }
-      ]
+      ],
+      "external": false,
+      "disabled": true
     },
     {
       "label": "Vendors",
