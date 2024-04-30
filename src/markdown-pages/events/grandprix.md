@@ -22,7 +22,7 @@ F﻿ollowing feedback from entrants and last year's judges, some rules have been
 
 * Songs must be between 1:30 and 5:00 long and can be in any language! They do not need to be able to be performed live.
 * Please keep song content "PG-13" and refrain from any kind of triggering, inappropriate, or offensive content.
-* Any content released prior to the time the contest was announced (May xx, 2024) will not be allowed.
+* Any content released prior to the time the contest was announced (May 1, 2024) will not be allowed.
 * Original song submissions must be an entirely original work, or will be judged as a remix/cover.
 * Remixes/covers must credit the original work in the entry form.
 * The entrant(s) retain 100% of any rights and ownership of submitted songs. By submitting a song to this contest, entrant(s) permit NWIF to use their song for purposes related to this year’s contest. This may include posting the song on social media or playing it at the event.
@@ -47,7 +47,7 @@ F﻿ollowing feedback from entrants and last year's judges, some rules have been
 * Staff Pick awards will be determined by a panel of NWIF staff and guest judges. All entrants will receive notes and feedback from our judges which will be released after the award winners have been announced.
 * The Fan Favorite award will be determined by a vote of the public.
 * There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions.
-* The Fan Favorite vote will be opened September 28th, 2024 and will be open until October 12th, 2024 at 
+* The Fan Favorite vote will be opened September 28th, 2024 and will be open until October 12th, 2024 at 6:59pm PT. 
 * The winners will be announced during Northwest IdolFest 2024, and announced to all people not in attendance at some point after Closing Ceremonies!
 
 ## Awards:
