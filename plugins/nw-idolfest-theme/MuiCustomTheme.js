@@ -154,6 +154,16 @@ const GlobalStyles = withStyles(theme => {
 				fontSize: '1.5em',
 				paddingBottom: '.5em'
 			},
+			// The above style causes our bulleted lists to appear differently depending on whether they contain nested components
+			// The reason for this: gatsby wraps list items in paragraph tags, but only when there are sub-bullets.
+			// Why? ¯\_(ツ)_/¯
+			"li > p": {
+				margin: "inherit",
+				lineHeight: "inherit",
+				fontSize: "inherit",
+				paddingBottom: "inherit",
+				fontWeight: "normal"
+			},
 			li: {
 				...theme.typography.body1
 			},
