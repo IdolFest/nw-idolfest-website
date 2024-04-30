@@ -4,6 +4,10 @@
   "registerButtonEnabled": true,
   "feedbackButtonEnabled": false,
   "buttons": [
+    {
+      "text": "Apply to perform!",
+      "href": "https://idolfe.st/perform"
+    }
   ],
   "scheduleDays": 3
 }
