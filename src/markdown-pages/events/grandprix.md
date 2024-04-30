@@ -47,7 +47,7 @@ F﻿ollowing feedback from entrants and last year's judges, some rules have been
 * Staff Pick awards will be determined by a panel of NWIF staff and guest judges. All entrants will receive notes and feedback from our judges which will be released after the award winners have been announced.
 * The Fan Favorite award will be determined by a vote of the public.
 * There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions.
-* The Fan Favorite vote will be opened September 28th, 2024 and will be open until October 12th, 2024 at 6:59pm PT. 
+* The Fan Favorite vote will be opened September 29th, 2024 and will be open until October 12th, 2024 at 6:59pm PT. 
 * The winners will be announced during Northwest IdolFest 2024, and announced to all people not in attendance at some point after Closing Ceremonies!
 
 ## Awards:
