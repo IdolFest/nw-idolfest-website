@@ -66,11 +66,11 @@
         {
           "label": "Grand Prix Song Contest",
           "href": "/events/grandprix",
-          "disabled": true
+          "disabled": false
         }
       ],
       "external": false,
-      "disabled": true
+      "disabled": false
     },
     {
       "label": "Vendors",
