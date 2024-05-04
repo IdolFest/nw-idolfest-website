@@ -35,6 +35,37 @@ document.addEventListener('keydown', kh, false);
 CMS.registerPreviewStyle("/admin/editor-preview.css")
 CMS.registerPreviewStyle("//styles.5a7ea073843f7b933178.css");
 
+function getLiveUrl(entry, forcePath) {
+    entry = entry.toJS ? entry.toJS() : entry
+    let nicePage = entry.path.replace('src/markdown-pages', '').replace('src/pages', '')
+    nicePage = nicePage.substr(0, nicePage.indexOf('.'))
+    if (typeof forcePath !== "undefined") {
+        nicePage = forcePath
+    } 
+
+    if (nicePage.length < 1) {
+        return h('em', {}, 'Visible on publish')
+    }
+    return `${window.location.protocol}//${window.location.host}${nicePage}`
+}
+
+function openLiveWebsite(entry, forcePath) {
+    entry = entry.toJS ? entry.toJS() : entry
+    if (!entry.newRecord) {
+        window.open(getLiveUrl(entry, forcePath), '_blank')
+    } else {
+        console.info('Not opening website, page isn\'t live yet!');
+    }
+}
+
+function customToolbar(entry, forcePath) {
+    const webUrl = getLiveUrl(entry, forcePath)
+
+    entry = entry.toJS ? entry.toJS() : entry
+    return h('div', {"className": `custom-toolbar`}, 
+        h('button', {onClick: () => openLiveWebsite(entry, forcePath), disabled: entry.newRecord}, "Show page on live site"),
+        h('span', {}, h('strong', {}, "Page Url: "), webUrl))
+}
 
 var PostPreview = createClass({
     render: function() {
@@ -42,6 +73,7 @@ var PostPreview = createClass({
 
         // We don't have jsx here sadly, so do things the ugly way
         return h('div', {},
+            customToolbar(entry),
             h('div', {"className": "heading-wrapper"},
                 h('h1', {}, entry.getIn(['data', 'title']))),
             h('div', {"className": "text post-container"}, 
@@ -63,6 +95,7 @@ var PagePreview = createClass({
 
         // We don't have jsx here sadly, so do things the ugly way
         return h('div', {},
+            customToolbar(entry),
             h('div', {"className": "heading-wrapper"},
                 h('h1', {}, entry.getIn(['data', 'title']))),
             h('div', {"className": "text post-container"}, 
@@ -100,6 +133,7 @@ var GuestPreview = createClass({
         const entry = this.props.entry.toJS();
         const guestimg = this.props.getAsset(this.props.entry.getIn(['data', 'guestimg'])).toString()
         return h('div', {},
+            customToolbar(entry),
             h('div', {"className": "heading-wrapper"},
                 h('h1', {}, entry.data.title)),
             h('div', {"className": "text guest-container"}, 
@@ -153,6 +187,7 @@ var RegisterPreview = createClass({
                 h('div', {className: "dummy-container"}, '[ Email Subscription Area ]'))
         }
         return h('div', {}, 
+            customToolbar(this.props.entry, "/register"),
             h('div',{"className": "heading-wrapper"},
                 h('h1', {}, 'Attend')),
             h('small', {}, 'Note: Please imagine this looks like the real register page. I know it doesn\'t line up perfectly.'),
@@ -174,6 +209,7 @@ var HomepagePreview = createClass({
 
 
         return h('div', {},
+            customToolbar(entry, "/"),
             h('div', {"className": "heading-wrapper"},
                 h('h1', {}, data.title)),
             h('div', {"className": "text post-container pre-line home-preview"}, 

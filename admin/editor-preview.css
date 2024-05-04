@@ -45,6 +45,7 @@ h1, h2, h3, h4 {
     color: black;
     font-size: 16px;
     line-height: 16px;
+    margin-top: 32px;
 }
 
 p {
@@ -158,4 +159,18 @@ a {
     text-transform: uppercase;
     line-height: 36px;
     flex-grow: 1;
+}
+
+.custom-toolbar {
+    padding: 4px;
+    background: white;
+    position: fixed;
+    border-radius: 8px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+}
+
+.custom-toolbar > * {
+    margin: 4px 8px;
 }
