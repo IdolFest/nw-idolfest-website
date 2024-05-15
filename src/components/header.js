@@ -296,8 +296,8 @@ const location = site.siteMetadata.location
       <Grid item key={label}>
         { children && children.length ? 
               <>
-              <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onMouseOver={handleClick} onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
-                {link}
+              <Button id={label} aria-controls={`idolfest-menu-${label}`} aria-haspopup="true" onClick={handleClick} aria-owns={state[label] ? `idolfest-menu-${label}` : null}>
+                {label}
                 <FontAwesomeIcon icon={['fas', 'caret-down']} style={{ marginLeft: '10px' }} />
               </Button>
               <Menu
@@ -308,7 +308,6 @@ const location = site.siteMetadata.location
                 open={state[label] ? state[label] : false}
                 onClose={handleClose.bind(this, label)}
                 id={`idolfest-menu-${label}`}
-                MenuListProps={{ onMouseLeave: handleClose.bind(this, label) }}
                 anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                 transformOrigin={{ vertical: "top", horizontal: "center" }}
               >
