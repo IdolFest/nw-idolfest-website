@@ -7,6 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Toggle from "@components/toggle"
 import { useStaticQuery, graphql } from 'gatsby'
 import moment from 'moment'
+import { remark } from 'remark'
+import mdastToHast from 'mdast-util-to-hast'
+import { toHtml as hastToHtml } from 'hast-util-to-html'
+
+const remarker = new remark()
 
 const EventsTable = styled(TableContainer)({
     margin: '0 auto',
@@ -33,8 +38,9 @@ const useStyles = makeStyles(_ => ({
         }
     },
     description: {
-        paddingTop: '.5em',
-        whiteSpace: 'pre-line'
+        '& p': {
+          fontSize: '1em'
+        }
     },
     desktopPanel: {
         fontSize: '1rem'
@@ -55,6 +61,12 @@ const useStyles = makeStyles(_ => ({
 // 2022-10-21T11:00:00-7:00 => 11:00 AM
 function formatTime(datetime) {
     return new Date(datetime).toLocaleTimeString([], {timeStyle: 'short', timeZone: 'America/Los_Angeles'})
+}
+
+function mdToHtml(txt) {
+  const markdownAst = remarker.parse(txt)
+  const htmlAst = mdastToHast(markdownAst, {allowDangerousHtml: true})
+  return hastToHtml(htmlAst, {allowDangerousHtml: true})
 }
 
 const Schedule = ({ dayOfWeek }) => {
@@ -128,7 +140,7 @@ const Schedule = ({ dayOfWeek }) => {
                         <span>
                             <Toggle 
                             title={`${panel.description.substring(0, panel.description.lastIndexOf(" ", 50))}…`} 
-                            content={panel.description} />
+                            content={<div dangerouslySetInnerHTML={{__html: mdToHtml(panel.description)}} />} />
                         </span>
                     </div>
                     : null}
@@ -162,7 +174,7 @@ const Schedule = ({ dayOfWeek }) => {
                                 {`${panel.title}`}
                             </TableCell>
                             <TableCell className={classes.desktopPanel}>
-                                <div className={classes.description}>{panel.description}</div>
+                                <div className={classes.description} dangerouslySetInnerHTML={{__html: mdToHtml(panel.description)}}></div>
                                 {panel.panelists ? <><br /><br /> <i>Panelists: {panel.panelists}</i></> : null}
                             </TableCell>
                         </TableRow>
