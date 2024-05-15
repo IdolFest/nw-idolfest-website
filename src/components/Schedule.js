@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Toggle from "@components/toggle"
 import { useStaticQuery, graphql } from 'gatsby'
 import moment from 'moment'
-import { remark } from 'remark'
+import remark from 'remark'
 import mdastToHast from 'mdast-util-to-hast'
 import { toHtml as hastToHtml } from 'hast-util-to-html'
 

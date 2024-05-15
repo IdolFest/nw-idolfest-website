@@ -43,7 +43,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-toggle-display": "^2.2.1",
-    "remark": "^15.0.1",
+    "remark": "^10.0.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {
