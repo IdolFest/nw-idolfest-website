@@ -54,7 +54,8 @@ exports.onCreateWebpackConfig = function({stage, getConfig, rules, loaders, plug
     resolve: {
       fallback: {
         path: false,
-        process: false,
+        assert: false,
+        fs: false
       }
     }
   })

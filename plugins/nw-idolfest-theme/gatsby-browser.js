@@ -20,3 +20,9 @@ export const wrapRootElement = ({ element }) =>
 wrapRootElement.propTypes = {
 	element: PropTypes.node
 };
+
+// Hack to make remark not crash. 
+// It tries to access the global window.process, which there's no great polyfill for.
+window.process = {
+    cwd: () => ''
+}
