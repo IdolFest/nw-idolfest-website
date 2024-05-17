@@ -6,6 +6,7 @@ title: Taberu Gumi
 descriptor: Australian solo idol
 twitter: https://twitter.com/gumitanman
 instagram: https://www.instagram.com/gumitanman
+tiktok: https://www.tiktok.com/@gumitanman
 guestimg: /images/guests/2024_gumi.png
 NOTE: Make sure image of the guest is in the media folder, named
   guest_(YEAR)_(GUEST_SLUG).png
