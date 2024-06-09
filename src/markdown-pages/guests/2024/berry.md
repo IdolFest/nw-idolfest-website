@@ -4,8 +4,8 @@ slug: berry
 template: guest
 title: Berry
 descriptor: J-pop Performer
-twitter: blooberrytrain
-instagram: blooberrytrain
+twitter: http://x.com/blooberrytrain
+instagram: http://instagram.com/blooberrytrain
 guestimg: /images/guests/berrystar.png
 NOTE: Make sure image of the guest is in the media folder, named
   guest_(YEAR)_(GUEST_SLUG).png
