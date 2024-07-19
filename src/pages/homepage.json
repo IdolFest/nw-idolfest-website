@@ -3,19 +3,6 @@
   "body": "Back for our fourth year, Northwest IdolFest is a three day convention all about idols, anisong, and j-pop! Featuring your favorite idol performers, vendors, and tons of amazing panels, join us in Seattle, WA from October 11-13, 2024.",
   "registerButtonEnabled": true,
   "feedbackButtonEnabled": false,
-  "buttons": [
-    {
-      "text": "Apply to perform!",
-      "href": "https://idolfe.st/perform"
-    },
-    {
-      "text": "Apply to perform at northern lights! (Idol showcase) ",
-      "href": "https://idolfe.st/nlapp"
-    },
-    {
-      "text": "Apply to panel!",
-      "href": "https://idolfe.st/panelapp"
-    }
-  ],
+  "buttons": [],
   "scheduleDays": 3
 }
