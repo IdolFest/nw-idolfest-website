@@ -58,7 +58,10 @@ const useStyles = makeStyles(_ => ({
     },
     prohibitList: {
       margin: "0 0 4px",
-      paddingLeft: "16px"
+      paddingLeft: "16px",
+      '& li': {
+        fontSize: 'inherit'
+      }
     }
 }))
 
