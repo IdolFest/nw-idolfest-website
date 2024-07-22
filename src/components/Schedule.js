@@ -55,6 +55,10 @@ const useStyles = makeStyles(_ => ({
         desktopSchedule: {
             display: 'none'
         }
+    },
+    prohibitList: {
+      margin: "0 0 4px",
+      paddingLeft: "16px"
     }
 }))
 
@@ -67,6 +71,48 @@ function mdToHtml(txt) {
   const markdownAst = remarker.parse(txt)
   const htmlAst = mdastToHast(markdownAst, {allowDangerousHtml: true})
   return hastToHtml(htmlAst, {allowDangerousHtml: true})
+}
+
+function getProhibitedList(panel, classes) {
+  let list = []
+
+  switch (panel.callMix.toLowerCase()) {
+    case 'all':
+      // Nothing!
+      break
+    case 'calls only':
+      list.push('Mix (calls are okay!)')
+      break
+    case 'none':
+      list.push('Calls and mix')
+      break
+  }
+
+  switch (panel.recording.toLowerCase()) {
+    case 'all':
+      // Nothing!
+      break
+    case 'photos':
+      list.push('Recorded video (pictures are okay!)')
+      break
+    case 'videos': 
+      // ... really?
+      list.push('Recorded photos (video okay)')
+      break
+    case 'none':
+      list.push('Video recording and photos')
+      break
+  }
+
+  if (list.length > 0) {
+    return <>
+      <strong>Prohibited:</strong>
+      <ul className={classes.prohibitList}>
+        {list.map(a => (<li key={a}>{a}</li>))}
+      </ul>
+    </>
+  }
+
 }
 
 const Schedule = ({ dayOfWeek }) => {
@@ -134,6 +180,7 @@ const Schedule = ({ dayOfWeek }) => {
                     <div className="name">{panel.isGuest ? <><FontAwesomeIcon icon={['fas', 'star']} /><span>  </span></> : null} {panel.title}</div>
                     <div className="room">Room: {panel.room}</div>
                     <div className="time">Time: {formatTime(panel.startTime)} – {formatTime(panel.endTime)}</div>
+                    <div className="prohibited">{getProhibitedList(panel, classes)}</div>
                     {panel.panelists ? <div><span className="panelists">Panelists</span>: {panel.panelists}</div> : null }
                     {panel.description ?
                     <div className={classes.description}>
@@ -175,7 +222,8 @@ const Schedule = ({ dayOfWeek }) => {
                             </TableCell>
                             <TableCell className={classes.desktopPanel}>
                                 <div className={classes.description} dangerouslySetInnerHTML={{__html: mdToHtml(panel.description)}}></div>
-                                {panel.panelists ? <><br /><br /> <i>Panelists: {panel.panelists}</i></> : null}
+                                <div className="prohibited">{getProhibitedList(panel, classes)}</div>
+                                {panel.panelists ? <><i>Panelists: {panel.panelists}</i></> : null}
                             </TableCell>
                         </TableRow>
                     ))
