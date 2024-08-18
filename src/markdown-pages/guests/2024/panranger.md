@@ -1,12 +1,15 @@
 ---
-template: guest
 name: Pan Ranger
+slug: panranger
+template: guest
 title: Pan Ranger
 descriptor: Tokusatsu idol
+twitter: http://x.com/bakerysentai
+instagram: http://instagram.com/panranger
+bandcamp: https://panranger.bandcamp.com/
 guestimg: /images/guests/panrangerstar.png
 NOTE: Make sure image of the guest is in the media folder, named
   guest_(YEAR)_(GUEST_SLUG).png
-slug: panranger
 ---
 Pan Ranger is soloist idol and indie tokusatsu project.
 
