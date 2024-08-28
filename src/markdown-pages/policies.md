@@ -13,9 +13,11 @@ Anyone who accepts a NWIF badge agrees to indemnify and hold harmless NWIF and T
 
 ## COVID-19
 
-For 2024, NWIF will require masks inside the Vendor Hall. Other areas of the convention will not require masks. COVID vaccination is strongly recommended, but not required.
+Masking is not required at NWIF 2024 but is highly encouraged due to the size of the venue and the intimate nature of our event. Similarly, we highly encourage that you have received the initial COVID-19 vaccination series and all applicable booster vaccines, but this is also not required. NWIF staff will not be conducting vaccination checks.
 
-These policies may change without notice, including during the event. NWIF will always seek to exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priority. Attendees are required to comply with all COVID-19 preventative measures.
+On a case-by-case basis, our guests may request for meet and greets that attendees wear a mask. In this event, signage will be clearly posted and staff will alert all attendees without masks or wearing their masks improperly to ensure they are wearing a mask securely over their nose and mouth. 
+
+These policies may change without notice, including during the event. NWIF will always seek to meet and exceed minimum compliance with health regulations, as the health and safety of all attendees and staff are our #1 priorities. Attendees are required to comply with all COVID-19 preventative measures. Failure to comply with any of these measures may result in consequences ranging from removal from the required masking area to confiscation of the attendee's badge and removal from the event depending on severity.
 
 ## Anti-Harassment
 
