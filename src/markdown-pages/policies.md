@@ -41,6 +41,18 @@ School IDs are accepted as proof of ID, or, if accompanied by an adult, the adul
 
 All content at NWIF is expected to fall within a PG-13 rating unless otherwise approved by event chairs. Any content deemed inappropriate will be asked to be removed from the convention space. This includes any imagery or discussion of drugs, alcohol, sex, or violence. If you are unsure if your content complies with our policies, please ask a staff member!
 
+## Events (Programming)
+
+All attendees and staff providing content including, but not limited to panels and performances at Northwest IdolFest (referred to in this section as “presenters”) are expected to abide by the content rating as well as providing content that aligns with the scope and mission of our event. To ensure this process is followed through, we maintain an application process for all presenters of which its opening and closing are announced on social media and hosted on our website. Content presented at NWIF is hand-selected by members of our staff to ensure that the content aligns with our standards and follows all expectations for NWIF content.
+
+NWIF staff are permitted to apply to provide content unless otherwise directed by a NWIF Department Head. Staff are held to the same standards listed above for all other attendees and must complete the same application. Any NWIF staff involved in the process of reviewing applications are not permitted to participate in the review of their own application and are advised to not participate in the review process altogether.
+
+Once scheduled to provide content, presenters are expected to provide content at that time. Presenters may request a change to their scheduled time and/or to cancel/withdraw their offering of content at any time up to one (1) week prior to the first day of the event by emailing events@nwidolfest.com and requesting the change. After this time, no change requests other than cancellations/withdrawals will be honored. If canceling/withdrawing, any compensation provided by the event to the ex-presenter will be revoked.
+
+All changes are subject to the approval of the Department Head for the Events team. The Events Department Head reserves the right to adjust or deny any requests submitted to align with the needs of the event. 
+
+Presenters are expected to arrive at their scheduled room for content presentation 15-30 minutes prior to their scheduled start time. This requirement may be superseded by direction from NWIF staff, and the most recent guidance should be followed by presenters. Presenters are expected to present their content and not go over the time allotted to them. In severe cases, NWIF staff may directly request for the presenter to wrap up their content so that the lineup of content for their room can continue on time.
+
 ## Badges
 
 Badges must be visibly displayed on your person while in event space. In case of lost badge, one $20 replacement will be available with presentation of photo ID. Additional replacements will be charged full price.
