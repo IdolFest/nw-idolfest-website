@@ -31,9 +31,9 @@ This policy applies without exception to everyone at the convention, including a
 
 ## Minor Attendees
 
-All attendees who are under 18 during any time they are at NW IdolFest are required to provide a consent form signed by a legal guardian. The consent form can be downloaded [here](/Parental%20Consent%20Form.pdf). If the legal guardian will be present at the event with the minor, then the form can be signed in front of us. If the legal guardian will not be in attendance, the form may be brought pre-signed.
+All attendees who are under 18 during any time they are at Northwest IdolFest are required to provide a consent form signed by a legal guardian. The consent form can be downloaded [here](/Parental%20Consent%20Form.pdf). If the legal guardian will be present at the event with the minor, then the form can be signed in front of us. If the legal guardian will not be in attendance, the form may be brought pre-signed.
 
-Minors ages 13-17 may attend NW IdolFest without accompaniment, so long as they have a completed consent form. Minors 12 years of age and under must be accompanied at all times by an adult with a paid badge.
+Minors ages 13-17 may attend Northwest IdolFest without accompaniment, so long as they have a completed consent form. Minors 12 years of age and under must be accompanied at all times by an adult with a paid badge.
 
 School IDs are accepted as proof of ID, or, if accompanied by an adult, the adult's ID may be accepted instead.
 
