@@ -44,7 +44,7 @@
     {
       "badgeName": "Super Sponsor",
       "badgeKey": "badge-supersponsor",
-      "onSale": true,
+      "onSale": false,
       "hasTax": false,
       "price": "900",
       "tierName": "Prism",
