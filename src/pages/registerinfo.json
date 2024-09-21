@@ -23,7 +23,7 @@
     {
       "badgeName": "Sponsor",
       "badgeKey": "badge-sponsor",
-      "onSale": true,
+      "onSale": false,
       "hasTax": false,
       "price": "150",
       "tierName": "Gold",
