@@ -48,104 +48,56 @@ const IndexPage = () => {
             />
           </a>
 
-          <a href="https://www.parfaitpins.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{margin: "56px 0"}}>
+          <a href="https://animirai.club" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{margin: "56px 0"}}>
             <StaticImage
               // This is a presentational image, so the alt should be an empty string
               alt=''
-              src='../images/partners/parfait_pins.png'
+              src='../images/partners/animirai.png'
               loading='eager'
               placeholder='blurred'
               quality='100'
               width={300}
             />
           </a>
-          <a href="https://www.dreamlandmaidcafe.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{margin: "56px 0"}}>
-            <StaticImage
-              // This is a presentational image, so the alt should be an empty string
-              alt=''
-              src='../images/partners/dreamland_maid_cafe.png'
-              loading='eager'
-              placeholder='blurred'
-              quality='100'
-              width={200}
-            />
-          </a>
-        </Grid>
-
-        <br />
-        <Grid container style={{ justifyContent: 'space-around' }}>
-          <a href="https://bigzfabric.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo} style={{marginTop: "32px"}}>
-              <StaticImage
-                // This is a presentational image, so the alt should be an empty string
-                alt=''
-                src='../images/partners/big_z.png'
-                loading='eager'
-                placeholder='blurred'
-                quality='100'
-                width={200}
-              />
-            </a>
-
-          <a href="https://www.thefivewitswigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
-            <StaticImage
-              // This is a presentational image, so the alt should be an empty string
-              alt=''
-              src='../images/partners/five_wits.png'
-              loading='eager'
-              placeholder='blurred'
-              quality='100'
-              height={200}
-            />
-          </a>
-          <a href="https://arda-wigs.com/" target="_blank" rel="noreferrer" className={classes.partnerLogo}>
-            <StaticImage
-              // This is a presentational image, so the alt should be an empty string
-              alt=''
-              src='../images/partners/arda_wigs.png'
-              loading='eager'
-              placeholder='blurred'
-              quality='100'
-              height={300}
-            />
-          </a>
         </Grid>
         
         <br />
-        <p>We also extend a huge THANK YOU to all our generous 2023 Prism and Gold sponsors!</p>
+        <p>We also extend a huge THANK YOU to all our generous 2024 Prism and Gold sponsors!</p>
         {/* Sponsor badges are limited and come with several exclusive perks. <Link to="/register">Grab yours today!</Link> */}
         <h3>Prism Sponsors</h3>
         <ul>
-          <li>Vivian / Seri</li>
-          <li>LUwUigi</li>
-          <li>@mrdangphotos</li>
-          <li>Kaye</li>
-        </ul>
+          <li>Luigi G</li>
+          <li>Fish & Bird Virtual Planning</li>
+          <li>EggyDrago</li>
+          <li>hiddennin</li>
+          <li>NaraMoore / 八尺様</li>
+          <li>Mr. Dang</li>        </ul>
 
         <h3>Gold Sponsors</h3>
         <ul>
-          <li>Megumin Kousaka</li>
-          <li>tsubasa83_ch</li>
-          <li>Jordan </li>
-          <li>Koko Wang</li>
-          <li>Bebe</li>
-          <li>mittens / vince </li>
-          <li>Jojo</li>
-          <li>Paturiku the Procastinator</li>
-          <li>Erose</li>
-          <li>Jay</li>
+          <li>SakeBomb.</li>
+          <li>J</li>
           <li>FakeName</li>
+          <li>Oyashiro</li>
+          <li>agri</li>
+          <li>David</li>
+          <li>Instagram.com/neso.sti</li>
+          <li>Baron Senpai</li>
+          <li>vic :PP</li>
+          <li>Austin Montler</li>
+          <li>thatguyjomar</li>
+          <li>mits</li>
+          <li>Kaye</li>
+          <li>Anonymous</li>
+          <li>Birdie</li>
+          <li>Jinx</li>
+          <li>Avalon</li>
+          <li>Rick</li>
+          <li>Leopaul C Del Rosario</li>
+          <li>Forest Swirl</li>
+          <li>DestructiveDave1900</li>
+          <li>Zeta Flare</li>
           <li>SarahLynne</li>
-          <li>AFR0</li>
-          <li>Valraiser</li>
-          <li>Bird</li>
-          <li>Des</li>
-          <li>Mayra - Jagi</li>
-          <li>Darkshadowcosplays</li>
-          <li>Autumn Jones</li>
-          <li>lentils09</li>
-          <li>ZetaFlare</li>
-          <li>Haewon</li>
-          <li>NaraMoore</li>
         </ul>
 
       </PageContent>
