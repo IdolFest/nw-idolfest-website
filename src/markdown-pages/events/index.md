@@ -29,7 +29,7 @@ Hours of Operation:
 
   * Thursday: CLOSED
   * Friday: 12 - 7:30pm, 10:30pm - 12am
-  * Saturday: 10am - 12am
+  * Saturday: 10am - 7pm, 8:30pm - 12am
   * Sunday: 10am - 4pm
 
 Events Schedule:
