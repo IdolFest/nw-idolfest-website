@@ -34,10 +34,10 @@ Hours of Operation:
 
 Events Schedule:
 
-* Thursday Schedule (including Day 0 meetup!)
-* Friday Schedule
-* Saturday Schedule
-* Sunday Schedule
+* [Thursday Schedule (including Day 0 meetup!)](https://nwidolfest.com/events/thursday)
+* [Friday Schedule](https://nwidolfest.com/events/friday/)
+* [Saturday Schedule](https://nwidolfest.com/events/saturday)
+* [Sunday Schedule](https://nwidolfest.com/events/sunday)
 * Meet and Greet Schedule
 
 ### Venue Map
