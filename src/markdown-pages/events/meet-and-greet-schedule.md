@@ -3,59 +3,76 @@ title: Meet and Greet Schedule
 template: page
 slug: meetandgreetschedule
 ---
-W﻿e are excited to announce our meet and greet schedule for this year, featuring our guests, our attendee performers, and our performers featured in Daybreak Live! and our Northern Lights Music Festival!
+W﻿e are excited to announce our meet and greet schedule for this year featuring our guests, our community performers, and our performers featured in Northern Lights Music Festival!
 
-A﻿ll guests will have at least 1 one-hour meet and greet directly following their main concerts, and will be included in the following schedule.
+Masks are not required in any areas this year; however, performers may request that those meeting them wear a mask. If requested, attendees are expected to comply. A limited quantity of masks will be available at the event, but we ask attendees bring their own if possible.
 
 ﻿﻿Whether the meet and greet is a paid or free meet and greet is at the discretion of each performer.
 
-# Lobby/Foyer Meet and Greets
-
-### ﻿Friday
-
-* 1﻿:00 - 2:00p: Phoebe
-* 2﻿:30 - 3:30p: Melancholiaah!
-* 4﻿:00 - 5:00p: Jenni Bon
-* 5﻿:00 - 6:00p: Isiliel
-* 5﻿:45 - 6:45p: Pan Ranger
-* 8﻿:00 - 9:00p: SHIHORI
-* 1﻿0:30 - 11:30p: Daybreak Live! Performers
-
-### Saturday
-
-* 1﻿1:30a - 12:30p: Alex Pinku
-* 1﻿:00 - 2:00p: Isiliel
-* 2﻿:30 -3:30p: Idolusion!!
-* 6﻿:30 - 7:00p: RinTaichou
-* 1﻿0:30 - 11:30p: Northern Lights Music Festival Performers
-
-### S﻿unday
-
-* 12:00 - 1:00p: Isiliel
-* ﻿1:00 - 2:00p: PAiDA
-* 2:30 - 4:00p: Non Sweet
-
-# V﻿endors Hall Meet and Greets
+# V﻿endor Hall Meet and Greets
 
 ### F﻿riday
 
-* 3﻿:30 - 4:00p: RinTaichou
-* 5﻿:00 - 6:00p: bunny☆kaisui
+* 1:30 - 3:00pm: Phoebe
+* 4:30 - 5:30pm: Pan Ranger, Melancholiaah
+* 7:00 - 8:00pm: Taberu Gumi, SHIHORI
 
 ### Saturday
 
-* 1﻿2:00 - 1:00p: CODE: MiAO
-* 3﻿:00 - 3:30p: ember*night
-* 5﻿:00 - 6:00p: Isiliel
+* 11:00am - 12:00pm: Melancholiaah, Pan Ranger
+* 1:00 - 2:00pm: SHIHORI
+* 3:00 - 4:00pm: Phoebe
+* 5:00 - 6:00pm: Idol Shikkaku
+* 7:00 - 8:00pm: Taberu Gumi, BERRY
+* 9:00 - 10:30pm: Non Sweet
 
 ### S﻿unday
 
-* 1﻿0:30 - 11:30a: Signals
-* 1﻿2:30 - 1:00p: RinTaichou
-* 3﻿:30 - 4:00p: mspaint palette
+* 1﻿1:30am - 1:00pm: Non Sweet
+* 1:30 - 2:30pm: Idol Shikkaku
+* 3﻿:00 - 4:00pm: Community Performer Cheki Power Hour!
 
-# Special Meet and Greets
+  * All community performers available and willing will be here for one last time to hold meet and greets as well as sell merch and chekis!
+
+# Community Stage Meet and Greets
+
+### Friday
+
+* 5:00 - 5:30pm: Meowgical Rosie, Oyasubunny
+* 6:30 - 7:00pm: Jenni Bon
+* 8:00 - 8:30pm: FLARE
 
 ### Saturday
 
-* 5﻿:00 - 6:30p: Non Sweet Tiktok Meet and Greet - Come meet members of Non Sweet, chat and make a cute Tiktok video together! This will be in **Panels 2.**
+* 12:00 - 12:30pm: Sapphire
+* 2:00 - 2:30pm: Martha
+* 4:00 - 4:30pm: atanadinata, Aqu♡rius
+* 8:00 - 8:30pm: Alice, bunny☆kaisui
+* 10:00 - 10:30pm: Estella!, Chérie Ifẹ
+
+### Sunday
+
+* 12:00 - 12:30pm: BOYiSH7
+* 2:30 - 3:00pm: Yumemi夢美
+
+# 2nd Floor Foyer Meet and Greets
+
+### Friday
+
+* 7:30 - 8:00pm: Estella!
+
+### Saturday
+
+* 12:30 - 1:00pm: FLARE
+* 1:00 - 1:30pm: Alice
+* 3:00 - 3:30pm: Martha
+* 3:30 - 4:00pm: Oyasubunny
+* 4:00 - 4:30pm: Alice
+* 4:30 - 5:00pm: Aqu♡rius
+* 5:00 - 5:30pm: Meowgical Rosie
+* 7:30 - 8:00pm: Chérie Ifẹ
+
+### Sunday
+
+* 12:30 - 1:00pm: BOYiSH7
+* 2:00 - 2:30pm: Meowgical Rosie
