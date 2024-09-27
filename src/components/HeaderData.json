@@ -26,22 +26,22 @@
         {
           "label": "Thursday Schedule",
           "href": "/events/thursday",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Friday Schedule",
           "href": "/events/friday",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Saturday Schedule",
           "href": "/events/saturday",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Sunday Schedule",
           "href": "/events/sunday",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Meet and Greet Schedule",
