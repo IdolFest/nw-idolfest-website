@@ -61,7 +61,7 @@
         {
           "label": "Arcade",
           "href": "/events/arcade",
-          "disabled": true
+          "disabled": false
         },
         {
           "label": "Grand Prix Song Contest",
