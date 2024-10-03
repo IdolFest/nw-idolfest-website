@@ -16,6 +16,7 @@ Masks are not required in any areas this year; however, performers may request t
 * 1:30 - 3:00pm: Phoebe
 * 4:30 - 5:30pm: Pan Ranger, Melancholiaah
 * 7:00 - 8:00pm: Taberu Gumi, SHIHORI
+* 10:30 - 11:30pm: Northern Lights Music Festival Performers
 
 ### Saturday
 
