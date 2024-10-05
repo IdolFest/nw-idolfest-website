@@ -60,6 +60,7 @@ Masks are not required in any areas this year; however, performers may request t
 
 ### Friday
 
+* 12:00 - 12:30pm: Martha
 * 7:30 - 8:00pm: Estella!
 
 ### Saturday
@@ -71,9 +72,11 @@ Masks are not required in any areas this year; however, performers may request t
 * 4:00 - 4:30pm: Alice
 * 4:30 - 5:00pm: Aqu♡rius
 * 5:00 - 5:30pm: Meowgical Rosie
+* 5:30 - 6:00pm: BOYiSH7
 * 7:30 - 8:00pm: Chérie Ifẹ
 
 ### Sunday
 
 * 12:30 - 1:00pm: BOYiSH7
+* 1:00 - 1:30pm: Estella!
 * 2:00 - 2:30pm: Meowgical Rosie
