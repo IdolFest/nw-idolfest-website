@@ -5,9 +5,16 @@ template: page
 ---
 Calling all musicians! We're hosting the third annual Northwest IdolFest Grand Prix Song Contest to showcase your original idol-themed compositions, covers and remixes!
 
+## Fan Vote and Playlist
+
+Check out the playlist of all entries here! (Coming **very** soon!)
+Make sure to vote for your favorites here! (Form will open after the watch party stream - keep an eye on our social media!)
+
 ## Application
 
-F﻿ollowing feedback from entrants and last year's judges, some rules have been clarified or changed from last year. Please make sure to read **all** of the rules below and then [submit your song here](https://idolfe.st/grandprixapp)!
+~~F﻿ollowing feedback from entrants and last year's judges, some rules have been clarified or changed from last year. Please make sure to read **all** of the rules below and then [submit your song here](https://idolfe.st/grandprixapp)!~~
+
+Applications have closed for 2024!
 
 ## General Guidelines
 
@@ -47,12 +54,16 @@ F﻿ollowing feedback from entrants and last year's judges, some rules have been
 * Staff Pick awards will be determined by a panel of NWIF staff and guest judges. All entrants will receive notes and feedback from our judges which will be released after the award winners have been announced.
 * The Fan Favorite award will be determined by a vote of the public.
 * There will be a YouTube playlist available of all entries so that everyone can listen and support the submissions.
-* The Fan Favorite vote will be opened September 29th, 2024 and will be open until October 12th, 2024 at 6:59pm PT. 
+* The Fan Favorite vote will be opened October 7th, 2024 and will be open until October 12th, 2024 at 6:59pm PT. 
 * The winners will be announced during Northwest IdolFest 2024, and announced to all people not in attendance at some point after Closing Ceremonies!
 
 ## Awards:
 
-* A prize will be awarded in each category. Stay tuned for more information on prizes this year!
+* Prizes will be awarded the in the form of Amazon gift cards or a cash equivalent. The value of the gift cards / cash equivalents are as follows:
+
+  * Staff Pick: Original Song - $175
+  * Staff Pick: Original Cover/Remix - $100
+  * Fan Favorite - $50
 
 If you have any questions about the song contest guidelines or application process, please join [our Discord](https://discord.gg/h5yJbXgTgE)
 and ask in [\#visitors-center](https://discordapp.com/channels/857780787599900684/866833137752080414), or send an email to [events@nwidolfest.com](mailto:events@nwidolfest.com)!
