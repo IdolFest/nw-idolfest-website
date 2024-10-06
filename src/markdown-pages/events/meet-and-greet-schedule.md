@@ -77,6 +77,7 @@ Masks are not required in any areas this year; however, performers may request t
 
 ### Sunday
 
+* 12:00 - 12:30pm: Yumemi夢美
 * 12:30 - 1:00pm: BOYiSH7
 * 1:00 - 1:30pm: Estella!
 * 2:00 - 2:30pm: Meowgical Rosie
