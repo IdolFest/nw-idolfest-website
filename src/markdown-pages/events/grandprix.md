@@ -7,12 +7,11 @@ Calling all musicians! We're hosting the third annual Northwest IdolFest Grand P
 
 ## Fan Vote and Playlist
 
-Check out the playlist of all entries here! (Coming **very** soon!)
-Make sure to vote for your favorites here! (Form will open after the watch party stream - keep an eye on our social media!)
+Want to listen to all the amazing submissions and vote for your favorites? Check out our fan vote [here](https://idolfe.st/grandprixvote)! The form has all the links for all the songs submitted, and after listening you can vote for up to three of your favorites!
 
 ## Application
 
-~~F﻿ollowing feedback from entrants and last year's judges, some rules have been clarified or changed from last year. Please make sure to read **all** of the rules below and then [submit your song here](https://idolfe.st/grandprixapp)!~~
+~~F﻿ollowing feedback from entrants and last year's judges, some rules have been clarified or changed from last year. Please make sure to read **all** of the rules below and then submit your song here!~~
 
 Applications have closed for 2024!
 
