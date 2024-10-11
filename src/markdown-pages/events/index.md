@@ -38,7 +38,7 @@ Events Schedule:
 * [Friday Schedule](https://nwidolfest.com/events/friday/)
 * [Saturday Schedule](https://nwidolfest.com/events/saturday)
 * [Sunday Schedule](https://nwidolfest.com/events/sunday)
-* Meet and Greet Schedule
+* [Meet and Greet Schedule](https://nwidolfest.com/events/meet-and-greet-schedule)
 
 ### Venue Map
 
