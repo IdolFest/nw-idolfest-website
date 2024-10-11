@@ -42,10 +42,10 @@ Events Schedule:
 
 ### Venue Map
 
-Ground Floor (coming soon!)
+Ground Floor
 
-![]( "Coming soon!")
+![](/images/uploads/2024-venue-map-2.png)
 
-Second Floor (coming soon!)
+Second Floor
 
-![]( "Coming soon!")
+![](/images/uploads/2024-venue-map-1.png)
