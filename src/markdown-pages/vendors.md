@@ -5,4 +5,11 @@ template: page
 ---
 W﻿e're excited to host some amazing vendors at NWIF 2024!
 
-Check back later for a list of vendors.
+* Idol Research Club
+* Dia Splits
+* atanadinata's Design
+* orrikal
+
+Check out our vendor map!
+
+![](/images/uploads/vendor-map-2024.png)
