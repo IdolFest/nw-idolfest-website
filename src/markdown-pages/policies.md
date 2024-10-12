@@ -3,6 +3,10 @@ slug: /policies
 title: Policies
 template: page
 ---
+## AT-CON NOTICE: NWIF Harassment Hotline
+
+Please see our anti-harassment policy below. If you feel that you have been harassed and/or feel unsafe because of any person, please call our harassment hotline at (206) 333-9167.
+
 ## Welcome!
 
 Welcome to Northwest IdolFest, or NWIF! We are a group of passionate idol fans working to bring idol culture and programming to the US. The primary purpose of NWIF is for the attendees to have fun. To make this happen, NWIF has established certain rules of conduct. These rules were created to ensure the behavior of any one individual or group of attendees does not disturb the enjoyment of another attendee, nor detract from the relaxed and comfortable atmosphere of the event. To both enjoy the convention to the fullest as well as to ensure the safety of all participants, please comply with staff instructions at all times.
