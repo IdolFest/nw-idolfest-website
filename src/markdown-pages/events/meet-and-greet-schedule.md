@@ -56,7 +56,7 @@ Masks are not required in any areas this year; however, performers may request t
 * 12:00 - 12:30pm: BOYiSH7
 * 2:30 - 3:00pm: Yumemi夢美
 
-# 2nd Floor Foyer Meet and Greets
+# 2nd Floor (Evergreen) Foyer Meet and Greets
 
 ### Friday
 
