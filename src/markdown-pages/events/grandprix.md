@@ -7,7 +7,9 @@ Calling all musicians! We're hosting the third annual Northwest IdolFest Grand P
 
 ## Fan Vote and Playlist
 
-Want to listen to all the amazing submissions and vote for your favorites? Check out our fan vote [here](https://idolfe.st/grandprixvote)! The form has all the links for all the songs submitted, and after listening you can vote for up to three of your favorites!
+~~Want to listen to all the amazing submissions and vote for your favorites? Check out our fan vote [here](https://idolfe.st/grandprixvote)! The form has all the links for all the songs submitted, and after listening you can vote for up to three of your favorites!~~
+
+The fan vote has closed. We will be announcing the winners at Closing Ceremonies and shortly after on social media!
 
 ## Application
 
