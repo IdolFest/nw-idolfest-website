@@ -7,4 +7,4 @@ Northwest IdolFest is a passion project founded by experienced event organizers.
 
 Our staff application opens in the months before the event, then is typically closed for a little while directly after while we look at the past year and how we want to adjust.
 
-The staff application is currently closed. Please keep an eye on our social media for when applications reopen for our post-move event in 2025!
+The staff application is currently closed. Please keep an eye on our social media for when applications reopen for 2025 as we prepare for our move to LA!
