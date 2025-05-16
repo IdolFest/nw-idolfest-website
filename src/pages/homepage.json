@@ -1,8 +1,13 @@
 {
   "title": "Thank You For Attending NW IdolFest 2024!",
-  "body": "Thank you for another successful Idolfest event! NW IdolFest has now concluded. \n\nIdolFest will return in Los Angeles, California in 2025!",
+  "body": "Thank you for another successful Idolfest event! NW IdolFest has now concluded. \n\nIdolFest is returning to Redondo Beach, California in 2025 as US IdolFes! Click below to see the new site!",
   "registerButtonEnabled": false,
   "feedbackButtonEnabled": false,
-  "buttons": [],
+  "buttons": [
+    {
+      "text": "Check out US IdolFes!",
+      "href": "https://idolfes.us"
+    }
+  ],
   "scheduleDays": 3
 }
